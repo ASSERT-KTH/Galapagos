@@ -6,6 +6,7 @@ import distance_utils
 import traceback    
 import shutil
 import hashlib
+import re 
 
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
@@ -27,7 +28,7 @@ def extract_substitution_from_file(file):
 def parse_response(resp):
     text = resp['choices'][0]['message']['content']
 
-    parsed = text.replace('\\"', '"').replace('```c', '').replace('```C', '').replace('```','')
+    parsed = re.sub(r'```[Cc][Cc]?[Pp]?[Pp]?', '', text).replace('\\"', '"').replace('```','')
 
     return parsed
 
@@ -124,18 +125,31 @@ def main(args):
     for it in range(20, n):
 
         prompt_intro = f'The following code describes an unspecified program.'
+        prompt_intro1 = f'I have the C code implementation in the following text'
 
         code = source
 
         instruction = f'create a substitute implementation of the program, which is different but equivalent. It should be possible to directly replace the program and it should provide the same functionality.'
 
+        instruction1 = f'Give me a semantically equivalent version of the program in the same language'
+
         # instruction_b = f'you are a software developer. You create a substitute implementation of the function `partition`. This substitute function must be different but semantically equivalent. It should be possible to directly replace the code in a program and it should provide the same functionality. Use the same function names.'
         
-        prompt = '\n'.join([prompt_intro, code, instruction])
+        remarks = 'Do not output any other text apart from the code.'
+        remarks1 = '''The natural language description of the programs is: Quicksort is an efficient, general-purpose sorting algorithm. Quicksort was developed by British computer scientist Tony Hoare in 1959[1] and published in 1961.[2] It is still a commonly used algorithm for sorting. Overall, it is slightly faster than merge sort and heapsort for randomized data, particularly on larger distributions.[3]
+
+            Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort.[4] The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
+
+            Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. Most implementations of quicksort are not stable, meaning that the relative order of equal sort items is not preserved.
+
+        '''
+
+        prompt = '\n'.join([prompt_intro, code, instruction, remarks])
+        prompt1 = '\n'.join([prompt_intro1, code, instruction1, remarks1])
 
         response = openai.ChatCompletion.create(
             model="gpt-4",
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": prompt1}],
             temperature=1,
             # max_tokens=7
         )
