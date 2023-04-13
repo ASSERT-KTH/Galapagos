@@ -131,7 +131,7 @@ def main(args):
 
         instruction = f'create a substitute implementation of the program, which is different but equivalent. It should be possible to directly replace the program and it should provide the same functionality.'
 
-        instruction1 = f'Give me a semantically equivalent version of the program in the same language'
+        instruction1 = f'Give me a semantically equivalent version of the program in the same language. Do not output any other text apart from the code.'
 
         # instruction_b = f'you are a software developer. You create a substitute implementation of the function `partition`. This substitute function must be different but semantically equivalent. It should be possible to directly replace the code in a program and it should provide the same functionality. Use the same function names.'
         

@@ -3,9 +3,10 @@ import os
 import time
 
 if __name__ == '__main__':
-    open(os.path.join(WORKSPACE, f"rosetta_codes/compiled/report.csv"), 'w').close()
+    
     for epoch in range(1, 100):
         filessc = os.listdir(os.path.join(WORKSPACE, "rosetta_codes"))
+        filessc = [ f for f in filessc if ".v" in f ]
         for opt in ["O0", "O1", "O2", "O3", "Os", "Ofast"] :
         
             hashes_source = set()
@@ -41,7 +42,7 @@ if __name__ == '__main__':
                         COUNT += 1
 
             reportfile = open(os.path.join(WORKSPACE, f"rosetta_codes/compiled/report.csv"), 'a')
-            reportfile.write(f"{epoch},{opt},{len(hashes_source)},{len(hashes_target)}, {COUNT}, {100*len(hashes_target)/COUNT},{len(filessc)}%\n")
+            reportfile.write(f"{epoch},{len(filessc)}, {opt},{len(hashes_source)},{len(hashes_target)}, {COUNT}, {100*len(hashes_target)/COUNT}%, {100*len(filessc)/COUNT}%\n")
 
             print(opt, len(hashes_source), len(hashes_target), f"{100*len(hashes_target)/COUNT}%", COUNT)
 
@@ -59,4 +60,4 @@ if __name__ == '__main__':
                     for f in files:
                         print(f"\t{f}")
 
-        time.sleep(60)
+        time.sleep(60/len(filessc))
