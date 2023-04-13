@@ -1,7 +1,7 @@
 import re
 
-ABSOLUTE_ADDRESS_RE = r'$[0-9a-f]+: (([0-9a-f]){2} )+[ ]+'
-ABSOLUTE_FUNC_ADDRE = r'$[0-9a-f]+ <'
+ABSOLUTE_ADDRESS_RE = r'^[0-9a-f]+: (([0-9a-f]){2} )+[ ]+'
+ABSOLUTE_FUNC_ADDRE = r'(0x)?[0-9a-f]+ <'
 # ABSOLUTE_JMP_RE = re.compile()
 
 def clean_code(content):
@@ -9,10 +9,11 @@ def clean_code(content):
     lines = content.split('\n')
 
     result = ""
-    for l in lines:
+    for l in lines[2:]:
         # Remove absolute address in the start of the line
         r = re.sub(ABSOLUTE_ADDRESS_RE, '', l)
-        r = re.sub(ABSOLUTE_FUNC_ADDRE, '', r)
+        r = re.sub(ABSOLUTE_FUNC_ADDRE, '<', r)
+        # print(r)
         result += r + "\n"
 
     return result
