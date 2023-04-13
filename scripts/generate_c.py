@@ -27,7 +27,8 @@ def extract_substitution_from_file(file):
 def parse_response(resp):
     text = resp['choices'][0]['message']['content']
 
-    parsed = text.replace('\\"', '"').replace('```c', '').replace('```','')
+    parsed = text.replace('\\"', '"').replace('```c', '').replace('```C', '').replace('```','')
+
     return parsed
 
 def pipeline(filepath, opt="O0"):
@@ -109,7 +110,7 @@ def synth_substitute(substitute_code, it):
     
 
 def main(args):
-    n = 20
+    n = 100
 
     source_file = os.path.join(WORKSPACE, 'rosetta_codes', 'quicksort.c')
     source = extract_substitution_from_file(source_file)
@@ -120,7 +121,7 @@ def main(args):
     # n = 3
     # language = 'golang'
 
-    for it in range(2, n):
+    for it in range(20, n):
 
         prompt_intro = f'The following code describes an unspecified program.'
 
