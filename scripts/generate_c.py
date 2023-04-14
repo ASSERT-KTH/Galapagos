@@ -7,6 +7,7 @@ import traceback
 import shutil
 import hashlib
 import re 
+import time
 
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
@@ -23,17 +24,17 @@ def parse_response(resp):
 
     return parsed
 
-def pipeline(filepath, opt="O0"):
+def pipeline(filepath, opt="O0", original_folder = ""):
     filename = os.path.basename(filepath)
-    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", "compiled")):
-        os.mkdir(os.path.join(WORKSPACE, "rosetta_codes", "compiled"))
+    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled")):
+        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled"))
     
 
-    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", "compiled", "objdump")):
-        os.mkdir(os.path.join(WORKSPACE, "rosetta_codes", "compiled", "objdump"))
+    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes",original_folder, "compiled", "objdump")):
+        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes",original_folder, "compiled", "objdump"))
 
-    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", "error")):
-        os.mkdir(os.path.join(WORKSPACE, "rosetta_codes", "error"))
+    if not os.path.exists(os.path.join(WORKSPACE, original_folder, "rosetta_codes", "error")):
+        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "error"))
 
     cmd = [
         "clang",
@@ -41,7 +42,7 @@ def pipeline(filepath, opt="O0"):
         f"-{opt}",
         # TODO add here the optimization flags
         "-o",
-        os.path.join(WORKSPACE, f'./rosetta_codes/compiled/{filename}.{opt}.o')
+        os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/{filename}.{opt}.o')
     ]
 
 
@@ -53,7 +54,7 @@ def pipeline(filepath, opt="O0"):
         objcmd = [
             "objdump",
             "-d",
-            os.path.join(WORKSPACE, f'./rosetta_codes/compiled/{filename}.{opt}.o')
+            os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/{filename}.{opt}.o')
         ]
 
 
@@ -63,7 +64,7 @@ def pipeline(filepath, opt="O0"):
         # print(objdump)
         clean = distance_utils.clean_code(objdump)
 
-        with open(os.path.join(WORKSPACE, "rosetta_codes", "compiled", "objdump", f"{filename}.{opt}.objdump"), 'w') as new_file:
+        with open(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled", "objdump", f"{filename}.{opt}.objdump"), 'w') as new_file:
             hsh = hashlib.sha256(clean.encode('utf-8')).hexdigest()
             print(filename, hsh)
             # TODO remove from here
@@ -73,14 +74,18 @@ def pipeline(filepath, opt="O0"):
             return (filename, hsh, hshsource)
     except Exception as e:
         # move to error folder
-        shutil.copy(os.path.join(WORKSPACE, filepath), os.path.join(WORKSPACE, f'./rosetta_codes/error/{filename}'))
+        shutil.copy(os.path.join(WORKSPACE, filepath), os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/error/{filename}'))
 
-        with open(os.path.join(WORKSPACE, "rosetta_codes", "error", f"{filename}.{opt}.error.txt"), 'w') as new_file:
+        with open(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "error", f"{filename}.{opt}.error.txt"), 'w') as new_file:
             new_file.write(f"{e}\n{traceback.format_exc()}")
         return (filename, None, None)
 
-def synth_substitute(filename, substitute_code, it):
-    with open(os.path.join(WORKSPACE, f'./rosetta_codes/{filename}'), 'w') as new_file:
+def synth_substitute(original, filename, substitute_code, it):
+    # Create a folder names as the original for better structure
+    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original)):
+        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original))
+
+    with open(os.path.join(WORKSPACE, f'./rosetta_codes/{original}/{filename}'), 'w') as new_file:
         new_file.write(substitute_code)
 
 def main(args):
@@ -108,24 +113,34 @@ def main(args):
         code = extract_source(f'{source_files_prefix}.c')
         # nl_description = extract_NL(f'{source_file}.md')
     
-
+        print(f"Taking original program {program}")
         for pit, prompt_tuple in enumerate(zip(prompt_intros, prompt_instructions)):
 
             prompt = '\n'.join([prompt_tuple[0], code, prompt_tuple[1], shared_remarks])
+            it = 0
+            while it < n:
+                
+                try:
+                    sys.stdout.write(f'\rGenerating variant for {program} with prompt {pit} and iteration {it}/{n - 1}')
+                    response = openai.ChatCompletion.create(
+                        model="gpt-4",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=1,
+                        # max_tokens=7
+                    )
 
-            for it in range(n):
-
-                response = openai.ChatCompletion.create(
-                    model="gpt-4",
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=1,
-                    # max_tokens=7
-                )
-
-                parsed = parse_response(response)
-                new_filename = f'{program}.p{pit}.v{it}.c'
-                synth_substitute(new_filename, parsed, it)
-
+                    parsed = parse_response(response)
+                    new_filename = f'{program}.p{pit}.v{it}.c'
+                    synth_substitute(program, new_filename, parsed, it)
+                    sys.stdout.write(f'\rGenerated variant for {program} with prompt {pit} and iteration {it}/{n - 1}')
+                    it += 1
+                except KeyboardInterrupt:
+                    break
+                except Exception as e:
+                    print(e)
+                    print("Trying again in 5 mins")
+                    # Sleep for 5 minutes
+                    time.sleep(300)
 
 if __name__ == "__main__":
 
