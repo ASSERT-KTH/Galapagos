@@ -91,8 +91,8 @@ def synth_substitute(original, filename, substitute_code, it):
 def main(args):
 
     openai.api_key = open(os.path.join(DIRNAME, ".API_TOKEN")).read().strip()
-    programs = ['quicksort', 'md5' ]
-    n = 3
+    programs = ['quicksort', 'md5', 'lcs', 'sudoku', 'canny' ]
+    n = 100
 
     prompt_intros = [
         'The following code describes an unspecified program.',
@@ -113,7 +113,7 @@ def main(args):
         code = extract_source(f'{source_files_prefix}.c')
         # nl_description = extract_NL(f'{source_file}.md')
     
-        print(f"Taking original program {program}")
+        print(f"\nTaking original program {program}")
         for pit, prompt_tuple in enumerate(zip(prompt_intros, prompt_instructions)):
 
             prompt = '\n'.join([prompt_tuple[0], code, prompt_tuple[1], shared_remarks])
