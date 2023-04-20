@@ -1,0 +1,3 @@
+[submodule "scripts/verifier/alive"]
+	path = scripts/verifier/alive
+	url = https://github.com/AliveToolkit/alive2.git

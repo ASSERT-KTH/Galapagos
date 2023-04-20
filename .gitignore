@@ -1,3 +1,4 @@
 chatgptsw
 *.o
 .API_TOKEN
+__pycache__
