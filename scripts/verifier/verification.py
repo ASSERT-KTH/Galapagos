@@ -125,7 +125,12 @@ class AliveVerifier(Verifier):
         alive_output = alive_output.decode('utf-8')
         # Parse the alive output
 
-        logging.debug(f'Alive output: {alive_output}')
+        if self.debug:
+            # Save the output of alive to a file in the debug folder
+            alive_output_file = os.path.join(DEBUG_FOLDER, f'{name1}_{name2}.alive_output.txt')
+            logging.debug(f"Saving alive output to {alive_output_file}")
+            with open(alive_output_file, 'w') as f:
+                f.write(alive_output)
         return self._parse_result(alive_output)
 
     

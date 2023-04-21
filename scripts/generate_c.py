@@ -8,6 +8,7 @@ import shutil
 import hashlib
 import re 
 import time
+import verifier
 
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
@@ -24,17 +25,25 @@ def parse_response(resp):
 
     return parsed
 
-def pipeline(filepath, opt="O0", original_folder = ""):
+'''
+    Compiles the source code with a passed optimization level
+    Returns a tuple: (filename, source code hash, machine code hash, llvm IR file)
+'''
+def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = False):
     filename = os.path.basename(filepath)
     if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled")):
         os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled"))
     
+    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled", "llvm")):
+        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled", "llvm"))
 
     if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes",original_folder, "compiled", "objdump")):
         os.makedirs(os.path.join(WORKSPACE, "rosetta_codes",original_folder, "compiled", "objdump"))
 
     if not os.path.exists(os.path.join(WORKSPACE, original_folder, "rosetta_codes", "error")):
         os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "error"))
+
+
 
     cmd = [
         "clang",
@@ -49,8 +58,20 @@ def pipeline(filepath, opt="O0", original_folder = ""):
     # try to compile
     try:
         subprocess.run(cmd, check=True)
-        # If it compiles, then we can objdump
+        # If it compiles, then generate the LLVM IR for verification
+        if generate_llvm_ir:
+            cmd = [
+            "clang",
+                f"-{opt}",
+                "-emit-llvm",
+                "-S",
+                os.path.join(WORKSPACE, filepath),
+                "-o",
+                os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/llvm/{filename}.{opt}.ll')
+            ]
 
+            subprocess.check_output(cmd)
+        # If it compiles, then we can objdump
         objcmd = [
             "objdump",
             "-d",
@@ -71,14 +92,14 @@ def pipeline(filepath, opt="O0", original_folder = ""):
             filesource = open(os.path.join(WORKSPACE, filepath), 'r').read()
             hshsource = hashlib.sha256(filesource.encode('utf-8')).hexdigest()
             new_file.write(clean)
-            return (filename, hsh, hshsource)
+            return (filename, hsh, hshsource, os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/llvm/{filename}.{opt}.ll') if generate_llvm_ir else None)
     except Exception as e:
         # move to error folder
         shutil.copy(os.path.join(WORKSPACE, filepath), os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/error/{filename}'))
 
         with open(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "error", f"{filename}.{opt}.error.txt"), 'w') as new_file:
             new_file.write(f"{e}\n{traceback.format_exc()}")
-        return (filename, None, None)
+        return (filename, None, None, None)
 
 def synth_substitute(original, filename, substitute_code, it):
     # Create a folder names as the original for better structure
