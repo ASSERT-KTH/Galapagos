@@ -141,4 +141,4 @@ if __name__ == "__main__":
     assert r.is_ok()
     # The one below should fail
     r = v.verify(code1, code3)
-    assert r.is_ok()
+    assert r.is_incorrect()
