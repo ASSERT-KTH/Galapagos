@@ -29,7 +29,7 @@ def parse_response(resp):
     Compiles the source code with a passed optimization level
     Returns a tuple: (filename, source code hash, machine code hash, llvm IR file)
 '''
-def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = False):
+def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = False, skip_if_exist = True):
     filename = os.path.basename(filepath)
     if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled")):
         os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original_folder, "compiled"))
@@ -57,7 +57,8 @@ def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = F
 
     # try to compile
     try:
-        subprocess.run(cmd, check=True)
+        if skip_if_exist and not os.path.exists(os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/{filename}.{opt}.o')):
+            subprocess.run(cmd, check=True)
         # If it compiles, then generate the LLVM IR for verification
         if generate_llvm_ir:
             cmd = [
@@ -69,8 +70,9 @@ def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = F
                 "-o",
                 os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/llvm/{filename}.{opt}.ll')
             ]
+            if skip_if_exist and not os.path.exists(os.path.join(WORKSPACE, f'./rosetta_codes/{original_folder}/compiled/llvm/{filename}.{opt}.ll')):
 
-            subprocess.check_output(cmd)
+                subprocess.check_output(cmd)
         # If it compiles, then we can objdump
         objcmd = [
             "objdump",
@@ -112,7 +114,7 @@ def synth_substitute(original, filename, substitute_code, it):
 def main(args):
 
     openai.api_key = open(os.path.join(DIRNAME, ".API_TOKEN")).read().strip()
-    programs = ['quicksort', 'md5', 'lcs', 'sudoku', 'canny' ]
+    programs = ['quicksort']
     n = 100
 
     prompt_intros = [
@@ -130,7 +132,7 @@ def main(args):
         'Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant. Do not output any other text apart from the code.'
     ]
 
-    shared_remarks = 'Do not output any other text apart from the code.'
+    shared_remarks = 'Do not output any other text apart from the code. Maintain the initial name of the functions.'
 
     for program in programs:
         source_files_prefix = os.path.join(WORKSPACE, 'rosetta_codes', program)
