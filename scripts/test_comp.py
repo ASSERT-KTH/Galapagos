@@ -9,14 +9,14 @@ if __name__ == '__main__':
     # Do the pipeline with the original
 
     # for epoch in range(1, 2):
-    filessc = os.listdir(os.path.join(WORKSPACE, "rosetta_codes", "md5"))
-    filessc = [ f for f in filessc if ".v" in f ] + [ "md5.c" ] # Adding the original as well
+    filessc = os.listdir(os.path.join(WORKSPACE, "rosetta_codes", "quicksort"))
+    filessc = [ f for f in filessc if ".v" in f ] + [ "quicksort.c" ] # Adding the original as well
     original_llvm = None
 
     alive_verifier = verifier.AliveVerifier(debug=True)
 
     reportfile = open(os.path.join(WORKSPACE, f"rosetta_codes/compiled/report.csv"), 'w')
-    reportfile.write("Total files, Opt level, Unique SC, Unique MC, Compiled, Unique SC%, Unique MC%, SVerified count\n")
+    reportfile.write("Total files, Opt level, Unique SC, Unique MC, Compiled, Unique MC%, Unique SC%, SVerified count\n")
 
     reportfile_verification = open(os.path.join(WORKSPACE, f"rosetta_codes/compiled/verification.csv"), 'w')
     reportfile_verification.write("File, Verified\n")
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         SUCCESS_VERIFICATION = 0
         
         for f in filessc:
-            filepath = os.path.join(WORKSPACE, "rosetta_codes", "md5", f)
+            filepath = os.path.join(WORKSPACE, "rosetta_codes", "quicksort", f)
             f , hsh, hshsource, llvm_ir_filename = llvm_pipeline(filepath, opt, generate_llvm_ir=True)
             
             equivalent = False
@@ -75,7 +75,7 @@ if __name__ == '__main__':
             reportfile_verification.write(f"{f}, {equivalent}\n")
 
         reportfile = open(os.path.join(WORKSPACE, f"rosetta_codes/compiled/report.csv"), 'a')
-        reportfile.write(f"{len(filessc)}, {opt},{len(hashes_source)},{len(hashes_target)}, {COUNT}, {100*len(hashes_target)/COUNT}%, {100*len(filessc)/COUNT}%, {SUCCESS_VERIFICATION}\n")
+        reportfile.write(f"{len(filessc)}, {opt},{len(hashes_source)},{len(hashes_target)}, {COUNT}, {100*len(hashes_target)/COUNT}%, {100*len(hash_per_filesc)/COUNT}%, {SUCCESS_VERIFICATION}\n")
 
         print(opt, len(hashes_source), len(hashes_target), f"{100*len(hashes_target)/COUNT}%", COUNT)
 
