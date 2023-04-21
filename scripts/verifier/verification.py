@@ -54,7 +54,8 @@ class AliveVerifier(Verifier):
             Returns true if the verification was successful
         '''
         def is_ok(self):
-            return self.result['correct transformations'] > 0
+            # Is ok if all passed and no errors
+            return self.result['correct transformations'] > 0 and self.result['incorrect transformations'] == 0 and self.result['failed-to-prove transformations'] == 0 and self.result['Alive2 errors'] == 0
         
         '''
             Returns true if the verification failed
