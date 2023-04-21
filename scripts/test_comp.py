@@ -9,8 +9,8 @@ if __name__ == '__main__':
     # Do the pipeline with the original
 
     # for epoch in range(1, 2):
-    filessc = os.listdir(os.path.join(WORKSPACE, "rosetta_codes", "quicksort"))
-    filessc = [ f for f in filessc if ".v" in f ] + [ "quicksort.c" ] # Adding the original as well
+    filessc = os.listdir(os.path.join(WORKSPACE, "rosetta_codes", "md5"))
+    filessc = [ f for f in filessc if ".v" in f ] + [ "md5.c" ] # Adding the original as well
     original_llvm = None
 
     alive_verifier = verifier.AliveVerifier(debug=True)
@@ -32,11 +32,11 @@ if __name__ == '__main__':
         hash_per_filesc = {
 
         }
-        COUNT = 1
+        COUNT = 0
         SUCCESS_VERIFICATION = 0
         
         for f in filessc:
-            filepath = os.path.join(WORKSPACE, "rosetta_codes", "quicksort", f)
+            filepath = os.path.join(WORKSPACE, "rosetta_codes", "md5", f)
             f , hsh, hshsource, llvm_ir_filename = llvm_pipeline(filepath, opt, generate_llvm_ir=True)
             
             equivalent = False
@@ -50,7 +50,7 @@ if __name__ == '__main__':
                 verification_result = alive_verifier.verify(f1, f2)
 
                 print(f"Verified {verification_result}")
-                if verification_result.is_ok():
+                if verification_result and verification_result.is_ok():
                     SUCCESS_VERIFICATION += 1
                     equivalent = True
 

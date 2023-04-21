@@ -121,8 +121,12 @@ class AliveVerifier(Verifier):
         # if debug enabled save the output of alive to a file in the debug folder
 
         logging.info(f'Alive verifier for: {tmp1.name} {tmp2.name}')
-        alive_output = subprocess.check_output([self.alive_tv_bin, tmp1.name, tmp2.name])
-        alive_output = alive_output.decode('utf-8')
+        try:
+            alive_output = subprocess.check_output([self.alive_tv_bin, tmp1.name, tmp2.name])
+            alive_output = alive_output.decode('utf-8')
+        except Exception as e:
+            logging.error(f"Error running alive: {e}")
+            return None
         # Parse the alive output
 
         if self.debug:
