@@ -33,6 +33,9 @@ class AliveVerifier(Verifier):
             # regular expression to extract success/fail information
             # Ex: '0 correct transformations'
             self.alive_summary_output_regex = re.compile(r'((\d+) ((correct|incorrect|failed-to-prove) transformations|(Alive2 errors)))')
+            self.alive_error_regex = re.compile(r'ERROR: (.+?)')
+            self.error = None
+            
             self._create_from_output()
 
 
@@ -46,6 +49,9 @@ class AliveVerifier(Verifier):
                     type = matches[0][2]
                     logging.info(f"Result matching {count} {type}")
                     self.result[type] = count
+                matches = self.alive_error_regex.findall(l)
+                if len(matches) > 0:
+                    self.error = l
             # TODO parse the counter examples if errors
             logging.info(f"{self.result}")
             self.result
@@ -133,6 +139,7 @@ class AliveVerifier(Verifier):
             # Save the output of alive to a file in the debug folder
             alive_output_file = os.path.join(DEBUG_FOLDER, f'{name1}_{name2}.alive_output.txt')
             logging.debug(f"Saving alive output to {alive_output_file}")
+            # TODO Separate per into folders for better searching of errors
             with open(alive_output_file, 'w') as f:
                 f.write(alive_output)
         return self._parse_result(alive_output)
