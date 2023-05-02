@@ -117,6 +117,9 @@ def main(args):
     programs = ['quicksort']
     n = 100
 
+    force_no_helpers = True
+    force_same_signature = True
+
     prompt_intros = [
         'The following code describes an unspecified program.',
         'I have the C code implementation in the following text'
@@ -133,6 +136,12 @@ def main(args):
     ]
 
     shared_remarks = 'Do not output any other text apart from the code.'
+
+    if force_no_helpers:
+        shared_remarks += " Do not create auxiliary nor helper functions."
+    if force_same_signature:
+        shared_remarks += " Maintain the functions signature."
+
 
     for program in programs:
         source_files_prefix = os.path.join(WORKSPACE, 'rosetta_codes', program)
