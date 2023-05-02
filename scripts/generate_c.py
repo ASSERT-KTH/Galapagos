@@ -132,7 +132,7 @@ def main(args):
         'Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant. Do not output any other text apart from the code.'
     ]
 
-    shared_remarks = 'Do not output any other text apart from the code. Maintain the initial name of the functions.'
+    shared_remarks = 'Do not output any other text apart from the code.'
 
     for program in programs:
         source_files_prefix = os.path.join(WORKSPACE, 'rosetta_codes', program)
