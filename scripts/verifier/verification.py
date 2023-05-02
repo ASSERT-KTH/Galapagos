@@ -99,13 +99,25 @@ class AliveVerifier(Verifier):
     '''
         Receives two files and run the alive verification over them. Files should be LLVM IR codes.
         entrypoint: if not None, then the verifier will extract the function with the given name from both files.
+        timeout: timeout in seconds for the verification process. Default 10000
     '''
-    def verify(self, code1, code2, entrypoint=None):
+    def verify(self, code1, code2, entrypoint=None, timeout=60, alive_flags=[]):
+
+        # if debug enable copy the content of the temporary files to the debug folder
+        # create the debug folder if it does not exist
+        if not os.path.exists(DEBUG_FOLDER):
+            logging.debug("Creating debug folder")
+            os.makedirs(DEBUG_FOLDER, exist_ok=True)
+
         if entrypoint:
+            # TODO this can be managed with alive itself
+            # --func=<function name> , --src-fn=<string> , --tgt-fn=<string>, --tgt-unroll=<uint>
             # Extract entrypoint function and call verification again
 
-            tmp1 = tempfile.NamedTemporaryFile(prefix=os.path.basename(code1.name), suffix=f".{entrypoint}", delete=False)
-            tmp2 = tempfile.NamedTemporaryFile(prefix=os.path.basename(code2.name), suffix=f".{entrypoint}", delete=False)
+            tmp1 = f"{DEBUG_FOLDER}/{os.path.basename(code1.name)}.{entrypoint}.ll"
+            tmp1 = open(tmp1, "wb")
+            tmp2 = f"{DEBUG_FOLDER}/{os.path.basename(code2.name)}.{entrypoint}.ll"
+            tmp2 = open(tmp2, "wb")
 
             logging.info(f"Extracting function {entrypoint} from {code1.name} and {code2.name}")
             cmd1 = [self.extract_bin, '-func', entrypoint, code1.name, '-S', '-o', tmp1.name]
@@ -132,11 +144,6 @@ class AliveVerifier(Verifier):
         shutil.copyfile(code2.name, tmp2.name)
         
         if self.debug:
-            # if debug enable copy the content of the temporary files to the debug folder
-            # create the debug folder if it does not exist
-            if not os.path.exists(DEBUG_FOLDER):
-                logging.debug("Creating debug folder")
-                os.makedirs(DEBUG_FOLDER, exist_ok=True)
             # just copy the files
             logging.debug(f"Copying {tmp1.name} and {tmp2.name} to debug folder")
             name1 = os.path.basename(code1.name)
@@ -150,7 +157,7 @@ class AliveVerifier(Verifier):
         
 
         try:
-            alive_output = subprocess.check_output([self.alive_tv_bin, tmp1.name, tmp2.name])
+            alive_output = subprocess.check_output([self.alive_tv_bin, "--smt-to", f"{timeout}", *alive_flags, tmp1.name, tmp2.name])
             alive_output = alive_output.decode('utf-8')
         except Exception as e:
             logging.error(f"Error running alive: {e}")
@@ -159,7 +166,11 @@ class AliveVerifier(Verifier):
 
         if self.debug:
             # Save the output of alive to a file in the debug folder
-            alive_output_file = os.path.join(DEBUG_FOLDER, f'{name1}_{name2}.alive_output.txt')
+
+            if not os.path.exists(os.path.join(DEBUG_FOLDER, f"{name1}cmp")):
+                os.makedirs(os.path.join(DEBUG_FOLDER, f"{name1}cmp"), exist_ok=True)
+
+            alive_output_file = os.path.join(DEBUG_FOLDER, f"{name1}cmp", f'{name2}.alive.txt')
             logging.debug(f"Saving alive output to {alive_output_file}")
             # TODO Separate per into folders for better searching of errors
             with open(alive_output_file, 'w') as f:

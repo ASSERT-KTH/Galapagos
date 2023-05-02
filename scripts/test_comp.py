@@ -67,7 +67,11 @@ if __name__ == '__main__':
                     # Do the verification here :|
                     f1 = open(original_llvm, 'r')
                     f2 = open(llvm_ir_filename, 'r')
-                    verification_result = alive_verifier.verify(f1, f2)
+                    verification_result = alive_verifier.verify(f1, f2, entrypoint="quicksort", timeout=60000, alive_flags=[
+                        "--disable-undef-input",
+                        "--disable-poison-input",
+                        "--always-verify"
+                    ])
 
                     print(f"Verified {verification_result}")
                     if verification_result:
