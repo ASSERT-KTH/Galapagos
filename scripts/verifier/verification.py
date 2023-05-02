@@ -56,6 +56,16 @@ class AliveVerifier(Verifier):
             logging.info(f"{self.result}")
             self.result
 
+
+
+        '''
+            Returns true if all verification values are zero. This probably means that alive could not find the target function due to renaming.
+        '''
+        def is_empty(self):
+            # Is ok if all passed and no errors
+            return self.result['correct transformations'] == 0 and self.result['incorrect transformations'] == 0 and self.result['failed-to-prove transformations'] == 0 and self.result['Alive2 errors'] == 0
+
+
         '''
             Returns true if the verification was successful
         '''
@@ -109,27 +119,15 @@ class AliveVerifier(Verifier):
             logging.debug("Creating debug folder")
             os.makedirs(DEBUG_FOLDER, exist_ok=True)
 
+
         if entrypoint:
-            # TODO this can be managed with alive itself
+            # This can be managed with alive itself
             # --func=<function name> , --src-fn=<string> , --tgt-fn=<string>, --tgt-unroll=<uint>
             # Extract entrypoint function and call verification again
+            alive_flags.append(f"--src-fn={entrypoint}")
+            alive_flags.append(f"--tgt-fn={entrypoint}")
+            alive_flags.append(f"--func={entrypoint}")
 
-            tmp1 = f"{DEBUG_FOLDER}/{os.path.basename(code1.name)}.{entrypoint}.ll"
-            tmp1 = open(tmp1, "wb")
-            tmp2 = f"{DEBUG_FOLDER}/{os.path.basename(code2.name)}.{entrypoint}.ll"
-            tmp2 = open(tmp2, "wb")
-
-            logging.info(f"Extracting function {entrypoint} from {code1.name} and {code2.name}")
-            cmd1 = [self.extract_bin, '-func', entrypoint, code1.name, '-S', '-o', tmp1.name]
-            cmd2 = [self.extract_bin, '-func', entrypoint, code2.name, '-S', '-o', tmp2.name]
-            try:
-                subprocess.check_output(cmd1)
-                subprocess.check_output(cmd2)
-                # Call this time without entrypoint
-                return self.verify(tmp1, tmp2)
-            except Exception as e:
-                print(e)
-                return None
             
         # TODO check if codes are LLVM IR or LLVM bitcode
         # If bitcode, then do the function extractions
@@ -157,6 +155,7 @@ class AliveVerifier(Verifier):
         
 
         try:
+            logging.info(f"Alive flags {alive_flags}")
             alive_output = subprocess.check_output([self.alive_tv_bin, "--smt-to", f"{timeout}", *alive_flags, tmp1.name, tmp2.name])
             alive_output = alive_output.decode('utf-8')
         except Exception as e:
@@ -164,18 +163,33 @@ class AliveVerifier(Verifier):
             return None
         # Parse the alive output
 
+        r = self._parse_result(alive_output)
+        if r.is_empty():
+            logging.warning(f"Verify the entrypoint '{entrypoint}' for {name2}. Alive did not find any transformation")
         if self.debug:
             # Save the output of alive to a file in the debug folder
+            dst = "Ok"
 
-            if not os.path.exists(os.path.join(DEBUG_FOLDER, f"{name1}cmp")):
-                os.makedirs(os.path.join(DEBUG_FOLDER, f"{name1}cmp"), exist_ok=True)
+            if r.is_empty():
+                dst = "Empty"
+            elif r.alive_failed():
+                dst = "AliveFailed"
+            elif r.failed_to_prove():
+             dst = "FailedToProve"
+            elif r.is_incorrect():
+                dst = "Incorrect"
 
-            alive_output_file = os.path.join(DEBUG_FOLDER, f"{name1}cmp", f'{name2}.alive.txt')
+            if not os.path.exists(os.path.join(DEBUG_FOLDER, f"{name1}cmp", dst)):
+                os.makedirs(os.path.join(DEBUG_FOLDER, f"{name1}cmp", dst), exist_ok=True)
+
+            alive_output_file = os.path.join(DEBUG_FOLDER, f"{name1}cmp", dst, f'{name2}.alive.txt')
             logging.debug(f"Saving alive output to {alive_output_file}")
+
             # TODO Separate per into folders for better searching of errors
             with open(alive_output_file, 'w') as f:
                 f.write(alive_output)
-        return self._parse_result(alive_output)
+
+        return r
 
     
 if __name__ == "__main__":

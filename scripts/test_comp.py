@@ -70,7 +70,8 @@ if __name__ == '__main__':
                     verification_result = alive_verifier.verify(f1, f2, entrypoint="quicksort", timeout=60000, alive_flags=[
                         "--disable-undef-input",
                         "--disable-poison-input",
-                        "--always-verify"
+                        "--always-verify",
+                        "--dbg"
                     ])
 
                     print(f"Verified {verification_result}")
