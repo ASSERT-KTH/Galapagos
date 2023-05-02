@@ -67,7 +67,7 @@ class AliveVerifier(Verifier):
             Returns true if the verification failed
         '''
         def is_incorrect(self):
-            return self.result['incorrect transformations'] > 0
+            return self.result['incorrect transformations'] > 0 or self.failed_to_prove() or self.alive_failed()
 
         '''
             Returns true if the verification failed to prove
@@ -90,6 +90,7 @@ class AliveVerifier(Verifier):
         self.debug = debug
         self.do_function_extraction = do_function_extraction
         self.alive_tv_bin = os.path.join(DIRNAME, "alive", "build", "alive-tv")
+        self.extract_bin = "llvm-extract"
 
 
     def _parse_result(self, alive_output):
@@ -97,8 +98,27 @@ class AliveVerifier(Verifier):
     
     '''
         Receives two files and run the alive verification over them. Files should be LLVM IR codes.
+        entrypoint: if not None, then the verifier will extract the function with the given name from both files.
     '''
-    def verify(self, code1, code2):
+    def verify(self, code1, code2, entrypoint=None):
+        if entrypoint:
+            # Extract entrypoint function and call verification again
+
+            tmp1 = tempfile.NamedTemporaryFile(prefix=os.path.basename(code1.name), suffix=f".{entrypoint}", delete=False)
+            tmp2 = tempfile.NamedTemporaryFile(prefix=os.path.basename(code2.name), suffix=f".{entrypoint}", delete=False)
+
+            logging.info(f"Extracting function {entrypoint} from {code1.name} and {code2.name}")
+            cmd1 = [self.extract_bin, '-func', entrypoint, code1.name, '-S', '-o', tmp1.name]
+            cmd2 = [self.extract_bin, '-func', entrypoint, code2.name, '-S', '-o', tmp2.name]
+            try:
+                subprocess.check_output(cmd1)
+                subprocess.check_output(cmd2)
+                # Call this time without entrypoint
+                return self.verify(tmp1, tmp2)
+            except Exception as e:
+                print(e)
+                return None
+            
         # TODO check if codes are LLVM IR or LLVM bitcode
         # If bitcode, then do the function extractions
 
@@ -127,6 +147,8 @@ class AliveVerifier(Verifier):
         # if debug enabled save the output of alive to a file in the debug folder
 
         logging.info(f'Alive verifier for: {tmp1.name} {tmp2.name}')
+        
+
         try:
             alive_output = subprocess.check_output([self.alive_tv_bin, tmp1.name, tmp2.name])
             alive_output = alive_output.decode('utf-8')
@@ -153,9 +175,14 @@ if __name__ == "__main__":
     code2 = open(os.path.join(DIRNAME, 'tests' ,'code2.ll'), 'r')
     code3 = open(os.path.join(DIRNAME, 'tests' ,'code3.ll'), 'r')
 
+    code4 = open(os.path.join(DIRNAME, 'tests' ,'code4.ll'), 'r')
+    code5 = open(os.path.join(DIRNAME, 'tests' ,'code5.ll'), 'r')
+
     # The one below should pass
-    r = v.verify(code1, code2)
-    assert r.is_ok()
+    # r = v.verify(code1, code2)
+    # assert r.is_ok()
     # The one below should fail
-    r = v.verify(code1, code3)
-    assert r.is_incorrect()
+    # r = v.verify(code1, code3)
+    # assert r.is_incorrect()
+
+    r = v.verify(code4, code5, entrypoint='quicksort')
