@@ -4,3 +4,6 @@
 [submodule "scripts/verifier/llvm"]
 	path = scripts/verifier/llvm
 	url = git@github.com:llvm/llvm-project.git
+[submodule "use_cases/openssl"]
+	path = use_cases/openssl
+	url = https://github.com/openssl/openssl.git
