@@ -1,0 +1,6 @@
+[submodule "scripts/verifier/alive"]
+	path = scripts/verifier/alive
+	url = https://github.com/Jacarte/alive2
+[submodule "scripts/verifier/llvm"]
+	path = scripts/verifier/llvm
+	url = git@github.com:llvm/llvm-project.git

@@ -1,3 +1,7 @@
 chatgptsw
 *.o
 .API_TOKEN
+__pycache__
+rosetta_codes
+rosetta_codes_bck1
+debug
