@@ -4,7 +4,7 @@ import subprocess
 import tempfile
 import logging
 import re
-
+import asyncio
 import logging
 
 class CustomFormatter(logging.Formatter):
@@ -35,7 +35,7 @@ DEBUG_FOLDER = os.path.join(DIRNAME, 'debug')
 '''
     Returns the Levenshtein distance between two strings
 '''
-def levenshtein_distance(s1, s2):
+async def levenshtein_distance(s1, s2):
     if len(s1) > len(s2):
         s1, s2 = s2, s1
 
@@ -204,6 +204,12 @@ class AliveVerifier(Verifier):
         src_fn: if not None, then the verifier will extract the function with the given name in the original file
     '''
     def verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
+        r = asyncio.run(self.async_verify(code1, code2, entrypoint, target_fn, src_fn, timeout, alive_flags, estimate_target_fn))
+
+    '''
+        The same of verify but async
+    '''
+    async def async_verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
 
         # if debug enable copy the content of the temporary files to the debug folder
         # create the debug folder if it does not exist
@@ -279,14 +285,15 @@ class AliveVerifier(Verifier):
                 functions = extract_all_defined_functions(code2, debug=self.debug)
                 # get the levensthein distances
                 # TODO going parallel
-                distances = [levenshtein_distance(entrypoint, f) for f in functions]
+                distances = [asyncio.create_task(levenshtein_distance(entrypoint, f)) for f in functions]
+                distances = [await d for d in distances]
                 # get the index of the minimum distance
                 min_index = distances.index(min(distances))
                 # get the function name
                 target_fn = functions[min_index]
                 logging.warning(f"Using {target_fn} as target function.")
                 
-                return self.verify(code1, code2, entrypoint=entrypoint, src_fn=entrypoint, target_fn=target_fn, timeout=timeout, alive_flags=alive_flags, estimate_target_fn=False)
+                return await self.async_verify(code1, code2, entrypoint=entrypoint, src_fn=entrypoint, target_fn=target_fn, timeout=timeout, alive_flags=alive_flags, estimate_target_fn=False)
             
         if self.debug:
             # Save the output of alive to a file in the debug folder
