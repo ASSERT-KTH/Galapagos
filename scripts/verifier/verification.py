@@ -5,6 +5,30 @@ import tempfile
 import logging
 import re
 
+import logging
+
+class CustomFormatter(logging.Formatter):
+
+    grey = "\x1b[38;20m"
+    yellow = "\x1b[33;20m"
+    red = "\x1b[31;20m"
+    bold_red = "\x1b[31;1m"
+    reset = "\x1b[0m"
+    format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s (%(filename)s:%(lineno)d)"
+
+    FORMATS = {
+        logging.DEBUG: grey + format + reset,
+        logging.INFO: grey + format + reset,
+        logging.WARNING: yellow + format + reset,
+        logging.ERROR: red + format + reset,
+        logging.CRITICAL: bold_red + format + reset
+    }
+
+    def format(self, record):
+        log_fmt = self.FORMATS.get(record.levelno)
+        formatter = logging.Formatter(log_fmt)
+        return formatter.format(record)
+    
 DIRNAME = os.path.abspath(os.path.dirname(__file__)) 
 DEBUG_FOLDER = os.path.join(DIRNAME, 'debug')
 
@@ -26,17 +50,38 @@ def levenshtein_distance(s1, s2):
         distances = distances_
     return distances[-1]
 
+
+'''
+    Returns all function names defined in the LLVM bitcode file
+'''
+def extract_all_defined_functions_from_bc(code1, llvm_dis="llvm-dis", debug=False):
+    tmp = tempfile.NamedTemporaryFile(delete=False)
+    subprocess.check_output([llvm_dis, "-o", tmp.name, code1.name])
+    return extract_all_defined_functions(open(tmp.name, "r"), debug=debug)
+    
+        
+
 '''
     Returns all function names defined in the LLVM IR file
 '''
-def extract_all_defined_functions(code1):
-    r = re.compile(r"define (.+) @(.+?)\(")
-    llvm_ir = code1.read()
-    function_names= []
-    for m in r.finditer(llvm_ir):
-        function_names.append(m.group(2))
+def extract_all_defined_functions(code1, debug=False):
+    try:
+        r = re.compile(r"define (.+) @(.+?)\(")
+        llvm_ir = code1.read()
+        if debug:
+            logging.debug(f"Extracting functions from {code1.name}")
+            name1 = f"{os.path.basename(code1.name)}.ll"
+            shutil.copy(code1.name, os.path.join(DEBUG_FOLDER, f'{name1}'))
 
-    return function_names
+        function_names= []
+        for m in r.finditer(llvm_ir):
+            function_names.append(m.group(2))
+
+        return function_names
+    except UnicodeDecodeError as e:
+        logging.warning(f"{e}\nInvalid file parsing. Trying to use llvm-dis to convert to text")
+        return extract_all_defined_functions_from_bc(code1, debug=debug)
+
 
 '''
     Abstract verifier class. Each verifier must implement the verify method.
@@ -64,9 +109,23 @@ class AliveVerifier(Verifier):
             # Ex: '0 correct transformations'
             self.alive_summary_output_regex = re.compile(r'((\d+) ((correct|incorrect|failed-to-prove) transformations|(Alive2 errors)))')
             self.alive_error_regex = re.compile(r'ERROR: (.+?)')
-            self.error = None
+            self.errors = []
             
+            import logging
             self._create_from_output()
+
+            # set the formatter
+            logger = logging.getLogger("root")
+            logger.setLevel(logging.DEBUG)
+
+            # create console handler with a higher log level
+            ch = logging.StreamHandler()
+            ch.setLevel(logging.DEBUG)
+
+            ch.setFormatter(CustomFormatter())
+
+            logger.addHandler(ch)
+            logging = logger
 
 
         def _create_from_output(self, ):
@@ -81,7 +140,8 @@ class AliveVerifier(Verifier):
                     self.result[type] = count
                 matches = self.alive_error_regex.findall(l)
                 if len(matches) > 0:
-                    self.error = l
+                    # adding all errors so far
+                    self.errors.append(l)
             # TODO parse the counter examples if errors
             logging.info(f"{self.result}")
             self.result
@@ -131,73 +191,42 @@ class AliveVerifier(Verifier):
         self.do_function_extraction = do_function_extraction
         self.alive_tv_bin = os.path.join(DIRNAME, "alive", "build", "alive-tv")
         self.extract_bin = "llvm-extract"
-
+        self.linker_bin = "llvm-link"
 
     def _parse_result(self, alive_output):
         return AliveVerifier.AliveResult(alive_output)
     
     '''
-        Receives two files and run the alive verification over them. Files should be LLVM IR codes.
+        Receives two files and run the alive verification over them. Files should be LLVM IR codes or bitcodes.
         entrypoint: if not None, then the verifier will extract the function with the given name from both files. If None, the default behavoir of alive2 if to do a pairwise comparison based on the names
         timeout: timeout in seconds for the verification process. Default 10000
+        target_fn: if not None, then the verifier will extract the function with the given name in the variant file (Notice that is based in our "modification" of alive2)
+        src_fn: if not None, then the verifier will extract the function with the given name in the original file
     '''
-    def verify(self, code1, code2, entrypoint=None, target_fn = None, src_fn = None, timeout=60, alive_flags=[], estimate_target_fn = False, solve_diff_names = False):
+    def verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
 
         # if debug enable copy the content of the temporary files to the debug folder
         # create the debug folder if it does not exist
         if not os.path.exists(DEBUG_FOLDER):
             logging.debug("Creating debug folder")
             os.makedirs(DEBUG_FOLDER, exist_ok=True)
-
-        # TODO, move this to alive2 itself. Right now this filter is done by perfect matching between function names. We can do a Lev distance threshold instead.
-        if solve_diff_names:
-            # Do a pairwise comparison of all functions from original and replace the names in the code2 file
-            tmp3 = f"{DEBUG_FOLDER}/{os.path.basename(code2.name)}.renamed.ll"
-            content = open(code2.name, "r").read()
-            tmp3f = open(tmp3, "wb")
-            tmp3f.write(content.encode("utf-8"))
-
-            for f in extract_all_defined_functions(code1):
-                code2 = open(tmp3, 'r')
-
-                logging.info(f"Replacing function {f}")
-                functions_in2 = extract_all_defined_functions(code2)
-                # get the distances
-                distances = [levenshtein_distance(f1, f) for f1 in functions_in2]
-                # get the index of the minimum distance
-                min_index = distances.index(min(distances))
-                # get the function name
-                min_function = functions_in2[min_index]
-                # replace the function name
-                
-                code2 = open(tmp3, 'r')
-                content = code2.read().replace(min_function, f)
-                # print(content)
-
-                tmp3f = open(tmp3, "wb")
-                tmp3f.write(content.encode('utf-8'))
-                tmp3f.close()
-
-
-            tmp3f = open(tmp3, "r")
-            return self.verify(code1, tmp3f, entrypoint, target_fn, src_fn, timeout, alive_flags, estimate_target_fn, False)
+        
         if target_fn is None:
             target_fn = entrypoint
         if src_fn is None:
             src_fn = entrypoint
 
         new_flags = [f for f in alive_flags]
-        if entrypoint:
-            # This can be managed with alive itself
-            # --func=<function name> , --src-fn=<string> , --tgt-fn=<string>, --tgt-unroll=<uint>
-            # Extract entrypoint function and call verification again
-            new_flags.append(f"--src-fn={src_fn}")
-            new_flags.append(f"--func={target_fn}")
-            new_flags.append(f"--func={entrypoint}")
+        # This can be managed with alive itself
+        # --func=<function name> , --src-fn=<string> , --tgt-fn=<string>, --tgt-unroll=<uint>
+        # Extract entrypoint function and call verification again
+        new_flags.append(f"--func={entrypoint}")
+        new_flags.append(f"--src-fn={src_fn}")
+        new_flags.append(f"--tgt-fn={target_fn}")
 
             
         # TODO check if codes are LLVM IR or LLVM bitcode
-        # If bitcode, then do the function extractions
+        # If bitcode, then do the function extractions ?
 
         # create two temporary files
         logging.info(f"Creating temporary files for {code1.name} and {code2.name}")
@@ -215,6 +244,11 @@ class AliveVerifier(Verifier):
             name2 = os.path.basename(code2.name)
             shutil.copy(tmp1.name, os.path.join(DEBUG_FOLDER, f'{name1}'))
             shutil.copy(tmp2.name, os.path.join(DEBUG_FOLDER, f'{name2}'))
+
+            # Just to save the ll
+            if self.debug:
+                extract_all_defined_functions(open(tmp1.name, "r"), debug=True)
+                extract_all_defined_functions(open(tmp2.name, "r"), debug=True)
         # run alive with the two files
         # if debug enabled save the output of alive to a file in the debug folder
 
@@ -227,7 +261,9 @@ class AliveVerifier(Verifier):
             alive_output = subprocess.check_output([self.alive_tv_bin, "--smt-to", f"{timeout}", *new_flags, tmp1.name, tmp2.name])
             alive_output = alive_output.decode('utf-8')
         except Exception as e:
+            cmd = " ".join([self.alive_tv_bin, "--smt-to", f"{timeout}", *new_flags, tmp1.name, tmp2.name])
             logging.error(f"Error running alive: {e}")
+            logging.error(f"Run {cmd}")
             return None
         # Parse the alive output
 
@@ -235,29 +271,22 @@ class AliveVerifier(Verifier):
         if r.is_empty():
             logging.warning(f"Verify the entrypoint '{entrypoint}' for {name2}. Alive did not find any transformation")
 
+            # This can be done because the the function names provide embedding. Thus the variant will maintain it in the end
+            # Yet, lets throw a warning just in case
             if estimate_target_fn:
                 # Estimate the closest function name to the current source function
                 # get all functions from code2
-                functions = extract_all_defined_functions(code2)
+                functions = extract_all_defined_functions(code2, debug=self.debug)
                 # get the levensthein distances
+                # TODO going parallel
                 distances = [levenshtein_distance(entrypoint, f) for f in functions]
                 # get the index of the minimum distance
                 min_index = distances.index(min(distances))
                 # get the function name
                 target_fn = functions[min_index]
-                logging.warning(f"Using {target_fn} as target function. Renaming in the {code2.name} file")
+                logging.warning(f"Using {target_fn} as target function.")
                 
-                # Reopen to set the file pointer
-                code2 = open(code2.name, "r")
-                tmp3 = f"{DEBUG_FOLDER}/{os.path.basename(code2.name)}.renamed.ll"
-                tmp3f = open(tmp3, "wb")
-                content = code2.read().replace(target_fn, entrypoint)
-                tmp3f.write(content.encode('utf-8'))
-                tmp3f.close()
-
-                tmp3f = open(tmp3, "r")
-
-                return self.verify(code1, tmp3f, entrypoint=entrypoint, timeout=timeout, alive_flags=alive_flags, estimate_target_fn=False)
+                return self.verify(code1, code2, entrypoint=entrypoint, src_fn=entrypoint, target_fn=target_fn, timeout=timeout, alive_flags=alive_flags, estimate_target_fn=False)
             
         if self.debug:
             # Save the output of alive to a file in the debug folder
@@ -296,6 +325,10 @@ if __name__ == "__main__":
     code4 = open(os.path.join(DIRNAME, 'tests' ,'code4.ll'), 'r')
     code5 = open(os.path.join(DIRNAME, 'tests' ,'code5.ll'), 'r')
 
+
+    code6 = open(os.path.join(DIRNAME, 'tests' ,'code4.bc'), 'r')
+    code7 = open(os.path.join(DIRNAME, 'tests' ,'code5.bc'), 'r')
+
     # The one below should pass
     # r = v.verify(code1, code2)
     # assert r.is_ok()
@@ -303,4 +336,19 @@ if __name__ == "__main__":
     # r = v.verify(code1, code3)
     # assert r.is_incorrect()
 
-    r = v.verify(code4, code5, entrypoint='quicksort')
+    # r = v.verify(code4, code5, entrypoint='quicksort')
+
+    # v.verify(code6, code7, entrypoint="quicksort", estimate_target_fn=True)
+
+
+    code8 = open(os.path.join(DIRNAME, 'tests' ,'code6.bc'), 'r')
+    code7 = open(os.path.join(DIRNAME, 'tests' ,'code7.bc'), 'r')
+
+    # The one below should pass
+    # r = v.verify(code1, code2)
+    # assert r.is_ok()
+    # The one below should fail
+    # r = v.verify(code1, code3)
+    # assert r.is_incorrect()
+
+    r = v.verify(code7, code8, entrypoint='quicksort')
