@@ -7,6 +7,7 @@ import hashlib
 import shutil
 import subprocess
 import logging
+import os
 
 '''
     Saves the file in the debug folder and returns the hash of the file
@@ -84,7 +85,8 @@ class UseCase(FileSystemEventHandler):
         This is the method to be implemented by the usecase clases to filter for example, bitcodes
     '''
     def on_modified_filtered(self, event, hash):
-        print(f"File modified: {event.src_path} {hash}")
+        pass
+        #print(f"File modified: {event.src_path} {hash}")
 
 
     def on_created(self, event):
@@ -103,7 +105,8 @@ class UseCase(FileSystemEventHandler):
 
     def on_created_filtered(self, event, hash):
         # TODO only if the file did not exist before in the state !
-        print(f"File created: {event.src_path} {hash}")
+        pass
+        # print(f"File created: {event.src_path} {hash}")
 
 
 
@@ -175,14 +178,6 @@ class LLVMCompilableUseCase(UseCase):
 
         raise NotImplementedError()
 
-    def detect_changed_bitcodes(self):
-        raise NotImplementedError()
-
-    def replace_basecode(self):
-        raise NotImplementedError()
-
-    def collect_compiled(self):
-        raise NotImplementedError()
 
 class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
 
@@ -220,6 +215,8 @@ class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
     def change_source_code(self):
         print("Changing source code")
         self.source_code = self.changed_source_code
+
+
 
 
 if __name__ == '__main__':
