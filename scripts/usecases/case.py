@@ -41,16 +41,20 @@ class UseCase(FileSystemEventHandler):
 
 
 
-    async def shadow(self, src):
+    async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
         # Create a folder in tmp
         # Copy the src folder to the tmp folder
         # Return the tmp folder
         # use a random name
 
-        random_name = str(uuid.uuid4())
-        logging.info(f"Copying {src} to /tmp/{random_name}")
+        random_name = str(uuid.uuid4()) if not name else name
+        print(f"Copying {src} to /tmp/{random_name}")
         tmp_folder = os.path.join("/tmp", random_name)
+        # if the folder exist, prevent the copy
+        if os.path.exists(tmp_folder):
+            return tmp_folder
+
         shutil.copytree(src, tmp_folder, symlinks=False, ignore=None, copy_function=shutil.copy, ignore_dangling_symlinks=False)
         os.sync()
         return tmp_folder
@@ -169,11 +173,13 @@ if __name__ == '__main__':
 
     async def mm():
 
-        shadow1 = await uc.shadow(TEST_LIB)
-        shadow2 = await uc.shadow(TEST_LIB)
+        shadow1 = asyncio.create_task(uc.shadow(TEST_LIB))
+        shadow2 = asyncio.create_task(uc.shadow(TEST_LIB))
 
 
+        shadow1 = await shadow1
         t1 = asyncio.create_task(uc.compile(shadow1, uc.initial_source_code))
+        shadow2 = await shadow2
         t2 = asyncio.create_task(uc.compile(shadow2, uc.changed_source_code))
         # changed_cource_code -> changed_compilable
         await t2
