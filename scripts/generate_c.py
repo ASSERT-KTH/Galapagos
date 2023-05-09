@@ -122,17 +122,10 @@ def main(args):
 
     prompt_intros = [
         'The following code describes an unspecified program.',
-        'I have the C code implementation in the following text'
     ]
     
     prompt_instructions = [
-        'create a substitute implementation of the program, which is different but equivalent. It should be possible to directly replace the program and it should provide the same functionality.',
-        ## Myself
-        'Give me a semantically equivalent version of the program in the same language. Do not output any other text apart from the code.'
-        ## From Nicos thesis
-        'Use code transformations to produce variants of the original program that would preserve its original functionalities. Do not output any other text apart from the code.',
-        ## From Forrest and others
-        'Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant. Do not output any other text apart from the code.'
+        'Explore program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.'
     ]
 
     shared_remarks = 'Do not output any other text apart from the code.'

@@ -1,0 +1,47 @@
+[
+    {
+        "_type": "tag",
+        "name": "BN_free",
+        "path": "/home/javier/openssl/crypto/bn/bn_lib.c",
+        "line": 225,
+        "kind": "function",
+        "end": 233,
+        "count": 960
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_free",
+        "path": "/home/javier/openssl/crypto/bio/bio_lib.c",
+        "line": 124,
+        "kind": "function",
+        "end": 155,
+        "count": 611
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_PKEY_free",
+        "path": "/home/javier/openssl/crypto/evp/p_lib.c",
+        "line": 1774,
+        "kind": "function",
+        "end": 1795,
+        "count": 566
+    },
+    {
+        "_type": "tag",
+        "name": "BN_new",
+        "path": "/home/javier/openssl/crypto/bn/bn_lib.c",
+        "line": 243,
+        "kind": "function",
+        "end": 252,
+        "count": 471
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_get",
+        "path": "/home/javier/openssl/crypto/bn/bn_ctx.c",
+        "line": 212,
+        "kind": "function",
+        "end": 235,
+        "count": 439
+    }
+]
