@@ -41,6 +41,9 @@ class UseCase(FileSystemEventHandler):
 
 
 
+    '''
+        Creates a github repo on the temp folder if it does not exist. Then create a random branch to modify the things. Add all new files bc, i, s force it. Returns the temp folder and the name of the temp branch
+    '''
     async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
         # Create a folder in tmp
@@ -48,7 +51,7 @@ class UseCase(FileSystemEventHandler):
         # Return the tmp folder
         # use a random name
 
-        random_name = str(uuid.uuid4()) if not name else name
+        random_name = "envy-%s"%str(uuid.uuid4()) if not name else name
         print(f"Copying {src} to /tmp/{random_name}")
         tmp_folder = os.path.join("/tmp", random_name)
         # if the folder exist, prevent the copy
@@ -59,24 +62,32 @@ class UseCase(FileSystemEventHandler):
         os.sync()
         return tmp_folder
 
-    def compare_shadows(self, src, dst):
+    async def compare_shadows(self, src, dst):
         # traverse root directory, and list directories as dirs and files as files
         modified = []
         insrc_only = []
         indst_only = []
+        
+        async def compare_two(f1, f2):
+            return f1, f2, hash_of_file(src_file) != hash_of_file(dst_file)
 
+        tasks = []
         for root, dirs, files in os.walk(src):
             for file in files:
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(dst, src_file[len(src)+1:])
+                print(src_file, dst_file)
                 if os.path.exists(dst_file):
-                    if hash_of_file(src_file) != hash_of_file(dst_file):
-                        modified.append(src_file)
-                    else:
-                        pass
+                    # Do this in parallel
+                    tasks.append(asyncio.create_task(compare_two(src_file, dst_file)))
                 else:
                     insrc_only.append(src_file)
-
+        tasks = await asyncio.gather(*tasks)
+        for f in tasks:
+            f1, f2, r = f
+            if r:
+                print(f1, f2)
+                modified.append((f1, f2))
         for root, dirs, files in os.walk(dst):
             for file in files:
                 dst_file = os.path.join(root, file)

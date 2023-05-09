@@ -8,9 +8,9 @@ class OpenSSL(case.LLVMCompilableUseCase):
     def __init__(self):
         super().__init__()
 
-        self.initial_source_code = open(os.path.join(os.path.dirname(__file__), "e_dec.test.c"), "r").read()
-        self.changed_source_code = open(os.path.join(os.path.dirname(__file__), "e_dec.test2.c"), "r").read()
-        self.change_location=("crypto/evp/e_des.c", 0, -1)
+        self.initial_source_code = open(os.path.join(os.path.dirname(__file__), "bn_lib.c"), "r").read()
+        self.changed_source_code = open(os.path.join(os.path.dirname(__file__), "bn_lib.2.c"), "r").read()
+        self.change_location=("crypto/bn/bn_lib.c", 0, -1)
 
 
     async def compile(self, cwd, source_code):
@@ -24,12 +24,10 @@ class OpenSSL(case.LLVMCompilableUseCase):
         f.close()
 
         # Lets set ccache to speed up
-        ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "ccache clang", "CXX": "ccache clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd)
-        ch = subprocess.Popen(["make"], cwd=cwd)
+        ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.DEVNULL)
+        ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.DEVNULL)
 
         # block here?
-        print("Blocking")
-        ch.communicate()
 
 
 
@@ -59,8 +57,10 @@ if __name__ == "__main__":
         shadow2 = await shadow2
 
         # TODO we can call this function as "clone" instead of shadow
-        modified = uc.get_modified_bitcodes(shadow1, shadow2)
+        print("Comparing files")
+        modified = await uc.compare_shadows(shadow1, shadow2)
         # changed_cource_code -> changed_compilable
+        print(modified)
 
 
     asyncio.run(mm())

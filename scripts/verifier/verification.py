@@ -209,7 +209,7 @@ class AliveVerifier(Verifier):
     '''
         The same of verify but async
     '''
-    async def async_verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
+    async def async_verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=60000, alive_flags=[], estimate_target_fn = True):
 
         # if debug enable copy the content of the temporary files to the debug folder
         # create the debug folder if it does not exist
@@ -348,8 +348,8 @@ if __name__ == "__main__":
     # v.verify(code6, code7, entrypoint="quicksort", estimate_target_fn=True)
 
 
-    code8 = open(os.path.join(DIRNAME, 'tests' ,'code6.bc'), 'r')
-    code7 = open(os.path.join(DIRNAME, 'tests' ,'code7.bc'), 'r')
+    code8 = open(os.path.join(DIRNAME, 'tests' ,'bc1.eq.bc'), 'r')
+    code7 = open(os.path.join(DIRNAME, 'tests' ,'bc2.eq.bc'), 'r')
 
     # The one below should pass
     # r = v.verify(code1, code2)
@@ -358,4 +358,4 @@ if __name__ == "__main__":
     # r = v.verify(code1, code3)
     # assert r.is_incorrect()
 
-    r = v.verify(code7, code8, entrypoint='quicksort')
+    r = v.verify(code7, code8, entrypoint='bn_free_d', timeout=300000, alive_flags=['--smt-log', '--disable-undef-input'])
