@@ -1,13 +1,17 @@
 
 import asyncio
 import usecases.openssl
+from usecases.case import is_executable
 import verifier
-
+import logging
 
 if __name__ == "__main__":
     # Compile openssl
-    import sys
+    import sys    
+    logging.basicConfig(level=logging.DEBUG)
     uc = usecases.openssl.OpenSSL()
+
+    verif = verifier.AliveVerifier(debug=True)
 
     async def comp1(src):
         shadow = await uc.shadow(src, name="opensslt1")
@@ -42,7 +46,7 @@ if __name__ == "__main__":
             print("Modified files", len(modified))
             
             bitcodes = [ (f1, f2) for f1, f2 in modified if f1.endswith(".bc") and f2.endswith(".bc") ]
-            executables = [ (f1, f2) for f1, f2 in modified if case.is_executable(f1) and case.is_executable(f2) ]
+            executables = [ (f1, f2) for f1, f2 in modified if is_executable(f1) and is_executable(f2) ]
             source_code = [(f1, f2) for f1, f2 in modified if (f1.endswith(".c") or f1.endswith(".cpp")) and (f2.endswith(".c") or f2.endswith(".cpp"))]
 
             assert len(source_code) > 0, "There are not changed source codes"
@@ -61,10 +65,8 @@ if __name__ == "__main__":
                     # Do the verification of the bitcodes
                     print("Doing verification")
                     for f1, f2 in bitcodes:
-                        import verifier
-                        r = verifier.AliveVerifier(debug=True)
                         print("Verifying ", f1, f2)
-                        r1 = await r.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint="bn_free_d", timeout=300_000)
+                        r1 = await verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint="bn_free_d", timeout=300_000)
 
 
 
