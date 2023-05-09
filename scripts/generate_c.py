@@ -114,30 +114,30 @@ def synth_substitute(original, filename, substitute_code, it):
 def main(args):
 
     openai.api_key = open(os.path.join(DIRNAME, ".API_TOKEN")).read().strip()
-    programs = ['quicksort']
+    programs = ['BIO_free', 'BN_CTX_get', 'BN_free', 'BN_new', 'EVP_PKEY_free']
     n = 100
 
     force_no_helpers = True
     force_same_signature = True
 
     prompt_intros = [
-        'The following code describes an unspecified program.',
+        'The following code describes an unspecified function.',
     ]
     
     prompt_instructions = [
-        'Explore program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.'
+        "Produce program transformations that slightly vary the behavior of the original function while maintaining its original functionality. Use them to provide a program variant."
     ]
 
-    shared_remarks = 'Do not output any other text apart from the code.'
+    shared_remarks = "Do not output any other text apart from the function's code."
 
     if force_no_helpers:
         shared_remarks += " Do not create auxiliary nor helper functions."
     if force_same_signature:
-        shared_remarks += " Maintain the functions signature."
+        shared_remarks += " Maintain the function's signature."
 
 
     for program in programs:
-        source_files_prefix = os.path.join(WORKSPACE, 'rosetta_codes', program)
+        source_files_prefix = os.path.join(WORKSPACE, 'functions', 'openssl', program)
 
         # read from file
         code = extract_source(f'{source_files_prefix}.c')
