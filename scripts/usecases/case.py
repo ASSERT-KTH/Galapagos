@@ -12,6 +12,14 @@ import shutil
 import  uuid
 
 '''
+    Returns true f the a file is executable. Useful for compiled binaries
+'''
+def is_executable(f):
+    return os.access(f, os.X_OK)
+
+
+
+'''
     Saves the file in the debug folder and returns the hash of the file
 '''
 def hash_of_file(file):
@@ -69,14 +77,15 @@ class UseCase(FileSystemEventHandler):
         indst_only = []
         
         async def compare_two(f1, f2):
-            return f1, f2, hash_of_file(src_file) != hash_of_file(dst_file)
+            h1 = hash_of_file(f1)
+            h2 = hash_of_file(f2)
+            return f1, f2, h1 != h2
 
         tasks = []
         for root, dirs, files in os.walk(src):
             for file in files:
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(dst, src_file[len(src)+1:])
-                print(src_file, dst_file)
                 if os.path.exists(dst_file):
                     # Do this in parallel
                     tasks.append(asyncio.create_task(compare_two(src_file, dst_file)))
@@ -86,7 +95,7 @@ class UseCase(FileSystemEventHandler):
         for f in tasks:
             f1, f2, r = f
             if r:
-                print(f1, f2)
+                print("Mismatch", f1, f2)
                 modified.append((f1, f2))
         for root, dirs, files in os.walk(dst):
             for file in files:
@@ -124,8 +133,17 @@ class UseCase(FileSystemEventHandler):
 
 class LLVMCompilableUseCase(UseCase):
 
-    def __init__(self):
+    def __init__(self, fixed_shadow=None):
+        # The following two fields are used to avoid the compilation and testing proces of an already compiled and tested project
+        self.compiled = False
+        self.tested = False
+        # This second one os used to create the temp comp folder
+        self.fixed_shadow = fixed_shadow
         super().__init__()
+
+    async def test(self, cwd):
+
+        raise NotImplementedError()
 
     async def compile(self, cwd):
 
@@ -164,9 +182,20 @@ class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
         ch = subprocess.run(["clang",  "-save-temps", "-o", "main.o", "main.cpp"], cwd=cwd)
 
 
+class CMPResult:
+
+    def __init__(self):
+        self.id = None # get a uuid here
+        self.project_name = ""
+        # Save the comparison results
 
 
+async def compile_test_verify(project1: LLVMCompilableUseCase, project2: LLVMCompilableUseCase) -> CMPResult:
+    pass
+    # Compile the original
+    # Compile the variant
 
+    # Check if they compile
 
 
 if __name__ == '__main__':
