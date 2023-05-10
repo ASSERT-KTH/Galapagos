@@ -20,6 +20,8 @@ if __name__ == "__main__":
     async def compare(original_folder, shadow1, original: usecases.openssl.OpenSSL, variant: usecases.openssl.OpenSSL):
         # The first one does not need to compile
 
+        # Fix name for faster compile. In theory the name is unique ?
+        # variant_shadow = await variant.shadow(original_folder, name=f"{variant.name.replace('.', '_')}")
         variant_shadow = await variant.shadow(original_folder)
 
         result = {
@@ -47,8 +49,12 @@ if __name__ == "__main__":
             assert len(in2) == 0,  "The new compilation adds new files. That is not possible"
             logging.info(f"Modified files {len(modified)}")
             
+            # The following filters depends on each project
             bitcodes = [ (f1, f2) for f1, f2 in modified if f1.endswith(".bc") and f2.endswith(".bc") ]
+            
             executables = [ (f1, f2) for f1, f2 in modified if is_executable(f1) and is_executable(f2) ]
+            executables = [(f1, f2) for f1, f2 in executables if "test" not in f1 and "test" not in f2]
+
             source_code = [(f1, f2) for f1, f2 in modified if (f1.endswith(".c") or f1.endswith(".cpp")) and (f2.endswith(".c") or f2.endswith(".cpp"))]
 
             assert len(source_code) > 0, "There are not changed source codes"
@@ -80,7 +86,7 @@ if __name__ == "__main__":
                     tasks = []
                     for f1, f2 in bitcodes:
                         logging.info(f"Verifying {f1} {f2}")
-                        tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint="bn_free_d", timeout=300_000))))
+                        tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint=variant.function_name, timeout=300_000))))
 
                     pass_test, msg = await pass_test
                     result['pass_tests'] = pass_test
@@ -153,7 +159,7 @@ if __name__ == "__main__":
                             
 
         # Comment this out
-        test_cases = test_cases[:1]
+        # test_cases = test_cases[:1]
         logging.info(f"Variants to check {len(test_cases)}")
 
         tasks = []

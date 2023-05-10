@@ -53,12 +53,12 @@ class OpenSSL(case.LLVMCompilableUseCase):
         if not self.tested:
             try:
                 self.replace(cwd)
-                ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
+                # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
                 ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
                 self.tested = True
-                self.test_result = True, None
-                print(f"Tested in {time.time() - start}s")
-                return True, None
+                self.test_result = True, ch.decode()
+                print(f"Tested in {time.time() - start:.2f}s")
+                return True, ch.decode()
             except Exception as e:
                 print(e)
                 self.test_result = False, f"{e}\n{traceback.format_exc()}"
@@ -74,7 +74,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
             # Lets set ccache to speed up
             ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
             ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
-            print(f"Tested in {time.time() - start}s")
+            print(f"Compiled in {time.time() - start:.2f}s")
             self.compiled = True
         # block here?
 
