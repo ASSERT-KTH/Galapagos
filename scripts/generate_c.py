@@ -8,6 +8,7 @@ import shutil
 import hashlib
 import re 
 import time
+import toml
 import verifier
 
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -103,81 +104,81 @@ def llvm_pipeline(filepath, opt="O0", original_folder = "", generate_llvm_ir = F
             new_file.write(f"{e}\n{traceback.format_exc()}")
         return (filename, None, None, None)
 
-def synth_substitute(original, filename, substitute_code, it):
-    # Create a folder names as the original for better structure
-    if not os.path.exists(os.path.join(WORKSPACE, "rosetta_codes", original)):
-        os.makedirs(os.path.join(WORKSPACE, "rosetta_codes", original))
-
-    with open(os.path.join(WORKSPACE, f'./rosetta_codes/{original}/{filename}'), 'w') as new_file:
-        new_file.write(substitute_code)
-
 def main(args):
 
+    config = toml.load(os.path.join(WORKSPACE, 'scripts', 'config.toml'))
+    print(f"\nExecuting script with config: {config}")
+
     openai.api_key = open(os.path.join(DIRNAME, ".API_TOKEN")).read().strip()
-    programs = ['quicksort']
-    n = 100
+    # programs = ['BIO_free', 'BN_CTX_get', 'BN_free', 'BN_new', 'EVP_PKEY_free']
+    functions = config['functions']
+    temperatures = config['temperatures']
+    n = config['n']
 
     force_no_helpers = True
     force_same_signature = True
 
     prompt_intros = [
-        'The following code describes an unspecified program.',
-        'I have the C code implementation in the following text'
+        'The following code describes an unspecified function.',
     ]
     
     prompt_instructions = [
-        'create a substitute implementation of the program, which is different but equivalent. It should be possible to directly replace the program and it should provide the same functionality.',
-        ## Myself
-        'Give me a semantically equivalent version of the program in the same language. Do not output any other text apart from the code.'
-        ## From Nicos thesis
-        'Use code transformations to produce variants of the original program that would preserve its original functionalities. Do not output any other text apart from the code.',
-        ## From Forrest and others
-        'Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant. Do not output any other text apart from the code.'
+        "Produce program transformations that slightly vary the behavior of the original function while maintaining its original functionality. Use them to provide a program variant."
     ]
 
-    shared_remarks = 'Do not output any other text apart from the code.'
+    shared_remarks = "Do not output any other text apart from the function's code."
 
     if force_no_helpers:
         shared_remarks += " Do not create auxiliary nor helper functions."
     if force_same_signature:
-        shared_remarks += " Maintain the functions signature."
+        shared_remarks += " Maintain the function's signature."
 
 
-    for program in programs:
-        source_files_prefix = os.path.join(WORKSPACE, 'rosetta_codes', program)
+    for function in functions:
+        for temperature in temperatures:
+            source_files_prefix = os.path.join(WORKSPACE, config['input_dir'], function)
 
-        # read from file
-        code = extract_source(f'{source_files_prefix}.c')
-        # nl_description = extract_NL(f'{source_file}.md')
-    
-        print(f"\nTaking original program {program}")
-        for pit, prompt_tuple in enumerate(zip(prompt_intros, prompt_instructions)):
+            # read from file
+            code = extract_source(f'{source_files_prefix}')
+            # nl_description = extract_NL(f'{source_file}.md')
+        
+            print(f"\nTaking original function {function}")
+            for pit, prompt_tuple in enumerate(zip(prompt_intros, prompt_instructions)):
 
-            prompt = '\n'.join([prompt_tuple[0], code, prompt_tuple[1], shared_remarks])
-            it = 0
-            while it < n:
-                
-                try:
-                    sys.stdout.write(f'\rGenerating variant for {program} with prompt {pit} and iteration {it}/{n - 1}')
-                    response = openai.ChatCompletion.create(
-                        model="gpt-4",
-                        messages=[{"role": "user", "content": prompt}],
-                        temperature=1,
-                        # max_tokens=7
-                    )
+                prompt = '\n'.join([prompt_tuple[0], code, prompt_tuple[1], shared_remarks])
+                print(prompt)
+                it = 0
+                while it < n:
+                    
+                    try:
+                        sys.stdout.write(f'\rGenerating variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
+                        response = openai.ChatCompletion.create(
+                            model="gpt-4",
+                            messages=[{"role": "user", "content": prompt}],
+                            temperature=temperature,
+                            # max_tokens=7
+                        )
 
-                    parsed = parse_response(response)
-                    new_filename = f'{program}.p{pit}.v{it}.c'
-                    synth_substitute(program, new_filename, parsed, it)
-                    sys.stdout.write(f'\rGenerated variant for {program} with prompt {pit} and iteration {it}/{n - 1}')
-                    it += 1
-                except KeyboardInterrupt:
-                    break
-                except Exception as e:
-                    print(e)
-                    print("Trying again in 5 mins")
-                    # Sleep for 5 minutes
-                    time.sleep(300)
+                        parsed = parse_response(response)
+                        new_filename = f'{function}.p{pit}.y{temperature}.v{it}.c'
+                        
+                         # Create a folder names as the original for better structure
+                        out_dir = os.path.join(WORKSPACE, config['output_dir'], function)
+                        if not os.path.exists(out_dir):
+                            os.makedirs(out_dir)
+
+                        with open(os.path.join(out_dir, new_filename), 'w') as new_file:
+                            new_file.write(parsed)
+                        
+                        sys.stdout.write(f'\rGenerated variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
+                        it += 1
+                    except KeyboardInterrupt:
+                        break
+                    except Exception as e:
+                        print(e)
+                        print("Trying again in 5 mins")
+                        # Sleep for 5 minutes
+                        time.sleep(300)
 
 if __name__ == "__main__":
 
