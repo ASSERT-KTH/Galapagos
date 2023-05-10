@@ -8,7 +8,7 @@ import json
 import os
 import traceback
 
-
+DIRNAME = os.path.abspath(os.path.dirname(__file__))
 
 if __name__ == "__main__":
     # Compile openssl
@@ -123,6 +123,7 @@ if __name__ == "__main__":
 
         # We compile the original first
         openssl_project_folder = "../../use_cases/openssl"
+        openssl_project_folder = os.path.join(DIRNAME, openssl_project_folder)
         original_uc = usecases.openssl.OpenSSL("all", None, None, None, 0, 0, "openssl", doreplace = False)
 
         # UNcomment this for real
@@ -135,21 +136,22 @@ if __name__ == "__main__":
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
         test_cases = []
-        with open("../../functions/openssl/functions_info.json", 'r') as f:
+        WORKSPACE = os.path.join(DIRNAME, "../../functions/openssl")
+        with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
             for function in functions_info:
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
                 # Reading the generated variants 
-                for variant_of_function in os.listdir("../../functions/openssl/variants"):
+                for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
                     if variant_of_function == function['name']:
                         # Then this is the variants for that function
-                        for variant_file in os.listdir(f"../../functions/openssl/variants/{variant_of_function}"):
+                        for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
                             testcase = usecases.openssl.OpenSSL(
                                 variant_of_function,
                                 original_project_folder=openssl_project_folder, 
                                 original_file_location=f"{function['path']}",
-                                variant_text_location=os.path.abspath(f"../../functions/openssl/variants/{variant_of_function}/{variant_file}"),
+                                variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{variant_of_function}/{variant_file}"),
                                 line_start=function['line'],
                                 line_end=function['end'],
                                 name=os.path.basename(variant_file),
@@ -164,7 +166,7 @@ if __name__ == "__main__":
 
         tasks = []
         for test in test_cases:
-            tasks.append(asyncio.create_task(compare("../../use_cases/openssl",shadow_original, original_uc, test)))
+            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, "../../use_cases/openssl"),shadow_original, original_uc, test)))
 
         results = await asyncio.gather(*tasks)
 
