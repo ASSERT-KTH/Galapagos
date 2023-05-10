@@ -91,7 +91,7 @@ class UseCase(FileSystemEventHandler):
         for f in tasks:
             f1, f2, r = f
             if r:
-                print("Mismatch", f1, f2)
+                # print("Mismatch", f1, f2)
                 modified.append((f1, f2))
         for root, dirs, files in os.walk(dst):
             for file in files:
