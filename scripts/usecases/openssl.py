@@ -28,6 +28,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
             variant_function = open(self.variant_text_location, "r").readlines()
             
             original_content = open(original_source, "r").readlines()
+            # TODO wrap function into our own comments to help in finding (manually) for bugs
             variant = original_content[:start-1] + variant_function + ["\n"] + original_content[end + 1:]
             variant = "".join(variant)
 
@@ -55,7 +56,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
                 return True
             except Exception as e:
                 print(e)
-                self.test_result = True
+                self.test_result = False
                 return False
             
         return self.test_result
