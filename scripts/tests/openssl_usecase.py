@@ -4,15 +4,36 @@ import usecases.openssl
 from usecases.case import is_executable
 import verifier
 import logging
+import json
+import os
 
 if __name__ == "__main__":
     # Compile openssl
     import sys    
     logging.basicConfig(level=logging.DEBUG)
-    uc = usecases.openssl.OpenSSL()
-
+    
     verif = verifier.AliveVerifier(debug=True)
 
+    async def compare(original_folder, original: usecases.openssl.OpenSSL, variant: usecases.openssl.OpenSSL):
+        # The first one does not need to compile
+
+        variant_shadow = await variant.shadow(original_folder)
+
+        result = {
+            "compiled": False
+        }
+
+        try:
+
+            await variant.compile(variant_shadow)
+            result['compiled'] = True
+
+        except Exception as e:
+            logging.warn("Could not compile variant", variant.name)
+            return
+        
+        return result
+    '''
     async def comp1(src):
         shadow = await uc.shadow(src, name="opensslt1")
         await uc.compile(shadow, uc.initial_source_code)
@@ -75,9 +96,65 @@ if __name__ == "__main__":
             print("Project could not compile", e)
 
 
-    asyncio.run(mm())
 
-    # change source code
-    # compile again
-    # verify changed Bitcodes
+    '''
+    async def main():
+
+        # We compile the original first
+        openssl_project_folder = "../../use_cases/openssl"
+        original_uc = usecases.openssl.OpenSSL("all", None, None, None, 0, 0, "openssl", doreplace = False)
+
+        # UNcomment this for real
+        original_uc.compiled = True
+        original_uc.tested = True
+
+        shadow_original = await original_uc.shadow(openssl_project_folder, name="opensslt1")
+        await original_uc.compile(shadow_original)
+
+        # Reading the functions and the variants
+        # Reading json inside ../../functions/openssl/functions_info.json
+        test_cases = []
+        with open("../../functions/openssl/functions_info.json", 'r') as f:
+            functions_info = json.load(f)
+            for function in functions_info:
+                logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
+
+                # Reading the generated variants 
+                for variant_of_function in os.listdir("../../functions/openssl/variants"):
+                    if variant_of_function == function['name']:
+                        # Then this is the variants for that function
+                        for variant_file in os.listdir(f"../../functions/openssl/variants/{variant_of_function}"):
+                            testcase = usecases.openssl.OpenSSL(
+                                variant_of_function,
+                                original_project_folder=openssl_project_folder, 
+                                original_file_location=f"{function['path']}",
+                                variant_text_location=os.path.abspath(f"../../functions/openssl/variants/{variant_of_function}/{variant_file}"),
+                                line_start=function['line'],
+                                line_end=function['end'],
+                                name=os.path.basename(variant_file),
+                                doreplace=True
+                            )
+                            test_cases.append(testcase)
+                            
+
+        # Comment this out
+        test_cases = test_cases[:1]
+        print(len(test_cases))
+
+        tasks = []
+        for test in test_cases:
+            tasks.append(asyncio.create_task(compare("../../use_cases/openssl", original_uc, test)))
+
+        results = await asyncio.gather(*tasks)
+        print(results)
+
+
+
+
+
+
+
+
+    asyncio.run(main())
+
 
