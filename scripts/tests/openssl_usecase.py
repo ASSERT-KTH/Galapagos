@@ -96,7 +96,7 @@ if __name__ == "__main__":
                     if pass_test:
                         # Then wait for the verification tasks
                         for f1, f2, t in tasks:
-                            result[os.path.basename(f1)] = await t
+                            result[os.path.basename(f1)] = (await t).toJSON()
                     else:
                         logging.warning("The tests did not pass, so we will not verify the bitcodes")
                         for f1, f2, t in tasks:
