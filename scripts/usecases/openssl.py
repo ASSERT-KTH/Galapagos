@@ -3,6 +3,8 @@ import subprocess
 import os
 import asyncio
 import logging
+import traceback
+import time
 
 class OpenSSL(case.LLVMCompilableUseCase):
 
@@ -36,7 +38,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
 
 
             # print(variant)
-            logging.info(f"Changing source code at {source}. Compiling...")
+            logging.info(f"Changing source code at {source}.")
 
             f = open(source, "w")
             f.write(variant)
@@ -46,28 +48,33 @@ class OpenSSL(case.LLVMCompilableUseCase):
 
 
     async def run_tests(self, cwd):
+        start = time.time()
+        logging.info("Testing")
         if not self.tested:
             try:
                 self.replace(cwd)
-                ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.DEVNULL)
-                ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.DEVNULL)
+                ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
                 self.tested = True
-                self.test_result = True
-                return True
+                self.test_result = True, None
+                print(f"Tested in {time.time() - start}s")
+                return True, None
             except Exception as e:
                 print(e)
-                self.test_result = False
-                return False
+                self.test_result = False, f"{e}\n{traceback.format_exc()}"
+                return False, f"{e}"
             
         return self.test_result
 
     async def compile(self, cwd):
-
+        logging.info("Compiling")
+        start = time.time()
         if not self.compiled:
             self.replace(cwd)
             # Lets set ccache to speed up
-            ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.DEVNULL)
-            ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.DEVNULL)
+            ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
+            ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+            print(f"Tested in {time.time() - start}s")
             self.compiled = True
         # block here?
 
