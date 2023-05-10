@@ -12,6 +12,7 @@ import traceback
 
 if __name__ == "__main__":
     # Compile openssl
+    print(f"Results will be in {os.path.abspath('out/openssl')}")
     logging.basicConfig(level=logging.DEBUG)
     
     verif = verifier.AliveVerifier(debug=True)
@@ -22,7 +23,11 @@ if __name__ == "__main__":
         variant_shadow = await variant.shadow(original_folder)
 
         result = {
-            "compiled": False
+            "compiled": False,
+            "function_name": variant.function_name,
+            "variant_name": variant.name,
+            # For other libraries, replace this name
+            "project": "openssl"
         }
 
         try:
@@ -77,8 +82,9 @@ if __name__ == "__main__":
                         logging.info(f"Verifying {f1} {f2}")
                         tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint="bn_free_d", timeout=300_000))))
 
-                    pass_test = await pass_test
+                    pass_test, msg = await pass_test
                     result['pass_tests'] = pass_test
+                    result['test_result'] = msg
 
                     result['verification'] = {}
                     if pass_test:
@@ -90,7 +96,7 @@ if __name__ == "__main__":
                         for f1, f2, t in tasks:
                             # cancel the task
                             # 0 timeout means that it will be cancelled immediately
-                            asyncio.wait_for(t, 0.0)
+                            t.cancel()
 
 
         except Exception as e:
@@ -148,14 +154,13 @@ if __name__ == "__main__":
 
         # Comment this out
         test_cases = test_cases[:1]
-        print(len(test_cases))
+        logging.info(f"Variants to check {len(test_cases)}")
 
         tasks = []
         for test in test_cases:
             tasks.append(asyncio.create_task(compare("../../use_cases/openssl",shadow_original, original_uc, test)))
 
         results = await asyncio.gather(*tasks)
-        print(results)
 
 
 
