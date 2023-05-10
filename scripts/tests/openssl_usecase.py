@@ -32,6 +32,11 @@ if __name__ == "__main__":
 
             # TODO check for changes, bitcodes,  binaries and source code
             modified, in1, in2 = await variant.compare_shadows(shadow1, variant_shadow)
+            result['changes'] = {}
+            result['all'] = modified
+            result['only_in_original'] = in1
+            result['only_in_destiny'] = in2
+
             # There should not be new or removed files
             assert len(in1) == 0, "The new compilation removes files. That is not possible"
             assert len(in2) == 0,  "The new compilation adds new files. That is not possible"
@@ -47,10 +52,11 @@ if __name__ == "__main__":
             logging.info(f"Bitcodes {len(bitcodes)}")
             logging.info(f"Executables {len(executables)}")
 
-            result['changes'] = {}
+
             result['changes']['source_code'] = source_code
             result['changes']['bitcodes'] = bitcodes
             result['changes']['executables'] = executables
+            result['shadow_folder'] = variant_shadow
 
             if len(bitcodes) == 0:
                 logging.warning("Warning there are not changed bitcodes. Either you are not changing the source code or the transormation is not preserved")
@@ -88,7 +94,7 @@ if __name__ == "__main__":
 
 
         except Exception as e:
-            logging.warning(f"Could not compile variant {variant.name}")
+            logging.warning(f"Could not compile variant {variant.name} {e}")
             result['python_error_trace'] = traceback.format_exc()
             result['python_error_msg'] = f"{e}"
             return
