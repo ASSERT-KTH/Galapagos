@@ -6,3 +6,5 @@ rosetta_codes
 rosetta_codes_bck1
 debug
 *.egg-info
+build
+out
