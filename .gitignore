@@ -7,3 +7,5 @@ rosetta_codes_bck1
 debug
 venv
 *.egg-info
+build
+out
