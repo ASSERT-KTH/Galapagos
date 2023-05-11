@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # Compile openssl
     print(f"Results will be in {os.path.abspath('out/openssl')}")
     logging.basicConfig(level=logging.DEBUG)
-    
+
     verif = verifier.AliveVerifier(debug=True)
 
     async def compare(original_folder, shadow1, original: usecases.openssl.OpenSSL, variant: usecases.openssl.OpenSSL):
@@ -34,8 +34,15 @@ if __name__ == "__main__":
 
         try:
 
-            await variant.compile(variant_shadow)
-            result['compiled'] = True
+            compiled, stdout, stderr = await variant.compile(variant_shadow)
+            result['compiled'] = compiled
+            result['compilation_stdout'] = stdout
+            result['compilation_stderr'] = stderr
+
+            result['shadow_folder'] = variant_shadow
+            if not compiled:
+                logging.error(stderr)
+                raise Exception("Could not compile")
 
             # TODO check for changes, bitcodes,  binaries and source code
             modified, in1, in2 = await variant.compare_shadows(shadow1, variant_shadow)
@@ -48,10 +55,10 @@ if __name__ == "__main__":
             assert len(in1) == 0, "The new compilation removes files. That is not possible"
             assert len(in2) == 0,  "The new compilation adds new files. That is not possible"
             logging.info(f"Modified files {len(modified)}")
-            
+
             # The following filters depends on each project
             bitcodes = [ (f1, f2) for f1, f2 in modified if f1.endswith(".bc") and f2.endswith(".bc") ]
-            
+
             executables = [ (f1, f2) for f1, f2 in modified if is_executable(f1) and is_executable(f2) ]
             executables = [(f1, f2) for f1, f2 in executables if "test" not in f1 and "test" not in f2]
 
@@ -67,7 +74,6 @@ if __name__ == "__main__":
             result['changes']['source_code'] = source_code
             result['changes']['bitcodes'] = bitcodes
             result['changes']['executables'] = executables
-            result['shadow_folder'] = variant_shadow
 
             if len(bitcodes) == 0:
                 logging.warning("Warning there are not changed bitcodes. Either you are not changing the source code or the transormation is not preserved")
@@ -96,7 +102,7 @@ if __name__ == "__main__":
                     if pass_test:
                         # Then wait for the verification tasks
                         for f1, f2, t in tasks:
-                            result[os.path.basename(f1)] = (await t).toJSON()
+                            result['verification'][os.path.basename(f1)] = (await t).toDict()
                     else:
                         logging.warning("The tests did not pass, so we will not verify the bitcodes")
                         for f1, f2, t in tasks:
@@ -116,9 +122,13 @@ if __name__ == "__main__":
             os.makedirs(function_folder, exist_ok=True)
             with open(f"{function_folder}/{variant.name}.result.json", 'w') as f:
                 json.dump(result, f, indent=4)
-        
+            # TODO create zip wifh modified files
+
+            # Remove the tmp dirname
+            os.rmdir(variant_shadow)
+
         return result
-    
+
     async def main():
 
         # We compile the original first
@@ -130,8 +140,13 @@ if __name__ == "__main__":
         # original_uc.compiled = True
         # original_uc.tested = True
 
-        shadow_original = await original_uc.shadow(openssl_project_folder, name="opensslt1")
-        await original_uc.compile(shadow_original)
+        shadow_original = await original_uc.shadow(openssl_project_folder)
+        compiled, msg, stderr = await original_uc.compile(shadow_original)
+
+        if not compiled:
+            logging.error(msg)
+            logging.eror(stderr)
+            exit(1)
 
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
@@ -142,14 +157,14 @@ if __name__ == "__main__":
             for function in functions_info:
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
-                # Reading the generated variants 
+                # Reading the generated variants
                 for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
                     if variant_of_function == function['name']:
                         # Then this is the variants for that function
                         for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
                             testcase = usecases.openssl.OpenSSL(
                                 variant_of_function,
-                                original_project_folder=openssl_project_folder, 
+                                original_project_folder=openssl_project_folder,
                                 original_file_location=f"{function['path']}",
                                 variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{variant_of_function}/{variant_file}"),
                                 line_start=function['line'],
@@ -158,7 +173,7 @@ if __name__ == "__main__":
                                 doreplace=True
                             )
                             test_cases.append(testcase)
-                            
+
 
         # Comment this out
         # test_cases = test_cases[:1]

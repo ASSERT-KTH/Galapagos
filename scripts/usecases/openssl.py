@@ -5,6 +5,7 @@ import asyncio
 import logging
 import traceback
 import time
+import re
 
 class OpenSSL(case.LLVMCompilableUseCase):
 
@@ -29,6 +30,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
 
             variant_function = open(self.variant_text_location, "r").readlines()
             
+
             original_content = open(original_source, "r").readlines()
             # TODO wrap function into our own comments to help in finding (manually) for bugs
             variant = original_content[:start-1] + variant_function + ["\n"] + original_content[end + 1:]
@@ -54,16 +56,16 @@ class OpenSSL(case.LLVMCompilableUseCase):
             try:
                 self.replace(cwd)
                 # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
-                ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+                ch = subprocess.run(["make", "test", "-j", "16"], cwd=cwd, check=False, capture_output=True, text=True)
                 self.tested = True
-                self.test_result = True, ch.decode()
+                self.test_result = ch.returncode == 0, ch.stdout.decode()
                 print(f"Tested in {time.time() - start:.2f}s")
-                return True, ch.decode()
+                return ch.returncode == 0, ch.stdout, ch.stderr
             except Exception as e:
                 print(e)
                 self.test_result = False, f"{e}\n{traceback.format_exc()}"
                 return False, f"{e}"
-            
+
         return self.test_result
 
     async def compile(self, cwd):
@@ -73,8 +75,13 @@ class OpenSSL(case.LLVMCompilableUseCase):
             self.replace(cwd)
             # Lets set ccache to speed up
             ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
-            ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+            ch = subprocess.run(["make", "-j", "16"], cwd=cwd, check=False, capture_output=True,text=True)
             print(f"Compiled in {time.time() - start:.2f}s")
+            if ch.returncode != 0:
+                return False, ch.stdout, ch.stderr
+            else:
+                return True, ch.stdout, ch.stderr
+
             self.compiled = True
         # block here?
 

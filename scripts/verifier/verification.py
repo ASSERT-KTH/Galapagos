@@ -29,8 +29,8 @@ class CustomFormatter(logging.Formatter):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         return formatter.format(record)
-    
-DIRNAME = os.path.abspath(os.path.dirname(__file__)) 
+
+DIRNAME = os.path.abspath(os.path.dirname(__file__))
 DEBUG_FOLDER = os.path.join(DIRNAME, 'debug')
 
 '''
@@ -59,8 +59,8 @@ def extract_all_defined_functions_from_bc(code1, llvm_dis="llvm-dis", debug=Fals
     tmp = tempfile.NamedTemporaryFile(delete=False)
     subprocess.check_output([llvm_dis, "-o", tmp.name, code1.name])
     return extract_all_defined_functions(open(tmp.name, "r"), debug=debug)
-    
-        
+
+
 
 '''
     Returns all function names defined in the LLVM IR file
@@ -98,11 +98,11 @@ class Verifier:
     '''
     def verify(code1, code2):
         raise NotImplementedError
-    
+
 class AliveVerifier(Verifier):
 
     class AliveResult:
-        
+
         def __init__(self, original_output) -> None:
             self.result = {}
             self.alive_output = original_output
@@ -111,7 +111,7 @@ class AliveVerifier(Verifier):
             self.alive_summary_output_regex = re.compile(r'((\d+) ((correct|incorrect|failed-to-prove) transformations|(Alive2 errors)))')
             self.alive_error_regex = re.compile(r'ERROR: (.+?)')
             self.errors = []
-            
+
             import logging
             self._create_from_output()
 
@@ -163,7 +163,7 @@ class AliveVerifier(Verifier):
         def is_ok(self):
             # Is ok if all passed and no errors
             return self.result['correct transformations'] > 0 and self.result['incorrect transformations'] == 0 and self.result['failed-to-prove transformations'] == 0 and self.result['Alive2 errors'] == 0
-        
+
         '''
             Returns true if the verification failed
         '''
@@ -181,12 +181,12 @@ class AliveVerifier(Verifier):
         '''
         def alive_failed(self):
             return self.result['Alive2 errors'] > 0
-        
-        def toJSON(self):
-            return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+
+        def toDict(self):
+            return { 'raw': self.alive_output, 'alive_falied': self.alive_failed(), 'failed_to_prove': self.failed_to_prove(), 'is_incorrect': self.is_incorrect(), 'is_ok': self.is_ok(), 'is_empty': self.is_empty(), 'errors': self.errors }
 
     '''
-        Creates an alive2 verifier instance. If debug is enabled, the verifier will save the output of alive2 to a file in the debug folder. 
+        Creates an alive2 verifier instance. If debug is enabled, the verifier will save the output of alive2 to a file in the debug folder.
         If do_function_extraction is enabled, the verifier will extract all functions from both files and will do a pairwise comparison in which the best result for verification will be returned.
     '''
     def __init__(self, debug = False, do_function_extraction = False):
@@ -199,7 +199,7 @@ class AliveVerifier(Verifier):
 
     def _parse_result(self, alive_output):
         return AliveVerifier.AliveResult(alive_output)
-    
+
     '''
         Receives two files and run the alive verification over them. Files should be LLVM IR codes or bitcodes.
         entrypoint: if not None, then the verifier will extract the function with the given name from both files. If None, the default behavoir of alive2 if to do a pairwise comparison based on the names
@@ -220,7 +220,7 @@ class AliveVerifier(Verifier):
         if not os.path.exists(DEBUG_FOLDER):
             logging.debug("Creating debug folder")
             os.makedirs(DEBUG_FOLDER, exist_ok=True)
-        
+
         if target_fn is None:
             target_fn = entrypoint
         if src_fn is None:
@@ -234,7 +234,7 @@ class AliveVerifier(Verifier):
         new_flags.append(f"--src-fn={src_fn}")
         new_flags.append(f"--tgt-fn={target_fn}")
 
-            
+
         # TODO check if codes are LLVM IR or LLVM bitcode
         # If bitcode, then do the function extractions ?
 
@@ -246,7 +246,7 @@ class AliveVerifier(Verifier):
         # copy the content of code1 and code2 to the temporary files
         shutil.copyfile(code1.name, tmp1.name)
         shutil.copyfile(code2.name, tmp2.name)
-        
+
         if self.debug:
             # just copy the files
             logging.debug(f"Copying {tmp1.name} and {tmp2.name} to debug folder")
@@ -263,7 +263,7 @@ class AliveVerifier(Verifier):
         # if debug enabled save the output of alive to a file in the debug folder
 
         logging.info(f'Alive verifier for: {tmp1.name} {tmp2.name}')
-        
+
 
         try:
             logging.info(f"Calling alive for {code1.name} and {code2.name}")
@@ -296,9 +296,9 @@ class AliveVerifier(Verifier):
                 # get the function name
                 target_fn = functions[min_index]
                 logging.warning(f"Using {target_fn} as target function.")
-                
+
                 return await self.async_verify(code1, code2, entrypoint=entrypoint, src_fn=entrypoint, target_fn=target_fn, timeout=timeout, alive_flags=alive_flags, estimate_target_fn=False)
-            
+
         if self.debug:
             # Save the output of alive to a file in the debug folder
             dst = "Ok"
@@ -324,7 +324,7 @@ class AliveVerifier(Verifier):
 
         return r
 
-    
+
 if __name__ == "__main__":
     # setting upo logging
     logging.basicConfig(level=logging.DEBUG)
