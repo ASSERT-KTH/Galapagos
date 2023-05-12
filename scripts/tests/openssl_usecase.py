@@ -95,9 +95,10 @@ if __name__ == "__main__":
                         logging.info(f"Verifying {f1} {f2}")
                         tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint=variant.function_name, timeout=300_000))))
 
-                    pass_test, msg = await pass_test
+                    pass_test, stdout, stderr = await pass_test
                     result['pass_tests'] = pass_test
-                    result['test_result'] = msg
+                    result['test_stdout'] = stdout
+                    result['test_stderr'] = stderr
 
                     result['verification'] = {}
                     if pass_test:
@@ -182,13 +183,15 @@ if __name__ == "__main__":
 
         tasks = []
         for i, test in enumerate(test_cases):
-
+            await compare(os.path.join(DIRNAME, "../../use_cases/openssl"),shadow_original, original_uc, test)
+            '''
             tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, "../../use_cases/openssl"),shadow_original, original_uc, test)))
             if (i + 1) % 5 == 0:
                 logging.info("Awaiting 5 tasks")
                 await asyncio.gather(*tasks)
                 tasks = []
         results = await asyncio.gather(*tasks)
+            '''
 
 
 

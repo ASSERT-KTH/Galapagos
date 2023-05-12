@@ -59,7 +59,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
                 # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
                 ch = subprocess.run(["make", "test", "-j", "24"], cwd=cwd, check=False, capture_output=True, text=True)
                 self.tested = True
-                self.test_result = ch.returncode == 0, ch.stdout.decode()
+                self.test_result = ch.returncode == 0, ch.stdout, ""
                 print(f"Tested in {time.time() - start:.2f}s")
                 return ch.returncode == 0, ch.stdout, ch.stderr
             except Exception as e:
