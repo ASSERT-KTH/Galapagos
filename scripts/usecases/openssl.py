@@ -29,14 +29,14 @@ class OpenSSL(case.LLVMCompilableUseCase):
             original_source = os.path.join(self.original_project_folder, self.original_file_location)
 
             variant_function = open(self.variant_text_location, "r").readlines()
-            
+
 
             original_content = open(original_source, "r").readlines()
             # TODO wrap function into our own comments to help in finding (manually) for bugs
             variant = original_content[:start-1] + variant_function + ["\n"] + original_content[end + 1:]
             variant = "".join(variant)
 
-            open("tmp.c", "w").write(variant)
+            open(f"{self.name}.all.c", "w").write(variant)
 
 
             # print(variant)
@@ -54,9 +54,10 @@ class OpenSSL(case.LLVMCompilableUseCase):
         logging.info("Testing")
         if not self.tested:
             try:
-                self.replace(cwd)
+                # We do not need to replace again
+                # self.replace(cwd)
                 # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
-                ch = subprocess.run(["make", "test", "-j", "16"], cwd=cwd, check=False, capture_output=True, text=True)
+                ch = subprocess.run(["make", "test", "-j", "24"], cwd=cwd, check=False, capture_output=True, text=True)
                 self.tested = True
                 self.test_result = ch.returncode == 0, ch.stdout.decode()
                 print(f"Tested in {time.time() - start:.2f}s")
@@ -75,7 +76,7 @@ class OpenSSL(case.LLVMCompilableUseCase):
             self.replace(cwd)
             # Lets set ccache to speed up
             ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
-            ch = subprocess.run(["make", "-j", "16"], cwd=cwd, check=False, capture_output=True,text=True)
+            ch = subprocess.run(["make", "-j", "24"], cwd=cwd, check=False, capture_output=True,text=True)
             print(f"Compiled in {time.time() - start:.2f}s")
             if ch.returncode != 0:
                 return False, ch.stdout, ch.stderr

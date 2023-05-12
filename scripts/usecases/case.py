@@ -1,6 +1,3 @@
-import watchdog
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
 import asyncio
 
 import hashlib
@@ -36,7 +33,7 @@ def hash_of_file(file):
 '''
     Define a use case to compile a library or a binary, detect LLVM bitcodes changed during compilation, and replace C/C++ code in the basecode.
 '''
-class UseCase(FileSystemEventHandler):
+class UseCase:
 
     def __init__(self, debug=False):
         self.observer = None
@@ -56,9 +53,13 @@ class UseCase(FileSystemEventHandler):
         # use a random name
 
         random_name = "envy-%s"%str(uuid.uuid4()) if not name else name
-        print(f"Copying {src} to /tmp/{random_name}")
-        tmp_folder = os.path.join("/tmp", random_name)
+        print(f"Copying {src} to /mnt/nvme/envy/{random_name}")
+        tmp_folder = os.path.join("/mnt/nvme/envy", random_name)
         # if the folder exist, prevent the copy
+        try:
+            os.makedirs("/mnt/nvme/envy", exist_ok=True)
+        except:
+            pass
         if os.path.exists(tmp_folder):
             return tmp_folder
 
@@ -71,7 +72,7 @@ class UseCase(FileSystemEventHandler):
         modified = []
         insrc_only = []
         indst_only = []
-        
+
         async def compare_two(f1, f2):
             h1 = hash_of_file(f1)
             h2 = hash_of_file(f2)

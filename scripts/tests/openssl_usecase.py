@@ -20,6 +20,7 @@ if __name__ == "__main__":
     async def compare(original_folder, shadow1, original: usecases.openssl.OpenSSL, variant: usecases.openssl.OpenSSL):
         # The first one does not need to compile
 
+        logging.info(variant.name)
         # Fix name for faster compile. In theory the name is unique ?
         # variant_shadow = await variant.shadow(original_folder, name=f"{variant.name.replace('.', '_')}")
         variant_shadow = await variant.shadow(original_folder)
@@ -125,7 +126,7 @@ if __name__ == "__main__":
             # TODO create zip wifh modified files
 
             # Remove the tmp dirname
-            os.rmdir(variant_shadow)
+            # os.rmdir(variant_shadow)
 
         return result
 
@@ -154,7 +155,7 @@ if __name__ == "__main__":
         WORKSPACE = os.path.join(DIRNAME, "../../functions/openssl")
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
-            for function in functions_info:
+            for function in functions_info[::-1]:
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
                 # Reading the generated variants
@@ -180,9 +181,13 @@ if __name__ == "__main__":
         logging.info(f"Variants to check {len(test_cases)}")
 
         tasks = []
-        for test in test_cases:
-            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, "../../use_cases/openssl"),shadow_original, original_uc, test)))
+        for i, test in enumerate(test_cases):
 
+            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, "../../use_cases/openssl"),shadow_original, original_uc, test)))
+            if (i + 1) % 5 == 0:
+                logging.info("Awaiting 5 tasks")
+                await asyncio.gather(*tasks)
+                tasks = []
         results = await asyncio.gather(*tasks)
 
 
