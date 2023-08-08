@@ -4,6 +4,19 @@
 [submodule "scripts/verifier/llvm"]
 	path = scripts/verifier/llvm
 	url = git@github.com:llvm/llvm-project.git
+[submodule "use_cases/coreutils"]
+	path = use_cases/coreutils
+	url = https://github.com/coreutils/coreutils.git
+[submodule "use_cases/FFmpeg"]
+	path = use_cases/FFmpeg
+	url = https://github.com/FFmpeg/FFmpeg.git
+[submodule "use_cases/libsodium"]
+	path = use_cases/libsodium
+	url = https://github.com/jedisct1/libsodium.git
+[submodule "use_cases/mako"]
+	path = use_cases/mako
+	url = https://github.com/chjj/mako.git
 [submodule "use_cases/openssl"]
 	path = use_cases/openssl
 	url = https://github.com/openssl/openssl.git
+
