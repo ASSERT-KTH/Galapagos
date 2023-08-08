@@ -1,0 +1,92 @@
+[
+    {
+        "_type": "tag",
+        "name": "emit_ancillary_info",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/system.h",
+        "line": 659,
+        "kind": "function",
+        "end": 702,
+        "count": 94
+    },
+    {
+        "_type": "tag",
+        "name": "write_error",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/system.h",
+        "line": 769,
+        "kind": "function",
+        "end": 775,
+        "count": 44
+    },
+    {
+        "_type": "tag",
+        "name": "alloc_field",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/df.c",
+        "line": 413,
+        "kind": "function",
+        "end": 425,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "diagnose",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/dd.c",
+        "line": 521,
+        "kind": "function",
+        "end": 533,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "is_colored",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/ls.c",
+        "line": 1450,
+        "kind": "function",
+        "end": 1457,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "nextarg",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/expr.c",
+        "line": 530,
+        "kind": "function",
+        "end": 540,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "freev",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/expr.c",
+        "line": 385,
+        "kind": "function",
+        "end": 392,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "compare",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/sort.c",
+        "line": 2812,
+        "kind": "function",
+        "end": 2851,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "put_indicator",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/ls.c",
+        "line": 5083,
+        "kind": "function",
+        "end": 5100,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "wrapf",
+        "path": "/home/javier/ChatGPT4SW/use_cases/coreutils/src/stty.c",
+        "line": 505,
+        "kind": "function",
+        "end": 535,
+        "count": 13
+    }
+]
