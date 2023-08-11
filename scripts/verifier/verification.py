@@ -6,6 +6,7 @@ import logging
 import re
 import asyncio
 import logging
+import json
 
 class CustomFormatter(logging.Formatter):
 
@@ -180,6 +181,9 @@ class AliveVerifier(Verifier):
         '''
         def alive_failed(self):
             return self.result['Alive2 errors'] > 0
+        
+        def toJSON(self):
+            return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
     '''
         Creates an alive2 verifier instance. If debug is enabled, the verifier will save the output of alive2 to a file in the debug folder. 

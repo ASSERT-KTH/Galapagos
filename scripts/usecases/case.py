@@ -40,10 +40,6 @@ class UseCase(FileSystemEventHandler):
 
     def __init__(self, debug=False):
         self.observer = None
-        # The state is a map of the filepath vs hash of the file in time
-        # A file changes if the last hash is != of the current hash
-        # TODO move this to REDIS ?
-        logging.info("Creating the empty state")
         self.state = {  }
         self.debug = debug
 
@@ -95,7 +91,7 @@ class UseCase(FileSystemEventHandler):
         for f in tasks:
             f1, f2, r = f
             if r:
-                print("Mismatch", f1, f2)
+                # print("Mismatch", f1, f2)
                 modified.append((f1, f2))
         for root, dirs, files in os.walk(dst):
             for file in files:
@@ -143,7 +139,8 @@ class LLVMCompilableUseCase(UseCase):
 
     async def test(self, cwd):
 
-        raise NotImplementedError()
+        # Not all projects have tests :(
+        return True, None
 
     async def compile(self, cwd):
 
@@ -189,13 +186,6 @@ class CMPResult:
         self.project_name = ""
         # Save the comparison results
 
-
-async def compile_test_verify(project1: LLVMCompilableUseCase, project2: LLVMCompilableUseCase) -> CMPResult:
-    pass
-    # Compile the original
-    # Compile the variant
-
-    # Check if they compile
 
 
 if __name__ == '__main__':
