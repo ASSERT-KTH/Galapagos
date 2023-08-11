@@ -1,0 +1,92 @@
+[
+    {
+        "_type": "tag",
+        "name": "ldb_malloc",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/deps/lcdb/src/util/internal.c",
+        "line": 25,
+        "kind": "function",
+        "end": 32,
+        "count": 83
+    },
+    {
+        "_type": "tag",
+        "name": "btc_read32le",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/bio.h",
+        "line": 42,
+        "kind": "function",
+        "end": 53,
+        "count": 76
+    },
+    {
+        "_type": "tag",
+        "name": "btc_memzero",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/util.c",
+        "line": 29,
+        "kind": "function",
+        "end": 49,
+        "count": 73
+    },
+    {
+        "_type": "tag",
+        "name": "btc_free",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/internal.c",
+        "line": 59,
+        "kind": "function",
+        "end": 66,
+        "count": 70
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint32_write",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/impl.h",
+        "line": 493,
+        "kind": "function",
+        "end": 504,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "json_integer_new",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/json/json_builder.c",
+        "line": 317,
+        "kind": "function",
+        "end": 330,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "btc_malloc",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/internal.c",
+        "line": 39,
+        "kind": "function",
+        "end": 46,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "btc_write32be",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/bio.h",
+        "line": 142,
+        "kind": "function",
+        "end": 151,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint32_read",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/src/impl.h",
+        "line": 507,
+        "kind": "function",
+        "end": 524,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_buffer_clear",
+        "path": "/home/javier/ChatGPT4SW/use_cases/mako/deps/lcdb/src/util/buffer.c",
+        "line": 29,
+        "kind": "function",
+        "end": 36,
+        "count": 37
+    }
+]
