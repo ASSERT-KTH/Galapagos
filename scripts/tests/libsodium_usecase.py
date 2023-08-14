@@ -145,17 +145,17 @@ if __name__ == "__main__":
         WORKSPACE = os.path.join(DIRNAME, "../../functions/libsodium")
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
-            for function in functions_info:
+            for idx, function in enumerate(functions_info):
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
                 # Reading the generated variants
                 for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
                     chunks = variant_of_function.split(".")
                     funcname, extension, prompt = chunks[:3]
-                    idx = funcname.split("_")[0]
-                    funcname = funcname[len(idx)+1:]
+                    #idx = funcname.split("_")[0]
+                    #funcname = funcname[len(idx)+1:]
 
-                    if funcname == function['name']:
+                    if funcname == f"{idx}_{function['name']}":
                         print(variant_of_function)
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
@@ -176,6 +176,8 @@ if __name__ == "__main__":
         # Comment this out
         # test_cases = test_cases[:1]
         logging.info(f"Variants to check {len(test_cases)}")
+        assert len(test_cases) > 0, "There are no variants to check"
+        assert len(test_cases) == 2000, "THere should be 2000 verifications"
 
         tasks = []
         for test in test_cases:
