@@ -9,7 +9,7 @@ import time
 
 class libsodium(case.LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="openssl", doreplace=True):
+    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="libsodium", doreplace=True):
         super().__init__()
         logging.warning("Make sure libtool is installed in your system, otherwise the compilation of libsodium wont work")
         self.name = name
@@ -88,7 +88,7 @@ class libsodium(case.LLVMCompilableUseCase):
 
             logging.info("Calling make")
             try:
-                ch = subprocess.check_output(["make"], cwd=cwd, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
             except Exception as e:

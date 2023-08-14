@@ -32,6 +32,14 @@ if __name__ == "__main__":
             "project": "libsodium"
         }
 
+        # Make partial saving of the results
+        def save(ot):
+            function_folder = f"out/libsodium/{variant.function_name}"
+            os.makedirs(function_folder, exist_ok=True)
+            with open(f"{function_folder}/{variant.name}.result.json", 'w') as f:
+                json.dump(result, f, indent=4)
+
+
         try:
 
             await variant.compile(variant_shadow)
@@ -112,11 +120,7 @@ if __name__ == "__main__":
             return
         finally:
             # Save the file as a json
-            function_folder = f"out/libsodium/{variant.function_name}"
-            os.makedirs(function_folder, exist_ok=True)
-            with open(f"{function_folder}/{variant.name}.result.json", 'w') as f:
-                json.dump(result, f, indent=4)
-
+            save(result)
         return result
 
     async def main():
@@ -155,13 +159,13 @@ if __name__ == "__main__":
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
                         testcase = usecases.libsodium.libsodium(
-                                variant_of_function,
+                                funcname,
                                 original_project_folder=libsodium_project_folder,
                                 original_file_location=f"{function['path']}",
                                 variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{variant_of_function}"),
                                 line_start=function['line'],
                                 line_end=function['end'],
-                                name=os.path.basename(function['name']),
+                                name=os.path.basename(variant_of_function),
                                 doreplace=True
                         )
                         test_cases.append(testcase)
