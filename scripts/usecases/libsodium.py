@@ -37,6 +37,7 @@ class libsodium(case.LLVMCompilableUseCase):
             variant = "".join(variant)
 
             open("tmp.c", "w").write(variant)
+            self.variant_text = variant_function
 
 
             # print(variant)

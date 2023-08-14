@@ -114,9 +114,10 @@ if __name__ == "__main__":
 
 
         except Exception as e:
-            logging.warning(f"Could not compile variant {variant.name} {e}")
+            logging.warning(f"Could not compile variant {variant.name} {e} \n{variant.variant_text}")
             result['python_error_trace'] = traceback.format_exc()
             result['python_error_msg'] = f"{e}"
+            result['variant_text'] = variant.variant_text
             return
         finally:
             # Save the file as a json
