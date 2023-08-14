@@ -159,7 +159,7 @@ if __name__ == "__main__":
                         print(variant_of_function)
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
-                        testcase = usecases.ffmeg.ffmpeg(
+                        testcase = usecases.ffmpeg.ffmpeg(
                                 funcname,
                                 original_project_folder=ffmpeg_project_folder,
                                 original_file_location=f"{function['path']}",
