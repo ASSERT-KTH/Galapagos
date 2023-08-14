@@ -142,7 +142,7 @@ if __name__ == "__main__":
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
         test_cases = []
-        WORKSPACE = os.path.join(DIRNAME, "../../functions/ffmpeg")
+        WORKSPACE = os.path.join(DIRNAME, "../../functions/FFmpeg")
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
             for idx, function in enumerate(functions_info):
