@@ -1,17 +1,35 @@
 [
     {
         "_type": "tag",
+        "name": "sodium_free",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
+        "line": 666,
+        "kind": "function",
+        "end": 694,
+        "count": 287
+    },
+    {
+        "_type": "tag",
+        "name": "sodium_malloc",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
+        "line": 636,
+        "kind": "function",
+        "end": 646,
+        "count": 278
+    },
+    {
+        "_type": "tag",
         "name": "sodium_memzero",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/sodium/utils.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
         "line": 125,
         "kind": "function",
         "end": 156,
-        "count": 180
+        "count": 186
     },
     {
         "_type": "tag",
         "name": "fe25519_mul",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
         "line": 362,
         "kind": "function",
         "end": 618,
@@ -20,7 +38,7 @@
     {
         "_type": "tag",
         "name": "fe25519_mul",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
         "line": 273,
         "kind": "function",
         "end": 333,
@@ -28,65 +46,47 @@
     },
     {
         "_type": "tag",
+        "name": "sodium_bin2hex",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 15,
+        "kind": "function",
+        "end": 39,
+        "count": 127
+    },
+    {
+        "_type": "tag",
+        "name": "randombytes_buf",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/randombytes/randombytes.c",
+        "line": 168,
+        "kind": "function",
+        "end": 174,
+        "count": 107
+    },
+    {
+        "_type": "tag",
+        "name": "sodium_hex2bin",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 42,
+        "kind": "function",
+        "end": 102,
+        "count": 90
+    },
+    {
+        "_type": "tag",
         "name": "sodium_misuse",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/sodium/core.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/sodium/core.c",
         "line": 191,
         "kind": "function",
         "end": 204,
-        "count": 76
+        "count": 77
     },
     {
         "_type": "tag",
         "name": "fe25519_sq",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
         "line": 632,
         "kind": "function",
         "end": 790,
         "count": 73
-    },
-    {
-        "_type": "tag",
-        "name": "fe25519_sq",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
-        "line": 341,
-        "kind": "function",
-        "end": 399,
-        "count": 73
-    },
-    {
-        "_type": "tag",
-        "name": "load_3",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
-        "line": 12,
-        "kind": "function",
-        "end": 21,
-        "count": 57
-    },
-    {
-        "_type": "tag",
-        "name": "load_3",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c",
-        "line": 10,
-        "kind": "function",
-        "end": 17,
-        "count": 57
-    },
-    {
-        "_type": "tag",
-        "name": "load_4",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
-        "line": 24,
-        "kind": "function",
-        "end": 34,
-        "count": 47
-    },
-    {
-        "_type": "tag",
-        "name": "load_4",
-        "path": "/home/javier/ChatGPT4SW/use_cases/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c",
-        "line": 20,
-        "kind": "function",
-        "end": 28,
-        "count": 47
     }
 ]

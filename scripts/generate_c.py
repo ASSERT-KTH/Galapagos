@@ -111,74 +111,85 @@ def main(args):
 
     openai.api_key = open(os.path.join(DIRNAME, ".API_TOKEN")).read().strip()
     # programs = ['BIO_free', 'BN_CTX_get', 'BN_free', 'BN_new', 'EVP_PKEY_free']
-    functions = config['functions']
+    projects = config['projects']
     temperatures = config['temperatures']
     n = config['n']
 
     force_no_helpers = True
     force_same_signature = True
 
-    prompt_intros = [
-        'The following code describes an unspecified function.',
-    ]
+    prompt_intro = 'The following code is a reference implementeation of a function in C.'
     
     prompt_instructions = [
-        "Produce program transformations that slightly vary the behavior of the original function while maintaining its original functionality. Use them to provide a program variant."
+        # "Create a substitute implementation of the function, which is different but equivalent. It should be possible to directly replace the function and it should provide the same functionality",
+        "Create a semantically equivalent version of the program in the same language.",
+        "Use code transformations to produce variants of the original function that would preserve its original functionalities",
+        "Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.",
+        "Create a semantically equivalent version of the function in the Go programming language", 
     ]
 
-    shared_remarks = "Do not output any other text apart from the function's code."
+    shared_remarks = "Do not output any other text apart from code."
 
     if force_no_helpers:
-        shared_remarks += " Do not create auxiliary nor helper functions."
+        shared_remarks += " Do not create auxiliary or helper functions."
     if force_same_signature:
-        shared_remarks += " Maintain the function's signature."
+        shared_remarks += " Maintain the original function's signature."
 
 
-    for function in functions:
-        for temperature in temperatures:
-            source_files_prefix = os.path.join(WORKSPACE, config['input_dir'], function)
+    for project in projects:
+        files = os.listdir(os.path.join(WORKSPACE, 'functions', project))
+        # filer .c files only
+        functions = [f for f in files if f.endswith('.c')]
+        for function in functions:
+            for temperature in temperatures:
+                function_file = os.path.join(WORKSPACE, 'functions', project, function)
 
-            # read from file
-            code = extract_source(f'{source_files_prefix}')
-            # nl_description = extract_NL(f'{source_file}.md')
-        
-            print(f"\nTaking original function {function}")
-            for pit, prompt_tuple in enumerate(zip(prompt_intros, prompt_instructions)):
+                # read from file
+                code = extract_source(f'{function_file}')
+                # nl_description = extract_NL(f'{source_file}.md')
+            
+                print(f"\nTaking original function {function}")
 
-                prompt = '\n'.join([prompt_tuple[0], code, prompt_tuple[1], shared_remarks])
-                print(prompt)
-                it = 0
-                while it < n:
-                    
-                    try:
-                        sys.stdout.write(f'\rGenerating variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
-                        response = openai.ChatCompletion.create(
-                            model="gpt-4",
-                            messages=[{"role": "user", "content": prompt}],
-                            temperature=temperature,
-                            # max_tokens=7
-                        )
-
-                        parsed = parse_response(response)
-                        new_filename = f'{function}.p{pit}.y{temperature}.v{it}.c'
+                # for each prompt instruction
+                for pit, prompt_instruct in enumerate(prompt_instructions):
+                    # skip if pit is 0 -- already generated
+                    if pit == 0:
+                        continue
+                    # join intro, code, instructions and remarks
+                    prompt = '\n'.join([prompt_intro, code, prompt_instruct, shared_remarks])
+                    print(prompt)
+                    it = 0
+                    while it < n:
                         
-                         # Create a folder names as the original for better structure
-                        out_dir = os.path.join(WORKSPACE, config['output_dir'], function)
-                        if not os.path.exists(out_dir):
-                            os.makedirs(out_dir)
+                        try:
+                            sys.stdout.write(f'\rGenerating variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
+                            response = openai.ChatCompletion.create(
+                                model="gpt-4",
+                                messages=[{"role": "user", "content": prompt}],
+                                temperature=temperature,
+                                # max_tokens=7
+                            )
 
-                        with open(os.path.join(out_dir, new_filename), 'w') as new_file:
-                            new_file.write(parsed)
-                        
-                        sys.stdout.write(f'\rGenerated variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
-                        it += 1
-                    except KeyboardInterrupt:
-                        break
-                    except Exception as e:
-                        print(e)
-                        print("Trying again in 5 mins")
-                        # Sleep for 5 minutes
-                        time.sleep(300)
+                            parsed = parse_response(response)
+                            new_filename = f'{function}.p{pit}.y{temperature}.v{it}.c'
+                            
+                            # Create a folder names as the original for better structure
+                            out_dir = os.path.join(WORKSPACE, 'functions', project, 'variants')
+                            if not os.path.exists(out_dir):
+                                os.makedirs(out_dir)
+
+                            with open(os.path.join(out_dir, new_filename), 'w') as new_file:
+                                new_file.write(parsed)
+                            
+                            sys.stdout.write(f'\rGenerated variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
+                            it += 1
+                        except KeyboardInterrupt:
+                            break
+                        except Exception as e:
+                            print(e)
+                            print("Trying again in 5 mins")
+                            # Sleep for 5 minutes
+                            time.sleep(300)
 
 if __name__ == "__main__":
 

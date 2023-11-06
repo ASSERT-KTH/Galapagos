@@ -2,91 +2,91 @@
     {
         "_type": "tag",
         "name": "av_log",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavutil/log.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavutil/log.c",
         "line": 409,
         "kind": "function",
         "end": 415,
-        "count": 14095
+        "count": 14564
     },
     {
         "_type": "tag",
         "name": "av_freep",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavutil/mem.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavutil/mem.c",
         "line": 245,
         "kind": "function",
         "end": 252,
-        "count": 3481
+        "count": 3612
     },
     {
         "_type": "tag",
         "name": "get_bits",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavcodec/get_bits.h",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavcodec/get_bits.h",
         "line": 325,
         "kind": "function",
         "end": 336,
-        "count": 2821
+        "count": 2832
     },
     {
         "_type": "tag",
         "name": "get_bits",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavcodec/jpeg2000dec.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavcodec/jpeg2000dec.c",
         "line": 60,
         "kind": "function",
         "end": 73,
-        "count": 2821
+        "count": 2832
     },
     {
         "_type": "tag",
         "name": "put_bits",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavcodec/j2kenc.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavcodec/j2kenc.c",
         "line": 222,
         "kind": "function",
         "end": 232,
-        "count": 1784
+        "count": 1815
     },
     {
         "_type": "tag",
         "name": "get_bits1",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavcodec/get_bits.h",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavcodec/get_bits.h",
         "line": 378,
         "kind": "function",
         "end": 396,
-        "count": 1780
+        "count": 1793
     },
     {
         "_type": "tag",
         "name": "av_frame_free",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavutil/frame.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavutil/frame.c",
         "line": 100,
         "kind": "function",
         "end": 107,
-        "count": 1481
+        "count": 1546
     },
     {
         "_type": "tag",
         "name": "av_free",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavutil/mem.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavutil/mem.c",
         "line": 236,
         "kind": "function",
         "end": 243,
-        "count": 1062
+        "count": 1240
     },
     {
         "_type": "tag",
         "name": "avio_wb32",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavformat/aviobuf.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavformat/aviobuf.c",
         "line": 386,
         "kind": "function",
         "end": 392,
-        "count": 905
+        "count": 906
     },
     {
         "_type": "tag",
         "name": "av_calloc",
-        "path": "/home/javier/ChatGPT4SW/use_cases/FFmpeg/libavutil/mem.c",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/FFmpeg/libavutil/mem.c",
         "line": 262,
         "kind": "function",
         "end": 268,
-        "count": 835
+        "count": 885
     }
 ]

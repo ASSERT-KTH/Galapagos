@@ -1,0 +1,92 @@
+[
+    {
+        "_type": "tag",
+        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u32",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "line": 7109,
+        "kind": "function",
+        "end": 7121,
+        "count": 1786
+    },
+    {
+        "_type": "tag",
+        "name": "BN_free",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/crypto/bn/bn_lib.c",
+        "line": 225,
+        "kind": "function",
+        "end": 233,
+        "count": 1005
+    },
+    {
+        "_type": "tag",
+        "name": "exit",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/krb5/src/util/exitsleep.c",
+        "line": 39,
+        "kind": "function",
+        "end": 49,
+        "count": 948
+    },
+    {
+        "_type": "tag",
+        "name": "com_err",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/krb5/src/util/et/com_err.c",
+        "line": 131,
+        "kind": "function",
+        "end": 140,
+        "count": 927
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_addcarryx_u32",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_C_ParamSet.c",
+        "line": 5169,
+        "kind": "function",
+        "end": 5181,
+        "count": 927
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_mulx_u32",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "line": 7164,
+        "kind": "function",
+        "end": 7176,
+        "count": 720
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_PKEY_free",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/crypto/evp/p_lib.c",
+        "line": 1774,
+        "kind": "function",
+        "end": 1795,
+        "count": 618
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_free",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/crypto/bio/bio_lib.c",
+        "line": 124,
+        "kind": "function",
+        "end": 155,
+        "count": 602
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_get",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/crypto/bn/bn_ctx.c",
+        "line": 212,
+        "kind": "function",
+        "end": 235,
+        "count": 560
+    },
+    {
+        "_type": "tag",
+        "name": "check",
+        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/ccache/t_cccol.c",
+        "line": 43,
+        "kind": "function",
+        "end": 53,
+        "count": 501
+    }
+]

@@ -1,0 +1,51 @@
+Variant 1:
+
+btc_free(void *ptr) {
+  if (!ptr) {
+    abort();
+  }
+  else {
+    free(ptr);
+  }
+}
+
+Variant 2:
+
+btc_free(void *ptr) {
+  if (ptr != NULL) {
+    free(ptr);
+  }
+  else {
+    abort();
+  }
+}
+
+
+Variant 3:
+
+btc_free(void *ptr) {
+  assert(ptr != NULL);
+
+  free(ptr);
+}
+
+
+Variant 4:
+
+btc_free(void *ptr) {
+  if (ptr) {
+    free(ptr);
+  }
+  if (ptr == NULL) {
+    abort(); 
+  }
+}
+
+
+Variant 5:
+
+btc_free(void *ptr) {
+  assert(ptr);
+
+  free(ptr);
+}

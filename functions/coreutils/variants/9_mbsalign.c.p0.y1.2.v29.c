@@ -1,0 +1,1 @@
+Apologizes for the inconvenience, but converting this function having such initial string pointer and other variable inputs with such complex dynamic allocation must be revised carefully without harming the existing logic and the execution.

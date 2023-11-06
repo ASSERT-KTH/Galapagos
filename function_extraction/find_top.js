@@ -2,7 +2,18 @@ const fs = require('fs');
 const readline = require('readline');
 
 async function processLineByLine() {
-  const fileStream = fs.createReadStream('function_data.dat');
+
+  // first argument in cli does not exixt
+  if (process.argv.length < 3) {
+    console.log("Usage: node find_top.js <project>")
+    process.exit(1)
+  }
+
+  const project = process.argv[2]
+
+  const project_path = `../functions/${project}`
+
+  const fileStream = fs.createReadStream(`${project_path}/function_data.dat`);
 
   const rl = readline.createInterface({
     input: fileStream,
@@ -21,11 +32,17 @@ async function processLineByLine() {
   })
 
   const non_trivial = sorted.filter(f => f.end - f.line > 5)
-  const non_printf = non_trivial.filter(f => !f.name.includes("printf"))
+  const non_printf = non_trivial.filter(f => 
+    !f.name.includes("printf") &&
+    !f.name.includes("usage")
+  )
 
-  const top = non_printf.slice(0,5)
+  const top = non_printf.slice(0,10)
 
-  console.log(JSON.stringify(top, null, 4))
+    // write to file
+    fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(top, null, 4) );
+
+  // console.log(JSON.stringify(top, null, 4))
 }
 
 processLineByLine();

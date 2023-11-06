@@ -52,14 +52,21 @@ namespace common {
 
     NF->splice(NF->begin(), &copyfrom);
 
+    auto I = copyfrom.arg_begin();
+    I ++;
+
+    auto I2 = NF->arg_begin();
+    //I ++;
 
     // Setting the name of the arguments
-   for (Function::arg_iterator I = function.arg_begin(), E = function.arg_end(),
-                              I2 = NF->arg_begin();
+   for (Function::arg_iterator E = copyfrom.arg_end();
        I != E; ++I, ++I2) {
+       errs() << *I2 << "\n";
+       errs() << *I << "\n";
        // Move the name and users over to the new version.
-       I->replaceAllUsesWith(&*I2);
        I2->takeName(&*I);
+       I->replaceAllUsesWith(&*I2);
+
    }
     // Replace calls by this one
 

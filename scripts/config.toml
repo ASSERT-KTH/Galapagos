@@ -1,6 +1,3 @@
-functions = ["BIO_free", "BN_CTX_get", "BN_free", "BN_new", "EVP_PKEY_free"]
+projects = ["coreutils", "FFmpeg", "libsodium", "mako", "openssl"]
 temperatures = [1.2]
-n = 100
-
-input_dir = "functions/openssl"
-output_dir = "functions/variants"
+n = 30

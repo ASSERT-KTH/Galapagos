@@ -1,0 +1,5 @@
+The described task could not be executed because Go doesn't support pointer arithmetic directly which is used in the original C code. Also, handling strings in Go is simpler and more adjusted, some operations perform in this C code are not easily converted in direct equivalent operations in Go. The Go language offers high-level functionality for string manipulation such as directly slicing the strings, or multiple library functions designed for Unicode support, making such manual byte-level correction appealing in some rare edge case.
+
+Moreover, Golang is a type safe language with automatic memory management(inbuilt garbage collection). It would take overall redesign of the approach solving the problem.
+
+Hence, converting this function directly keeping the original signature is hard to done because of language constraints and overall idiomatic programming approach.

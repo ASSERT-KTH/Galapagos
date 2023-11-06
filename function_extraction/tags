@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/javier/ChatGPT4SW/function_extraction/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+LHASH_OF	../use_cases/openssl/apps/openssl.c	/^static LHASH_OF(FUNCTION) *prog_init(void)$/;"	f	file:
+STACK_OF	../use_cases/openssl/apps/openssl.c	/^static STACK_OF(tracedata) *trace_data_stack;$/;"	f	file:
+SortFnByName	../use_cases/openssl/apps/openssl.c	/^static int SortFnByName(const void *_f1, const void *_f2)$/;"	f	typeref:typename:int	file:
+add_DN_object	../use_cases/openssl/apps/req.c	/^static int add_DN_object(X509_NAME *n, char *text, const char *def,$/;"	f	typeref:typename:int	file:
+add_attribute_object	../use_cases/openssl/apps/req.c	/^static int add_attribute_object(X509_REQ *req, char *text, const char *def,$/;"	f	typeref:typename:int	file:
+apps_shutdown	../use_cases/openssl/apps/openssl.c	/^static void apps_shutdown(void)$/;"	f	typeref:typename:void	file:
+apps_startup	../use_cases/openssl/apps/openssl.c	/^static int apps_startup(void)$/;"	f	typeref:typename:int	file:
+auto_info	../use_cases/openssl/apps/req.c	/^static int auto_info(X509_REQ *req, STACK_OF(CONF_VALUE) *dn_sk,$/;"	f	typeref:typename:int	file:
+build_data	../use_cases/openssl/apps/req.c	/^static int build_data(char *text, const char *def, char *value,$/;"	f	typeref:typename:int	file:
+check_end	../use_cases/openssl/apps/req.c	/^static int check_end(const char *str, const char *end)$/;"	f	typeref:typename:int	file:
+do_cmd	../use_cases/openssl/apps/openssl.c	/^static int do_cmd(LHASH_OF(FUNCTION) *prog, int argc, char *argv[])$/;"	f	typeref:typename:int	file:
+duplicated	../use_cases/openssl/apps/req.c	/^static int duplicated(LHASH_OF(OPENSSL_STRING) *addexts, char *kv)$/;"	f	typeref:typename:int	file:
+ext_name_cmp	../use_cases/openssl/apps/req.c	/^static int ext_name_cmp(const OPENSSL_STRING *a, const OPENSSL_STRING *b)$/;"	f	typeref:typename:int	file:
+ext_name_hash	../use_cases/openssl/apps/req.c	/^static unsigned long ext_name_hash(const OPENSSL_STRING *a)$/;"	f	typeref:typename:unsigned long	file:
+exts_cleanup	../use_cases/openssl/apps/req.c	/^static void exts_cleanup(OPENSSL_STRING *x)$/;"	f	typeref:typename:void	file:
+function_cmp	../use_cases/openssl/apps/openssl.c	/^static int function_cmp(const FUNCTION * a, const FUNCTION * b)$/;"	f	typeref:typename:int	file:
+function_hash	../use_cases/openssl/apps/openssl.c	/^static unsigned long function_hash(const FUNCTION * a)$/;"	f	typeref:typename:unsigned long	file:
+help_main	../use_cases/openssl/apps/openssl.c	/^int help_main(int argc, char **argv)$/;"	f	typeref:typename:int
+internal_trace_cb	../use_cases/openssl/apps/openssl.c	/^static size_t internal_trace_cb(const char *buf, size_t cnt,$/;"	f	typeref:typename:size_t	file:
+join	../use_cases/openssl/apps/req.c	/^static int join(char buf[], size_t buf_size, const char *name,$/;"	f	typeref:typename:int	file:
+main	../use_cases/openssl/apps/openssl.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+make_REQ	../use_cases/openssl/apps/req.c	/^static int make_REQ(X509_REQ *req, EVP_PKEY *pkey, X509_NAME *fsubj,$/;"	f	typeref:typename:int	file:
+nseq_main	../use_cases/openssl/apps/nseq.c	/^int nseq_main(int argc, char **argv)$/;"	f	typeref:typename:int
+prompt_info	../use_cases/openssl/apps/req.c	/^static int prompt_info(X509_REQ *req,$/;"	f	typeref:typename:int	file:
+req_check_len	../use_cases/openssl/apps/req.c	/^static int req_check_len(int len, int n_min, int n_max)$/;"	f	typeref:typename:int	file:
+req_main	../use_cases/openssl/apps/req.c	/^int req_main(int argc, char **argv)$/;"	f	typeref:typename:int
+set_keygen_ctx	../use_cases/openssl/apps/req.c	/^static EVP_PKEY_CTX *set_keygen_ctx(const char *gstr,$/;"	f	typeref:typename:EVP_PKEY_CTX *	file:
+setup_trace	../use_cases/openssl/apps/openssl.c	/^static void setup_trace(const char *str)$/;"	f	typeref:typename:void	file:
+setup_trace_category	../use_cases/openssl/apps/openssl.c	/^static void setup_trace_category(int category)$/;"	f	typeref:typename:void	file:
+tracedata_free	../use_cases/openssl/apps/openssl.c	/^static void tracedata_free(tracedata *data)$/;"	f	typeref:typename:void	file:
+warn_deprecated	../use_cases/openssl/apps/openssl.c	/^static void warn_deprecated(const FUNCTION *fp)$/;"	f	typeref:typename:void	file:
