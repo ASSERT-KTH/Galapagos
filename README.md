@@ -11,7 +11,7 @@
 - Build alive. `cd scripts/verification && bash build.sh`
 - Enter the scripts folder
 - Install it as a package `pip3 install -e .`
-- Run each test module inside the `tests` folder. For example `pyrhon3 -m tests.openssl_usecase`
+- Run each test module inside the `tests` folder. For example `python3 -m tests.openssl_usecase`
 
 
 ## Use cases
