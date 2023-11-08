@@ -9,7 +9,7 @@ import time
 
 class ffmpeg(case.LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True):
+    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name=""):
         super().__init__()
         logging.warning("Make sure nasm is installed in your system, otherwise the compilation of ffmpeg wont work")
         self.name = name
@@ -20,6 +20,7 @@ class ffmpeg(case.LLVMCompilableUseCase):
         self.change_location=(original_file_location, line_start, line_end)
 
         self.test_result = None
+        self.real_name = real_name
         self.doreplace = doreplace
 
     def replace(self, cwd):
@@ -82,14 +83,14 @@ class ffmpeg(case.LLVMCompilableUseCase):
             #    stderr=subprocess.STDOUT)
             #logging.debug(ch.decode())
             logging.info("Calling configure")
-            ch = subprocess.check_output(["./configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"},
+            ch = subprocess.check_output(["./configure", "--cc=clang", "--extra-cflags=\"-emit-llvm\"", "--disable-x86asm"], env={**os.environ},
                 shell=True,
                 cwd=cwd,
                 stderr=subprocess.STDOUT)
 
             logging.info("Calling make")
             try:
-                ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
             except Exception as e:

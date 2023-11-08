@@ -94,7 +94,7 @@ if __name__ == "__main__":
                     tasks = []
                     for f1, f2 in bitcodes:
                         logging.info(f"Verifying {f1} {f2}")
-                        tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint=variant.function_name, timeout=300_000))))
+                        tasks.append((f1, f2, asyncio.create_task(verif.async_verify(open(f1, 'r'), open(f2, 'r'), entrypoint=variant.real_name, timeout=300_000))))
 
                     pass_test, msg = await pass_test
                     result['pass_tests'] = pass_test
@@ -167,9 +167,10 @@ if __name__ == "__main__":
                                 line_start=function['line'],
                                 line_end=function['end'],
                                 name=os.path.basename(variant_of_function),
-                                doreplace=True
+                                doreplace=True,
+                                real_name=function['name'],
                         )
-                        test_cases.append(testcase)
+                        test_cases.insert(0, testcase)
 
 
 

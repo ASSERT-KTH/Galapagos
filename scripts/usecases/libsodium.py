@@ -9,7 +9,7 @@ import time
 
 class libsodium(case.LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="libsodium", doreplace=True):
+    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="libsodium", doreplace=True, real_name=""):
         super().__init__()
         logging.warning("Make sure libtool is installed in your system, otherwise the compilation of libsodium wont work")
         self.name = name
@@ -20,6 +20,7 @@ class libsodium(case.LLVMCompilableUseCase):
         self.change_location=(original_file_location, line_start, line_end)
 
         self.test_result = None
+        self.real_name = real_name
         self.doreplace = doreplace
 
     def replace(self, cwd):
