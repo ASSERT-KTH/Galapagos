@@ -8,7 +8,7 @@
 
 ### For running tests
 
-- Build alive. `cd scripts/verification && bash build.sh`
+- Build alive. `cd scripts/verifier && bash build.sh`
 - Enter the scripts folder
 - Install it as a package `pip3 install -e .`
 - Run each test module inside the `tests` folder. For example `python3 -m tests.openssl_usecase`
