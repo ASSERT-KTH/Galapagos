@@ -77,15 +77,15 @@ class mako(case.LLVMCompilableUseCase):
         if not self.compiled:
             self.replace(cwd)
             # Lets set ccache to speed up
-            #logging.info("Setting up autogen")
-            #ch = subprocess.check_output(["./autogen.sh"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"},
-            #    shell=True,
-            #    cwd=cwd,
-            #    stderr=subprocess.STDOUT)
-            #logging.debug(ch.decode())
+            logging.info("Setting up autogen")
+            ch = subprocess.check_output(["./autogen.sh"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"},
+               shell=True,
+               cwd=cwd,
+               stderr=subprocess.STDOUT)
+            logging.debug(ch.decode())
             logging.info("Calling configure")
             # TODO: change this to the correct flags?
-            ch = subprocess.check_output(["./configure", "--cc=clang", "--extra-cflags=\"-emit-llvm\"", "--disable-x86asm"], env={**os.environ},
+            ch = subprocess.check_output(["./configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"},
                 shell=True,
                 cwd=cwd,
                 stderr=subprocess.STDOUT)
@@ -101,32 +101,8 @@ class mako(case.LLVMCompilableUseCase):
                 # logging.warning(
                 #     "Make sure the dependencies are installed\n" + '''
                 #     sudo apt-get update -qq && sudo apt-get -y install \
-                #     autoconf \
-                #     automake \
-                #     build-essential \
-                #     cmake \
-                #     git-core \
-                #     libass-dev \
-                #     libfreetype6-dev \
-                #     libgnutls28-dev \
-                #     libmp3lame-dev \
-                #     libsdl2-dev \
-                #     libtool \
-                #     libva-dev \
-                #     libvdpau-dev \
-                #     libvorbis-dev \
-                #     libxcb1-dev \
-                #     libxcb-shm0-dev \
-                #     libxcb-xfixes0-dev \
-                #     meson \
-                #     ninja-build \
-                #     pkg-config \
-                #     texinfo \
-                #     wget \
-                #     yasm \
-                #     zlib1g-dev
+                #     ...
                 #     ''',
-
                 #     )
                 self.compiled = False
                 raise e
