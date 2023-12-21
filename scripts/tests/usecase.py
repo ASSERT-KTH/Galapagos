@@ -1,6 +1,5 @@
 
 import asyncio
-import usecases.ffmpeg
 from usecases.case import is_executable
 import verifier
 import logging
@@ -19,7 +18,10 @@ if __name__ == "__main__":
 
     verif = verifier.AliveVerifier(debug=True)
 
-    async def compare(original_folder, shadow1, original: usecases.ffmpeg.ffmpeg, variant: usecases.ffmpeg.ffmpeg):
+    # TODO: remove these comments, only here for reference (as typing is not working)
+    # original is the original use case, is of type usecases.<LIBRARY>.<LIBRARY>
+    # variant is the variant use case, is of type usecases.<LIBRARY>.<LIBRARY>
+    async def compare(original_folder, shadow1, original, variant):
         # The first one does not need to compile
 
         # Fix name for faster compile. In theory the name is unique ?
@@ -133,7 +135,11 @@ if __name__ == "__main__":
         project_folder = f"../../use_cases/{LIBRARY}"
 
         project_folder = os.path.join(DIRNAME, project_folder)
-        original_uc = usecases.ffmpeg.ffmpeg("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
+        # HACK to import the use case from the string passed
+        uc_name = f"usecases.{LIBRARY}.{LIBRARY}"
+        uc_name = __import__(uc_name, fromlist=[LIBRARY])
+        original_uc = getattr(original_uc, LIBRARY)
+        original_uc = original_uc("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
 
         # UNcomment this for real
         # original_uc.compiled = True
@@ -163,7 +169,8 @@ if __name__ == "__main__":
                         print(variant_of_function)
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
-                        testcase = usecases.ffmpeg.ffmpeg(
+                        # TODO: still must check if this call works
+                        testcase = original_uc.__class__(
                                 funcname,
                                 original_project_folder=project_folder,
                                 original_file_location=f"{function['path']}",
