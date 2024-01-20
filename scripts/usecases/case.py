@@ -11,6 +11,96 @@ import os
 import shutil
 import  uuid
 
+
+# TODO: have a dictionary which maps libraries to their respective warnings, dependencies, compilation flags, etc.
+
+LIBRARY_INFO = {
+    "ffmpeg": {
+        "dependencies": [
+            "autoconf",
+            "automake",
+            "build-essential",
+            "cmake",
+            "git-core",
+            "libass-dev",
+            "libfreetype6-dev",
+            "libgnutls28-dev",
+            "libmp3lame-dev",
+            "libsdl2-dev",
+            "libtool",
+            "libva-dev",
+            "libvdpau-dev",
+            "libvorbis-dev",
+            "libxcb1-dev",
+            "libxcb-shm0-dev",
+            "libxcb-xfixes0-dev",
+            "meson",
+            "nasm",
+            "ninja-build",
+            "pkg-config",
+            "texinfo",
+            "wget",
+            "yasm",
+            "zlib1g-dev"
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+            "--disable-x86asm"
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./Configure",
+    },
+    "openssl": {
+        "dependencies": [
+            # TODO
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+            "--disable-x86asm"
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+    },
+    "libsodium": {
+        "dependencies": [
+            # TODO
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+            "--disable-x86asm"
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+    },
+    # TODO: mako, coreutils
+}
+
+DEPENDENCY_WARNING_TEMPLATE = '''
+Make sure the required dependencies are installed\n
+sudo apt-get update -qq && sudo apt-get -y install \\
+{dependencies}
+'''
+
+
+
 '''
     Returns true f the a file is executable. Useful for compiled binaries
 '''
@@ -147,13 +237,10 @@ class LLVMCompilableUseCase(UseCase):
         raise NotImplementedError()
 
 # TODO: rename this
-class LibraryCompilableUse(LLVMCompilableUseCase):
+class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
     def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name=""):
         super().__init__()
-        # TODO: check whether we can programatically have these warnings for each library (?)
-        # Or rather, should we have a general warning that encompasses every one?
-        # logging.warning("Make sure nasm is installed in your system, otherwise the compilation of ffmpeg wont work")
         self.name = name
         self.function_name = function_name
         self.original_project_folder = original_project_folder
@@ -218,10 +305,9 @@ class LibraryCompilableUse(LLVMCompilableUseCase):
             self.replace(cwd)
             # Lets set ccache to speed up
             logging.info("Setting up autogen")
-            # TODO: this requires specific flags for each library
             ch = subprocess.check_output(
-                ["./autogen.sh"],
-                env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"},
+                ["./autogen.sh", "-s"],
+                env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                 shell=True,
                 cwd=cwd,
                 stderr=subprocess.STDOUT
@@ -229,10 +315,9 @@ class LibraryCompilableUse(LLVMCompilableUseCase):
             logging.debug(ch.decode())
 
             logging.info("Calling configure")
-            # TODO: this requires specific flags for each library -- talk to javier about the best way?
             ch = subprocess.check_output(
-                ["./configure", "--cc=clang", "--extra-cflags=\"-emit-llvm\"", "--disable-x86asm"],
-                env={**os.environ},
+                [*LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]],
+                env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                 shell=True,
                 cwd=cwd,
                 stderr=subprocess.STDOUT
@@ -245,36 +330,12 @@ class LibraryCompilableUse(LLVMCompilableUseCase):
                 self.compiled = True
             except Exception as e:
                 print(e)
-                # TODO: make this warning applied to all?? + add every single warning required for every library
+                # TODO: check if this call works (currently untested)
                 logging.warning(
-                    "Make sure the dependencies are installed\n" + '''
-                    sudo apt-get update -qq && sudo apt-get -y install \
-                    autoconf \
-                    automake \
-                    build-essential \
-                    cmake \
-                    git-core \
-                    libass-dev \
-                    libfreetype6-dev \
-                    libgnutls28-dev \
-                    libmp3lame-dev \
-                    libsdl2-dev \
-                    libtool \
-                    libva-dev \
-                    libvdpau-dev \
-                    libvorbis-dev \
-                    libxcb1-dev \
-                    libxcb-shm0-dev \
-                    libxcb-xfixes0-dev \
-                    meson \
-                    ninja-build \
-                    pkg-config \
-                    texinfo \
-                    wget \
-                    yasm \
-                    zlib1g-dev
-                    ''',
+                    DEPENDENCY_WARNING_TEMPLATE.format(
+                        dependencies="\n".join(LIBRARY_INFO[self.name]["dependencies"])
                     )
+                )
                 self.compiled = False
                 raise e
         # block here?
