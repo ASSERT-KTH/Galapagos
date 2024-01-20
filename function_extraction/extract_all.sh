@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # for each item in the list of functions
 for FUN in "coreutils" "ffmpeg" "libsodium" "mako" "openssl"; do
