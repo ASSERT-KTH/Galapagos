@@ -49,7 +49,7 @@ if __name__ == "__main__":
             await variant.compile(variant_shadow)
             result['compiled'] = True
 
-            # TODO check for changes, bitcodes,  binaries and source code
+            # TODO check for changes, bitcodes, binaries and source code
             modified, in1, in2 = await variant.compare_shadows(shadow1, variant_shadow)
             result['changes'] = {}
             result['all'] = modified
@@ -131,7 +131,6 @@ if __name__ == "__main__":
     async def main():
 
         # We compile the original first
-        # TODO: rename FFmpeg (w/ caps) to ffmpeg in use_cases/
         project_folder = f"../../use_cases/{LIBRARY}"
 
         project_folder = os.path.join(DIRNAME, project_folder)
@@ -151,7 +150,6 @@ if __name__ == "__main__":
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
         test_cases = []
-        # TODO: rename functions/FFmpeg to functions/ffmpeg
         WORKSPACE = os.path.join(DIRNAME, f"../../functions/{LIBRARY}")
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
