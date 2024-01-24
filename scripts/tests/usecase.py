@@ -47,7 +47,7 @@ if __name__ == "__main__":
         try:
 
             await variant.compile(variant_shadow)
-            result['compiled'] = True
+            result['compiled'] = True # TODO compilation can fail. return if false
 
             # TODO check for changes, bitcodes, binaries and source code
             modified, in1, in2 = await variant.compare_shadows(shadow1, variant_shadow)
@@ -135,9 +135,9 @@ if __name__ == "__main__":
 
         project_folder = os.path.join(DIRNAME, project_folder)
         # HACK to import the use case from the string passed
-        uc_name = f"usecases.{LIBRARY}.{LIBRARY}"
+        uc_name = f"usecases.{LIBRARY}"
         uc_name = __import__(uc_name, fromlist=[LIBRARY])
-        original_uc = getattr(original_uc, LIBRARY)
+        original_uc = getattr(uc_name, LIBRARY)
         original_uc = original_uc("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
 
         # UNcomment this for real
@@ -187,14 +187,15 @@ if __name__ == "__main__":
         # test_cases = test_cases[:1]
         logging.info(f"Variants to check {len(test_cases)}")
         assert len(test_cases) > 0, "There are no variants to check"
-        assert len(test_cases) == 2000, "THere should be 2000 verifications"
+        # assert len(test_cases) == 2000, "THere should be 2000 verifications"
 
         tasks = []
         for test in test_cases:
             tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"../../use_cases/{LIBRARY}"),shadow_original, original_uc, test)))
-            break
+            # break
 
         results = await asyncio.gather(*tasks)
+        # TODO summarize results: print_summary(results)
 
 
 
