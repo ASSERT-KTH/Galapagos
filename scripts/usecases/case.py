@@ -12,8 +12,6 @@ import shutil
 import  uuid
 
 
-# TODO: have a dictionary which maps libraries to their respective warnings, dependencies, compilation flags, etc.
-
 LIBRARY_INFO = {
     "ffmpeg": {
         "dependencies": [
@@ -58,7 +56,7 @@ LIBRARY_INFO = {
     },
     "openssl": {
         "dependencies": [
-            # TODO
+            # it's just glibc and make so it should be fine
         ],
         "flags": [
             "--cc=clang",
@@ -75,7 +73,7 @@ LIBRARY_INFO = {
     },
     "libsodium": {
         "dependencies": [
-            # TODO
+            "minisign", # apparently it's a circular dependency? but it's a dep nonetheless
         ],
         "flags": [
             "--cc=clang",
