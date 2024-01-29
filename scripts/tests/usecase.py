@@ -1,12 +1,14 @@
 
 import asyncio
-from usecases.case import is_executable
+import usecases.case
 import verifier
 import logging
 import json
 import os
 import traceback
 import sys
+import shutil
+
 
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
 LIBRARY = sys.argv[1] # TODO: check if this is correct, check if str() is needed
@@ -46,8 +48,8 @@ if __name__ == "__main__":
 
         try:
 
-            await variant.compile(variant_shadow)
-            result['compiled'] = True # TODO compilation can fail. return if false
+            await variant.compile(variant_shadow) # raises exception on fail
+            result['compiled'] = True 
 
             # TODO check for changes, bitcodes, binaries and source code
             modified, in1, in2 = await variant.compare_shadows(shadow1, variant_shadow)
@@ -134,11 +136,10 @@ if __name__ == "__main__":
         project_folder = f"../../use_cases/{LIBRARY}"
 
         project_folder = os.path.join(DIRNAME, project_folder)
-        # HACK to import the use case from the string passed
-        uc_name = f"usecases.{LIBRARY}"
-        uc_name = __import__(uc_name, fromlist=[LIBRARY])
-        original_uc = getattr(uc_name, LIBRARY)
-        original_uc = original_uc("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
+
+        uc_name = f"usecases.case"
+        uc_name = __import__(uc_name).case
+        original_uc = uc_name.LibraryCompilableUseCase("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
 
         # UNcomment this for real
         # original_uc.compiled = True
@@ -168,14 +169,14 @@ if __name__ == "__main__":
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
                         # TODO: still must check if this call works
-                        testcase = original_uc.__class__(
+                        testcase = uc_name.LibraryCompilableUseCase(
                                 funcname,
                                 original_project_folder=project_folder,
                                 original_file_location=f"{function['path']}",
                                 variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{variant_of_function}"),
                                 line_start=function['line'],
                                 line_end=function['end'],
-                                name=os.path.basename(variant_of_function),
+                                name=LIBRARY,
                                 doreplace=True,
                                 real_name=function['name']
                         )
@@ -184,7 +185,7 @@ if __name__ == "__main__":
 
 
         # Comment this out
-        # test_cases = test_cases[:1]
+        test_cases = test_cases[:1]
         logging.info(f"Variants to check {len(test_cases)}")
         assert len(test_cases) > 0, "There are no variants to check"
         # assert len(test_cases) == 2000, "THere should be 2000 verifications"
@@ -195,13 +196,6 @@ if __name__ == "__main__":
             # break
 
         results = await asyncio.gather(*tasks)
-        # TODO summarize results: print_summary(results)
-
-
-
-
-
-
 
 
     asyncio.run(main())

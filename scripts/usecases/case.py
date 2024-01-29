@@ -9,7 +9,9 @@ import subprocess
 import logging
 import os
 import shutil
-import  uuid
+import uuid
+import time
+
 
 
 LIBRARY_INFO = {
@@ -43,8 +45,7 @@ LIBRARY_INFO = {
         ],
         "flags": [
             "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
-            "--disable-x86asm"
+            "--extra-cflags=\"-save-temps\"",
         ],
         "env": {
             "CFLAGS": "-save-temps",
@@ -52,7 +53,8 @@ LIBRARY_INFO = {
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps"
         },
-        "configure": "./Configure",
+        "configure": "./configure",
+        "autogen": False,
     },
     "openssl": {
         "dependencies": [
@@ -61,7 +63,6 @@ LIBRARY_INFO = {
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
-            "--disable-x86asm"
         ],
         "env": {
             "CFLAGS": "-save-temps",
@@ -78,7 +79,6 @@ LIBRARY_INFO = {
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
-            "--disable-x86asm"
         ],
         "env": {
             "CFLAGS": "-save-temps",
@@ -138,14 +138,15 @@ class UseCase(FileSystemEventHandler):
     '''
     async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
+        shadow_dir = "/mnt/data"
         # Create a folder in tmp
         # Copy the src folder to the tmp folder
         # Return the tmp folder
         # use a random name
 
         random_name = "envy-%s"%str(uuid.uuid4()) if not name else name
-        print(f"Copying {src} to /tmp/{random_name}")
-        tmp_folder = os.path.join("/tmp", random_name)
+        print(f"Copying {src} to {shadow_dir}/{random_name}")
+        tmp_folder = os.path.join(shadow_dir, random_name)
         # if the folder exist, prevent the copy
         if os.path.exists(tmp_folder):
             return tmp_folder
@@ -302,28 +303,30 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         if not self.compiled:
             self.replace(cwd)
             # Lets set ccache to speed up
-            logging.info("Setting up autogen")
-            ch = subprocess.check_output(
-                ["./autogen.sh", "-s"],
-                env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
-                shell=True,
-                cwd=cwd,
-                stderr=subprocess.STDOUT
-            )
-            logging.debug(ch.decode())
-
+            if LIBRARY_INFO[self.name]["autogen"]:
+                logging.info("Setting up autogen")
+                ch = subprocess.check_output(
+                    ["./autogen.sh", "-s"],
+                    env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                    shell=True,
+                    cwd=cwd,
+                    stderr=subprocess.STDOUT
+                )
+                logging.debug(ch.decode())
+            logging.info(cwd)
             logging.info("Calling configure")
+            logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
             ch = subprocess.check_output(
-                [*LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]],
+                " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]),
                 env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                 shell=True,
                 cwd=cwd,
                 stderr=subprocess.STDOUT
             )
-
+            # TODO SHOULD FAIL IF CONFIGURE FAILS!
             logging.info("Calling make")
             try:
-                ch = subprocess.check_output(["make", "-j", "16"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
             except Exception as e:
