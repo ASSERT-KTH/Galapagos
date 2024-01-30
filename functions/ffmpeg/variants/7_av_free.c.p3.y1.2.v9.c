@@ -1,0 +1,1 @@
+In Go, the garbage collector does memory management automatically, hence there is no direct equivalent to a memory free function in C. Manual memory management through C function-like `free()` does not exist. So there's actually no need, or way, to manually free memory like in C. So converting this function into a Go language equivalent is not possible in the traditional sense.

@@ -9,7 +9,98 @@ import subprocess
 import logging
 import os
 import shutil
-import  uuid
+import uuid
+import time
+import traceback
+
+
+LIBRARY_INFO = {
+    "ffmpeg": {
+        "dependencies": [
+            "autoconf",
+            "automake",
+            "build-essential",
+            "cmake",
+            "git-core",
+            "libass-dev",
+            "libfreetype6-dev",
+            "libgnutls28-dev",
+            "libmp3lame-dev",
+            "libsdl2-dev",
+            "libtool",
+            "libva-dev",
+            "libvdpau-dev",
+            "libvorbis-dev",
+            "libxcb1-dev",
+            "libxcb-shm0-dev",
+            "libxcb-xfixes0-dev",
+            "meson",
+            "nasm",
+            "ninja-build",
+            "pkg-config",
+            "texinfo",
+            "wget",
+            "yasm",
+            "zlib1g-dev"
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+        "autogen": False,
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
+    },
+    "openssl": {
+        "dependencies": [
+            # it's just glibc and make so it should be fine
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+    },
+    "libsodium": {
+        "dependencies": [
+            "minisign", # apparently it's a circular dependency? but it's a dep nonetheless
+        ],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+    },
+    # TODO: mako, coreutils
+}
+
+DEPENDENCY_WARNING_TEMPLATE = '''
+Make sure the required dependencies are installed\n
+sudo apt-get update -qq && sudo apt-get -y install \\
+{dependencies}
+'''
+
+
 
 '''
     Returns true f the a file is executable. Useful for compiled binaries
@@ -31,7 +122,17 @@ def hash_of_file(file):
                 file_hash.update(chunk)
         return file_hash.hexdigest()
     except Exception as e:
-        # logging.error(e)
+        logging.error(f"while hahsing file {file}, {e}")
+        return None
+
+
+def strip(file):
+    try:
+        strip_filename = f"{file}-strip"
+        subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
+        return strip_filename 
+    except Exception as e:
+        logging.error(f"while stripping file {file}, {e}")
         return None
 '''
     Define a use case to compile a library or a binary, detect LLVM bitcodes changed during compilation, and replace C/C++ code in the basecode.
@@ -50,14 +151,15 @@ class UseCase(FileSystemEventHandler):
     '''
     async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
+        shadow_dir = "/mnt/data"
         # Create a folder in tmp
         # Copy the src folder to the tmp folder
         # Return the tmp folder
         # use a random name
 
         random_name = "envy-%s"%str(uuid.uuid4()) if not name else name
-        print(f"Copying {src} to /tmp/{random_name}")
-        tmp_folder = os.path.join("/tmp", random_name)
+        print(f"Copying {src} to {shadow_dir}/{random_name}")
+        tmp_folder = os.path.join(shadow_dir, random_name)
         # if the folder exist, prevent the copy
         if os.path.exists(tmp_folder):
             return tmp_folder
@@ -73,13 +175,19 @@ class UseCase(FileSystemEventHandler):
         indst_only = []
         
         async def compare_two(f1, f2):
-            h1 = hash_of_file(f1)
-            h2 = hash_of_file(f2)
+            s1, s2 = f1, f2
+            if f1.endswith('.bc'):
+                s1 = strip(f1)
+                s2 = strip(f2)
+
+            h1 = hash_of_file(s1)
+            h2 = hash_of_file(s2)
             return f1, f2, h1 != h2
 
         tasks = []
-        for root, dirs, files in os.walk(src):
+        for root, _, files in os.walk(src):
             for file in files:
+                #TODO: why are we comparing all files??
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(dst, src_file[len(src)+1:])
                 if os.path.exists(dst_file):
@@ -91,9 +199,9 @@ class UseCase(FileSystemEventHandler):
         for f in tasks:
             f1, f2, r = f
             if r:
-                # print("Mismatch", f1, f2)
+                print("Mismatch", f1, f2)
                 modified.append((f1, f2))
-        for root, dirs, files in os.walk(dst):
+        for root, _, files in os.walk(dst):
             for file in files:
                 dst_file = os.path.join(root, file)
                 src_file = os.path.join(src, dst_file[len(dst)+1:])
@@ -146,6 +254,114 @@ class LLVMCompilableUseCase(UseCase):
 
         raise NotImplementedError()
 
+# TODO: rename this
+class LibraryCompilableUseCase(LLVMCompilableUseCase):
+
+    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name=""):
+        super().__init__()
+        self.name = name
+        self.function_name = function_name
+        self.original_project_folder = original_project_folder
+        self.variant_text_location = variant_text_location
+        self.original_file_location = original_file_location
+        self.change_location = (original_file_location, line_start, line_end)
+
+        self.test_result = None
+        self.real_name = real_name
+        self.doreplace = doreplace
+    
+    def replace(self, cwd):
+        if self.doreplace:
+            (source, start, end) = self.change_location
+            # This path is in the shadow folder of the new compilation
+            source = os.path.join(cwd, source)
+            original_source = os.path.join(self.original_project_folder, self.original_file_location)
+
+            variant_function = open(self.variant_text_location, "r").readlines()
+
+            original_content = open(original_source, "r").readlines()
+            # TODO wrap function into our own comments to help in finding (manually) for bugs
+            variant = original_content[:start-1] + variant_function + ["\n"] + original_content[end + 1:]
+            variant = "".join(variant)
+
+            open("tmp.c", "w").write(variant)
+            self.variant_text = variant_function
+
+            # print(variant)
+            logging.info(f"Changing source code at {source} {start}:{end}.")
+
+            f = open(source, "w")
+            f.write(variant)
+            f.close()
+        else:
+            logging.info("No change provided")
+    
+    async def run_tests(self, cwd):
+        if not LIBRARY_INFO[self.name]["testing"]["enabled"]:
+            return True, "testing disabled"
+        start = time.time()
+        logging.info("Testing")
+        if not self.tested:
+            try:
+                self.replace(cwd)
+                # TODO: check this below;;;
+                # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
+                #
+                ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+                self.tested = True
+                self.test_result = True, ch.decode()
+                print(f"Tested in {time.time() - start:.2f}s")
+                return True, ch.decode()
+            except Exception as e:
+                print(e)
+                self.test_result = False, f"{e}\n{traceback.format_exc()}"
+                return False, f"{e}"
+
+        return self.test_result
+    
+    async def compile(self, cwd):
+        logging.info(f"Compiling {cwd}")
+        start = time.time()
+        if not self.compiled:
+            self.replace(cwd)
+            # Lets set ccache to speed up
+            if LIBRARY_INFO[self.name]["autogen"]:
+                logging.info("Setting up autogen")
+                ch = subprocess.check_output(
+                    ["./autogen.sh", "-s"],
+                    env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                    shell=True,
+                    cwd=cwd,
+                    stderr=subprocess.STDOUT
+                )
+                logging.debug(ch.decode())
+            logging.info(cwd)
+            logging.info("Calling configure")
+            logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
+            ch = subprocess.check_output(
+                " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]),
+                env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                shell=True,
+                cwd=cwd,
+                stderr=subprocess.STDOUT
+            )
+            # TODO SHOULD FAIL IF CONFIGURE FAILS!
+            logging.info("Calling make")
+            try:
+                ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
+                print(f"Compiled in {time.time() - start:.2f}s")
+                self.compiled = True
+            except Exception as e:
+                print(e)
+                # TODO: check if this call works (currently untested)
+                logging.warning(
+                    DEPENDENCY_WARNING_TEMPLATE.format(
+                        dependencies="\n".join(LIBRARY_INFO[self.name]["dependencies"])
+                    )
+                )
+                self.compiled = False
+                raise e
+        # block here?
 
 class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
 

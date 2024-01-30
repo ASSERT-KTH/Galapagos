@@ -7,8 +7,8 @@
 [submodule "use_cases/coreutils"]
 	path = use_cases/coreutils
 	url = https://github.com/coreutils/coreutils.git
-[submodule "use_cases/FFmpeg"]
-	path = use_cases/FFmpeg
+[submodule "use_cases/ffmpeg"]
+	path = use_cases/ffmpeg
 	url = https://github.com/FFmpeg/FFmpeg.git
 [submodule "use_cases/libsodium"]
 	path = use_cases/libsodium
