@@ -1,6 +1,6 @@
 
 import asyncio
-import usecases.case
+from usecases.case import is_executable
 import verifier
 import logging
 import json

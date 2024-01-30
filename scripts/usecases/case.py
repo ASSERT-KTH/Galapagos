@@ -11,7 +11,7 @@ import os
 import shutil
 import uuid
 import time
-
+import traceback
 
 
 LIBRARY_INFO = {
@@ -45,7 +45,7 @@ LIBRARY_INFO = {
         ],
         "flags": [
             "--cc=clang",
-            "--extra-cflags=\"-save-temps\"",
+            "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
         ],
         "env": {
             "CFLAGS": "-save-temps",
@@ -55,6 +55,9 @@ LIBRARY_INFO = {
         },
         "configure": "./configure",
         "autogen": False,
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
     },
     "openssl": {
         "dependencies": [
@@ -119,7 +122,17 @@ def hash_of_file(file):
                 file_hash.update(chunk)
         return file_hash.hexdigest()
     except Exception as e:
-        # logging.error(e)
+        logging.error(f"while hahsing file {file}, {e}")
+        return None
+
+
+def strip(file):
+    try:
+        strip_filename = f"{file}-strip"
+        subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
+        return strip_filename 
+    except Exception as e:
+        logging.error(f"while stripping file {file}, {e}")
         return None
 '''
     Define a use case to compile a library or a binary, detect LLVM bitcodes changed during compilation, and replace C/C++ code in the basecode.
@@ -162,13 +175,19 @@ class UseCase(FileSystemEventHandler):
         indst_only = []
         
         async def compare_two(f1, f2):
-            h1 = hash_of_file(f1)
-            h2 = hash_of_file(f2)
+            s1, s2 = f1, f2
+            if f1.endswith('.bc'):
+                s1 = strip(f1)
+                s2 = strip(f2)
+
+            h1 = hash_of_file(s1)
+            h2 = hash_of_file(s2)
             return f1, f2, h1 != h2
 
         tasks = []
-        for root, dirs, files in os.walk(src):
+        for root, _, files in os.walk(src):
             for file in files:
+                #TODO: why are we comparing all files??
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(dst, src_file[len(src)+1:])
                 if os.path.exists(dst_file):
@@ -180,9 +199,9 @@ class UseCase(FileSystemEventHandler):
         for f in tasks:
             f1, f2, r = f
             if r:
-                # print("Mismatch", f1, f2)
+                print("Mismatch", f1, f2)
                 modified.append((f1, f2))
-        for root, dirs, files in os.walk(dst):
+        for root, _, files in os.walk(dst):
             for file in files:
                 dst_file = os.path.join(root, file)
                 src_file = os.path.join(src, dst_file[len(dst)+1:])
@@ -278,6 +297,8 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             logging.info("No change provided")
     
     async def run_tests(self, cwd):
+        if not LIBRARY_INFO[self.name]["testing"]["enabled"]:
+            return True, "testing disabled"
         start = time.time()
         logging.info("Testing")
         if not self.tested:
@@ -285,6 +306,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 self.replace(cwd)
                 # TODO: check this below;;;
                 # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
+                #
                 ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
                 self.tested = True
                 self.test_result = True, ch.decode()
