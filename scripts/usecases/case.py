@@ -106,8 +106,15 @@ sudo apt-get update -qq && sudo apt-get -y install \\
     Returns true f the a file is executable. Useful for compiled binaries
 '''
 def is_executable(f):
-    return os.access(f, os.X_OK)
-
+    if not os.access(f, os.X_OK):
+        return False
+    try:
+        with open(f, 'rb') as check:
+            b = check.read(4)
+            return b == b'\x7fELF' 
+    except:
+        logging.error(f"while checking is_executable: could not read {f} ")
+        return False
 
 
 '''
@@ -128,9 +135,16 @@ def hash_of_file(file):
 
 def strip(file):
     try:
-        strip_filename = f"{file}-strip"
-        subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
-        return strip_filename 
+        if file.endswith('.bc'):
+            strip_filename = f"{file}-strip"
+            subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
+            return strip_filename
+        elif file.endswith('.o') or is_executable(file):
+            strip_filename = f"{file}-strip"
+            subprocess.run(['strip', '--strip-all', '-o', strip_filename, file])
+            return strip_filename
+        else:
+            return file
     except Exception as e:
         logging.error(f"while stripping file {file}, {e}")
         return None
@@ -175,10 +189,8 @@ class UseCase(FileSystemEventHandler):
         indst_only = []
         
         async def compare_two(f1, f2):
-            s1, s2 = f1, f2
-            if f1.endswith('.bc'):
-                s1 = strip(f1)
-                s2 = strip(f2)
+            s1 = strip(f1)
+            s2 = strip(f2)
 
             h1 = hash_of_file(s1)
             h2 = hash_of_file(s2)
