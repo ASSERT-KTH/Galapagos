@@ -2,11 +2,11 @@ import os
 import shutil
 import subprocess
 import tempfile
-import logging
 import re
 import asyncio
 import logging
 import json
+
 
 class CustomFormatter(logging.Formatter):
 
@@ -15,14 +15,14 @@ class CustomFormatter(logging.Formatter):
     red = "\x1b[31;20m"
     bold_red = "\x1b[31;1m"
     reset = "\x1b[0m"
-    format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s (%(filename)s:%(lineno)d)"
+    frmat = '%(asctime)s - %(name)s - %(levelname)s - %(message)s (%(filename)s:%(lineno)d)'
 
     FORMATS = {
-        logging.DEBUG: grey + format + reset,
-        logging.INFO: grey + format + reset,
-        logging.WARNING: yellow + format + reset,
-        logging.ERROR: red + format + reset,
-        logging.CRITICAL: bold_red + format + reset
+        logging.DEBUG: grey + frmat + reset,
+        logging.INFO: grey + frmat + reset,
+        logging.WARNING: yellow + frmat + reset,
+        logging.ERROR: red + frmat + reset,
+        logging.CRITICAL: bold_red + frmat + reset
     }
 
     def format(self, record):
@@ -32,6 +32,7 @@ class CustomFormatter(logging.Formatter):
     
 DIRNAME = os.path.abspath(os.path.dirname(__file__)) 
 DEBUG_FOLDER = os.path.join(DIRNAME, 'debug')
+logging.StreamHandler().setFormatter(CustomFormatter())
 
 '''
     Returns the Levenshtein distance between two strings
@@ -96,57 +97,41 @@ class Verifier:
 
         returns: Custom object with validation results
     '''
-    def verify(code1, code2):
+    def verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
         raise NotImplementedError
     
 class AliveVerifier(Verifier):
 
     class AliveResult:
-        
+
         def __init__(self, original_output) -> None:
             self.result = {}
             self.alive_output = original_output
             # regular expression to extract success/fail information
             # Ex: '0 correct transformations'
-            self.alive_summary_output_regex = re.compile(r'((\d+) ((correct|incorrect|failed-to-prove) transformations|(Alive2 errors)))')
-            self.alive_error_regex = re.compile(r'ERROR: (.+?)')
             self.errors = []
             
-            import logging
             self._create_from_output()
-
-            # set the formatter
-            logger = logging.getLogger("root")
-            logger.setLevel(logging.DEBUG)
-
-            # create console handler with a higher log level
-            ch = logging.StreamHandler()
-            ch.setLevel(logging.DEBUG)
-
-            ch.setFormatter(CustomFormatter())
-
-            logger.addHandler(ch)
-            logging = logger
 
 
         def _create_from_output(self, ):
             lines = self.alive_output.splitlines()
             self.result = {}
+            alive_summary_output_regex = re.compile(r'((\d+) ((correct|incorrect|failed-to-prove) transformations|(Alive2 errors)))')
             for l in lines:
-                matches = self.alive_summary_output_regex.findall(l)
+                matches = alive_summary_output_regex.findall(l)
                 if len(matches) > 0:
                     count = int(matches[0][1])
                     type = matches[0][2]
                     logging.info(f"Result matching {count} {type}")
                     self.result[type] = count
-                matches = self.alive_error_regex.findall(l)
+                alive_error_regex = re.compile(r'ERROR: (.+?)')
+                matches = alive_error_regex.findall(l)
                 if len(matches) > 0:
                     # adding all errors so far
                     self.errors.append(l)
             # TODO parse the counter examples if errors
             logging.info(f"{self.result}")
-            self.result
-
 
 
         '''
@@ -208,10 +193,10 @@ class AliveVerifier(Verifier):
         src_fn: if not None, then the verifier will extract the function with the given name in the original file
     '''
     def verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=10000, alive_flags=[], estimate_target_fn = True):
-        r = asyncio.run(self.async_verify(code1, code2, entrypoint, target_fn, src_fn, timeout, alive_flags, estimate_target_fn))
+        asyncio.run(self.async_verify(code1, code2, entrypoint, target_fn, src_fn, timeout, alive_flags, estimate_target_fn))
 
     '''
-        The same of verify but async
+        The same as verify but async
     '''
     async def async_verify(self, code1, code2, entrypoint, target_fn = None, src_fn = None, timeout=60000, alive_flags=[], estimate_target_fn = True):
 
