@@ -45,7 +45,8 @@ LIBRARY_INFO = {
         ],
         "flags": [
             "--cc=clang",
-            "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
+            # -march=native allows for faster compilation, according to ffmpeg's documentation
+            "--extra-cflags=\"-save-temps -fno-strict-aliasing -march=native\"",
         ],
         "env": {
             "CFLAGS": "-save-temps",
@@ -57,6 +58,9 @@ LIBRARY_INFO = {
         "autogen": False,
         "testing": {
             "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        },
+        "build": {
+            "folder": "ffmpeg_build",
         }
     },
     "openssl": {
@@ -250,7 +254,7 @@ class UseCase(FileSystemEventHandler):
 class LLVMCompilableUseCase(UseCase):
 
     def __init__(self, fixed_shadow=None):
-        # The following two fields are used to avoid the compilation and testing proces of an already compiled and tested project
+        # The following two fields are used to avoid the compilation and testing process of an already compiled and tested project
         self.compiled = False
         self.tested = False
         # This second one os used to create the temp comp folder
@@ -368,7 +372,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 # TODO: check if this call works (currently untested)
                 logging.warning(
                     DEPENDENCY_WARNING_TEMPLATE.format(
-                        dependencies="\n".join(LIBRARY_INFO[self.name]["dependencies"])
+                        dependencies=" \\\n".join(LIBRARY_INFO[self.name]["dependencies"])
                     )
                 )
                 self.compiled = False
@@ -429,20 +433,20 @@ if __name__ == '__main__':
     uc = TestLLVMCompilableUseCase()
     # uc.set_init_state()
 
+    # perform a compilation with the initial source code
+    initial_shadow = asyncio.run(uc.shadow(TEST_LIB))
+    uc.compile(initial_shadow, uc.initial_source_code)
+
     async def mm():
+        new_shadow = await uc.shadow(TEST_LIB)
+        # copying the build files: should allow for faster compilation
+        shutil.copytree(
+            os.path.join(initial_shadow, LIBRARY_INFO[uc.name]["build"]["folder"]),
+            os.path.join(new_shadow, LIBRARY_INFO[uc.name]["build"]["folder"])
+        )
 
-        shadow1 = asyncio.create_task(uc.shadow(TEST_LIB))
-        shadow2 = asyncio.create_task(uc.shadow(TEST_LIB))
-
-
-        shadow1 = await shadow1
-        t1 = asyncio.create_task(uc.compile(shadow1, uc.initial_source_code))
-        shadow2 = await shadow2
-        t2 = asyncio.create_task(uc.compile(shadow2, uc.changed_source_code))
-        # changed_cource_code -> changed_compilable
-        await t2
-        await t1
-        modified, insrc_only, indst_only = uc.compare_shadows(shadow1, shadow2)
+        await uc.compile(new_shadow, uc.changed_source_code)
+        modified, insrc_only, indst_only = uc.compare_shadows(initial_shadow, new_shadow)
         print("Modified", modified)
 
 
