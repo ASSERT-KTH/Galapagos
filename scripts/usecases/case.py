@@ -54,7 +54,10 @@ LIBRARY_INFO = {
             "CXXFLAGS": "-save-temps"
         },
         "configure": "./configure",
-        "autogen": False,
+        "autogen": {
+            "enabled": False,
+            "command": ""
+        },
         "testing": {
             "enabled": False, # Disabling for now as testing for ffmpeg takes too long
         }
@@ -73,7 +76,13 @@ LIBRARY_INFO = {
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps"
         },
-        "configure": "./configure",
+        "configure": "./Configure",
+        "autogen": {
+            "enabled": False,
+            },
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
     },
     "libsodium": {
         "dependencies": [
@@ -90,6 +99,55 @@ LIBRARY_INFO = {
             "CXXFLAGS": "-save-temps"
         },
         "configure": "./configure",
+        "autogen": {
+            "enabled": True,
+            "command": "./autogen.sh -s",
+        },
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
+    },
+    "mako": {
+        "dependencies": [],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+        "autogen": {
+            "enabled": True,
+            "command": "./autogen.sh -s",
+        },
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
+    },
+    "coreutils": {
+        "dependencies": [],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-emit-llvm\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+        "autogen": {
+            "enabled": True,
+            "command": "./bootstrap",
+        },
+        "testing": {
+            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+        }
     },
     # TODO: mako, coreutils
 }
@@ -337,10 +395,10 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         if not self.compiled:
             self.replace(cwd)
             # Lets set ccache to speed up
-            if LIBRARY_INFO[self.name]["autogen"]:
+            if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
                 logging.info("Setting up autogen")
                 ch = subprocess.check_output(
-                    ["./autogen.sh", "-s"],
+                    LIBRARY_INFO[self.name]["autogen"]["command"],
                     env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                     shell=True,
                     cwd=cwd,
@@ -351,7 +409,8 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             logging.info("Calling configure")
             logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
             ch = subprocess.check_output(
-                " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]),
+                # " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]),
+                [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]],
                 env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                 shell=True,
                 cwd=cwd,

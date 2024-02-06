@@ -2,7 +2,7 @@
     {
         "_type": "tag",
         "name": "emit_ancillary_info",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/system.h",
+        "path": "src/system.h",
         "line": 659,
         "kind": "function",
         "end": 702,
@@ -11,7 +11,7 @@
     {
         "_type": "tag",
         "name": "write_error",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/system.h",
+        "path": "src/system.h",
         "line": 769,
         "kind": "function",
         "end": 775,
@@ -20,7 +20,7 @@
     {
         "_type": "tag",
         "name": "alloc_field",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/df.c",
+        "path": "src/df.c",
         "line": 413,
         "kind": "function",
         "end": 425,
@@ -29,7 +29,7 @@
     {
         "_type": "tag",
         "name": "diagnose",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/dd.c",
+        "path": "src/dd.c",
         "line": 521,
         "kind": "function",
         "end": 533,
@@ -38,7 +38,7 @@
     {
         "_type": "tag",
         "name": "is_colored",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/ls.c",
+        "path": "src/ls.c",
         "line": 1450,
         "kind": "function",
         "end": 1457,
@@ -47,7 +47,7 @@
     {
         "_type": "tag",
         "name": "xwrite_stdout",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/head.c",
+        "path": "src/head.c",
         "line": 179,
         "kind": "function",
         "end": 187,
@@ -56,7 +56,7 @@
     {
         "_type": "tag",
         "name": "xwrite_stdout",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/tail.c",
+        "path": "src/tail.c",
         "line": 414,
         "kind": "function",
         "end": 422,
@@ -65,7 +65,7 @@
     {
         "_type": "tag",
         "name": "nextarg",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/expr.c",
+        "path": "src/expr.c",
         "line": 530,
         "kind": "function",
         "end": 540,
@@ -74,7 +74,7 @@
     {
         "_type": "tag",
         "name": "freev",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/src/expr.c",
+        "path": "src/expr.c",
         "line": 385,
         "kind": "function",
         "end": 392,
@@ -83,7 +83,7 @@
     {
         "_type": "tag",
         "name": "mbsalign",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/coreutils/gl/lib/mbsalign.c",
+        "path": "gl/lib/mbsalign.c",
         "line": 109,
         "kind": "function",
         "end": 238,

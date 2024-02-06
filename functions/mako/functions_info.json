@@ -2,7 +2,7 @@
     {
         "_type": "tag",
         "name": "ldb_malloc",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/deps/lcdb/src/util/internal.c",
+        "path": "deps/lcdb/src/util/internal.c",
         "line": 25,
         "kind": "function",
         "end": 32,
@@ -11,7 +11,7 @@
     {
         "_type": "tag",
         "name": "btc_read32le",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/bio.h",
+        "path": "src/bio.h",
         "line": 42,
         "kind": "function",
         "end": 53,
@@ -20,7 +20,7 @@
     {
         "_type": "tag",
         "name": "btc_memzero",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/util.c",
+        "path": "src/util.c",
         "line": 29,
         "kind": "function",
         "end": 49,
@@ -29,7 +29,7 @@
     {
         "_type": "tag",
         "name": "btc_free",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/internal.c",
+        "path": "src/internal.c",
         "line": 59,
         "kind": "function",
         "end": 66,
@@ -38,7 +38,7 @@
     {
         "_type": "tag",
         "name": "btc_uint32_write",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/impl.h",
+        "path": "src/impl.h",
         "line": 493,
         "kind": "function",
         "end": 504,
@@ -47,7 +47,7 @@
     {
         "_type": "tag",
         "name": "json_integer_new",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "path": "src/json/json_builder.c",
         "line": 317,
         "kind": "function",
         "end": 330,
@@ -56,7 +56,7 @@
     {
         "_type": "tag",
         "name": "btc_malloc",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/internal.c",
+        "path": "src/internal.c",
         "line": 39,
         "kind": "function",
         "end": 46,
@@ -65,7 +65,7 @@
     {
         "_type": "tag",
         "name": "btc_write32be",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/bio.h",
+        "path": "src/bio.h",
         "line": 142,
         "kind": "function",
         "end": 151,
@@ -74,7 +74,7 @@
     {
         "_type": "tag",
         "name": "btc_uint32_read",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/src/impl.h",
+        "path": "src/impl.h",
         "line": 507,
         "kind": "function",
         "end": 524,
@@ -83,7 +83,7 @@
     {
         "_type": "tag",
         "name": "ldb_buffer_clear",
-        "path": "/home/javier/ChatGPT4SW/function_extraction/../use_cases/mako/deps/lcdb/src/util/buffer.c",
+        "path": "deps/lcdb/src/util/buffer.c",
         "line": 29,
         "kind": "function",
         "end": 36,
