@@ -129,7 +129,11 @@ LIBRARY_INFO = {
         }
     },
     "coreutils": {
-        "dependencies": [],
+        "dependencies": [
+            "autopoint",
+            "gperf",
+            "bison",
+        ],
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
