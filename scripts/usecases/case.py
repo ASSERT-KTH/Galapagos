@@ -467,7 +467,7 @@ class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
         f.close()
         # lets call clang
         # use subprocess
-        ch = subprocess.run(["clang",  "-save-temps", "-o", "main.o", "main.cpp"], cwd=cwd)
+        ch = subprocess.run(["clang",  "-save-temps", "main.cpp"], cwd=cwd)
 
 
 class CMPResult:
@@ -505,7 +505,7 @@ if __name__ == '__main__':
         # changed_cource_code -> changed_compilable
         await t2
         await t1
-        modified, insrc_only, indst_only = uc.compare_shadows(shadow1, shadow2)
+        modified, insrc_only, indst_only = await uc.compare_shadows(shadow1, shadow2)
         print("Modified", modified)
 
 
