@@ -1,5 +1,4 @@
-bash build.sh || exit 1
-
+# bash build.sh || exit 1
 cd tests
 BIN="../build/linker"
 LLVM="../deps/llvm-Release-build/bin"
@@ -9,13 +8,12 @@ ALIVE="../../scripts/verifier/alive/build/alive-tv"
 
 # Generating the chi
 $LLVM/clang -c -emit-llvm chi/chi.c -o main.c.bc
-$LLVM_GO/llvm-goc -c -S -emit-llvm chi/chi.go -o main.go.bc
-../deps/llvm-Release-build/bin/opt -strip-debug main.go.bc -o main.go.nod.bc
+$LLVM/clang -c -emit-llvm chi/chi-variant.c -o main-variant.c.bc
 
 $LLVM/llvm-dis main.c.bc -o main.c.ll
-$LLVM/llvm-dis main.go.nod.bc -o main.go.ll
+$LLVM/llvm-dis main-variant.c.bc -o main-variant.c.ll
 
-$BIN main.c.bc main.go.nod.bc --debug-level=1 --output=result.ll --function_name_in_input="Chi" --function_name_in_replacement="main.Chi"
+$BIN main.c.bc main-variant.c.bc --debug-level=1 --output=result.ll --function_name_in_input="Chi" --function_name_in_replacement="Chi" --lang=0 --debug-level=2
 
 $LLVM/llvm-as result.ll -o result.bc
 
@@ -32,4 +30,4 @@ $LLVM/clang chi/chi.c -o result.o
 # echo "Calling alive to verify"
 # $ALIVE main.c.bc  result.bc --src-fn "Chi" --tgt-fn "Chi"
 
-cd ../
+# cd ../
