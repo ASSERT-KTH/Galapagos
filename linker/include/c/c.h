@@ -1,5 +1,5 @@
-#ifndef GO_H
-#define GO_H
+#ifndef C_H
+#define C_H
 
 #include <llvm/ADT/StringRef.h>
 #include <llvm/IR/Function.h>
@@ -11,9 +11,8 @@
 
 using namespace llvm;
 
-namespace go {
-  void patch(llvm::Function* function);
-  llvm::Function* cloneFunction(llvm::Function& function, llvm::Function& copyfrom);
+namespace c {
+    llvm::Function* cloneFunction(llvm::Function& function, llvm::Function& copyfrom);
 }
 
 #endif

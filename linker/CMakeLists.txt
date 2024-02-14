@@ -128,10 +128,15 @@ set(GO_FILES
      lib/go/go.cpp
   )
 
+set(C_FILES
+     include/c/c.h
+     lib/c/c.cpp
+  )
 set(LINKER_SOURCES
   ${COMMON_FILES}
   ${LINKER_FILES}
   ${GO_FILES}
+  ${C_FILES}
 )
 
 add_executable(linker

@@ -1,6 +1,7 @@
 // Maintainers and copyright: Javier Cabrera-Arteaga <javierca@kth.se> and Javier Ron-Arteaga <javierro@kth.se>
 
 #include "llvm/ADT/Twine.h"
+#include "llvm/IR/Function.h"
 #include "llvm/IR/LLVMContext.h"
 #include "llvm/IR/Module.h"
 #include "llvm/IR/IRBuilder.h"
@@ -23,11 +24,11 @@
 #include "common/Common.h"
 #include "linker/Linker.h"
 #include "go/go.h"
+#include "c/c.h"
 
 
 using namespace common;
 using namespace llvm;
-using namespace go;
 // using namespace linker;
 // using namespace name;
 
@@ -113,21 +114,14 @@ int main(int argc, const char **argv) {
        // Replace the BasicBlocks of function 1 by Basic blocks of function2
        // Remove the original function
 
-       auto newfunction = cloneFunction(*bitcode, *original_function, *replacement_function);
-
-       if(DebugLevel > 2){
-         errs() << "Basic blocks removed from original function \n";
-       }
-       // replacement_function->splice(original_function->begin(), replacement_function);
-       // Creates a new one with the same signature and attributes
-       // Iterates though the basic blocks of the replacement function,
-       //
-
+       llvm::Function* newfunction; 
        switch(Language){
           case 1:
+            newfunction = go::cloneFunction(*original_function, *replacement_function);
             go::patch(newfunction);
             break;
           default:
+            newfunction = c::cloneFunction(*original_function, *replacement_function);
             break;
        }
 

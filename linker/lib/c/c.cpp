@@ -1,35 +1,9 @@
-#include "go/go.h"
+#include <c/c.h>
 
 extern unsigned DebugLevel;
-
-namespace go {
-  void patch(llvm::Function* function) {
-      // For GO only
-      std::vector<CallInst*> toRemove;
-      for(auto &BB: *function){
-        for(auto &I: BB){
-          if (CallInst* callInst = dyn_cast<CallInst>(&I)){
-             if(DebugLevel > 2) {
-               errs() << "Checking " << callInst->getCalledFunction()->getName() << "\n";
-             }
-
-             // TODO add more here
-             if (callInst->getCalledFunction()->getName().contains("llvm.lifetime.")) {
-                toRemove.push_back(callInst);
-             }
-             if (callInst->getCalledFunction()->getName().contains("runtime.")) {
-                toRemove.push_back(callInst);
-             }
-          }
-        }
-      }
-      for (auto callInst : toRemove) {
-        callInst->eraseFromParent();
-      }
-  }
-
-
+namespace c {
   llvm::Function* cloneFunction(llvm::Function& function, llvm::Function& copyfrom) {
+
 
     FunctionType *FTy = function.getFunctionType();
     std::vector<Type *> Params(FTy->param_begin(), FTy->param_end());
@@ -46,9 +20,14 @@ namespace go {
 
     NF->splice(NF->begin(), &copyfrom);
 
-    auto I = copyfrom.arg_begin(); I ++; //hack to replace first argument with "nest" attr
+    auto I = copyfrom.arg_begin();
+    //TODO: this is a hack to remove the first arg from a go function.
+    //move to the go file
+    //I ++;
+
 
     auto I2 = NF->arg_begin();
+    //I ++;
 
     // Setting the name of the arguments
    for (Function::arg_iterator E = copyfrom.arg_end();
