@@ -4,7 +4,6 @@ from watchdog.events import FileSystemEventHandler
 import asyncio
 
 import hashlib
-import shutil
 import subprocess
 import logging
 import os
@@ -240,7 +239,7 @@ class UseCase(FileSystemEventHandler):
         if os.path.exists(tmp_folder):
             return tmp_folder
 
-        shutil.copytree(src, tmp_folder, symlinks=False, ignore=None, copy_function=shutil.copy, ignore_dangling_symlinks=False)
+        shutil.copytree(src, tmp_folder, symlinks=False, ignore=None, copy_function=shutil.copy2, ignore_dangling_symlinks=False)
         os.sync()
         return tmp_folder
 
@@ -260,8 +259,9 @@ class UseCase(FileSystemEventHandler):
 
         tasks = []
         for root, _, files in os.walk(src):
+            files = list(filter( lambda f: f.endswith('.bc') or f.endswith('.o') or (is_executable(os.path.join(root, f)) and not f.endswith('-strip') ), files))
+             
             for file in files:
-                #TODO: why are we comparing all files??
                 src_file = os.path.join(root, file)
                 dst_file = os.path.join(dst, src_file[len(src)+1:])
                 if os.path.exists(dst_file):
@@ -393,33 +393,40 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
         return self.test_result
     
-    async def compile(self, cwd):
+    async def compile(self, cwd, configure_project=False):
         logging.info(f"Compiling {cwd}")
         start = time.time()
         if not self.compiled:
             self.replace(cwd)
-            # Lets set ccache to speed up
-            if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
-                logging.info("Setting up autogen")
+
+            if configure_project:
+                if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
+                    logging.info("Setting up autogen")
+                    ch = subprocess.check_output(
+                        LIBRARY_INFO[self.name]["autogen"]["command"],
+                        env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                        shell=True,
+                        cwd=cwd,
+                        stderr=subprocess.STDOUT
+                    )
+                    logging.debug(ch.decode())
+                logging.info(cwd)
+                logging.info("Calling configure")
+                logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
+                
+                configure_cmd = None
+                if self.name == "ffmpeg":
+                   configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+                else:
+                    configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
+
                 ch = subprocess.check_output(
-                    LIBRARY_INFO[self.name]["autogen"]["command"],
+                    configure_cmd,
                     env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
                     shell=True,
                     cwd=cwd,
                     stderr=subprocess.STDOUT
                 )
-                logging.debug(ch.decode())
-            logging.info(cwd)
-            logging.info("Calling configure")
-            logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
-            ch = subprocess.check_output(
-                # " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]),
-                [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]],
-                env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
-                shell=True,
-                cwd=cwd,
-                stderr=subprocess.STDOUT
-            )
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
             logging.info("Calling make")
             try:
