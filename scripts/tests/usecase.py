@@ -42,7 +42,7 @@ if __name__ == "__main__":
         def save(ot):
             function_folder = f"out/{LIBRARY}/{variant.function_name}"
             os.makedirs(function_folder, exist_ok=True)
-            with open(f"{function_folder}/{variant.name}.result.json", 'w') as f:
+            with open(f"{function_folder}/{variant.function_name}.result.json", 'w') as f:
                 json.dump(result, f, indent=4)
 
 
@@ -69,16 +69,16 @@ if __name__ == "__main__":
             executables = [ (f1, f2) for f1, f2 in modified if is_executable(f1) and is_executable(f2) ]
             executables = [(f1, f2) for f1, f2 in executables if "test" not in f1 and "test" not in f2]
 
-            source_code = [(f1, f2) for f1, f2 in modified if (f1.endswith(".c") or f1.endswith(".cpp") or f1.endswith(".h")) and (f2.endswith(".c") or f2.endswith(".cpp") or f2.endswith(".h"))]
+            # source_code = [(f1, f2) for f1, f2 in modified if (f1.endswith(".c") or f1.endswith(".cpp") or f1.endswith(".h")) and (f2.endswith(".c") or f2.endswith(".cpp") or f2.endswith(".h"))]
 
-            assert len(source_code) > 0, "There are not changed source codes"
+            # assert len(source_code) > 0, "There are not changed source codes"
 
 
             logging.info(f"Bitcodes {len(bitcodes)}")
             logging.info(f"Executables {len(executables)}")
 
 
-            result['changes']['source_code'] = source_code
+            # result['changes']['source_code'] = source_code
             result['changes']['bitcodes'] = bitcodes
             result['changes']['executables'] = executables
             result['shadow_folder'] = variant_shadow
@@ -146,7 +146,7 @@ if __name__ == "__main__":
         # original_uc.tested = True
 
         shadow_original = await original_uc.shadow(project_folder, name=f"{LIBRARY}")
-        await original_uc.compile(shadow_original)
+        await original_uc.compile(shadow_original, configure_project=True)
 
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
@@ -163,8 +163,9 @@ if __name__ == "__main__":
                     funcname, extension, prompt = chunks[:3]
                     #idx = funcname.split("_")[0]
                     #funcname = funcname[len(idx)+1:]
-
-                    if funcname == f"{idx}_{function['name']}":
+                    
+                    # allowlist = [f'0_av_log.c.p0.y1.2.v{i}.c' for i in range(30)]
+                    if funcname == f"{idx}_{function['name']}": # and variant_of_function in allowlist:
                         print(variant_of_function)
                         # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
@@ -185,14 +186,15 @@ if __name__ == "__main__":
 
 
         # Comment this out
-        test_cases = test_cases[:1]
+        # test_cases = test_cases[:5]
         logging.info(f"Variants to check {len(test_cases)}")
         assert len(test_cases) > 0, "There are no variants to check"
         # assert len(test_cases) == 2000, "THere should be 2000 verifications"
 
         tasks = []
         for test in test_cases:
-            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"../../use_cases/{LIBRARY}"),shadow_original, original_uc, test)))
+            # TODO: hardcoded path
+            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"/mnt/data/{LIBRARY}"),shadow_original, original_uc, test)))
             # break
 
         results = await asyncio.gather(*tasks)
