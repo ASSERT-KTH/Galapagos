@@ -26,6 +26,6 @@ static uint64_t Chi(uint64_t A[5][5], uint64_t i)
 
 int main(){
     uint64_t A[5][5];
-    printf("%ld\n", Chi(A, 0));
+    printf("%ld\n", Chi(A, 10));
     return 0;
 }

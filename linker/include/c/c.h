@@ -13,6 +13,7 @@ using namespace llvm;
 
 namespace c {
     llvm::Function* cloneFunction(llvm::Function& function, llvm::Function& copyfrom);
+    llvm::Function* synthNVersion(llvm::Function& function1, llvm::Function& function2);
 }
 
 #endif
