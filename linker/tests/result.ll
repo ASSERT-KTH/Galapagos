@@ -8,19 +8,47 @@ define dso_local i32 @n_version_call(i32 noundef %0, i32 noundef %1) #0 {
 entry:
   %2 = call i32 @version_1(i32 %0, i32 %1)
   %3 = call i32 @version_2(i32 %0, i32 %1)
-  %4 = icmp eq i32 %2, %3
-  br i1 %4, label %true, label %false
+  %4 = call i32 @version_3(i32 %0, i32 %1)
+  br label %comparisons
 
-true:                                             ; preds = %entry
+comparisons:                                      ; preds = %entry
+  %5 = icmp eq i32 %2, %3
+  br i1 %5, label %true, label %error
+
+true:                                             ; preds = %comparisons
+  %6 = icmp eq i32 %2, %4
+  br i1 %6, label %true1, label %error
+
+true1:                                            ; preds = %true
   ret i32 %2
 
-false:                                            ; preds = %entry
+error:                                            ; preds = %true, %comparisons
   call void @llvm.trap()
   unreachable
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @version_2(i32 noundef %0, i32 noundef %1) #0 {
+  %3 = alloca i32, align 4
+  %4 = alloca i32, align 4
+  %5 = alloca i32, align 4
+  %6 = alloca i32, align 4
+  store i32 %0, ptr %3, align 4
+  store i32 %1, ptr %4, align 4
+  %7 = load i32, ptr %3, align 4
+  %8 = load i32, ptr %4, align 4
+  %9 = add nsw i32 %7, %8
+  store i32 %9, ptr %5, align 4
+  %10 = load i32, ptr %5, align 4
+  %11 = add nsw i32 %10, 2
+  store i32 %11, ptr %6, align 4
+  %12 = load i32, ptr %6, align 4
+  %13 = sub nsw i32 %12, 2
+  ret i32 %13
+}
+
+; Function Attrs: noinline nounwind optnone uwtable
+define dso_local i32 @version_3(i32 noundef %0, i32 noundef %1) #0 {
   %3 = alloca i32, align 4
   %4 = alloca i32, align 4
   %5 = alloca i32, align 4
