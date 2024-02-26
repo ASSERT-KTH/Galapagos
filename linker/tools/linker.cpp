@@ -147,7 +147,7 @@ int main(int argc, const char **argv) {
             newfunction = c::synthNVersion(*original_function, replacement_functions);
             break;
           case cln:
-            errs() << "not implemented\n";
+            newfunction = go::synthNVersion(*original_function, replacement_functions);
             break;
        }
 

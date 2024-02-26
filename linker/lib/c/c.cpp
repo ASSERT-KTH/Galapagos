@@ -1,9 +1,4 @@
-#include "llvm/IR/BasicBlock.h"
-#include "llvm/IR/IRBuilder.h"
 #include <c/c.h>
-#include <cstdio>
-#include <string>
-#include <vector>
 
 extern unsigned DebugLevel;
 namespace c {
