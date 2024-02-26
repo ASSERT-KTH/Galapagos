@@ -29,7 +29,7 @@ $LLVM/clang chi/chi.c -o result.o
 ./result.o 
 
 
-# echo "Calling alive to verify"
-# $ALIVE main.c.bc  result.bc --src-fn "Chi" --tgt-fn "Chi"
+echo "Calling alive to verify"
+$ALIVE main.c.bc  result.bc --src-fn "Chi" --tgt-fn "Chi"
 
 cd ../
