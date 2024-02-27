@@ -1,0 +1,20 @@
+    calls syscall
+--------- ----------------
+        8 mmap
+        4 mprotect
+        4 pread64
+        2 close
+        2 arch_prctl
+        2 openat
+        2 newfstatat
+        1 read
+        1 munmap
+        1 brk
+        1 access
+        1 execve
+        1 set_tid_address
+        1 set_robust_list
+        1 prlimit64
+        1 rseq
+--------- ----------------
+       33 total
