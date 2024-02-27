@@ -29,42 +29,16 @@ error:                                            ; preds = %true, %comparisons
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @version_2(i32 noundef %0, i32 noundef %1) #0 {
-  %3 = alloca i32, align 4
-  %4 = alloca i32, align 4
-  %5 = alloca i32, align 4
-  %6 = alloca i32, align 4
-  store i32 %0, ptr %3, align 4
-  store i32 %1, ptr %4, align 4
-  %7 = load i32, ptr %3, align 4
-  %8 = load i32, ptr %4, align 4
-  %9 = add nsw i32 %7, %8
-  store i32 %9, ptr %5, align 4
-  %10 = load i32, ptr %5, align 4
-  %11 = add nsw i32 %10, 2
-  store i32 %11, ptr %6, align 4
-  %12 = load i32, ptr %6, align 4
-  %13 = sub nsw i32 %12, 2
-  ret i32 %13
+entry:
+  %add.0 = add i32 %1, %0
+  ret i32 %add.0
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @version_3(i32 noundef %0, i32 noundef %1) #0 {
-  %3 = alloca i32, align 4
-  %4 = alloca i32, align 4
-  %5 = alloca i32, align 4
-  %6 = alloca i32, align 4
-  store i32 %0, ptr %3, align 4
-  store i32 %1, ptr %4, align 4
-  %7 = load i32, ptr %3, align 4
-  %8 = load i32, ptr %4, align 4
-  %9 = add nsw i32 %7, %8
-  store i32 %9, ptr %5, align 4
-  %10 = load i32, ptr %5, align 4
-  %11 = add nsw i32 %10, 2
-  store i32 %11, ptr %6, align 4
-  %12 = load i32, ptr %6, align 4
-  %13 = sub nsw i32 %12, 2
-  ret i32 %13
+entry:
+  %add.0 = add i32 %1, %0
+  ret i32 %add.0
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
@@ -83,7 +57,7 @@ define dso_local i32 @version_1(i32 noundef %0, i32 noundef %1) #0 {
 define dso_local i32 @main() #0 {
   %1 = alloca i32, align 4
   store i32 0, ptr %1, align 4
-  %2 = call i32 @n_version_call(i32 noundef 1, i32 noundef 2)
+  %2 = call i32 @n_version_call(i32 noundef 64, i32 noundef 2)
   ret i32 %2
 }
 

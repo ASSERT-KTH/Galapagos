@@ -19,7 +19,7 @@ define dso_local i32 @sum(i32 noundef %0, i32 noundef %1) #0 {
 define dso_local i32 @main() #0 {
   %1 = alloca i32, align 4
   store i32 0, ptr %1, align 4
-  %2 = call i32 @sum(i32 noundef 1, i32 noundef 2)
+  %2 = call i32 @sum(i32 noundef 64, i32 noundef 2)
   ret i32 %2
 }
 
