@@ -218,6 +218,8 @@ class AliveVerifier(Verifier):
         new_flags.append(f"--func={entrypoint}")
         new_flags.append(f"--src-fn={src_fn}")
         new_flags.append(f"--tgt-fn={target_fn}")
+        new_flags.append(f"--src-unroll=2")
+        new_flags.append(f"--tgt-unroll=2")
 
             
         # TODO check if codes are LLVM IR or LLVM bitcode

@@ -20,7 +20,8 @@ def extract_source(file):
         return data
 
 def parse_response(resp):
-    text = resp['choices'][0]['message']['content']
+    print(resp)
+    text = resp.choices[0].message.content
 
     parsed = re.sub(r'```[Cc][Cc]?[Pp]?[Pp]?', '', text).replace('\\"', '"').replace('```','')
 
@@ -121,7 +122,7 @@ def main(args):
     prompt_intro = 'The following code is a reference implementeation of a function in C.'
     
     prompt_instructions = [
-        # "Create a substitute implementation of the function, which is different but equivalent. It should be possible to directly replace the function and it should provide the same functionality",
+        "Create a substitute implementation of the function, which is different but equivalent. It should be possible to directly replace the function and it should provide the same functionality",
         "Create a semantically equivalent version of the program in the same language.",
         "Use code transformations to produce variants of the original function that would preserve its original functionalities",
         "Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.",
@@ -134,7 +135,6 @@ def main(args):
         shared_remarks += " Do not create auxiliary or helper functions."
     if force_same_signature:
         shared_remarks += " Maintain the original function's signature."
-
 
     for project in projects:
         files = os.listdir(os.path.join(WORKSPACE, 'functions', project))
@@ -153,8 +153,8 @@ def main(args):
                 # for each prompt instruction
                 for pit, prompt_instruct in enumerate(prompt_instructions):
                     # skip if pit is 0 -- already generated
-                    if pit == 0:
-                        continue
+                    # if pit == 0:
+                    #     continue
                     # join intro, code, instructions and remarks
                     prompt = '\n'.join([prompt_intro, code, prompt_instruct, shared_remarks])
                     print(prompt)
@@ -163,7 +163,7 @@ def main(args):
                         
                         try:
                             sys.stdout.write(f'\rGenerating variant for {function} with prompt {pit} and iteration {it}/{n - 1}')
-                            response = openai.ChatCompletion.create(
+                            response = openai.chat.completions.create(
                                 model="gpt-4",
                                 messages=[{"role": "user", "content": prompt}],
                                 temperature=temperature,

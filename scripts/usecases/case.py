@@ -12,6 +12,7 @@ import uuid
 import time
 import traceback
 
+CLONE_PATH = "/home/javier/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
@@ -226,7 +227,7 @@ class UseCase(FileSystemEventHandler):
     '''
     async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
-        shadow_dir = "/mnt/data"
+        shadow_dir = CLONE_PATH
         # Create a folder in tmp
         # Copy the src folder to the tmp folder
         # Return the tmp folder

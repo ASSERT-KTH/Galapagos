@@ -1,6 +1,6 @@
 
 import asyncio
-from usecases.case import is_executable
+from usecases.case import is_executable, CLONE_PATH
 import verifier
 import logging
 import json
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # TODO: remove these comments, only here for reference (as typing is not working)
     # original is the original use case, is of type usecases.<LIBRARY>.<LIBRARY>
     # variant is the variant use case, is of type usecases.<LIBRARY>.<LIBRARY>
-    async def compare(original_folder, shadow1, original, variant):
+    async def compare(original_folder, shadow1, original, variant, n):
         # The first one does not need to compile
 
         # Fix name for faster compile. In theory the name is unique ?
@@ -37,12 +37,11 @@ if __name__ == "__main__":
             # For other libraries, replace this name
             "project": LIBRARY
         }
-
         # Make partial saving of the results
         def save(ot):
             function_folder = f"out/{LIBRARY}/{variant.function_name}"
             os.makedirs(function_folder, exist_ok=True)
-            with open(f"{function_folder}/{variant.function_name}.result.json", 'w') as f:
+            with open(f"{function_folder}/{variant.function_name}_{n}.result.json", 'w') as f:
                 json.dump(result, f, indent=4)
 
 
@@ -110,7 +109,7 @@ if __name__ == "__main__":
                     if pass_test:
                         # Then wait for the verification tasks
                         for f1, f2, t in tasks:
-                            result[os.path.basename(f1)] = (await t).toJSON()
+                            result['verification'][os.path.basename(f1)] = (await t).result # .toJSON()
                     else:
                         logging.warning("The tests did not pass, so we will not verify the bitcodes")
                         for f1, f2, t in tasks:
@@ -192,9 +191,9 @@ if __name__ == "__main__":
         # assert len(test_cases) == 2000, "THere should be 2000 verifications"
 
         tasks = []
-        for test in test_cases:
+        for i, test in enumerate(test_cases):
             # TODO: hardcoded path
-            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"/mnt/data/{LIBRARY}"),shadow_original, original_uc, test)))
+            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"{CLONE_PATH}/{LIBRARY}"),shadow_original, original_uc, test, i)))
             # break
 
         results = await asyncio.gather(*tasks)
