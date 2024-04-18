@@ -159,16 +159,12 @@ if __name__ == "__main__":
                 # Reading the generated variants
                 for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
                     chunks = variant_of_function.split(".")
-                    funcname, extension, prompt = chunks[:3]
-                    #idx = funcname.split("_")[0]
-                    #funcname = funcname[len(idx)+1:]
+                    funcname = chunks[0]
+                    func_version = chunks[-2]
                     
-                    # allowlist = [f'0_av_log.c.p0.y1.2.v{i}.c' for i in range(30)]
+                    # allowlist = ['0_sodium_is_zero.c.p0.y1.2.v0.c']
                     if funcname == f"{idx}_{function['name']}": # and variant_of_function in allowlist:
-                        print(variant_of_function)
-                        # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
-                        # TODO: still must check if this call works
                         testcase = uc_name.LibraryCompilableUseCase(
                                 funcname,
                                 original_project_folder=project_folder,
@@ -178,7 +174,8 @@ if __name__ == "__main__":
                                 line_end=function['end'],
                                 name=LIBRARY,
                                 doreplace=True,
-                                real_name=function['name']
+                                real_name=function['name'],
+                                version=func_version
                         )
                         test_cases.append(testcase)
 

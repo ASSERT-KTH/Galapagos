@@ -123,10 +123,10 @@ def main(args):
     
     prompt_instructions = [
         "Create a substitute implementation of the function, which is different but equivalent. It should be possible to directly replace the function and it should provide the same functionality",
-        "Create a semantically equivalent version of the program in the same language.",
-        "Use code transformations to produce variants of the original function that would preserve its original functionalities",
-        "Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.",
-        "Create a semantically equivalent version of the function in the Go programming language", 
+        # "Create a semantically equivalent version of the program in the same language.",
+        # "Use code transformations to produce variants of the original function that would preserve its original functionalities",
+        # "Explore different forms of program transformations that slightly vary the behavior of the original program while maintaining its initial functionality. Use them to provide a program variant.",
+        # "Create a semantically equivalent version of the function in the Go programming language", 
     ]
 
     shared_remarks = "Do not output any other text apart from code."
@@ -139,7 +139,7 @@ def main(args):
     for project in projects:
         files = os.listdir(os.path.join(WORKSPACE, 'functions', project))
         # filer .c files only
-        functions = [f for f in files if f.endswith('.c')]
+        functions = [f for f in files if f.endswith('clamp.c') or f.endswith('canonical.c')]
         for function in functions:
             for temperature in temperatures:
                 function_file = os.path.join(WORKSPACE, 'functions', project, function)

@@ -104,7 +104,8 @@ LIBRARY_INFO = {
             "command": "./autogen.sh -s",
         },
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "command": ["make", "check"]
         }
     },
     "mako": {
@@ -223,7 +224,7 @@ class UseCase(FileSystemEventHandler):
 
 
     '''
-        Creates a github repo on the temp folder if it does not exist. Then create a random branch to modify the things. Add all new files bc, i, s force it. Returns the temp folder and the name of the temp branch
+        Creates a copy of the project for modification. Add all new files bc, i, s force it. Returns the temp folder and the name of the temp branch
     '''
     async def shadow(self, src, name=None):
         print(f"Shadowing {src}")
@@ -231,9 +232,9 @@ class UseCase(FileSystemEventHandler):
         # Create a folder in tmp
         # Copy the src folder to the tmp folder
         # Return the tmp folder
-        # use a random name
 
-        random_name = "envy-%s"%str(uuid.uuid4()) if not name else name
+        # name should be <projectname>-<function>-<version>
+        random_name = f'{self.name}-{self.function_name}-{self.version}' if not name else name
         print(f"Copying {src} to {shadow_dir}/{random_name}")
         tmp_folder = os.path.join(shadow_dir, random_name)
         # if the folder exist, prevent the copy
@@ -332,7 +333,7 @@ class LLVMCompilableUseCase(UseCase):
 # TODO: rename this
 class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name=""):
+    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name="", version=0):
         super().__init__()
         self.name = name
         self.function_name = function_name
@@ -340,6 +341,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         self.variant_text_location = variant_text_location
         self.original_file_location = original_file_location
         self.change_location = (original_file_location, line_start, line_end)
+        self.version = version
 
         self.test_result = None
         self.real_name = real_name
@@ -379,10 +381,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         if not self.tested:
             try:
                 self.replace(cwd)
-                # TODO: check this below;;;
-                # ch = subprocess.check_output(["./Configure"], env={**os.environ, "CFLAGS": "-save-temps", "CC": "clang", "CXX": "clang++", "CXXFLAGS": "-save-temps"}, shell=True, cwd=cwd, stderr=subprocess.STDOUT)
-                #
-                ch = subprocess.check_output(["make", "test", "-j", "16"], cwd=cwd, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(LIBRARY_INFO[self.name]["testing"]["command"], cwd=cwd, stderr=subprocess.STDOUT, timeout=90)
                 self.tested = True
                 self.test_result = True, ch.decode()
                 print(f"Tested in {time.time() - start:.2f}s")
