@@ -1,6 +1,6 @@
 
 import asyncio
-from usecases.case import is_executable
+from usecases.case import is_executable, CLONE_PATH
 import verifier
 import logging
 import json
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # TODO: remove these comments, only here for reference (as typing is not working)
     # original is the original use case, is of type usecases.<LIBRARY>.<LIBRARY>
     # variant is the variant use case, is of type usecases.<LIBRARY>.<LIBRARY>
-    async def compare(original_folder, shadow1, original, variant):
+    async def compare(original_folder, shadow1, original, variant, n):
         # The first one does not need to compile
 
         # Fix name for faster compile. In theory the name is unique ?
@@ -37,12 +37,11 @@ if __name__ == "__main__":
             # For other libraries, replace this name
             "project": LIBRARY
         }
-
         # Make partial saving of the results
         def save(ot):
             function_folder = f"out/{LIBRARY}/{variant.function_name}"
             os.makedirs(function_folder, exist_ok=True)
-            with open(f"{function_folder}/{variant.function_name}.result.json", 'w') as f:
+            with open(f"{function_folder}/{variant.function_name}_{n}.result.json", 'w') as f:
                 json.dump(result, f, indent=4)
 
 
@@ -110,7 +109,7 @@ if __name__ == "__main__":
                     if pass_test:
                         # Then wait for the verification tasks
                         for f1, f2, t in tasks:
-                            result[os.path.basename(f1)] = (await t).toJSON()
+                            result['verification'][os.path.basename(f1)] = (await t).result # .toJSON()
                     else:
                         logging.warning("The tests did not pass, so we will not verify the bitcodes")
                         for f1, f2, t in tasks:
@@ -160,16 +159,12 @@ if __name__ == "__main__":
                 # Reading the generated variants
                 for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
                     chunks = variant_of_function.split(".")
-                    funcname, extension, prompt = chunks[:3]
-                    #idx = funcname.split("_")[0]
-                    #funcname = funcname[len(idx)+1:]
+                    funcname = chunks[0]
+                    func_version = chunks[-2]
                     
-                    # allowlist = [f'0_av_log.c.p0.y1.2.v{i}.c' for i in range(30)]
+                    # allowlist = ['0_sodium_is_zero.c.p0.y1.2.v0.c']
                     if funcname == f"{idx}_{function['name']}": # and variant_of_function in allowlist:
-                        print(variant_of_function)
-                        # Then this is the variants for that function
                         #for variant_file in os.listdir(f"{WORKSPACE}/variants/{variant_of_function}"):
-                        # TODO: still must check if this call works
                         testcase = uc_name.LibraryCompilableUseCase(
                                 funcname,
                                 original_project_folder=project_folder,
@@ -179,7 +174,8 @@ if __name__ == "__main__":
                                 line_end=function['end'],
                                 name=LIBRARY,
                                 doreplace=True,
-                                real_name=function['name']
+                                real_name=function['name'],
+                                version=func_version
                         )
                         test_cases.append(testcase)
 
@@ -192,9 +188,9 @@ if __name__ == "__main__":
         # assert len(test_cases) == 2000, "THere should be 2000 verifications"
 
         tasks = []
-        for test in test_cases:
+        for i, test in enumerate(test_cases):
             # TODO: hardcoded path
-            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"/mnt/data/{LIBRARY}"),shadow_original, original_uc, test)))
+            tasks.append(asyncio.create_task(compare(os.path.join(DIRNAME, f"{CLONE_PATH}/{LIBRARY}"),shadow_original, original_uc, test, i)))
             # break
 
         results = await asyncio.gather(*tasks)

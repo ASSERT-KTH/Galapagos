@@ -19,7 +19,7 @@ $LLVM_GO/llvm-goc -c -S -emit-llvm sum/sum-variant.go -o main.go.bc
 $LLVM/llvm-dis main.c.bc -o main.c.ll
 $LLVM/llvm-dis main.go.nod.bc -o main.go.ll
 
-$BIN main.c.bc main.go.nod.bc main.go.nod.bc --debug-level=1 --output=result.ll --function_name_in_input="sum" --function_name_in_replacement="main.sum" --cln --debug-level=2
+$BIN main.c.bc main.go.nod.bc --debug-level=1 --output=result.ll --function_name_in_input="sum" --function_name_in_replacement="main.sum" --cln --debug-level=2
 
 $LLVM/llvm-as result.ll -o result.bc
 
