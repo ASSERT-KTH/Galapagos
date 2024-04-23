@@ -30,7 +30,7 @@ OUT="$FUNC_DIR/function_data.dat"
     # {end} : the line number at which the tag ends
 # --output-format=json : output in json format
 # --kinds-c=f : only include function definitions
-find $LIB_DIR -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test/* --exclude=*doc/* --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+find $LIB_DIR -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
 # TODO: somehow make {file} relative to LIB_DIR, not absolute
 
 # below: creating a cscope database for the project

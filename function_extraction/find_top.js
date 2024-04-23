@@ -27,20 +27,21 @@ async function processLineByLine() {
     functions.push(o)
   }
 
-  const sorted = functions.sort( (a,b) => {
-    return b.count - a.count  
+  const sorted = functions.sort((a, b) => {
+    return b.count - a.count
   })
 
-  const non_trivial = sorted.filter(f => f.end - f.line > 5)
-  const non_printf = non_trivial.filter(f => 
-    !f.name.includes("printf") &&
+  const non_trivial = sorted.filter(f => f.end - f.line > 5 && 35 > f.end - f.line)
+  const non_printf = non_trivial.filter(f =>
+    !f.name.includes("print") &&
+    !f.name.includes("error") &&
     !f.name.includes("usage")
   )
 
-  const top = non_printf.slice(0,10)
+  const top = non_printf.slice(0, 50)
 
-    // write to file
-    fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(top, null, 4) );
+  // write to file
+  fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(top, null, 4));
 
   // console.log(JSON.stringify(top, null, 4))
 }
