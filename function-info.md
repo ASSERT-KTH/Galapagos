@@ -1,0 +1,120 @@
+# Use case functions picking
+
+## coreutils
+
+- `memset`: is small, has a small while loop, does not alter outside variables, does not have external calls
+- `wcscmp`: is medium-size (15 lines), has a big for (;;) loop, alters outside variables (s1, s2 args), has macro
+- `memcmp`: is small, has a small while loop, does not alter outside variables, does not have external calls
+- `wcslen`: is small, has an empty while loop (everything happens in the loop def.), does not alter outside variables, does not have external calls
+- `mbsinit`: is small-ish (14 lines), does not have loops, does not alter outside variables, has macro
+- `proper_name`: is long-ish (23 lines), does not have loops, does not alter outside variables, has (many) external calls
+- `u16_strcmp`: is long (27 lines), has a big for (;;) loop, alters outside variables (s1, s2 args), does not have external calls
+- `u32_strcmp`: is small-ish (13 lines), has a big for (;;) loop, alters outside variables (s1, s2 args), does not have external calls
+- `xalloc_die`: is small, does not have loops, does not alter outside variables, has external calls (error, abort)
+- `bitmap_lookup`: is long-ish (21 lines), does not have loops, does not alter outside variables, does not have external calls
+- `atexit`: is small, does not have loops, does not alter outside variables, has an external call (on\_exit)
+- `c32_apply_type_test`: is small, does not have loops, does not alter outside variables, has external calls + macro
+- `c32tob`: is too long (34 lines), does not have loops, does not alter outside variables, has external calls + macros
+- `wcsncmp`: is medium-size (19 lines), has a big for (;n;), alters outside variables (s1, s2 args), has a macro
+- `uc_is_general_category`: is small, does not have loops, does not alter outside variables, has an external call (bitmap\_lookup)
+- `sigaddset`: is medium-size (18 lines), does not have loops, alters an outside variable (set arg), has macro
+- `pthread_mutex_unlock`: is small-ish (12 lines), does not have loops (has switch, is it relevant?), does not alter outside variables, has external calls
+- `parse_datetime`: is small-ish (11 lines), does not have loops, does not alter outside variables, has external calls
+- `setenv`: is small, does not have loops, does not alter outside variables, has external calls
+- `uc_joining_group_name`: is small, does not have loops, does not alter outside variables, not sure (??)
+- `creat`: is too long (33 lines), does not have loops, does not alter outside variables, has macro and external calls
+- `wctob`: is small-ish (12 lines), does not have loops, does not alter outside variables, has external calls
+- `u32_cmp`: is medium-size (17 lines), has a big for (;n;), alters outside variables (s1, s2 args), does not have external calls
+- `canonicalize_filename_mode`: is small-ish (12 lines), does not have loops, does not alter outside variables, has external calls
+- `callback`: is long (30 lines), does not have loops, alters outside variables (locals arg),has macro
+- `linkat`: is small, does not have loops, does not alter outside variables, has an external call (at\_func2)
+- `is_open`: is medium-size (15 lines), does not have loops, does not alter outside variables, has external calls and macros
+- `memmove`: is medium-size (16 lines), has a small for, does not alter outside variables, does not have external calls
+- `freea`: is medium-size (15 lines), does not have loops, does not alter outside variables, has external calls (free, abort)
+- `ftell`: is small-ish (12 lines), does not have loops, does not alter outside variables, has an external call (ftello) and macro (??)
+- `addtok`: is too long (31 lines), does not have loops, alters outside variables (dfa arg), has external calls
+- `pthread_mutex_lock`: is small-ish (12 lines), does not have loops (has switch, is it relevant?), does not alter outside variables, has external calls
+
+## mako
+
+- `ldb_malloc`: is small, does not have loops, does not alter outside variables, has an external call( abort() )
+- `btc_read32le`: is small-ish (12 lines), does not have loops, does not alter outside variables, has an external call (it's built in, memcpy)
+- `btc_memzero`: is medium-size (21 lines), does not have loops, alters outside variables (ptr arg), has external callS, has asm code (may be relevant for alive)
+- `btc_free`: is small, does not have loops, alters outside variables (ptr arg), has an external call ( abort() )
+- `btc_uint32_write`: is small-ish (12 lines), does not have loops, alters outside variables (zp arg), has an external call (it's built in, memcpy)
+- `json_integer_new`: is small-ish (14 lines), does not have loops, does not alter outside variables, has an external call (it's built in, calloc)
+- `btc_malloc`: is small, does not have loops, does not alter outside variables, has external callS (malloc, abort)
+- `btc_write32be`: is small, does not have loops, alters outside variables, has an external call (memcpy)
+- `btc_uint32_read`: is medium-size (18 lines), does not have loops, alters outside variables (zp arg, xp arg), has an external call (memcpy)
+- `ldb_buffer_clear`: is small, does not have loops, alters outside variables (z arg), has an external call (ldb\_free)
+- `ldb_slice`: is small, does not have loops, does not alter outside variables, does not have external calls
+  - NOTE: there are at least 3 different versions of this function, they all share these characteristics
+- `btc_vector_clear`: is small, does not have loops, alters outside variables (z arg), has an external call (btc\_free)
+- `ldb_batch_put`: is small, does not have loops, MAY alter outside variables via calls, has external callS
+- `btc_chain_throw`: is medium-size (21 lines), does not have loops, alters outside variables (chain arg) and may others, has external calls
+- `btc_stack_get`: is small, does not have loops, does not alter outside variables, has an external call (to a macro(!), CHECK)
+- `ldb_log`: is small, does not have loops, does not alter outside variables, has external calls
+- `sc_import`: is small-ish (11 lines), does not have loops, does not alter outside variables, has external calls
+- `state_need`: is medium-size (17 lines), does not have loops, does not alter outside variables, has an external call (state\_grow)
+- `mpz_grow`: is small, does not have loops, I _think_ it alters an outside variable (z arg), has an external call
+- `json_hash_new`: is small, does not have loops, does not alter outside variables, has external calls
+- `json_object_new`: is long-ish (25 lines), does not have loops, does not alter outside variables, has external calls (calloc, free)
+- `sc_montsqrn`: is small, HAS a loop (small - 1 line), does not alter outside variables, has external calls
+- `btc_peer_sendmsg`: is small, does not have loops, does not alter outside variables, has external calls
+- `btc_time_msec`: is small-ish (15 lines), does not have loops, does not alter outside variables, has external calls
+- `btc_uint32_update`: is small, does not have loops, does not alter outside variables, has external calls
+- `ldb_iter_destroy`: is small, does not have loops, MAY alter outside variables, has external calls
+- `btc_log`: is small-ish (15 lines), does not have loops, does not alter outside variables, has external calls
+- `ldb_iter_status`: is small, does not have loops, does not alter outside variables, has external calls
+- `ldb_strerror`, is small, does not have loops, does not alter outside variables, has external calls, does not seem relevant
+- `btc_rdtsc`: is too long(?) (31 lines), does not have loops, does not seem to alter outside variables (?? weird to check with asm), does not have external calls, has asm code
+- `btc_mempool_throw`: is small-ish (13 lines), does not have loops. does not alter outside variables, has external calls
+- `json_string_get`: is small, does not have loops, alters outside variables (z arg), has external call (strlen)
+- `mpz_sub_ui`: is long (23 lines), does not have loops, alters outside variables(??)(z arg), has external calls;; also seems cool to test
+- `btc_socket_close`: is long (25 lines), has a loop (5 loc), alters outside variables (socket arg), has external calls
+- `json_amount_new`: is small-ish (14 lines), does not have loops, does not alter outside variables, has an external call (free)
+- `btc_uint8_read`: is small, does not have loops, alters outside variables (zp, xp, xn args), does not have external calls
+- `json_array_push`: is long (29 lines), does not have loops, alters outside variables (array, value args), has external calls
+- `ldb_vector_clear`: is small, does not have loops, alters an outside variable (z arg), has an external call
+- `mpz_add_ui`: is medium-size (19 lines), does not have loops, alters an outside variable (z arg), has external calls
+- `mpz_set`: is small, does not have loops, alters an outside variable (z arg), has external calls
+- `mpz_sub`: is long (27 lines), does not have loops, alters an outside variable (z arg), has external calls;; seems interesting to test
+- `mpz_swap`: is small-ish (13 lines), does not have loops, alters outside variables (x, y args), does not have external calls
+- `btc_now`: is small, does not have loops, does not alter outside variables, has external calls (time and a macro)
+- `btc_sha256_update`: is long (28 lines), does not have loops, alters an outside variable (ctx arg), has external calls
+- `json_boolean_new`: is small-ish (14 lines), does not have loops, does not alter outside variables, has an external call (calloc)
+
+## openssl
+
+- `fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u32`: is small-ish (13 lines), does not have loops, alters outside variables (out1, out2 args), does not have external calls
+- `OPENSSL_free`: is long-ish (21 lines), does not have loops, does not alter outside variables, has external calls
+- `BN_free`: is small, does not have loops, does not alter outside variables, has external calls
+  - has at least one other version with the same characteristics
+- `exit`: is small-ish (11 lines), does not have loops, does not alter variables, has external calls
+  - has at least one other version with the same characteristics
+- `com_err`: is small, does not have loops, does not alter variables, has external calls
+- `fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_addcarryx_u32`: is small-ish (13 lines), does not have loops, alters outside variables (out1, out2 args), does not have external calls
+- `EVP_PKEY_free`: is long-ish (22 lines), does not have loops, does not alter outside variables, has external calls
+- `BIO_free`: is TOO long (32 lines), does not have loops, alters outside variables, has external calls
+- `OPENSSL_malloc`: is long-ish (21 lines), does not have loops, does not alter outside variables, has external calls
+- `BN_CTX_get`: is long (24 lines), does not have loops, alters an outside variable (ctx arg), has external calls (MAY be macros) 
+  - has variations with either the same or worse problems (longer)
+- `fiat_id_tc26_gost_3410_2012_512_paramSetB_mulx_u32`: is small-ish (13 lines), does not have loops, alters outside variables (out1, out2 args), does not have external calls
+- `check`: is small, does not have loops, does not alter outside variables, has external calls;; does not seem very relevant (i.e., no core "mechanisms")
+  - many variations, all seem to share these issues
+- `EVP_PKEY_free`: is small-ish (12 lines), does not have loops, does not alter outside variables, has external calls
+  - has a variation, same issues but longer
+- `BIO_free`: is medium-size (18 lines), has a loop -- small, just an if, does not alter outside variables, has external calls
+  - variation, longer than 30 lines, does not have a loop, other problems are the same
+- `fiat_p256_addcarryx_u32`: is small, does not have loops, alters outside variables (out1, out2 args), does not have external calls
+- `BN_new`: is small-ish (13 lines), does not have loops, does not alter outside variables, has external calls (macros?)
+  - variation, same issue
+- `fiat_id_GostR3410_2001_CryptoPro_B_ParamSet_addcarryx_u32`: is small-ish (13 lines), does not have loops, alters outside variables (out1, out2 args), has macro calls
+- `fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u64`: same as above
+- `fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_mulx_u32`: same as above
+- `BIO_puts`: too long (48 lines), does not have loops, alters outside variables (b arg), has external calls
+- `OPENSSL_cleanse`: has asm so no
+- `krb5_free_principal`: is medium-size (16 lines), has a while loop, alters outside variables (data arg), has a free call
+- `BIO_write`: is medium-size (18 lines), does not have loops, alters outside variables (bio arg), has external calls (macro, bwrite)
+  - variation, similar yet does not alter outside variables, has no macro
+- `OSSL_PARAM_locate`: is small, has a loop (may be small enough? idk), does not alter outside variables, has external call (strcmp)
