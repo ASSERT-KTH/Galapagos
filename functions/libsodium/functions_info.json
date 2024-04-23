@@ -2,7 +2,7 @@
     {
         "_type": "tag",
         "name": "sodium_free",
-        "path": "src/libsodium/sodium/utils.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
         "line": 666,
         "kind": "function",
         "end": 694,
@@ -11,7 +11,7 @@
     {
         "_type": "tag",
         "name": "sodium_malloc",
-        "path": "src/libsodium/sodium/utils.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
         "line": 636,
         "kind": "function",
         "end": 646,
@@ -20,7 +20,7 @@
     {
         "_type": "tag",
         "name": "sodium_memzero",
-        "path": "src/libsodium/sodium/utils.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
         "line": 125,
         "kind": "function",
         "end": 156,
@@ -28,26 +28,8 @@
     },
     {
         "_type": "tag",
-        "name": "fe25519_mul",
-        "path": "src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
-        "line": 362,
-        "kind": "function",
-        "end": 618,
-        "count": 141
-    },
-    {
-        "_type": "tag",
-        "name": "fe25519_mul",
-        "path": "src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
-        "line": 273,
-        "kind": "function",
-        "end": 333,
-        "count": 141
-    },
-    {
-        "_type": "tag",
         "name": "sodium_bin2hex",
-        "path": "src/libsodium/sodium/codecs.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/codecs.c",
         "line": 15,
         "kind": "function",
         "end": 39,
@@ -56,7 +38,7 @@
     {
         "_type": "tag",
         "name": "randombytes_buf",
-        "path": "src/libsodium/randombytes/randombytes.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/randombytes/randombytes.c",
         "line": 168,
         "kind": "function",
         "end": 174,
@@ -64,17 +46,8 @@
     },
     {
         "_type": "tag",
-        "name": "sodium_hex2bin",
-        "path": "src/libsodium/sodium/codecs.c",
-        "line": 42,
-        "kind": "function",
-        "end": 102,
-        "count": 90
-    },
-    {
-        "_type": "tag",
         "name": "sodium_misuse",
-        "path": "src/libsodium/sodium/core.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/core.c",
         "line": 191,
         "kind": "function",
         "end": 204,
@@ -82,11 +55,398 @@
     },
     {
         "_type": "tag",
-        "name": "fe25519_sq",
-        "path": "src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
-        "line": 632,
+        "name": "randombytes_uniform",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/randombytes/randombytes.c",
+        "line": 145,
         "kind": "function",
-        "end": 790,
-        "count": 73
+        "end": 165,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "load_3",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 12,
+        "kind": "function",
+        "end": 21,
+        "count": 57
+    },
+    {
+        "_type": "tag",
+        "name": "load_3",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c",
+        "line": 10,
+        "kind": "function",
+        "end": 17,
+        "count": 57
+    },
+    {
+        "_type": "tag",
+        "name": "load_4",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 24,
+        "kind": "function",
+        "end": 34,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "load_4",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c",
+        "line": 20,
+        "kind": "function",
+        "end": 28,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "line": 42,
+        "kind": "function",
+        "end": 65,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
+        "line": 34,
+        "kind": "function",
+        "end": 47,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_sub",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "line": 80,
+        "kind": "function",
+        "end": 103,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_sub",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
+        "line": 54,
+        "kind": "function",
+        "end": 87,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "gcm_reduce",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+        "line": 237,
+        "kind": "function",
+        "end": 249,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "gcm_reduce",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/armcrypto/aead_aes256gcm_armcrypto.c",
+        "line": 251,
+        "kind": "function",
+        "end": 263,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "sodium_is_zero",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
+        "line": 257,
+        "kind": "function",
+        "end": 266,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "gh_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+        "line": 306,
+        "kind": "function",
+        "end": 312,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "gh_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/armcrypto/aead_aes256gcm_armcrypto.c",
+        "line": 320,
+        "kind": "function",
+        "end": 326,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "ge25519_p1p1_to_p3",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 466,
+        "kind": "function",
+        "end": 472,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sodium_memcmp",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/sodium/utils.c",
+        "line": 186,
+        "kind": "function",
+        "end": 207,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_generichash_blake2b_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_generichash/blake2b/ref/generichash_blake2b.c",
+        "line": 95,
+        "kind": "function",
+        "end": 101,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "ge25519_p3_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 1015,
+        "kind": "function",
+        "end": 1023,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "aegis256_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis256/aesni/aead_aegis256_aesni.c",
+        "line": 38,
+        "kind": "function",
+        "end": 49,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "aegis256_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis256/armcrypto/aead_aegis256_armcrypto.c",
+        "line": 31,
+        "kind": "function",
+        "end": 42,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "aegis256_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis256/soft/aead_aegis256_soft.c",
+        "line": 28,
+        "kind": "function",
+        "end": 39,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_pwhash_str_verify",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_pwhash/crypto_pwhash.c",
+        "line": 175,
+        "kind": "function",
+        "end": 190,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "incr_counters",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+        "line": 366,
+        "kind": "function",
+        "end": 377,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "incr_counters",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/armcrypto/aead_aes256gcm_armcrypto.c",
+        "line": 380,
+        "kind": "function",
+        "end": 391,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_auth_hmacsha256_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c",
+        "line": 72,
+        "kind": "function",
+        "end": 78,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_core_ed25519_scalar_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/core_ed25519.c",
+        "line": 191,
+        "kind": "function",
+        "end": 203,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_auth_hmacsha512_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_auth/hmacsha512/auth_hmacsha512.c",
+        "line": 72,
+        "kind": "function",
+        "end": 78,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_iszero",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "line": 320,
+        "kind": "function",
+        "end": 327,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_iszero",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
+        "line": 258,
+        "kind": "function",
+        "end": 265,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "ge25519_p3_to_cached",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 537,
+        "kind": "function",
+        "end": 543,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_generichash_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_generichash/crypto_generichash.c",
+        "line": 71,
+        "kind": "function",
+        "end": 77,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "encrypt_xor_block",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+        "line": 148,
+        "kind": "function",
+        "end": 162,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "encrypt_xor_block",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/armcrypto/aead_aes256gcm_armcrypto.c",
+        "line": 162,
+        "kind": "function",
+        "end": 176,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "encrypt_xor_wide",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c",
+        "line": 166,
+        "kind": "function",
+        "end": 189,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "encrypt_xor_wide",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aes256gcm/armcrypto/aead_aes256gcm_armcrypto.c",
+        "line": 180,
+        "kind": "function",
+        "end": 203,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "equal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 609,
+        "kind": "function",
+        "end": 620,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "aegis128l_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis128l/aesni/aead_aegis128l_aesni.c",
+        "line": 38,
+        "kind": "function",
+        "end": 54,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "aegis128l_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis128l/armcrypto/aead_aegis128l_armcrypto.c",
+        "line": 31,
+        "kind": "function",
+        "end": 44,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "aegis128l_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_aead/aegis128l/soft/aead_aegis128l_soft.c",
+        "line": 28,
+        "kind": "function",
+        "end": 44,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_neg",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_25_5.h",
+        "line": 116,
+        "kind": "function",
+        "end": 139,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "fe25519_neg",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/include/sodium/private/ed25519_ref10_fe_51.h",
+        "line": 94,
+        "kind": "function",
+        "end": 100,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "crypto_generichash_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_generichash/crypto_generichash.c",
+        "line": 62,
+        "kind": "function",
+        "end": 68,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "ge25519_add_cached",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 264,
+        "kind": "function",
+        "end": 279,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "ge25519_p3_dbladd",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libsodium/src/libsodium/crypto_core/ed25519/ref10/ed25519_ref10.c",
+        "line": 1037,
+        "kind": "function",
+        "end": 1050,
+        "count": 14
     }
 ]

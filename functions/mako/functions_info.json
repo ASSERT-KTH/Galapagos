@@ -2,7 +2,7 @@
     {
         "_type": "tag",
         "name": "ldb_malloc",
-        "path": "deps/lcdb/src/util/internal.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/internal.c",
         "line": 25,
         "kind": "function",
         "end": 32,
@@ -11,7 +11,7 @@
     {
         "_type": "tag",
         "name": "btc_read32le",
-        "path": "src/bio.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
         "line": 42,
         "kind": "function",
         "end": 53,
@@ -20,7 +20,7 @@
     {
         "_type": "tag",
         "name": "btc_memzero",
-        "path": "src/util.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/util.c",
         "line": 29,
         "kind": "function",
         "end": 49,
@@ -29,7 +29,7 @@
     {
         "_type": "tag",
         "name": "btc_free",
-        "path": "src/internal.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/internal.c",
         "line": 59,
         "kind": "function",
         "end": 66,
@@ -38,7 +38,7 @@
     {
         "_type": "tag",
         "name": "btc_uint32_write",
-        "path": "src/impl.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
         "line": 493,
         "kind": "function",
         "end": 504,
@@ -47,7 +47,7 @@
     {
         "_type": "tag",
         "name": "json_integer_new",
-        "path": "src/json/json_builder.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
         "line": 317,
         "kind": "function",
         "end": 330,
@@ -56,7 +56,7 @@
     {
         "_type": "tag",
         "name": "btc_malloc",
-        "path": "src/internal.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/internal.c",
         "line": 39,
         "kind": "function",
         "end": 46,
@@ -65,7 +65,7 @@
     {
         "_type": "tag",
         "name": "btc_write32be",
-        "path": "src/bio.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
         "line": 142,
         "kind": "function",
         "end": 151,
@@ -74,7 +74,7 @@
     {
         "_type": "tag",
         "name": "btc_uint32_read",
-        "path": "src/impl.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
         "line": 507,
         "kind": "function",
         "end": 524,
@@ -83,10 +83,370 @@
     {
         "_type": "tag",
         "name": "ldb_buffer_clear",
-        "path": "deps/lcdb/src/util/buffer.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/buffer.c",
         "line": 29,
         "kind": "function",
         "end": 36,
         "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_slice",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 1419,
+        "kind": "function",
+        "end": 1425,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_slice",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/slice.c",
+        "line": 31,
+        "kind": "function",
+        "end": 39,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_slice",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/slice.h",
+        "line": 37,
+        "kind": "function",
+        "end": 45,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "btc_vector_clear",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/vector.c",
+        "line": 27,
+        "kind": "function",
+        "end": 34,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_batch_put",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/write_batch.c",
+        "line": 160,
+        "kind": "function",
+        "end": 167,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "btc_chain_throw",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/node/chain.c",
+        "line": 978,
+        "kind": "function",
+        "end": 998,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "btc_stack_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/script.c",
+        "line": 114,
+        "kind": "function",
+        "end": 121,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_log",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/logger.c",
+        "line": 149,
+        "kind": "function",
+        "end": 158,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "sc_import",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 420,
+        "kind": "function",
+        "end": 430,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "state_need",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/printf_core.c",
+        "line": 112,
+        "kind": "function",
+        "end": 128,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_grow",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5260,
+        "kind": "function",
+        "end": 5269,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "json_hash_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json.c",
+        "line": 63,
+        "kind": "function",
+        "end": 72,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "json_object_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 180,
+        "kind": "function",
+        "end": 204,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "sc_montsqrn",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 393,
+        "kind": "function",
+        "end": 402,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "btc_peer_sendmsg",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/node/pool.c",
+        "line": 684,
+        "kind": "function",
+        "end": 692,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "btc_time_msec",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/core_unix_impl.h",
+        "line": 737,
+        "kind": "function",
+        "end": 751,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint32_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 527,
+        "kind": "function",
+        "end": 535,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_iter_destroy",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 1243,
+        "kind": "function",
+        "end": 1250,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "btc_log",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 145,
+        "kind": "function",
+        "end": 159,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_iter_status",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 1297,
+        "kind": "function",
+        "end": 1303,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "btc_rdtsc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/rand_win_impl.h",
+        "line": 58,
+        "kind": "function",
+        "end": 88,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "btc_mempool_throw",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/node/mempool.c",
+        "line": 348,
+        "kind": "function",
+        "end": 360,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "json_string_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_extra.c",
+        "line": 121,
+        "kind": "function",
+        "end": 131,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_sub_ui",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5647,
+        "kind": "function",
+        "end": 5669,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "btc_socket_close",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/loop.c",
+        "line": 1208,
+        "kind": "function",
+        "end": 1232,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "json_amount_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 332,
+        "kind": "function",
+        "end": 345,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint8_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 398,
+        "kind": "function",
+        "end": 407,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "json_array_push",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 150,
+        "kind": "function",
+        "end": 178,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_vector_clear",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/vector.c",
+        "line": 25,
+        "kind": "function",
+        "end": 32,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_add_ui",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5582,
+        "kind": "function",
+        "end": 5600,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_set",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5284,
+        "kind": "function",
+        "end": 5293,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_sub",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5618,
+        "kind": "function",
+        "end": 5644,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_swap",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 8985,
+        "kind": "function",
+        "end": 8997,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "btc_now",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/util.c",
+        "line": 236,
+        "kind": "function",
+        "end": 242,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "btc_sha256_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/sha256.c",
+        "line": 194,
+        "kind": "function",
+        "end": 221,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "json_boolean_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 362,
+        "kind": "function",
+        "end": 375,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "btc_raw_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 893,
+        "kind": "function",
+        "end": 905,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "safe_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 385,
+        "kind": "function",
+        "end": 392,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "safe_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/loop.c",
+        "line": 332,
+        "kind": "function",
+        "end": 339,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "safe_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/workers.c",
+        "line": 20,
+        "kind": "function",
+        "end": 27,
+        "count": 18
     }
 ]

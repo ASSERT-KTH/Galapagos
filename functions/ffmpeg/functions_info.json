@@ -2,7 +2,7 @@
     {
         "_type": "tag",
         "name": "av_log",
-        "path": "libavutil/log.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/log.c",
         "line": 409,
         "kind": "function",
         "end": 415,
@@ -11,7 +11,7 @@
     {
         "_type": "tag",
         "name": "av_freep",
-        "path": "libavutil/mem.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/mem.c",
         "line": 245,
         "kind": "function",
         "end": 252,
@@ -20,7 +20,7 @@
     {
         "_type": "tag",
         "name": "get_bits",
-        "path": "libavcodec/get_bits.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/get_bits.h",
         "line": 325,
         "kind": "function",
         "end": 336,
@@ -29,7 +29,7 @@
     {
         "_type": "tag",
         "name": "get_bits",
-        "path": "libavcodec/jpeg2000dec.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/jpeg2000dec.c",
         "line": 60,
         "kind": "function",
         "end": 73,
@@ -38,7 +38,7 @@
     {
         "_type": "tag",
         "name": "put_bits",
-        "path": "libavcodec/j2kenc.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/j2kenc.c",
         "line": 222,
         "kind": "function",
         "end": 232,
@@ -47,7 +47,7 @@
     {
         "_type": "tag",
         "name": "get_bits1",
-        "path": "libavcodec/get_bits.h",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/get_bits.h",
         "line": 378,
         "kind": "function",
         "end": 396,
@@ -56,7 +56,7 @@
     {
         "_type": "tag",
         "name": "av_frame_free",
-        "path": "libavutil/frame.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/frame.c",
         "line": 100,
         "kind": "function",
         "end": 107,
@@ -65,7 +65,7 @@
     {
         "_type": "tag",
         "name": "av_free",
-        "path": "libavutil/mem.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/mem.c",
         "line": 236,
         "kind": "function",
         "end": 243,
@@ -74,7 +74,7 @@
     {
         "_type": "tag",
         "name": "avio_wb32",
-        "path": "libavformat/aviobuf.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
         "line": 386,
         "kind": "function",
         "end": 392,
@@ -83,10 +83,370 @@
     {
         "_type": "tag",
         "name": "av_calloc",
-        "path": "libavutil/mem.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/mem.c",
         "line": 262,
         "kind": "function",
         "end": 268,
         "count": 885
+    },
+    {
+        "_type": "tag",
+        "name": "avio_rl32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
+        "line": 751,
+        "kind": "function",
+        "end": 757,
+        "count": 783
+    },
+    {
+        "_type": "tag",
+        "name": "AV_RL32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/avr32/intreadwrite.h",
+        "line": 147,
+        "kind": "function",
+        "end": 160,
+        "count": 773
+    },
+    {
+        "_type": "tag",
+        "name": "av_mallocz",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/tools/coverity.c",
+        "line": 48,
+        "kind": "function",
+        "end": 59,
+        "count": 751
+    },
+    {
+        "_type": "tag",
+        "name": "av_mallocz",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/mem.c",
+        "line": 254,
+        "kind": "function",
+        "end": 260,
+        "count": 751
+    },
+    {
+        "_type": "tag",
+        "name": "avio_rb32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
+        "line": 782,
+        "kind": "function",
+        "end": 788,
+        "count": 652
+    },
+    {
+        "_type": "tag",
+        "name": "avio_r8",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
+        "line": 624,
+        "kind": "function",
+        "end": 631,
+        "count": 634
+    },
+    {
+        "_type": "tag",
+        "name": "av_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/tools/coverity.c",
+        "line": 35,
+        "kind": "function",
+        "end": 46,
+        "count": 630
+    },
+    {
+        "_type": "tag",
+        "name": "get_vlc2",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/get_bits.h",
+        "line": 631,
+        "kind": "function",
+        "end": 644,
+        "count": 529
+    },
+    {
+        "_type": "tag",
+        "name": "avio_w8",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
+        "line": 200,
+        "kind": "function",
+        "end": 206,
+        "count": 517
+    },
+    {
+        "_type": "tag",
+        "name": "AV_RB32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/avr32/intreadwrite.h",
+        "line": 131,
+        "kind": "function",
+        "end": 144,
+        "count": 498
+    },
+    {
+        "_type": "tag",
+        "name": "av_malloc_array",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/mem.c",
+        "line": 207,
+        "kind": "function",
+        "end": 213,
+        "count": 430
+    },
+    {
+        "_type": "tag",
+        "name": "av_buffer_unref",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavutil/buffer.c",
+        "line": 139,
+        "kind": "function",
+        "end": 145,
+        "count": 427
+    },
+    {
+        "_type": "tag",
+        "name": "avio_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavformat/aviobuf.c",
+        "line": 222,
+        "kind": "function",
+        "end": 242,
+        "count": 426
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 1034,
+        "kind": "function",
+        "end": 1049,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 178,
+        "kind": "function",
+        "end": 211,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 19,
+        "kind": "function",
+        "end": 28,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 213,
+        "kind": "function",
+        "end": 237,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 2364,
+        "kind": "function",
+        "end": 2398,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 2453,
+        "kind": "function",
+        "end": 2482,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 2484,
+        "kind": "function",
+        "end": 2499,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 30,
+        "kind": "function",
+        "end": 48,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 3004,
+        "kind": "function",
+        "end": 3015,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 310,
+        "kind": "function",
+        "end": 344,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 3429,
+        "kind": "function",
+        "end": 3455,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 3457,
+        "kind": "function",
+        "end": 3476,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 346,
+        "kind": "function",
+        "end": 365,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 367,
+        "kind": "function",
+        "end": 392,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 394,
+        "kind": "function",
+        "end": 408,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 50,
+        "kind": "function",
+        "end": 58,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 558,
+        "kind": "function",
+        "end": 584,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 586,
+        "kind": "function",
+        "end": 607,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 609,
+        "kind": "function",
+        "end": 641,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 643,
+        "kind": "function",
+        "end": 668,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_h266_syntax_template.c",
+        "line": 670,
+        "kind": "function",
+        "end": 692,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 160,
+        "kind": "function",
+        "end": 174,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 176,
+        "kind": "function",
+        "end": 208,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 210,
+        "kind": "function",
+        "end": 238,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 298,
+        "kind": "function",
+        "end": 330,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 332,
+        "kind": "function",
+        "end": 348,
+        "count": 425
+    },
+    {
+        "_type": "tag",
+        "name": "FUNC",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/ffmpeg/libavcodec/cbs_mpeg2_syntax_template.c",
+        "line": 350,
+        "kind": "function",
+        "end": 381,
+        "count": 425
     }
 ]

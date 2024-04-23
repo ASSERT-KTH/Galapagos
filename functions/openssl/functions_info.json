@@ -1,8 +1,17 @@
 [
     {
         "_type": "tag",
+        "name": "OPENSSL_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/mem.c",
+        "line": 154,
+        "kind": "function",
+        "end": 174,
+        "count": 3110
+    },
+    {
+        "_type": "tag",
         "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u32",
-        "path": "gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
         "line": 7109,
         "kind": "function",
         "end": 7121,
@@ -11,7 +20,16 @@
     {
         "_type": "tag",
         "name": "BN_free",
-        "path": "crypto/bn/bn_lib.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/bn.c",
+        "line": 87,
+        "kind": "function",
+        "end": 101,
+        "count": 1121
+    },
+    {
+        "_type": "tag",
+        "name": "BN_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_lib.c",
         "line": 225,
         "kind": "function",
         "end": 233,
@@ -20,7 +38,7 @@
     {
         "_type": "tag",
         "name": "exit",
-        "path": "krb5/src/util/exitsleep.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/util/exitsleep.c",
         "line": 39,
         "kind": "function",
         "end": 49,
@@ -28,17 +46,8 @@
     },
     {
         "_type": "tag",
-        "name": "com_err",
-        "path": "krb5/src/util/et/com_err.c",
-        "line": 131,
-        "kind": "function",
-        "end": 140,
-        "count": 927
-    },
-    {
-        "_type": "tag",
         "name": "fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_addcarryx_u32",
-        "path": "gost-engine/ecp_id_GostR3410_2001_CryptoPro_C_ParamSet.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_C_ParamSet.c",
         "line": 5169,
         "kind": "function",
         "end": 5181,
@@ -46,8 +55,26 @@
     },
     {
         "_type": "tag",
+        "name": "com_err",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/util/et/com_err.c",
+        "line": 131,
+        "kind": "function",
+        "end": 140,
+        "count": 927
+    },
+    {
+        "_type": "tag",
+        "name": "OPENSSL_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/mem.c",
+        "line": 132,
+        "kind": "function",
+        "end": 152,
+        "count": 824
+    },
+    {
+        "_type": "tag",
         "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_mulx_u32",
-        "path": "gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
         "line": 7164,
         "kind": "function",
         "end": 7176,
@@ -55,8 +82,35 @@
     },
     {
         "_type": "tag",
+        "name": "BN_CTX_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/ctx.c",
+        "line": 152,
+        "kind": "function",
+        "end": 186,
+        "count": 685
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_ctx.c",
+        "line": 212,
+        "kind": "function",
+        "end": 235,
+        "count": 685
+    },
+    {
+        "_type": "tag",
         "name": "EVP_PKEY_free",
-        "path": "crypto/evp/p_lib.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/evp/evp.c",
+        "line": 107,
+        "kind": "function",
+        "end": 118,
+        "count": 669
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_PKEY_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/evp/p_lib.c",
         "line": 1774,
         "kind": "function",
         "end": 1795,
@@ -65,7 +119,16 @@
     {
         "_type": "tag",
         "name": "BIO_free",
-        "path": "crypto/bio/bio_lib.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/bio/bio.c",
+        "line": 92,
+        "kind": "function",
+        "end": 109,
+        "count": 634
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bio/bio_lib.c",
         "line": 124,
         "kind": "function",
         "end": 155,
@@ -73,20 +136,317 @@
     },
     {
         "_type": "tag",
-        "name": "BN_CTX_get",
-        "path": "crypto/bn/bn_ctx.c",
-        "line": 212,
+        "name": "fiat_p256_addcarryx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/third_party/fiat/p256_32.h",
+        "line": 37,
         "kind": "function",
-        "end": 235,
-        "count": 685
+        "end": 43,
+        "count": 563
+    },
+    {
+        "_type": "tag",
+        "name": "BN_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/bn.c",
+        "line": 69,
+        "kind": "function",
+        "end": 81,
+        "count": 531
+    },
+    {
+        "_type": "tag",
+        "name": "BN_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_lib.c",
+        "line": 243,
+        "kind": "function",
+        "end": 252,
+        "count": 531
     },
     {
         "_type": "tag",
         "name": "check",
-        "path": "krb5/src/lib/krb5/ccache/t_cccol.c",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/ccache/t_cccol.c",
         "line": 43,
         "kind": "function",
         "end": 53,
         "count": 501
+    },
+    {
+        "_type": "tag",
+        "name": "check",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/krb/t_response_items.c",
+        "line": 42,
+        "kind": "function",
+        "end": 48,
+        "count": 501
+    },
+    {
+        "_type": "tag",
+        "name": "check",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/krb/t_ser.c",
+        "line": 39,
+        "kind": "function",
+        "end": 45,
+        "count": 501
+    },
+    {
+        "_type": "tag",
+        "name": "check",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/krb/t_vfy_increds.c",
+        "line": 37,
+        "kind": "function",
+        "end": 43,
+        "count": 501
+    },
+    {
+        "_type": "tag",
+        "name": "check",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/plugins/preauth/spake/t_vectors.c",
+        "line": 330,
+        "kind": "function",
+        "end": 339,
+        "count": 501
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_CryptoPro_B_ParamSet_addcarryx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_B_ParamSet.c",
+        "line": 4511,
+        "kind": "function",
+        "end": 4523,
+        "count": 498
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_TestParamSet_addcarryx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_TestParamSet.c",
+        "line": 4437,
+        "kind": "function",
+        "end": 4449,
+        "count": 498
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "line": 132,
+        "kind": "function",
+        "end": 145,
+        "count": 498
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_mulx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_C_ParamSet.c",
+        "line": 5224,
+        "kind": "function",
+        "end": 5234,
+        "count": 480
+    },
+    {
+        "_type": "tag",
+        "name": "OPENSSL_cleanse",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/mem.c",
+        "line": 207,
+        "kind": "function",
+        "end": 220,
+        "count": 378
+    },
+    {
+        "_type": "tag",
+        "name": "krb5_free_principal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/krb/kfree.c",
+        "line": 399,
+        "kind": "function",
+        "end": 414,
+        "count": 349
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/bio/bio.c",
+        "line": 162,
+        "kind": "function",
+        "end": 179,
+        "count": 338
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bio/bio_lib.c",
+        "line": 375,
+        "kind": "function",
+        "end": 391,
+        "count": 338
+    },
+    {
+        "_type": "tag",
+        "name": "OSSL_PARAM_locate",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/params.c",
+        "line": 51,
+        "kind": "function",
+        "end": 58,
+        "count": 336
+    },
+    {
+        "_type": "tag",
+        "name": "SSL_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/ssl/ssl_lib.c",
+        "line": 1371,
+        "kind": "function",
+        "end": 1392,
+        "count": 330
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_PKEY_CTX_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/evp/evp_ctx.c",
+        "line": 140,
+        "kind": "function",
+        "end": 150,
+        "count": 327
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_PKEY_CTX_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/evp/pmeth_lib.c",
+        "line": 406,
+        "kind": "function",
+        "end": 427,
+        "count": 327
+    },
+    {
+        "_type": "tag",
+        "name": "OPENSSL_strdup",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/mem.c",
+        "line": 266,
+        "kind": "function",
+        "end": 277,
+        "count": 314
+    },
+    {
+        "_type": "tag",
+        "name": "BIO_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/bio/bio.c",
+        "line": 72,
+        "kind": "function",
+        "end": 90,
+        "count": 313
+    },
+    {
+        "_type": "tag",
+        "name": "ossl_prov_is_running",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/providers/fips/self_test.c",
+        "line": 470,
+        "kind": "function",
+        "end": 488,
+        "count": 309
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_end",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/ctx.c",
+        "line": 188,
+        "kind": "function",
+        "end": 196,
+        "count": 257
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_end",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_ctx.c",
+        "line": 193,
+        "kind": "function",
+        "end": 210,
+        "count": 257
+    },
+    {
+        "_type": "tag",
+        "name": "krb5_free_data_contents",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/krb5/src/lib/krb5/krb/kfree.c",
+        "line": 242,
+        "kind": "function",
+        "end": 249,
+        "count": 256
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_start",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/ctx.c",
+        "line": 138,
+        "kind": "function",
+        "end": 150,
+        "count": 250
+    },
+    {
+        "_type": "tag",
+        "name": "BN_CTX_start",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_ctx.c",
+        "line": 179,
+        "kind": "function",
+        "end": 191,
+        "count": 250
+    },
+    {
+        "_type": "tag",
+        "name": "BN_num_bits",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/bn/bn.c",
+        "line": 216,
+        "kind": "function",
+        "end": 223,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "BN_num_bits",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/bn/bn_lib.c",
+        "line": 178,
+        "kind": "function",
+        "end": 200,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_CryptoPro_B_ParamSet_mulx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_CryptoPro_B_ParamSet.c",
+        "line": 4566,
+        "kind": "function",
+        "end": 4576,
+        "count": 232
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_GostR3410_2001_TestParamSet_mulx_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_GostR3410_2001_TestParamSet.c",
+        "line": 4492,
+        "kind": "function",
+        "end": 4504,
+        "count": 232
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_mulx_u64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
+        "line": 189,
+        "kind": "function",
+        "end": 201,
+        "count": 232
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_MD_CTX_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/cloudflare-quiche/quiche/deps/boringssl/src/crypto/fipsmodule/digest/digest.c",
+        "line": 109,
+        "kind": "function",
+        "end": 116,
+        "count": 228
+    },
+    {
+        "_type": "tag",
+        "name": "EVP_MD_CTX_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/evp/digest.c",
+        "line": 135,
+        "kind": "function",
+        "end": 142,
+        "count": 228
     }
 ]
