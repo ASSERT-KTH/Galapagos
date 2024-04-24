@@ -1,3 +1,3 @@
-projects = ["coreutils", "ffmpeg", "libsodium", "mako", "openssl"]
+projects = ["libsodium"]
 temperatures = [1.2]
-n = 30
+n = 10

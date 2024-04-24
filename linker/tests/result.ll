@@ -8,34 +8,22 @@ define dso_local i32 @n_version_call(i32 noundef %0, i32 noundef %1) #0 {
 entry:
   %2 = call i32 @version_1(i32 %0, i32 %1)
   %3 = call i32 @version_2(i32 %0, i32 %1)
-  %4 = call i32 @version_3(i32 %0, i32 %1)
   br label %comparisons
 
 comparisons:                                      ; preds = %entry
-  %5 = icmp eq i32 %2, %3
-  br i1 %5, label %true, label %error
+  %4 = icmp eq i32 %2, %3
+  br i1 %4, label %true, label %error
 
 true:                                             ; preds = %comparisons
-  %6 = icmp eq i32 %2, %4
-  br i1 %6, label %true1, label %error
-
-true1:                                            ; preds = %true
   ret i32 %2
 
-error:                                            ; preds = %true, %comparisons
+error:                                            ; preds = %comparisons
   call void @llvm.trap()
   unreachable
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @version_2(i32 noundef %0, i32 noundef %1) #0 {
-entry:
-  %add.0 = add i32 %1, %0
-  ret i32 %add.0
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define dso_local i32 @version_3(i32 noundef %0, i32 noundef %1) #0 {
 entry:
   %add.0 = add i32 %1, %0
   ret i32 %add.0
