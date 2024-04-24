@@ -1,5 +1,36 @@
 # Use case functions picking
 
+### Second attempt (slices of 200 functions)
+
+#### ffmpeg
+
+- `67_mid_pred`: seems to respect everything
+- `70_av_expr_eval`: call to eval_expr
+
+#### mako
+
+- `60_btc_match_bool`: call to `btc_match`
+- `69_ldb_open`: call to `ldb_try_open` in 1line do while loop
+- `77_json_null_new`: call to calloc
+- `99_btc_tx_has_witness`: for loop with 1 if
+- `112_json_boolean_get`: changes z arg
+- `138_json_boolean_get`: call to `json_object_find`
+- `140_ldb_fixed64_decode`: ...seems ok?
+- `149_btc_match_uint`: call to `btc_match_int`
+- `151_btc_script_is_program`: has macros but not "calling" ones, seem to be regular macros (e.g. defining values)
+
+#### openssl
+
+- `62_CRYPTO_memcmp`: for loop with 1 line
+- `65_make_data`: seems to respect everything
+- `75_BN_cmp`: seems to respect everything
+- `85_f`: seems to respect everything
+  - same for `86_f`
+- `121_BN_value_one`: seems to respect everything
+- `155_scalar_get_bit`: seems to respect everything
+- `177_BIO_push`: while loop with 1 line
+
+
 ## coreutils
 
 - `memset`: is small, has a small while loop, does not alter outside variables, does not have external calls

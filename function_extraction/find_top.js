@@ -38,7 +38,7 @@ async function processLineByLine() {
     !f.name.includes("usage")
   )
 
-  const top = non_printf.slice(0, 50)
+  const top = non_printf.slice(0, 200)
 
   // write to file
   fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(top, null, 4));

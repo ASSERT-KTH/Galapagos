@@ -448,5 +448,1355 @@
         "kind": "function",
         "end": 27,
         "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "btc_header_hash",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/header.c",
+        "line": 98,
+        "kind": "function",
+        "end": 111,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "btc_size_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 771,
+        "kind": "function",
+        "end": 783,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "json_array_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 125,
+        "kind": "function",
+        "end": 148,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "btc_peer_increase_ban",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/node/pool.c",
+        "line": 627,
+        "kind": "function",
+        "end": 637,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint64_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 553,
+        "kind": "function",
+        "end": 568,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "btc_write32le",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
+        "line": 56,
+        "kind": "function",
+        "end": 65,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "db_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 430,
+        "kind": "function",
+        "end": 437,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_join",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/strutil.c",
+        "line": 160,
+        "kind": "function",
+        "end": 186,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5553,
+        "kind": "function",
+        "end": 5579,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "btc_filter_has",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bloom.c",
+        "line": 349,
+        "kind": "function",
+        "end": 369,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "btc_match_bool",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 239,
+        "kind": "function",
+        "end": 255,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "fe_equal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 850,
+        "kind": "function",
+        "end": 863,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "fe_sqrn",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 935,
+        "kind": "function",
+        "end": 942,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "btc_match_argbool",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 258,
+        "kind": "function",
+        "end": 285,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint64_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 571,
+        "kind": "function",
+        "end": 592,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "btc_view_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/view.c",
+        "line": 141,
+        "kind": "function",
+        "end": 148,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "json_unsigned_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_extra.c",
+        "line": 53,
+        "kind": "function",
+        "end": 67,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_buffer_append",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/buffer.c",
+        "line": 151,
+        "kind": "function",
+        "end": 158,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_open",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 757,
+        "kind": "function",
+        "end": 787,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_open",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_unix_impl.h",
+        "line": 236,
+        "kind": "function",
+        "end": 244,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "LDBIsWindowsNT",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 131,
+        "kind": "function",
+        "end": 149,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "btc_read32be",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
+        "line": 128,
+        "kind": "function",
+        "end": 139,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "btc_sha256_final",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/sha256.c",
+        "line": 224,
+        "kind": "function",
+        "end": 248,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uniform",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/rand.c",
+        "line": 277,
+        "kind": "function",
+        "end": 288,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "btc_write64be",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
+        "line": 172,
+        "kind": "function",
+        "end": 185,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_secp256k1_cmovznz_u32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/fields/secp256k1_32.h",
+        "line": 136,
+        "kind": "function",
+        "end": 144,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "jge_zero",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 1744,
+        "kind": "function",
+        "end": 1751,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "json_null_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_builder.c",
+        "line": 377,
+        "kind": "function",
+        "end": 389,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_buffer_expand",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/buffer.c",
+        "line": 54,
+        "kind": "function",
+        "end": 71,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_remove_file",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 739,
+        "kind": "function",
+        "end": 759,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_wide_import",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 105,
+        "kind": "function",
+        "end": 119,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "sc_mul",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 349,
+        "kind": "function",
+        "end": 358,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "wge_import_even",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 1332,
+        "kind": "function",
+        "end": 1341,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "btc_drbg_generate",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/drbg.c",
+        "line": 71,
+        "kind": "function",
+        "end": 92,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "btc_hex",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/printf_core.c",
+        "line": 237,
+        "kind": "function",
+        "end": 269,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "btc_match_netaddr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 390,
+        "kind": "function",
+        "end": 400,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "btc_tx_verify",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/tx.c",
+        "line": 377,
+        "kind": "function",
+        "end": 397,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wallet_lookup",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 717,
+        "kind": "function",
+        "end": 729,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "db_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 975,
+        "kind": "function",
+        "end": 985,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "http_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/http/http_common.c",
+        "line": 18,
+        "kind": "function",
+        "end": 25,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_fixed64_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/coding.h",
+        "line": 93,
+        "kind": "function",
+        "end": 103,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 896,
+        "kind": "function",
+        "end": 909,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_unix_impl.h",
+        "line": 304,
+        "kind": "function",
+        "end": 325,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 432,
+        "kind": "function",
+        "end": 449,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "safe_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 395,
+        "kind": "function",
+        "end": 402,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "BTCIsWindowsNT",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/core_win_impl.h",
+        "line": 107,
+        "kind": "function",
+        "end": 125,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_entry_median_time",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/entry.c",
+        "line": 182,
+        "kind": "function",
+        "end": 195,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_list_push",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/loop.c",
+        "line": 211,
+        "kind": "function",
+        "end": 225,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_realloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/internal.c",
+        "line": 49,
+        "kind": "function",
+        "end": 56,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_tx_has_witness",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/tx.c",
+        "line": 69,
+        "kind": "function",
+        "end": 78,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wallet_output_path",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 705,
+        "kind": "function",
+        "end": 714,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "fe_is_zero",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 836,
+        "kind": "function",
+        "end": 847,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_iterator",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 1225,
+        "kind": "function",
+        "end": 1240,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_iterator",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/db_impl.c",
+        "line": 2301,
+        "kind": "function",
+        "end": 2317,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_rshift",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 3302,
+        "kind": "function",
+        "end": 3317,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_cmp",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5444,
+        "kind": "function",
+        "end": 5452,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "wge_export",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 1315,
+        "kind": "function",
+        "end": 1329,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "btc_bloom_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bloom.c",
+        "line": 120,
+        "kind": "function",
+        "end": 131,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "btc_list_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/loop.c",
+        "line": 170,
+        "kind": "function",
+        "end": 187,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "btc_memcmp",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/util.c",
+        "line": 56,
+        "kind": "function",
+        "end": 73,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "btc_read64le",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bio.h",
+        "line": 68,
+        "kind": "function",
+        "end": 83,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wide_import",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/core_win_impl.h",
+        "line": 81,
+        "kind": "function",
+        "end": 95,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "json_boolean_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_extra.c",
+        "line": 17,
+        "kind": "function",
+        "end": 33,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_cond_wait",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/port_win_impl.h",
+        "line": 126,
+        "kind": "function",
+        "end": 154,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_memtable_unref",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/memtable.c",
+        "line": 80,
+        "kind": "function",
+        "end": 87,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_varint32_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/coding.h",
+        "line": 170,
+        "kind": "function",
+        "end": 204,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_cmp",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 1329,
+        "kind": "function",
+        "end": 1338,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_sub_n",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 1525,
+        "kind": "function",
+        "end": 1558,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_mul_ui",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5746,
+        "kind": "function",
+        "end": 5764,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "bech32_polymod",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bech32.c",
+        "line": 48,
+        "kind": "function",
+        "end": 57,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_address_set_script",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/address.c",
+        "line": 205,
+        "kind": "function",
+        "end": 238,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_base16_encode",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base16.c",
+        "line": 62,
+        "kind": "function",
+        "end": 71,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_bloom_has",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/bloom.c",
+        "line": 134,
+        "kind": "function",
+        "end": 148,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_buffer_clear",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/buffer.c",
+        "line": 31,
+        "kind": "function",
+        "end": 38,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_delta_conf",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/record.c",
+        "line": 164,
+        "kind": "function",
+        "end": 171,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_header_copy",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/header.c",
+        "line": 38,
+        "kind": "function",
+        "end": 45,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_header_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/header.c",
+        "line": 64,
+        "kind": "function",
+        "end": 72,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_match",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 145,
+        "kind": "function",
+        "end": 160,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_netaddr_network",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/netaddr.c",
+        "line": 526,
+        "kind": "function",
+        "end": 540,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_sockaddr_import",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/sockaddr.c",
+        "line": 131,
+        "kind": "function",
+        "end": 149,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_stack_get_num",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/script.c",
+        "line": 124,
+        "kind": "function",
+        "end": 140,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_tx_base_size",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/tx.c",
+        "line": 1191,
+        "kind": "function",
+        "end": 1200,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint16_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 437,
+        "kind": "function",
+        "end": 446,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_unsigned",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/printf_core.c",
+        "line": 162,
+        "kind": "function",
+        "end": 179,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_zraw_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 908,
+        "kind": "function",
+        "end": 918,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "fe_import",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 773,
+        "kind": "function",
+        "end": 787,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "http_conn_abort",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/http/http_server.c",
+        "line": 364,
+        "kind": "function",
+        "end": 375,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "json_address_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json.c",
+        "line": 170,
+        "kind": "function",
+        "end": 176,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "json_object_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_extra.c",
+        "line": 152,
+        "kind": "function",
+        "end": 159,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_buffer_escape",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/buffer.c",
+        "line": 178,
+        "kind": "function",
+        "end": 200,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_fixed64_decode",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/coding.h",
+        "line": 54,
+        "kind": "function",
+        "end": 63,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_truncfile_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 1382,
+        "kind": "function",
+        "end": 1399,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_vedit_clear",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/version_edit.c",
+        "line": 225,
+        "kind": "function",
+        "end": 238,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_vedit_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/version_edit.c",
+        "line": 206,
+        "kind": "function",
+        "end": 222,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_version_unref",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/version_set.c",
+        "line": 731,
+        "kind": "function",
+        "end": 739,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_montmul",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 3671,
+        "kind": "function",
+        "end": 3688,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "btc_buffer_set",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/buffer.c",
+        "line": 63,
+        "kind": "function",
+        "end": 70,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_die",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 59,
+        "kind": "function",
+        "end": 67,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_hash_compare",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/util.c",
+        "line": 201,
+        "kind": "function",
+        "end": 210,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_match_uint",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/base/config.c",
+        "line": 340,
+        "kind": "function",
+        "end": 348,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_retry_rdwr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/rand_sys.c",
+        "line": 717,
+        "kind": "function",
+        "end": 733,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_script_is_program",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/script.c",
+        "line": 980,
+        "kind": "function",
+        "end": 993,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_sha256_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/sha256.c",
+        "line": 25,
+        "kind": "function",
+        "end": 35,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_signed",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/printf_core.c",
+        "line": 182,
+        "kind": "function",
+        "end": 205,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_tx_is_final",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/tx.c",
+        "line": 432,
+        "kind": "function",
+        "end": 448,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wallet_account",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 511,
+        "kind": "function",
+        "end": 520,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_zinv_clear",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/netmsg.c",
+        "line": 418,
+        "kind": "function",
+        "end": 425,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "db_get_txmeta",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 1319,
+        "kind": "function",
+        "end": 1334,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_secp256k1_addcarryx_u21",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/fields/secp256k1_32.h",
+        "line": 88,
+        "kind": "function",
+        "end": 97,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_secp256k1_subborrowx_u21",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/fields/secp256k1_32.h",
+        "line": 113,
+        "kind": "function",
+        "end": 122,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "hex_value",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_parser.c",
+        "line": 58,
+        "kind": "function",
+        "end": 72,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "jge_set_wge",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 2634,
+        "kind": "function",
+        "end": 2641,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "json_address_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json.c",
+        "line": 179,
+        "kind": "function",
+        "end": 186,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "json_hash_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json.c",
+        "line": 75,
+        "kind": "function",
+        "end": 83,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "json_signed_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/json/json_extra.c",
+        "line": 36,
+        "kind": "function",
+        "end": 50,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/contrib/lwdb/lwdb.c",
+        "line": 809,
+        "kind": "function",
+        "end": 840,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_now_usec",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_unix_impl.h",
+        "line": 1251,
+        "kind": "function",
+        "end": 1258,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "ldb_now_usec",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/env_win_impl.h",
+        "line": 1471,
+        "kind": "function",
+        "end": 1480,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "mp_bitlen",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 1054,
+        "kind": "function",
+        "end": 1072,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_add_n",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 1391,
+        "kind": "function",
+        "end": 1424,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "mpn_lshift",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 3280,
+        "kind": "function",
+        "end": 3295,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_bitlen",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 8965,
+        "kind": "function",
+        "end": 8972,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "mpz_quo_ui",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/mpi.c",
+        "line": 5966,
+        "kind": "function",
+        "end": 5999,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "rb_iter_next",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/util/rbt.c",
+        "line": 564,
+        "kind": "function",
+        "end": 571,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "report_corruption",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/db_impl.c",
+        "line": 820,
+        "kind": "function",
+        "end": 827,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "report_corruption",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/dumpfile.c",
+        "line": 61,
+        "kind": "function",
+        "end": 74,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "report_corruption",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/repair.c",
+        "line": 257,
+        "kind": "function",
+        "end": 263,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "total_file_size",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/deps/lcdb/src/version_set.c",
+        "line": 94,
+        "kind": "function",
+        "end": 105,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "btc_cond_broadcast",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/core_win_impl.h",
+        "line": 1068,
+        "kind": "function",
+        "end": 1077,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_delta_coin",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/record.c",
+        "line": 144,
+        "kind": "function",
+        "end": 151,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_delta_unconf",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/record.c",
+        "line": 154,
+        "kind": "function",
+        "end": 161,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_ecdsa_pubkey_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 3532,
+        "kind": "function",
+        "end": 3550,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_hash256_root",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/hash256.c",
+        "line": 36,
+        "kind": "function",
+        "end": 42,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_hmac256_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/hmac256.c",
+        "line": 22,
+        "kind": "function",
+        "end": 55,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_netaddr_is_local",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/netaddr.c",
+        "line": 446,
+        "kind": "function",
+        "end": 457,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_netaddr_set_sockaddr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/netaddr.c",
+        "line": 678,
+        "kind": "function",
+        "end": 692,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_path_join",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/core.c",
+        "line": 97,
+        "kind": "function",
+        "end": 123,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_stack_get_bool",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/script.c",
+        "line": 166,
+        "kind": "function",
+        "end": 180,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_uint8_update",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/impl.h",
+        "line": 410,
+        "kind": "function",
+        "end": 419,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wallet_path",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 695,
+        "kind": "function",
+        "end": 702,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_wallet_watch",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/wallet.c",
+        "line": 1483,
+        "kind": "function",
+        "end": 1490,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_writer_push_data",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/script.c",
+        "line": 2765,
+        "kind": "function",
+        "end": 2771,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "btc_zinv_grow",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/netmsg.c",
+        "line": 447,
+        "kind": "function",
+        "end": 453,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "checked_malloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 224,
+        "kind": "function",
+        "end": 231,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "db_get_coin",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 1217,
+        "kind": "function",
+        "end": 1234,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "db_get_size",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 1001,
+        "kind": "function",
+        "end": 1011,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "db_put_wallet",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/wallet/database.h",
+        "line": 454,
+        "kind": "function",
+        "end": 462,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "fe_is_odd",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/ecc.c",
+        "line": 866,
+        "kind": "function",
+        "end": 872,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "fiat_secp256k1_cmovznz_u64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/crypto/fields/secp256k1_64.h",
+        "line": 138,
+        "kind": "function",
+        "end": 146,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "http_string_append",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/mako/src/io/http/http_common.c",
+        "line": 96,
+        "kind": "function",
+        "end": 104,
+        "count": 7
     }
 ]
