@@ -20,3 +20,6 @@
 	path = use_cases/openssl
 	url = https://github.com/openssl/openssl.git
 
+[submodule "use_cases/libcsp"]
+	path = use_cases/libcsp
+	url = git@github.com:libcsp/libcsp.git
