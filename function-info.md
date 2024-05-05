@@ -30,6 +30,26 @@
 - `155_scalar_get_bit`: seems to respect everything
 - `177_BIO_push`: while loop with 1 line
 
+#### libcsp
+
+- `1_csp_hton32`: has an if-macro, otherwise good
+- `2_cs_get_msg`: has a call to `clock_gettime` and a macro
+- `11_csp_hton16`: has an if-macro, otherwise good
+- `47_csp_hton64`: has an if-macro, otherwise good
+- `62_csp_buffer_get_isr`: has a call to `csp_queue_dequeue_isr`
+- `63_csp_bytesize`: has a call to `snprintf`
+- `70_csp_get_uptime_s`: has a call to `csp_get_s`
+- `78_csp_rdp_is_conn_ready_for_tx`: has a call to `csp_rdp_seq_after`
+- `86_csp_zmqhub_make_endpoint`: has a call to `snprintf`
+- `102_csp_clock_set_time`: has a call to `clock_settime`
+- `115_csp_htole16`: has an if-macro, otherwise good
+- `116_csp_htole32`: has an if-macro, otherwise good
+- `117_csp_htole64`: has an if-macro, otherwise good
+- `118_csp_htondbl`: has an if-macro and a call to `csp_hton64`
+- `119_csp_htonflt`: has an if-macro and a call to `csp_hton32`
+- `121_csp_port_get_socket`: has a macro (regular one, a constant), otherwise good
+- `131_csp_rdp_set_opt`: alters globals, I think?
+
 
 ## coreutils
 

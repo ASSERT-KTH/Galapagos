@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "csp_buffer_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 164,
+        "kind": "function",
+        "end": 196,
+        "count": 59
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hton32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 39,
+        "kind": "function",
+        "end": 48,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_ms",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_time.c",
+        "line": 27,
+        "kind": "function",
+        "end": 35,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 109,
+        "kind": "function",
+        "end": 132,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_post",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_semaphore.c",
+        "line": 68,
+        "kind": "function",
+        "end": 74,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_post",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 141,
+        "kind": "function",
+        "end": 155,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_post",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 85,
+        "kind": "function",
+        "end": 91,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_wait",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_semaphore.c",
+        "line": 57,
+        "kind": "function",
+        "end": 66,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_wait",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 100,
+        "kind": "function",
+        "end": 132,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_wait",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 77,
+        "kind": "function",
+        "end": 83,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "csp_send",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_io.c",
+        "line": 264,
+        "kind": "function",
+        "end": 283,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hton16",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 24,
+        "kind": "function",
+        "end": 31,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "csp_thread_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_thread.c",
+        "line": 23,
+        "kind": "function",
+        "end": 38,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "csp_thread_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/csp_thread.c",
+        "line": 26,
+        "kind": "function",
+        "end": 38,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "csp_thread_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_thread.c",
+        "line": 28,
+        "kind": "function",
+        "end": 56,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "csp_thread_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_thread.c",
+        "line": 25,
+        "kind": "function",
+        "end": 36,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_pbuf_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_can_pbuf.c",
+        "line": 35,
+        "kind": "function",
+        "end": 55,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 83,
+        "kind": "function",
+        "end": 90,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 59,
+        "kind": "function",
+        "end": 67,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_calloc",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_malloc.c",
+        "line": 31,
+        "kind": "function",
+        "end": 38,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_lock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/csp_semaphore.c",
+        "line": 47,
+        "kind": "function",
+        "end": 57,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_lock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 41,
+        "kind": "function",
+        "end": 73,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_lock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 43,
+        "kind": "function",
+        "end": 49,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sleep_ms",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/csp_thread.c",
+        "line": 45,
+        "kind": "function",
+        "end": 55,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sleep_ms",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_thread.c",
+        "line": 63,
+        "kind": "function",
+        "end": 72,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "socketcan_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/can/can_socketcan.c",
+        "line": 47,
+        "kind": "function",
+        "end": 55,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 92,
+        "kind": "function",
+        "end": 98,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 69,
+        "kind": "function",
+        "end": 75,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_free_isr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 134,
+        "kind": "function",
+        "end": 162,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_crc32_memory",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_crc32.c",
+        "line": 64,
+        "kind": "function",
+        "end": 76,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_s",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_time.c",
+        "line": 43,
+        "kind": "function",
+        "end": 51,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_iflist_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_iflist.c",
+        "line": 42,
+        "kind": "function",
+        "end": 64,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_unlock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/csp_semaphore.c",
+        "line": 59,
+        "kind": "function",
+        "end": 65,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_unlock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 75,
+        "kind": "function",
+        "end": 81,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_unlock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 51,
+        "kind": "function",
+        "end": 57,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_find_route",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_cidr.c",
+        "line": 88,
+        "kind": "function",
+        "end": 95,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_find_route",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_static.c",
+        "line": 28,
+        "kind": "function",
+        "end": 38,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sha1_process",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_sha1.c",
+        "line": 142,
+        "kind": "function",
+        "end": 166,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_clone",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 198,
+        "kind": "function",
+        "end": 212,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_memory",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 111,
+        "kind": "function",
+        "end": 131,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_iflist_get_by_name",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_iflist.c",
+        "line": 31,
+        "kind": "function",
+        "end": 40,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_check_ack",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 468,
+        "kind": "function",
+        "end": 486,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_set",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable.c",
+        "line": 89,
+        "kind": "function",
+        "end": 105,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_log_and_return",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_system.c",
+        "line": 58,
+        "kind": "function",
+        "end": 67,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "csp_clock_get_time",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_clock.c",
+        "line": 25,
+        "kind": "function",
+        "end": 35,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_clock_get_time",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_clock.c",
+        "line": 28,
+        "kind": "function",
+        "end": 36,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_enqueue_packet",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 68,
+        "kind": "function",
+        "end": 94,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hton64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 56,
+        "kind": "function",
+        "end": 69,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_semaphore.c",
+        "line": 24,
+        "kind": "function",
+        "end": 31,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/csp_semaphore.c",
+        "line": 30,
+        "kind": "function",
+        "end": 40,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 24,
+        "kind": "function",
+        "end": 31,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 25,
+        "kind": "function",
+        "end": 33,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_promisc_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_promisc.c",
+        "line": 66,
+        "kind": "function",
+        "end": 82,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sha1_done",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_sha1.c",
+        "line": 168,
+        "kind": "function",
+        "end": 201,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sha1_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_sha1.c",
+        "line": 130,
+        "kind": "function",
+        "end": 140,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sha1_memory",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_sha1.c",
+        "line": 203,
+        "kind": "function",
+        "end": 210,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "get_capsule_pointer",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 39,
+        "kind": "function",
+        "end": 58,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "csp_accept",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_io.c",
+        "line": 109,
+        "kind": "function",
+        "end": 123,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_post_isr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_semaphore.c",
+        "line": 76,
+        "kind": "function",
+        "end": 83,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bin_sem_post_isr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 93,
+        "kind": "function",
+        "end": 99,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bind",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_port.c",
+        "line": 88,
+        "kind": "function",
+        "end": 113,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_free_resources",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 79,
+        "kind": "function",
+        "end": 88,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_get_isr",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 90,
+        "kind": "function",
+        "end": 107,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bytesize",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_iflist.c",
+        "line": 72,
+        "kind": "function",
+        "end": 88,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conf_get_defaults",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/include/csp/csp.h",
+        "line": 67,
+        "kind": "function",
+        "end": 80,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_find",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 185,
+        "kind": "function",
+        "end": 198,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_flush_rx_queue",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 200,
+        "kind": "function",
+        "end": 221,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 266,
+        "kind": "function",
+        "end": 284,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_crc32_append",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_crc32.c",
+        "line": 78,
+        "kind": "function",
+        "end": 101,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_crc32_verify",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_crc32.c",
+        "line": 103,
+        "kind": "function",
+        "end": 129,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_uptime_s",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/csp_time.c",
+        "line": 25,
+        "kind": "function",
+        "end": 32,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_listen",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_port.c",
+        "line": 73,
+        "kind": "function",
+        "end": 86,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_semaphore.c",
+        "line": 33,
+        "kind": "function",
+        "end": 39,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_mutex_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_semaphore.c",
+        "line": 35,
+        "kind": "function",
+        "end": 41,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_qfifo_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_qfifo.c",
+        "line": 73,
+        "kind": "function",
+        "end": 102,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_close_internal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 1075,
+        "kind": "function",
+        "end": 1108,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_flush_all",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 440,
+        "kind": "function",
+        "end": 465,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_header_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 108,
+        "kind": "function",
+        "end": 117,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_is_conn_ready_for_tx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 488,
+        "kind": "function",
+        "end": 495,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_receive_data",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 287,
+        "kind": "function",
+        "end": 300,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_send_eack",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 230,
+        "kind": "function",
+        "end": 261,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_route_start_task",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_route.c",
+        "line": 327,
+        "kind": "function",
+        "end": 337,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_cidr.c",
+        "line": 133,
+        "kind": "function",
+        "end": 140,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_iterate",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_static.c",
+        "line": 61,
+        "kind": "function",
+        "end": 73,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_encrypt",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 94,
+        "kind": "function",
+        "end": 123,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_zmqhub_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_zmqhub.c",
+        "line": 137,
+        "kind": "function",
+        "end": 149,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "csp_zmqhub_make_endpoint",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_zmqhub.c",
+        "line": 128,
+        "kind": "function",
+        "end": 135,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "get_deadline",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 33,
+        "kind": "function",
+        "end": 53,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/pthread_queue.c",
+        "line": 36,
+        "kind": "function",
+        "end": 61,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 73,
+        "kind": "function",
+        "end": 98,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_delete",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/pthread_queue.c",
+        "line": 63,
+        "kind": "function",
+        "end": 73,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_delete",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 100,
+        "kind": "function",
+        "end": 110,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_items",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/macosx/pthread_queue.c",
+        "line": 170,
+        "kind": "function",
+        "end": 178,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "pthread_queue_items",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 231,
+        "kind": "function",
+        "end": 239,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "windows_queue_dequeue",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/windows_queue.c",
+        "line": 100,
+        "kind": "function",
+        "end": 117,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "windows_queue_enqueue",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/windows_queue.c",
+        "line": 80,
+        "kind": "function",
+        "end": 98,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "windows_queue_items",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/windows_queue.c",
+        "line": 119,
+        "kind": "function",
+        "end": 127,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "configurePort",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_windows.c",
+        "line": 56,
+        "kind": "function",
+        "end": 76,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buffer_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_buffer.c",
+        "line": 51,
+        "kind": "function",
+        "end": 77,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_add_interface",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_can.c",
+        "line": 255,
+        "kind": "function",
+        "end": 275,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_pbuf_find",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_can_pbuf.c",
+        "line": 83,
+        "kind": "function",
+        "end": 92,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_pbuf_new",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_can_pbuf.c",
+        "line": 57,
+        "kind": "function",
+        "end": 81,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_clock_set_time",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_clock.c",
+        "line": 37,
+        "kind": "function",
+        "end": 45,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_cmp",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 244,
+        "kind": "function",
+        "end": 253,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_check_timeouts",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 46,
+        "kind": "function",
+        "end": 56,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_conn_get_rxq",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_conn.c",
+        "line": 58,
+        "kind": "function",
+        "end": 66,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_dedup_is_duplicate",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_dedup.c",
+        "line": 39,
+        "kind": "function",
+        "end": 62,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_buf_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 197,
+        "kind": "function",
+        "end": 207,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_memfree",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 173,
+        "kind": "function",
+        "end": 183,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_get_uptime",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 221,
+        "kind": "function",
+        "end": 230,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_append",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 146,
+        "kind": "function",
+        "end": 166,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_done",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 84,
+        "kind": "function",
+        "end": 109,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 41,
+        "kind": "function",
+        "end": 70,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_process",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 72,
+        "kind": "function",
+        "end": 82,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_verify",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 168,
+        "kind": "function",
+        "end": 193,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_htole16",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 82,
+        "kind": "function",
+        "end": 89,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_htole32",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 107,
+        "kind": "function",
+        "end": 116,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_htole64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 134,
+        "kind": "function",
+        "end": 147,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_htondbl",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 182,
+        "kind": "function",
+        "end": 195,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_htonflt",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_endian.c",
+        "line": 161,
+        "kind": "function",
+        "end": 174,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_kiss_add_interface",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_kiss.c",
+        "line": 216,
+        "kind": "function",
+        "end": 245,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_port_get_socket",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_port.c",
+        "line": 37,
+        "kind": "function",
+        "end": 54,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_port_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_port.c",
+        "line": 56,
+        "kind": "function",
+        "end": 65,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_qfifo_free_resources",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_qfifo.c",
+        "line": 55,
+        "kind": "function",
+        "end": 71,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_qfifo_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_qfifo.c",
+        "line": 32,
+        "kind": "function",
+        "end": 53,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_get_opt",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 1127,
+        "kind": "function",
+        "end": 1143,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 1024,
+        "kind": "function",
+        "end": 1058,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_rx_queue_add",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 367,
+        "kind": "function",
+        "end": 373,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_rx_queue_flush",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 302,
+        "kind": "function",
+        "end": 335,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_send_syn",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 268,
+        "kind": "function",
+        "end": 285,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_seq_in_rx_queue",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 337,
+        "kind": "function",
+        "end": 365,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_set_opt",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 1116,
+        "kind": "function",
+        "end": 1125,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rdp_should_ack",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_rdp.c",
+        "line": 420,
+        "kind": "function",
+        "end": 438,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_route_check_options",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_route.c",
+        "line": 47,
+        "kind": "function",
+        "end": 76,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_set_internal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_cidr.c",
+        "line": 97,
+        "kind": "function",
+        "end": 131,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_set_internal",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable_static.c",
+        "line": 40,
+        "kind": "function",
+        "end": 54,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sfp_header_remove",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_sfp.c",
+        "line": 47,
+        "kind": "function",
+        "end": 67,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_memfree",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/csp_system.c",
+        "line": 47,
+        "kind": "function",
+        "end": 55,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_memfree",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/csp_system.c",
+        "line": 41,
+        "kind": "function",
+        "end": 50,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_reboot",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/csp_system.c",
+        "line": 34,
+        "kind": "function",
+        "end": 42,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_shutdown",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/csp_system.c",
+        "line": 50,
+        "kind": "function",
+        "end": 58,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_sys_tasklist",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/freertos/csp_system.c",
+        "line": 28,
+        "kind": "function",
+        "end": 35,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_udp_new_packet",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/transport/csp_udp.c",
+        "line": 28,
+        "kind": "function",
+        "end": 49,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_usart_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_linux.c",
+        "line": 170,
+        "kind": "function",
+        "end": 180,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_usart_write",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_windows.c",
+        "line": 122,
+        "kind": "function",
+        "end": 132,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_decrypt_packet",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 157,
+        "kind": "function",
+        "end": 181,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_encrypt_block",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 50,
+        "kind": "function",
+        "end": 71,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_encrypt_packet",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 125,
+        "kind": "function",
+        "end": 148,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_set_key",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 81,
+        "kind": "function",
+        "end": 92,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_xtea_xor_byte",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_xtea.c",
+        "line": 73,
+        "kind": "function",
+        "end": 79,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "csp_zmqhub_init_w_endpoints",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_zmqhub.c",
+        "line": 151,
+        "kind": "function",
+        "end": 171,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_clock",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 144,
+        "kind": "function",
+        "end": 166,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_ident",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 57,
+        "kind": "function",
+        "end": 81,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_if_stats",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 98,
+        "kind": "function",
+        "end": 116,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_peek",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 118,
+        "kind": "function",
+        "end": 129,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_poke",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 131,
+        "kind": "function",
+        "end": 142,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "do_cmp_route_set",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_service_handler.c",
+        "line": 83,
+        "kind": "function",
+        "end": 96,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "init_cond_clock_monotonic",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 55,
+        "kind": "function",
+        "end": 71,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "openPort",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_windows.c",
+        "line": 39,
+        "kind": "function",
+        "end": 54,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "setPortTimeouts",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_windows.c",
+        "line": 78,
+        "kind": "function",
+        "end": 99,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "wait_item_available",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 172,
+        "kind": "function",
+        "end": 191,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "wait_slot_available",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/posix/pthread_queue.c",
+        "line": 113,
+        "kind": "function",
+        "end": 132,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "windows_queue_create",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/windows_queue.c",
+        "line": 44,
+        "kind": "function",
+        "end": 70,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "windows_queue_delete",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/arch/windows/windows_queue.c",
+        "line": 72,
+        "kind": "function",
+        "end": 78,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "CMP_MESSAGE",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/include/csp/csp_cmp.h",
+        "line": 183,
+        "kind": "function",
+        "end": 198,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "CSP_DEFINE_TASK",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/examples/csp_arch.c",
+        "line": 40,
+        "kind": "function",
+        "end": 46,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "CSP_DEFINE_TASK",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_route.c",
+        "line": 316,
+        "kind": "function",
+        "end": 325,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_bridge_start",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_bridge.c",
+        "line": 80,
+        "kind": "function",
+        "end": 96,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_buf_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 209,
+        "kind": "function",
+        "end": 219,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_socketcan_stop",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/can/can_socketcan.c",
+        "line": 221,
+        "kind": "function",
+        "end": 237,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_can_tx_frame",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/can/can_socketcan.c",
+        "line": 98,
+        "kind": "function",
+        "end": 120,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_debug_get_level",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_debug.c",
+        "line": 123,
+        "kind": "function",
+        "end": 129,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_free_resources",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_init.c",
+        "line": 80,
+        "kind": "function",
+        "end": 89,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_hmac_set_key",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/crypto/csp_hmac.c",
+        "line": 133,
+        "kind": "function",
+        "end": 144,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_i2c_add_interface",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_i2c.c",
+        "line": 93,
+        "kind": "function",
+        "end": 112,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_i2c_rx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_i2c.c",
+        "line": 62,
+        "kind": "function",
+        "end": 91,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_i2c_tx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_i2c.c",
+        "line": 30,
+        "kind": "function",
+        "end": 55,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_lo_tx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_lo.c",
+        "line": 30,
+        "kind": "function",
+        "end": 47,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_memfree",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 185,
+        "kind": "function",
+        "end": 195,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_ping_noreply",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 84,
+        "kind": "function",
+        "end": 109,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_promisc_enable",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_promisc.c",
+        "line": 31,
+        "kind": "function",
+        "end": 48,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_promisc_read",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_promisc.c",
+        "line": 54,
+        "kind": "function",
+        "end": 64,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_recvfrom",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_io.c",
+        "line": 342,
+        "kind": "function",
+        "end": 352,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_save",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable.c",
+        "line": 148,
+        "kind": "function",
+        "end": 154,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_rtable_save_route",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/rtable/csp_rtable.c",
+        "line": 114,
+        "kind": "function",
+        "end": 146,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_transaction_w_opts",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_io.c",
+        "line": 328,
+        "kind": "function",
+        "end": 340,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_uptime",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/csp_services.c",
+        "line": 232,
+        "kind": "function",
+        "end": 242,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "csp_zmqhub_tx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/interfaces/csp_if_zmqhub.c",
+        "line": 52,
+        "kind": "function",
+        "end": 72,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "kiss_driver_tx",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/drivers/usart/usart_kiss.c",
+        "line": 36,
+        "kind": "function",
+        "end": 43,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_accept",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 183,
+        "kind": "function",
+        "end": 202,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_bind",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 415,
+        "kind": "function",
+        "end": 433,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_buffer_free",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 611,
+        "kind": "function",
+        "end": 623,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_buffer_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 597,
+        "kind": "function",
+        "end": 609,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_can_socketcan_init",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 810,
+        "kind": "function",
+        "end": 824,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_close",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 353,
+        "kind": "function",
+        "end": 361,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_cmp_clock_get",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 772,
+        "kind": "function",
+        "end": 793,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_cmp_clock_set",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 743,
+        "kind": "function",
+        "end": 770,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_cmp_ident",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 629,
+        "kind": "function",
+        "end": 652,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_cmp_peek",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 681,
+        "kind": "function",
+        "end": 711,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "pycsp_cmp_poke",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/libcsp/src/bindings/python/pycsp.c",
+        "line": 713,
+        "kind": "function",
+        "end": 741,
+        "count": 0
+    }
+]
