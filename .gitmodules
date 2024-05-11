@@ -20,3 +20,18 @@
 	path = use_cases/openssl
 	url = https://github.com/openssl/openssl.git
 
+[submodule "alsa-lib"]
+	path = alsa-lib
+	url = git@github.com:alsa-project/alsa-lib.git
+[submodule "use_cases/pipewire"]
+	path = use_cases/pipewire
+	url = git@gitlab.freedesktop.org:pipewire/pipewire.git
+[submodule "use_cases/gnupg"]
+	path = use_cases/gnupg
+	url = git@github.com:gpg/gnupg.git
+[submodule "use_cases/NetworkManager"]
+	path = use_cases/NetworkManager
+	url = git@github.com:NetworkManager/NetworkManager.git
+[submodule "use_cases/libssl2"]
+	path = use_cases/libssl2
+	url = git@github.com:libssh2/libssh2.git

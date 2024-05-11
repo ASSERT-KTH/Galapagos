@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "spa_hook_remove",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/hook.h",
+        "line": 382,
+        "kind": "function",
+        "end": 388,
+        "count": 469
+    },
+    {
+        "_type": "tag",
+        "name": "pw_properties_setf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/properties.c",
+        "line": 619,
+        "kind": "function",
+        "end": 629,
+        "count": 386
+    },
+    {
+        "_type": "tag",
+        "name": "pw_properties_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/properties.c",
+        "line": 561,
+        "kind": "function",
+        "end": 572,
+        "count": 344
+    },
+    {
+        "_type": "tag",
+        "name": "pw_properties_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/properties.c",
+        "line": 95,
+        "kind": "function",
+        "end": 122,
+        "count": 287
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_builder_pop",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/builder.h",
+        "line": 158,
+        "kind": "function",
+        "end": 173,
+        "count": 249
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-combine-stream.c",
+        "line": 1436,
+        "kind": "function",
+        "end": 1444,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-echo-cancel.c",
+        "line": 1236,
+        "kind": "function",
+        "end": 1249,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-filter.c",
+        "line": 487,
+        "kind": "function",
+        "end": 496,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-sink.c",
+        "line": 364,
+        "kind": "function",
+        "end": 371,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-source.c",
+        "line": 370,
+        "kind": "function",
+        "end": 377,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-ffado-driver.c",
+        "line": 1383,
+        "kind": "function",
+        "end": 1392,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-filter-chain.c",
+        "line": 2943,
+        "kind": "function",
+        "end": 2952,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-jack-tunnel.c",
+        "line": 1020,
+        "kind": "function",
+        "end": 1029,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-loopback.c",
+        "line": 730,
+        "kind": "function",
+        "end": 739,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-netjack2-driver.c",
+        "line": 1190,
+        "kind": "function",
+        "end": 1199,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-netjack2-manager.c",
+        "line": 1220,
+        "kind": "function",
+        "end": 1229,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-pipe-tunnel.c",
+        "line": 846,
+        "kind": "function",
+        "end": 853,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-pulse-tunnel.c",
+        "line": 1156,
+        "kind": "function",
+        "end": 1163,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-raop-sink.c",
+        "line": 1765,
+        "kind": "function",
+        "end": 1772,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-session.c",
+        "line": 1646,
+        "kind": "function",
+        "end": 1653,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-sink.c",
+        "line": 448,
+        "kind": "function",
+        "end": 455,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-source.c",
+        "line": 502,
+        "kind": "function",
+        "end": 509,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-vban-recv.c",
+        "line": 411,
+        "kind": "function",
+        "end": 418,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "copy_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-vban-send.c",
+        "line": 342,
+        "kind": "function",
+        "end": 349,
+        "count": 243
+    },
+    {
+        "_type": "tag",
+        "name": "run_test",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/benchmark-fmt-ops.c",
+        "line": 94,
+        "kind": "function",
+        "end": 101,
+        "count": 213
+    },
+    {
+        "_type": "tag",
+        "name": "run_test",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/benchmark-mix-ops.c",
+        "line": 82,
+        "kind": "function",
+        "end": 92,
+        "count": 213
+    },
+    {
+        "_type": "tag",
+        "name": "run_test",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/test-mix-ops.c",
+        "line": 36,
+        "kind": "function",
+        "end": 51,
+        "count": 213
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_builder_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/builder.h",
+        "line": 621,
+        "kind": "function",
+        "end": 631,
+        "count": 210
+    },
+    {
+        "_type": "tag",
+        "name": "spa_support_find",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/support/plugin.h",
+        "line": 76,
+        "kind": "function",
+        "end": 86,
+        "count": 150
+    },
+    {
+        "_type": "tag",
+        "name": "dot_data_add_string",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/tools/pw-dot.c",
+        "line": 124,
+        "kind": "function",
+        "end": 130,
+        "count": 121
+    },
+    {
+        "_type": "tag",
+        "name": "spa_strstartswith",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/string.h",
+        "line": 57,
+        "kind": "function",
+        "end": 65,
+        "count": 118
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-compress-offload-sink.c",
+        "line": 1075,
+        "kind": "function",
+        "end": 1086,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/audioconvert.c",
+        "line": 283,
+        "kind": "function",
+        "end": 317,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/test-source.c",
+        "line": 117,
+        "kind": "function",
+        "end": 127,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/audiomixer.c",
+        "line": 194,
+        "kind": "function",
+        "end": 204,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/mixer-dsp.c",
+        "line": 189,
+        "kind": "function",
+        "end": 199,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-sink.c",
+        "line": 62,
+        "kind": "function",
+        "end": 83,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-source.c",
+        "line": 62,
+        "kind": "function",
+        "end": 83,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-sink.c",
+        "line": 1512,
+        "kind": "function",
+        "end": 1522,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-source.c",
+        "line": 932,
+        "kind": "function",
+        "end": 942,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/midi-node.c",
+        "line": 1450,
+        "kind": "function",
+        "end": 1459,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-sink.c",
+        "line": 1056,
+        "kind": "function",
+        "end": 1066,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-source.c",
+        "line": 960,
+        "kind": "function",
+        "end": 970,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/control/mixer.c",
+        "line": 161,
+        "kind": "function",
+        "end": 171,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/ffmpeg/ffmpeg-dec.c",
+        "line": 129,
+        "kind": "function",
+        "end": 139,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/ffmpeg/ffmpeg-enc.c",
+        "line": 127,
+        "kind": "function",
+        "end": 137,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-sink.c",
+        "line": 262,
+        "kind": "function",
+        "end": 288,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-source.c",
+        "line": 285,
+        "kind": "function",
+        "end": 310,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/null-audio-sink.c",
+        "line": 377,
+        "kind": "function",
+        "end": 387,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/v4l2/v4l2-source.c",
+        "line": 171,
+        "kind": "function",
+        "end": 181,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/volume/volume.c",
+        "line": 239,
+        "kind": "function",
+        "end": 249,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-dsp-filter.c",
+        "line": 252,
+        "kind": "function",
+        "end": 266,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-filter.c",
+        "line": 252,
+        "kind": "function",
+        "end": 266,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-filter.c",
+        "line": 219,
+        "kind": "function",
+        "end": 233,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-source.c",
+        "line": 456,
+        "kind": "function",
+        "end": 470,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/filter.c",
+        "line": 546,
+        "kind": "function",
+        "end": 564,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "emit_port_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 579,
+        "kind": "function",
+        "end": 597,
+        "count": 103
+    },
+    {
+        "_type": "tag",
+        "name": "spa_json_get_string",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/json.h",
+        "line": 625,
+        "kind": "function",
+        "end": 632,
+        "count": 97
+    },
+    {
+        "_type": "tag",
+        "name": "spa_atou32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/string.h",
+        "line": 123,
+        "kind": "function",
+        "end": 141,
+        "count": 96
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_builder_push_object",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/builder.h",
+        "line": 409,
+        "kind": "function",
+        "end": 418,
+        "count": 90
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_filter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/filter.h",
+        "line": 426,
+        "kind": "function",
+        "end": 451,
+        "count": 90
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_parser_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/parser.h",
+        "line": 499,
+        "kind": "function",
+        "end": 509,
+        "count": 90
+    },
+    {
+        "_type": "tag",
+        "name": "pw_proxy_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/proxy.c",
+        "line": 205,
+        "kind": "function",
+        "end": 234,
+        "count": 87
+    },
+    {
+        "_type": "tag",
+        "name": "pw_impl_module_schedule_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/impl-module.c",
+        "line": 394,
+        "kind": "function",
+        "end": 403,
+        "count": 86
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_builder_push_struct",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/builder.h",
+        "line": 397,
+        "kind": "function",
+        "end": 404,
+        "count": 84
+    },
+    {
+        "_type": "tag",
+        "name": "pw_impl_module_add_listener",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/impl-module.c",
+        "line": 380,
+        "kind": "function",
+        "end": 386,
+        "count": 82
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/pipewire-jack/src/pipewire-jack.c",
+        "line": 685,
+        "kind": "function",
+        "end": 704,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-compress-offload-sink.c",
+        "line": 900,
+        "kind": "function",
+        "end": 907,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-pcm-sink.c",
+        "line": 554,
+        "kind": "function",
+        "end": 561,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-pcm-source.c",
+        "line": 497,
+        "kind": "function",
+        "end": 505,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-seq-bridge.c",
+        "line": 621,
+        "kind": "function",
+        "end": 629,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/audioconvert.c",
+        "line": 2292,
+        "kind": "function",
+        "end": 2300,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/test-source.c",
+        "line": 496,
+        "kind": "function",
+        "end": 504,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/audiomixer.c",
+        "line": 492,
+        "kind": "function",
+        "end": 500,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/mixer-dsp.c",
+        "line": 469,
+        "kind": "function",
+        "end": 477,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-sink.c",
+        "line": 490,
+        "kind": "function",
+        "end": 497,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-source.c",
+        "line": 490,
+        "kind": "function",
+        "end": 497,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-sink.c",
+        "line": 1713,
+        "kind": "function",
+        "end": 1721,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-source.c",
+        "line": 1130,
+        "kind": "function",
+        "end": 1139,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/midi-node.c",
+        "line": 335,
+        "kind": "function",
+        "end": 343,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-sink.c",
+        "line": 1269,
+        "kind": "function",
+        "end": 1277,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-source.c",
+        "line": 1171,
+        "kind": "function",
+        "end": 1180,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/control/mixer.c",
+        "line": 412,
+        "kind": "function",
+        "end": 420,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-sink.c",
+        "line": 593,
+        "kind": "function",
+        "end": 601,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-source.c",
+        "line": 593,
+        "kind": "function",
+        "end": 602,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/null-audio-sink.c",
+        "line": 573,
+        "kind": "function",
+        "end": 581,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/volume/volume.c",
+        "line": 419,
+        "kind": "function",
+        "end": 427,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-dsp-filter.c",
+        "line": 476,
+        "kind": "function",
+        "end": 489,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-filter.c",
+        "line": 521,
+        "kind": "function",
+        "end": 534,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-utils.c",
+        "line": 295,
+        "kind": "function",
+        "end": 306,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-filter.c",
+        "line": 414,
+        "kind": "function",
+        "end": 426,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-source.c",
+        "line": 651,
+        "kind": "function",
+        "end": 663,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-utils.c",
+        "line": 473,
+        "kind": "function",
+        "end": 486,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-client-node/client-node.c",
+        "line": 276,
+        "kind": "function",
+        "end": 288,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-client-node/remote-node.c",
+        "line": 527,
+        "kind": "function",
+        "end": 550,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-client-node/v0/client-node.c",
+        "line": 189,
+        "kind": "function",
+        "end": 217,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "clear_buffers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/filter.c",
+        "line": 731,
+        "kind": "function",
+        "end": 758,
+        "count": 79
+    },
+    {
+        "_type": "tag",
+        "name": "pw_map_lookup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/map.h",
+        "line": 192,
+        "kind": "function",
+        "end": 200,
+        "count": 75
+    },
+    {
+        "_type": "tag",
+        "name": "spa_format_audio_raw_build",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/param/audio/raw-utils.h",
+        "line": 42,
+        "kind": "function",
+        "end": 67,
+        "count": 72
+    },
+    {
+        "_type": "tag",
+        "name": "pw_stream_queue_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 2419,
+        "kind": "function",
+        "end": 2440,
+        "count": 66
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-compress-offload-sink.c",
+        "line": 1062,
+        "kind": "function",
+        "end": 1073,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-seq-bridge.c",
+        "line": 201,
+        "kind": "function",
+        "end": 211,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/audioconvert.c",
+        "line": 263,
+        "kind": "function",
+        "end": 281,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/audiomixer.c",
+        "line": 183,
+        "kind": "function",
+        "end": 192,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audiomixer/mixer-dsp.c",
+        "line": 178,
+        "kind": "function",
+        "end": 187,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-sink.c",
+        "line": 33,
+        "kind": "function",
+        "end": 60,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-source.c",
+        "line": 33,
+        "kind": "function",
+        "end": 60,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-sink.c",
+        "line": 1476,
+        "kind": "function",
+        "end": 1510,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-source.c",
+        "line": 897,
+        "kind": "function",
+        "end": 930,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/midi-node.c",
+        "line": 1433,
+        "kind": "function",
+        "end": 1448,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-sink.c",
+        "line": 1026,
+        "kind": "function",
+        "end": 1054,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-source.c",
+        "line": 932,
+        "kind": "function",
+        "end": 958,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/control/mixer.c",
+        "line": 150,
+        "kind": "function",
+        "end": 159,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/ffmpeg/ffmpeg-dec.c",
+        "line": 118,
+        "kind": "function",
+        "end": 127,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/ffmpeg/ffmpeg-enc.c",
+        "line": 116,
+        "kind": "function",
+        "end": 125,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-sink.c",
+        "line": 238,
+        "kind": "function",
+        "end": 260,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/jack/jack-source.c",
+        "line": 261,
+        "kind": "function",
+        "end": 283,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/node-driver.c",
+        "line": 469,
+        "kind": "function",
+        "end": 485,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/null-audio-sink.c",
+        "line": 362,
+        "kind": "function",
+        "end": 375,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/v4l2/v4l2-source.c",
+        "line": 159,
+        "kind": "function",
+        "end": 169,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/videoconvert/videoadapter.c",
+        "line": 305,
+        "kind": "function",
+        "end": 329,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/volume/volume.c",
+        "line": 228,
+        "kind": "function",
+        "end": 237,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-dsp-filter.c",
+        "line": 240,
+        "kind": "function",
+        "end": 250,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-blit-filter.c",
+        "line": 240,
+        "kind": "function",
+        "end": 250,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-filter.c",
+        "line": 207,
+        "kind": "function",
+        "end": 217,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/vulkan/vulkan-compute-source.c",
+        "line": 444,
+        "kind": "function",
+        "end": 454,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/filter.c",
+        "line": 526,
+        "kind": "function",
+        "end": 544,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "emit_node_info",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 559,
+        "kind": "function",
+        "end": 577,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "pw_context_connect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/core.c",
+        "line": 393,
+        "kind": "function",
+        "end": 416,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "pw_proxy_add_listener",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/proxy.c",
+        "line": 171,
+        "kind": "function",
+        "end": 177,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_parser_push_struct",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/parser.h",
+        "line": 241,
+        "kind": "function",
+        "end": 252,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "pw_stream_dequeue_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 2391,
+        "kind": "function",
+        "end": 2416,
+        "count": 57
+    },
+    {
+        "_type": "tag",
+        "name": "pw_main_loop_run",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/main-loop.c",
+        "line": 121,
+        "kind": "function",
+        "end": 139,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "test_mix",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/audioconvert/test-channelmix.c",
+        "line": 42,
+        "kind": "function",
+        "end": 61,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "pw_main_loop_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/main-loop.c",
+        "line": 72,
+        "kind": "function",
+        "end": 83,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "pw_deinit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/pipewire.c",
+        "line": 600,
+        "kind": "function",
+        "end": 624,
+        "count": 54
+    },
+    {
+        "_type": "tag",
+        "name": "spa_format_parse",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/param/format-utils.h",
+        "line": 22,
+        "kind": "function",
+        "end": 28,
+        "count": 53
+    },
+    {
+        "_type": "tag",
+        "name": "spa_hook_list_isolate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/hook.h",
+        "line": 399,
+        "kind": "function",
+        "end": 410,
+        "count": 53
+    },
+    {
+        "_type": "tag",
+        "name": "pw_core_disconnect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/core.c",
+        "line": 480,
+        "kind": "function",
+        "end": 494,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-pcm.c",
+        "line": 2365,
+        "kind": "function",
+        "end": 2375,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-seq.c",
+        "line": 361,
+        "kind": "function",
+        "end": 372,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/test-timer.c",
+        "line": 43,
+        "kind": "function",
+        "end": 51,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm.c",
+        "line": 819,
+        "kind": "function",
+        "end": 833,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/iso-io.c",
+        "line": 128,
+        "kind": "function",
+        "end": 137,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-sink.c",
+        "line": 279,
+        "kind": "function",
+        "end": 288,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/media-source.c",
+        "line": 230,
+        "kind": "function",
+        "end": 239,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/midi-node.c",
+        "line": 303,
+        "kind": "function",
+        "end": 312,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-sink.c",
+        "line": 246,
+        "kind": "function",
+        "end": 255,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/bluez5/sco-source.c",
+        "line": 219,
+        "kind": "function",
+        "end": 228,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/node-driver.c",
+        "line": 155,
+        "kind": "function",
+        "end": 162,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/null-audio-sink.c",
+        "line": 178,
+        "kind": "function",
+        "end": 185,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-ffado-driver.c",
+        "line": 505,
+        "kind": "function",
+        "end": 515,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-pipe-tunnel.c",
+        "line": 217,
+        "kind": "function",
+        "end": 227,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "set_timeout",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-session.c",
+        "line": 285,
+        "kind": "function",
+        "end": 294,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-echo-cancel.c",
+        "line": 1150,
+        "kind": "function",
+        "end": 1178,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-filter.c",
+        "line": 415,
+        "kind": "function",
+        "end": 434,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-sink.c",
+        "line": 248,
+        "kind": "function",
+        "end": 259,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-example-source.c",
+        "line": 253,
+        "kind": "function",
+        "end": 264,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-fallback-sink.c",
+        "line": 325,
+        "kind": "function",
+        "end": 352,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-ffado-driver.c",
+        "line": 1284,
+        "kind": "function",
+        "end": 1312,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-filter-chain.c",
+        "line": 2863,
+        "kind": "function",
+        "end": 2890,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-jack-tunnel.c",
+        "line": 947,
+        "kind": "function",
+        "end": 965,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-loopback.c",
+        "line": 657,
+        "kind": "function",
+        "end": 677,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-netjack2-driver.c",
+        "line": 1113,
+        "kind": "function",
+        "end": 1135,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-netjack2-manager.c",
+        "line": 1143,
+        "kind": "function",
+        "end": 1165,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-parametric-equalizer.c",
+        "line": 341,
+        "kind": "function",
+        "end": 347,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-pipe-tunnel.c",
+        "line": 715,
+        "kind": "function",
+        "end": 741,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-protocol-native.c",
+        "line": 1180,
+        "kind": "function",
+        "end": 1192,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-pulse-tunnel.c",
+        "line": 1031,
+        "kind": "function",
+        "end": 1050,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-raop-sink.c",
+        "line": 1733,
+        "kind": "function",
+        "end": 1751,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-roc-sink.c",
+        "line": 211,
+        "kind": "function",
+        "end": 229,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-roc-source.c",
+        "line": 220,
+        "kind": "function",
+        "end": 238,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-sap.c",
+        "line": 1605,
+        "kind": "function",
+        "end": 1638,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-session.c",
+        "line": 1201,
+        "kind": "function",
+        "end": 1231,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-sink.c",
+        "line": 401,
+        "kind": "function",
+        "end": 418,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-rtp-source.c",
+        "line": 451,
+        "kind": "function",
+        "end": 472,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-vban-recv.c",
+        "line": 360,
+        "kind": "function",
+        "end": 381,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "impl_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/modules/module-vban-send.c",
+        "line": 295,
+        "kind": "function",
+        "end": 312,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "spa_buffer_find_meta_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/buffer/buffer.h",
+        "line": 105,
+        "kind": "function",
+        "end": 111,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "pw_impl_module_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/impl-module.c",
+        "line": 297,
+        "kind": "function",
+        "end": 328,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "pw_properties_new_string",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/properties.c",
+        "line": 348,
+        "kind": "function",
+        "end": 365,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "spa_hook_list_append",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/hook.h",
+        "line": 362,
+        "kind": "function",
+        "end": 369,
+        "count": 46
+    },
+    {
+        "_type": "tag",
+        "name": "pw_impl_module_update_properties",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/impl-module.c",
+        "line": 350,
+        "kind": "function",
+        "end": 370,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "reset_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/alsa-compress-offload-sink.c",
+        "line": 892,
+        "kind": "function",
+        "end": 898,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "reset_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-sink.c",
+        "line": 22,
+        "kind": "function",
+        "end": 31,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "reset_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/avb/avb-pcm-source.c",
+        "line": 22,
+        "kind": "function",
+        "end": 31,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "reset_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/node-driver.c",
+        "line": 102,
+        "kind": "function",
+        "end": 109,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "reset_props",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/support/null-audio-sink.c",
+        "line": 48,
+        "kind": "function",
+        "end": 56,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "dot_data_add_uint32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/tools/pw-dot.c",
+        "line": 116,
+        "kind": "function",
+        "end": 122,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "spa_atoi32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/string.h",
+        "line": 95,
+        "kind": "function",
+        "end": 113,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_builder_push_choice",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/builder.h",
+        "line": 382,
+        "kind": "function",
+        "end": 392,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "pw_proxy_add_object_listener",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/proxy.c",
+        "line": 180,
+        "kind": "function",
+        "end": 186,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "spa_strbuf_append",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/string.h",
+        "line": 375,
+        "kind": "function",
+        "end": 386,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "pa_proplist_sets",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/acp/proplist.h",
+        "line": 91,
+        "kind": "function",
+        "end": 101,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "pw_stream_update_params",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 2169,
+        "kind": "function",
+        "end": 2187,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "spa_pod_dynamic_builder_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/pod/dynamic.h",
+        "line": 40,
+        "kind": "function",
+        "end": 51,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "spa_atoi64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/include/spa/utils/string.h",
+        "line": 151,
+        "kind": "function",
+        "end": 166,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "pw_map_insert_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/map.h",
+        "line": 126,
+        "kind": "function",
+        "end": 144,
+        "count": 38
+    },
+    {
+        "_type": "tag",
+        "name": "pw_stream_add_listener",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/src/pipewire/stream.c",
+        "line": 1699,
+        "kind": "function",
+        "end": 1715,
+        "count": 38
+    },
+    {
+        "_type": "tag",
+        "name": "pa_alsa_mixer_id_to_string",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/pipewire/spa/plugins/alsa/acp/alsa-mixer.c",
+        "line": 46,
+        "kind": "function",
+        "end": 53,
+        "count": 37
+    }
+]
