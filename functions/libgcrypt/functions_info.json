@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "asm_xor",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 99,
+        "kind": "function",
+        "end": 106,
+        "count": 203
+    },
+    {
+        "_type": "tag",
+        "name": "asm_xor",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 250,
+        "kind": "function",
+        "end": 257,
+        "count": 203
+    },
+    {
+        "_type": "tag",
+        "name": "asm_cipher_be",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 270,
+        "kind": "function",
+        "end": 277,
+        "count": 139
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_sexp_build",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 110,
+        "kind": "function",
+        "end": 120,
+        "count": 104
+    },
+    {
+        "_type": "tag",
+        "name": "buf_put_be32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 57,
+        "kind": "function",
+        "end": 64,
+        "count": 99
+    },
+    {
+        "_type": "tag",
+        "name": "buf_put_le32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 66,
+        "kind": "function",
+        "end": 73,
+        "count": 87
+    },
+    {
+        "_type": "tag",
+        "name": "asm_cipherlast_be",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 280,
+        "kind": "function",
+        "end": 287,
+        "count": 86
+    },
+    {
+        "_type": "tag",
+        "name": "asm_vpmsumd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 109,
+        "kind": "function",
+        "end": 116,
+        "count": 74
+    },
+    {
+        "_type": "tag",
+        "name": "asm_vpmsumd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/crc-ppc.c",
+        "line": 96,
+        "kind": "function",
+        "end": 102,
+        "count": 74
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 863,
+        "kind": "function",
+        "end": 876,
+        "count": 65
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_setiv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 759,
+        "kind": "function",
+        "end": 765,
+        "count": 64
+    },
+    {
+        "_type": "tag",
+        "name": "buf_get_le64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 87,
+        "kind": "function",
+        "end": 94,
+        "count": 63
+    },
+    {
+        "_type": "tag",
+        "name": "asm_ncipher_be",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 290,
+        "kind": "function",
+        "end": 297,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_setkey",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 750,
+        "kind": "function",
+        "end": 756,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 731,
+        "kind": "function",
+        "end": 741,
+        "count": 57
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_decrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 879,
+        "kind": "function",
+        "end": 887,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_cpy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 813,
+        "kind": "function",
+        "end": 830,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 790,
+        "kind": "function",
+        "end": 808,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_xor",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 835,
+        "kind": "function",
+        "end": 857,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "asm_ncipherlast_be",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 300,
+        "kind": "function",
+        "end": 307,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "ocb_get_l",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 761,
+        "kind": "function",
+        "end": 776,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "buf_cpy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 203,
+        "kind": "function",
+        "end": 237,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "vec_load_le",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/chacha20-ppc.c",
+        "line": 68,
+        "kind": "function",
+        "end": 77,
+        "count": 44
+    },
+    {
+        "_type": "tag",
+        "name": "vec_store_le",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/chacha20-ppc.c",
+        "line": 81,
+        "kind": "function",
+        "end": 88,
+        "count": 44
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_free_limb_space",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpiutil.c",
+        "line": 139,
+        "kind": "function",
+        "end": 153,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_genkey",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1093,
+        "kind": "function",
+        "end": 1101,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_control",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 74,
+        "kind": "function",
+        "end": 83,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "gost_val",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/gost28147.c",
+        "line": 76,
+        "kind": "function",
+        "end": 84,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_md_read",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 1163,
+        "kind": "function",
+        "end": 1170,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "LIMB64_HILO",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec-inline.h",
+        "line": 632,
+        "kind": "function",
+        "end": 638,
+        "count": 34
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_is_secure",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/global.c",
+        "line": 1056,
+        "kind": "function",
+        "end": 1063,
+        "count": 34
+    },
+    {
+        "_type": "tag",
+        "name": "buf_put_be64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 96,
+        "kind": "function",
+        "end": 107,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "drbg_string_fill",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-drbg.c",
+        "line": 455,
+        "kind": "function",
+        "end": 461,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_authenticate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 793,
+        "kind": "function",
+        "end": 799,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "LOAD64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec-inline.h",
+        "line": 583,
+        "kind": "function",
+        "end": 589,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "buf_put_le64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 109,
+        "kind": "function",
+        "end": 120,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_md_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1251,
+        "kind": "function",
+        "end": 1259,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 1529,
+        "kind": "function",
+        "end": 1540,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "vec_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 3558,
+        "kind": "function",
+        "end": 3580,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_algo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 244,
+        "kind": "function",
+        "end": 259,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_algo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mac.c",
+        "line": 424,
+        "kind": "function",
+        "end": 445,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_algo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 309,
+        "kind": "function",
+        "end": 324,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_algo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/pubkey.c",
+        "line": 75,
+        "kind": "function",
+        "end": 86,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_add_n",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/generic/mpih-add1.c",
+        "line": 35,
+        "kind": "function",
+        "end": 64,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "asm_vperm1",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 200,
+        "kind": "function",
+        "end": 207,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "buf_get_be64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 78,
+        "kind": "function",
+        "end": 85,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_gettag",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 802,
+        "kind": "function",
+        "end": 808,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_md_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 538,
+        "kind": "function",
+        "end": 552,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_sub_n",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/generic/mpih-sub1.c",
+        "line": 35,
+        "kind": "function",
+        "end": 64,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_log_debug",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1602,
+        "kind": "function",
+        "end": 1609,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "selftest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/arcfour.c",
+        "line": 185,
+        "kind": "function",
+        "end": 208,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "selftest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blowfish.c",
+        "line": 859,
+        "kind": "function",
+        "end": 891,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "selftest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael.c",
+        "line": 1694,
+        "kind": "function",
+        "end": 1704,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "selftest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/seed.c",
+        "line": 431,
+        "kind": "function",
+        "end": 460,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "asm_swap_u64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 119,
+        "kind": "function",
+        "end": 126,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "asm_swap_u64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/crc-ppc.c",
+        "line": 106,
+        "kind": "function",
+        "end": 112,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "buf_xor",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bufhelp.h",
+        "line": 242,
+        "kind": "function",
+        "end": 269,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_checktag",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 811,
+        "kind": "function",
+        "end": 817,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_cipher_ctl",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 821,
+        "kind": "function",
+        "end": 827,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "scanval",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-curves.c",
+        "line": 571,
+        "kind": "function",
+        "end": 580,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "scanval",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-eddsa.c",
+        "line": 51,
+        "kind": "function",
+        "end": 60,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "scanval",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 802,
+        "kind": "function",
+        "end": 811,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "vec_load_he",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 207,
+        "kind": "function",
+        "end": 225,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_randomize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpiutil.c",
+        "line": 689,
+        "kind": "function",
+        "end": 713,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_poly1305_update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/poly1305.c",
+        "line": 657,
+        "kind": "function",
+        "end": 665,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_sign",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1039,
+        "kind": "function",
+        "end": 1047,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_md_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 708,
+        "kind": "function",
+        "end": 729,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "stpcpy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/missing-string.c",
+        "line": 33,
+        "kind": "function",
+        "end": 40,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "add_randomness",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-csprng.c",
+        "line": 1097,
+        "kind": "function",
+        "end": 1129,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "aes_ocb_get_l",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-aesni.c",
+        "line": 64,
+        "kind": "function",
+        "end": 75,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "aes_ocb_get_l",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ssse3-amd64.c",
+        "line": 72,
+        "kind": "function",
+        "end": 83,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_md_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1200,
+        "kind": "function",
+        "end": 1209,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_ctx_get_pointer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/context.c",
+        "line": 93,
+        "kind": "function",
+        "end": 105,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_ctz",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bithelp.h",
+        "line": 83,
+        "kind": "function",
+        "end": 100,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_md_setkey",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 1086,
+        "kind": "function",
+        "end": 1102,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_rshift",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/generic/mpih-rshift.c",
+        "line": 44,
+        "kind": "function",
+        "end": 66,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "aria_gsrk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/aria.c",
+        "line": 787,
+        "kind": "function",
+        "end": 804,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_mpi_randomize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1531,
+        "kind": "function",
+        "end": 1542,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "asm_add_uint128",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc-common.h",
+        "line": 210,
+        "kind": "function",
+        "end": 217,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_md_hash_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1276,
+        "kind": "function",
+        "end": 1285,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "ocb_input",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/serpent-avx512-x86.c",
+        "line": 693,
+        "kind": "function",
+        "end": 721,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_get_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpicoder.c",
+        "line": 381,
+        "kind": "function",
+        "end": 396,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_random_bytes_secure",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random.c",
+        "line": 375,
+        "kind": "function",
+        "end": 385,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_pk_util_init_encoding_ctx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/pubkey-util.c",
+        "line": 627,
+        "kind": "function",
+        "end": 648,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "check_one",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/kdf.c",
+        "line": 2198,
+        "kind": "function",
+        "end": 2231,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "reverse_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-eddsa.c",
+        "line": 36,
+        "kind": "function",
+        "end": 46,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "transpose_64x64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 1087,
+        "kind": "function",
+        "end": 1118,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cipher_close",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 721,
+        "kind": "function",
+        "end": 745,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_ec_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 1040,
+        "kind": "function",
+        "end": 1047,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "do_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blowfish.c",
+        "line": 406,
+        "kind": "function",
+        "end": 440,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "do_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/elgamal.c",
+        "line": 475,
+        "kind": "function",
+        "end": 506,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "do_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael.c",
+        "line": 970,
+        "kind": "function",
+        "end": 982,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "do_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/seed.c",
+        "line": 340,
+        "kind": "function",
+        "end": 371,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_randomize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1485,
+        "kind": "function",
+        "end": 1494,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "vec_rol_elems",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/chacha20-ppc.c",
+        "line": 57,
+        "kind": "function",
+        "end": 64,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "vec_rol_elems",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/sha256-ppc.c",
+        "line": 87,
+        "kind": "function",
+        "end": 94,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "vec_rol_elems",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/sha512-ppc.c",
+        "line": 109,
+        "kind": "function",
+        "end": 116,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "vec_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 3583,
+        "kind": "function",
+        "end": 3612,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_hmac256_release",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/hmac256.c",
+        "line": 373,
+        "kind": "function",
+        "end": 382,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "asm_load_be_const",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rijndael-ppc.c",
+        "line": 59,
+        "kind": "function",
+        "end": 67,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "bulk_ocb_prepare_L_pointers_array_blk16",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/bulkhelp.h",
+        "line": 95,
+        "kind": "function",
+        "end": 114,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_sexp_extract_param",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 255,
+        "kind": "function",
+        "end": 265,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "vec_be_swap",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 228,
+        "kind": "function",
+        "end": 238,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_point_release",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 102,
+        "kind": "function",
+        "end": 109,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_lshift",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/generic/mpih-lshift.c",
+        "line": 42,
+        "kind": "function",
+        "end": 66,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "asm_rot_block_right",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 160,
+        "kind": "function",
+        "end": 168,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "ec_subm",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 292,
+        "kind": "function",
+        "end": 298,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pubkey_get_sexp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1176,
+        "kind": "function",
+        "end": 1184,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 993,
+        "kind": "function",
+        "end": 1017,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/gostr3411-94.c",
+        "line": 285,
+        "kind": "function",
+        "end": 297,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md2.c",
+        "line": 115,
+        "kind": "function",
+        "end": 127,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md4.c",
+        "line": 187,
+        "kind": "function",
+        "end": 199,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md5.c",
+        "line": 211,
+        "kind": "function",
+        "end": 223,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/rmd160.c",
+        "line": 387,
+        "kind": "function",
+        "end": 399,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/sm3.c",
+        "line": 346,
+        "kind": "function",
+        "end": 359,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/stribog.c",
+        "line": 1266,
+        "kind": "function",
+        "end": 1278,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "transform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/tiger.c",
+        "line": 712,
+        "kind": "function",
+        "end": 724,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cmac_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-cmac.c",
+        "line": 245,
+        "kind": "function",
+        "end": 255,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_add_1",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpi-inline.h",
+        "line": 43,
+        "kind": "function",
+        "end": 68,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_rngdrbg_healthcheck_one",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-drbg.c",
+        "line": 2379,
+        "kind": "function",
+        "end": 2392,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "aria_add_round_key",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/aria.c",
+        "line": 735,
+        "kind": "function",
+        "end": 741,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "asm_rot_block_left",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-ppc.c",
+        "line": 149,
+        "kind": "function",
+        "end": 157,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "blake2b_init_ctx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blake2.c",
+        "line": 481,
+        "kind": "function",
+        "end": 503,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "blake2b_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blake2.c",
+        "line": 430,
+        "kind": "function",
+        "end": 436,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "do_encrypt_block",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blowfish.c",
+        "line": 585,
+        "kind": "function",
+        "end": 594,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_ec_add_points",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 1689,
+        "kind": "function",
+        "end": 1705,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_set_opaque_copy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpiutil.c",
+        "line": 304,
+        "kind": "function",
+        "end": 315,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_addmul_1",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/generic/mpih-mul2.c",
+        "line": 36,
+        "kind": "function",
+        "end": 66,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_xor_2dst",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 871,
+        "kind": "function",
+        "end": 899,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_xor_n_copy_2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 905,
+        "kind": "function",
+        "end": 939,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "ct_is_zero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/const-time.h",
+        "line": 53,
+        "kind": "function",
+        "end": 59,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "gfmul_pclmul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-intel-pclmul.c",
+        "line": 95,
+        "kind": "function",
+        "end": 124,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "mpi_from_keyparam",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-curves.c",
+        "line": 940,
+        "kind": "function",
+        "end": 955,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "reporter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/fips.c",
+        "line": 533,
+        "kind": "function",
+        "end": 547,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 264,
+        "kind": "function",
+        "end": 283,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mac.c",
+        "line": 450,
+        "kind": "function",
+        "end": 460,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md.c",
+        "line": 329,
+        "kind": "function",
+        "end": 341,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "spec_from_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/pubkey.c",
+        "line": 92,
+        "kind": "function",
+        "end": 108,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "transform_blk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/gostr3411-94.c",
+        "line": 268,
+        "kind": "function",
+        "end": 281,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "transform_blk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/md2.c",
+        "line": 97,
+        "kind": "function",
+        "end": 111,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "transform_blk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/stribog.c",
+        "line": 1256,
+        "kind": "function",
+        "end": 1263,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "transform_blk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/tiger.c",
+        "line": 677,
+        "kind": "function",
+        "end": 708,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "vec_set1_16b",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 730,
+        "kind": "function",
+        "end": 739,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "LIMB_TO64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec-inline.h",
+        "line": 623,
+        "kind": "function",
+        "end": 629,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_ecc_ec2os",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-misc.c",
+        "line": 145,
+        "kind": "function",
+        "end": 152,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_logv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/misc.c",
+        "line": 164,
+        "kind": "function",
+        "end": 183,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_pk_verify",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/pubkey.c",
+        "line": 640,
+        "kind": "function",
+        "end": 662,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_poly1305_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/poly1305.c",
+        "line": 680,
+        "kind": "function",
+        "end": 703,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_sexp_nth_string",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/sexp.c",
+        "line": 795,
+        "kind": "function",
+        "end": 810,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "absorb_lanes64_8",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/keccak.c",
+        "line": 278,
+        "kind": "function",
+        "end": 299,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "absorb_lanes64_8",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/keccak.c",
+        "line": 329,
+        "kind": "function",
+        "end": 339,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "ct_is_not_zero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/const-time.h",
+        "line": 41,
+        "kind": "function",
+        "end": 47,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "decrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blowfish.c",
+        "line": 494,
+        "kind": "function",
+        "end": 528,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "do_decrypt_block",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blowfish.c",
+        "line": 606,
+        "kind": "function",
+        "end": 615,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "do_decrypt_block",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cast5.c",
+        "line": 628,
+        "kind": "function",
+        "end": 660,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcm_lsh",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-intel-pclmul.c",
+        "line": 1236,
+        "kind": "function",
+        "end": 1255,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_create_nonce",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1545,
+        "kind": "function",
+        "end": 1554,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_kem_decap",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1471,
+        "kind": "function",
+        "end": 1482,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_mac_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 981,
+        "kind": "function",
+        "end": 987,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1017,
+        "kind": "function",
+        "end": 1025,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_get_nbits",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1131,
+        "kind": "function",
+        "end": 1140,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "prefetch_sbox_table",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/sm4.c",
+        "line": 635,
+        "kind": "function",
+        "end": 656,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "test_keys",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc.c",
+        "line": 354,
+        "kind": "function",
+        "end": 387,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "twofish_decrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/twofish.c",
+        "line": 1117,
+        "kind": "function",
+        "end": 1123,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "twofish_setkey",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/twofish.c",
+        "line": 760,
+        "kind": "function",
+        "end": 787,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "unlock_pool",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-csprng.c",
+        "line": 263,
+        "kind": "function",
+        "end": 271,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cipher_encrypt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 1167,
+        "kind": "function",
+        "end": 1192,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cmac_final",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-cmac.c",
+        "line": 178,
+        "kind": "function",
+        "end": 210,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_ctx_release",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/context.c",
+        "line": 129,
+        "kind": "function",
+        "end": 154,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_dsa_normalize_hash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/dsa-common.c",
+        "line": 449,
+        "kind": "function",
+        "end": 473,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_ecc_eddsa_encodepoint",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-eddsa.c",
+        "line": 121,
+        "kind": "function",
+        "end": 145,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_secmem_get_flags",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/secmem.c",
+        "line": 484,
+        "kind": "function",
+        "end": 499,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_sexp_nth_buffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/sexp.c",
+        "line": 773,
+        "kind": "function",
+        "end": 789,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "blake2s_init_ctx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/blake2.c",
+        "line": 818,
+        "kind": "function",
+        "end": 840,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "chacha20_setiv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/chacha20.c",
+        "line": 470,
+        "kind": "function",
+        "end": 487,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "cipher_block_bswap",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-internal.h",
+        "line": 944,
+        "kind": "function",
+        "end": 962,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "decrypt_block",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/idea.c",
+        "line": 289,
+        "kind": "function",
+        "end": 296,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "drbg_add_buf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-drbg.c",
+        "line": 544,
+        "kind": "function",
+        "end": 572,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "drbg_hash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/random-drbg.c",
+        "line": 2573,
+        "kind": "function",
+        "end": 2582,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "ec_invm",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 347,
+        "kind": "function",
+        "end": 355,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcm_lsh_avx2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-intel-pclmul.c",
+        "line": 692,
+        "kind": "function",
+        "end": 713,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcm_lsh_avx512",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher-gcm-intel-pclmul.c",
+        "line": 1056,
+        "kind": "function",
+        "end": 1078,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_kem_encap",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1457,
+        "kind": "function",
+        "end": 1468,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_kem_keypair",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1446,
+        "kind": "function",
+        "end": 1454,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_md_copy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1226,
+        "kind": "function",
+        "end": 1234,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_hash_sign",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1050,
+        "kind": "function",
+        "end": 1059,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "gcry_pk_hash_verify",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/visibility.c",
+        "line": 1070,
+        "kind": "function",
+        "end": 1076,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "waitpid",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/random/rndunix.c",
+        "line": 364,
+        "kind": "function",
+        "end": 385,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Hash_prefix",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/sntrup761.c",
+        "line": 697,
+        "kind": "function",
+        "end": 709,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cipher_get_algo_blklen",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 1992,
+        "kind": "function",
+        "end": 1999,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cipher_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 491,
+        "kind": "function",
+        "end": 505,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_cipher_setiv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/cipher.c",
+        "line": 1245,
+        "kind": "function",
+        "end": 1259,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_malloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/src/global.c",
+        "line": 1029,
+        "kind": "function",
+        "end": 1036,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_const",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpiutil.c",
+        "line": 785,
+        "kind": "function",
+        "end": 792,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_ec_dup_point",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/ec.c",
+        "line": 1388,
+        "kind": "function",
+        "end": 1402,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_ec_ec2os",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/ecc-misc.c",
+        "line": 158,
+        "kind": "function",
+        "end": 172,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpi_normalize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpi-bit.c",
+        "line": 56,
+        "kind": "function",
+        "end": 63,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_mpih_cmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/mpi/mpi-inline.h",
+        "line": 140,
+        "kind": "function",
+        "end": 158,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_pk_single_data_push",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/pubkey.c",
+        "line": 1219,
+        "kind": "function",
+        "end": 1240,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "_gcry_poly1305_finish",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/libgcrypt/cipher/poly1305.c",
+        "line": 669,
+        "kind": "function",
+        "end": 676,
+        "count": 6
+    }
+]

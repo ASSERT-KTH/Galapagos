@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "dict_get_str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2076,
+        "kind": "function",
+        "end": 2100,
+        "count": 801
+    },
+    {
+        "_type": "tag",
+        "name": "gf_strdup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/mem-pool.h",
+        "line": 146,
+        "kind": "function",
+        "end": 162,
+        "count": 786
+    },
+    {
+        "_type": "tag",
+        "name": "dict_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 494,
+        "kind": "function",
+        "end": 512,
+        "count": 553
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_int32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1687,
+        "kind": "function",
+        "end": 1708,
+        "count": 465
+    },
+    {
+        "_type": "tag",
+        "name": "dict_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 98,
+        "kind": "function",
+        "end": 108,
+        "count": 429
+    },
+    {
+        "_type": "tag",
+        "name": "gf_proc_dump_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/statedump.c",
+        "line": 203,
+        "kind": "function",
+        "end": 216,
+        "count": 348
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2103,
+        "kind": "function",
+        "end": 2120,
+        "count": 343
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_int32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1712,
+        "kind": "function",
+        "end": 1729,
+        "count": 339
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_copy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/copy.c",
+        "line": 37,
+        "kind": "function",
+        "end": 45,
+        "count": 335
+    },
+    {
+        "_type": "tag",
+        "name": "dict_ref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 515,
+        "kind": "function",
+        "end": 529,
+        "count": 316
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 376,
+        "kind": "function",
+        "end": 396,
+        "count": 290
+    },
+    {
+        "_type": "tag",
+        "name": "xdr_to_generic",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/xdr-generic.c",
+        "line": 40,
+        "kind": "function",
+        "end": 59,
+        "count": 277
+    },
+    {
+        "_type": "tag",
+        "name": "inode_ref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 467,
+        "kind": "function",
+        "end": 483,
+        "count": 256
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_is_null",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/isnull.c",
+        "line": 38,
+        "kind": "function",
+        "end": 47,
+        "count": 245
+    },
+    {
+        "_type": "tag",
+        "name": "loc_wipe",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/xlator.c",
+        "line": 593,
+        "kind": "function",
+        "end": 610,
+        "count": 236
+    },
+    {
+        "_type": "tag",
+        "name": "inode_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 445,
+        "kind": "function",
+        "end": 463,
+        "count": 219
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_dynstr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2140,
+        "kind": "function",
+        "end": 2157,
+        "count": 168
+    },
+    {
+        "_type": "tag",
+        "name": "list_add_tail",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/list.h",
+        "line": 38,
+        "kind": "function",
+        "end": 45,
+        "count": 167
+    },
+    {
+        "_type": "tag",
+        "name": "fd_ref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 438,
+        "kind": "function",
+        "end": 452,
+        "count": 163
+    },
+    {
+        "_type": "tag",
+        "name": "fd_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 531,
+        "kind": "function",
+        "end": 552,
+        "count": 152
+    },
+    {
+        "_type": "tag",
+        "name": "mem_get0",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/mem-pool.c",
+        "line": 363,
+        "kind": "function",
+        "end": 378,
+        "count": 150
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_compare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/compare.c",
+        "line": 42,
+        "kind": "function",
+        "end": 54,
+        "count": 146
+    },
+    {
+        "_type": "tag",
+        "name": "list_del_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/list.h",
+        "line": 85,
+        "kind": "function",
+        "end": 92,
+        "count": 140
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_call_state_wipe",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3.c",
+        "line": 436,
+        "kind": "function",
+        "end": 465,
+        "count": 119
+    },
+    {
+        "_type": "tag",
+        "name": "strcasecmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/argp-standalone/strcasecmp.c",
+        "line": 13,
+        "kind": "function",
+        "end": 29,
+        "count": 117
+    },
+    {
+        "_type": "tag",
+        "name": "ec_trace",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-helpers.c",
+        "line": 76,
+        "kind": "function",
+        "end": 107,
+        "count": 116
+    },
+    {
+        "_type": "tag",
+        "name": "iobref_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/iobuf.c",
+        "line": 835,
+        "kind": "function",
+        "end": 852,
+        "count": 116
+    },
+    {
+        "_type": "tag",
+        "name": "STACK_DESTROY",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/stack.h",
+        "line": 160,
+        "kind": "function",
+        "end": 189,
+        "count": 115
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_uint64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1868,
+        "kind": "function",
+        "end": 1889,
+        "count": 108
+    },
+    {
+        "_type": "tag",
+        "name": "iobuf_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/iobuf.c",
+        "line": 729,
+        "kind": "function",
+        "end": 747,
+        "count": 108
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_volinfo_find",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-utils.c",
+        "line": 1318,
+        "kind": "function",
+        "end": 1344,
+        "count": 98
+    },
+    {
+        "_type": "tag",
+        "name": "stub_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/call-stub.c",
+        "line": 24,
+        "kind": "function",
+        "end": 44,
+        "count": 88
+    },
+    {
+        "_type": "tag",
+        "name": "gettimeofday",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/gen_uuid.c",
+        "line": 119,
+        "kind": "function",
+        "end": 134,
+        "count": 86
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_uint64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1893,
+        "kind": "function",
+        "end": 1910,
+        "count": 84
+    },
+    {
+        "_type": "tag",
+        "name": "send_fuse_err",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mount/fuse/src/fuse-bridge.c",
+        "line": 364,
+        "kind": "function",
+        "end": 392,
+        "count": 84
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_utoa_r",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 2164,
+        "kind": "function",
+        "end": 2170,
+        "count": 82
+    },
+    {
+        "_type": "tag",
+        "name": "dict_foreach",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1132,
+        "kind": "function",
+        "end": 1147,
+        "count": 80
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_str_boolean",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2295,
+        "kind": "function",
+        "end": 2328,
+        "count": 76
+    },
+    {
+        "_type": "tag",
+        "name": "gf_string2boolean",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 1556,
+        "kind": "function",
+        "end": 1582,
+        "count": 75
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_dynstr_with_alloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2123,
+        "kind": "function",
+        "end": 2137,
+        "count": 73
+    },
+    {
+        "_type": "tag",
+        "name": "runner_add_args",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 131,
+        "kind": "function",
+        "end": 138,
+        "count": 73
+    },
+    {
+        "_type": "tag",
+        "name": "gf_quiesce_enqueue",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/quiesce/src/quiesce.c",
+        "line": 111,
+        "kind": "function",
+        "end": 141,
+        "count": 67
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_log_common_res",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3-helpers.c",
+        "line": 3393,
+        "kind": "function",
+        "end": 3402,
+        "count": 66
+    },
+    {
+        "_type": "tag",
+        "name": "xlator_set_option",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-volgen.c",
+        "line": 211,
+        "kind": "function",
+        "end": 225,
+        "count": 66
+    },
+    {
+        "_type": "tag",
+        "name": "__is_root_gfid",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 747,
+        "kind": "function",
+        "end": 758,
+        "count": 64
+    },
+    {
+        "_type": "tag",
+        "name": "dht_iatt_merge",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/dht/src/dht-helper.c",
+        "line": 746,
+        "kind": "function",
+        "end": 776,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_uint32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1848,
+        "kind": "function",
+        "end": 1865,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "gf_proc_dump_add_section",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/statedump.c",
+        "line": 150,
+        "kind": "function",
+        "end": 163,
+        "count": 60
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_big_locked_handler",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-handler.c",
+        "line": 74,
+        "kind": "function",
+        "end": 84,
+        "count": 60
+    },
+    {
+        "_type": "tag",
+        "name": "iobref_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/iobuf.c",
+        "line": 767,
+        "kind": "function",
+        "end": 791,
+        "count": 59
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_uint32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1822,
+        "kind": "function",
+        "end": 1843,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "iobref_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/iobuf.c",
+        "line": 929,
+        "kind": "function",
+        "end": 944,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 332,
+        "kind": "function",
+        "end": 351,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "gf_stat_from_iatt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/glusterfs3.h",
+        "line": 246,
+        "kind": "function",
+        "end": 268,
+        "count": 53
+    },
+    {
+        "_type": "tag",
+        "name": "gf_stat_to_iatt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/glusterfs3.h",
+        "line": 219,
+        "kind": "function",
+        "end": 242,
+        "count": 53
+    },
+    {
+        "_type": "tag",
+        "name": "iov_length",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.h",
+        "line": 303,
+        "kind": "function",
+        "end": 312,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "runinit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 49,
+        "kind": "function",
+        "end": 63,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "xlator_mem_acct_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/xlator.c",
+        "line": 497,
+        "kind": "function",
+        "end": 524,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "inode_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 567,
+        "kind": "function",
+        "end": 586,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "gf_time_fmt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.h",
+        "line": 512,
+        "kind": "function",
+        "end": 529,
+        "count": 50
+    },
+    {
+        "_type": "tag",
+        "name": "dict_copy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1267,
+        "kind": "function",
+        "end": 1281,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "runner_add_arg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 110,
+        "kind": "function",
+        "end": 119,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "xdr_serialize_generic",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/xdr-generic.c",
+        "line": 16,
+        "kind": "function",
+        "end": 36,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "data_to_str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1075,
+        "kind": "function",
+        "end": 1082,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "glupy_enter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/glupy/src/glupy.c",
+        "line": 32,
+        "kind": "function",
+        "end": 40,
+        "count": 46
+    },
+    {
+        "_type": "tag",
+        "name": "mem_pool_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/mem-pool.c",
+        "line": 552,
+        "kind": "function",
+        "end": 568,
+        "count": 46
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_bin",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2184,
+        "kind": "function",
+        "end": 2208,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "resolve_and_resume",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/protocol/server/src/server-resolve.c",
+        "line": 604,
+        "kind": "function",
+        "end": 614,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "dict_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 458,
+        "kind": "function",
+        "end": 491,
+        "count": 44
+    },
+    {
+        "_type": "tag",
+        "name": "cli_cmd_broadcast_response",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/cli/src/cli-cmd.c",
+        "line": 306,
+        "kind": "function",
+        "end": 322,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "list_del",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/list.h",
+        "line": 74,
+        "kind": "function",
+        "end": 81,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_map_deviceid_to_statdev",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3-helpers.c",
+        "line": 115,
+        "kind": "function",
+        "end": 121,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "nfs_request_user_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs.c",
+        "line": 657,
+        "kind": "function",
+        "end": 670,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "ec_manager",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-common.c",
+        "line": 1499,
+        "kind": "function",
+        "end": 1511,
+        "count": 41
+    },
+    {
+        "_type": "tag",
+        "name": "qstring_append",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/qobject/qstring.c",
+        "line": 87,
+        "kind": "function",
+        "end": 95,
+        "count": 41
+    },
+    {
+        "_type": "tag",
+        "name": "list_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/list.h",
+        "line": 27,
+        "kind": "function",
+        "end": 34,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "synclock_lock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syncop.c",
+        "line": 778,
+        "kind": "function",
+        "end": 789,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "synclock_unlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syncop.c",
+        "line": 854,
+        "kind": "function",
+        "end": 865,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "update_stat",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/filter/src/filter.c",
+        "line": 153,
+        "kind": "function",
+        "end": 186,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_bin",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2212,
+        "kind": "function",
+        "end": 2238,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "runner_end",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 360,
+        "kind": "function",
+        "end": 377,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_generate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/gen_uuid.c",
+        "line": 680,
+        "kind": "function",
+        "end": 686,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "uuid_generate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/uuid/gen_uuid_nt.c",
+        "line": 81,
+        "kind": "function",
+        "end": 92,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "fd_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 627,
+        "kind": "function",
+        "end": 639,
+        "count": 38
+    },
+    {
+        "_type": "tag",
+        "name": "get_mapping_subvol_from_ctx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/map/src/map-helper.c",
+        "line": 142,
+        "kind": "function",
+        "end": 152,
+        "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_static_bin",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 2242,
+        "kind": "function",
+        "end": 2268,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "ec_fop_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-helpers.c",
+        "line": 66,
+        "kind": "function",
+        "end": 74,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "inode_link",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 920,
+        "kind": "function",
+        "end": 945,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "dht_frame_return",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/dht/src/dht-helper.c",
+        "line": 46,
+        "kind": "function",
+        "end": 63,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "gf_dirent_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/gf-dirent.c",
+        "line": 48,
+        "kind": "function",
+        "end": 68,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_cbk_errno_status",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3-helpers.c",
+        "line": 265,
+        "kind": "function",
+        "end": 272,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "bd_inode_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/storage/bd/src/bd-helper.c",
+        "line": 32,
+        "kind": "function",
+        "end": 45,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "dict_copy_with_ref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1298,
+        "kind": "function",
+        "end": 1314,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "inode_path",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 1273,
+        "kind": "function",
+        "end": 1290,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_int8",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1622,
+        "kind": "function",
+        "end": 1639,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_op_sm_inject_event",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-op-sm.c",
+        "line": 6487,
+        "kind": "function",
+        "end": 6512,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "inode_find",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 791,
+        "kind": "function",
+        "end": 809,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_ptr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1997,
+        "kind": "function",
+        "end": 2022,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "fd_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 935,
+        "kind": "function",
+        "end": 949,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "fuse_resolve_and_resume",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mount/fuse/src/fuse-resolve.c",
+        "line": 709,
+        "kind": "function",
+        "end": 718,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "marker_local_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/marker/src/marker.c",
+        "line": 179,
+        "kind": "function",
+        "end": 207,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_fh_resolve_and_resume",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3-helpers.c",
+        "line": 3853,
+        "kind": "function",
+        "end": 3881,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "gf_timer_call_cancel",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/timer.c",
+        "line": 94,
+        "kind": "function",
+        "end": 121,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "iobref_ref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/iobuf.c",
+        "line": 795,
+        "kind": "function",
+        "end": 807,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "strtail",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 1692,
+        "kind": "function",
+        "end": 1702,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "xdr_post_op_attr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/xdr-nfs3.c",
+        "line": 242,
+        "kind": "function",
+        "end": 257,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "call_stub_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/call-stub.c",
+        "line": 2810,
+        "kind": "function",
+        "end": 2824,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "cli_cmd_sent_status_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/cli/src/cli-cmd.c",
+        "line": 77,
+        "kind": "function",
+        "end": 89,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "syncop_lookup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syncop.c",
+        "line": 1011,
+        "kind": "function",
+        "end": 1031,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "ec_dict_combine",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-combine.c",
+        "line": 649,
+        "kind": "function",
+        "end": 668,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "inode_parent",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 1141,
+        "kind": "function",
+        "end": 1171,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "meta_ops_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/meta/src/meta-helpers.c",
+        "line": 103,
+        "kind": "function",
+        "end": 115,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "rpc_clnt_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/rpc-lib/src/rpc-clnt.c",
+        "line": 1658,
+        "kind": "function",
+        "end": 1674,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sys_lgetxattr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syscall.c",
+        "line": 403,
+        "kind": "function",
+        "end": 423,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "gf_quiesce_local_wipe",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/quiesce/src/quiesce.c",
+        "line": 25,
+        "kind": "function",
+        "end": 43,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_big_locked_cbk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-rpc-ops.c",
+        "line": 202,
+        "kind": "function",
+        "end": 213,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "ha_local_wipe",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ha/src/ha.c",
+        "line": 35,
+        "kind": "function",
+        "end": 66,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "inode_lookup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/inode.c",
+        "line": 949,
+        "kind": "function",
+        "end": 967,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "mdc_local_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/performance/md-cache/src/md-cache.c",
+        "line": 202,
+        "kind": "function",
+        "end": 217,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "meta_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/meta/src/meta-helpers.c",
+        "line": 118,
+        "kind": "function",
+        "end": 128,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "ec_dispatch_all",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-common.c",
+        "line": 558,
+        "kind": "function",
+        "end": 569,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "gf_string2int",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 1058,
+        "kind": "function",
+        "end": 1067,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_resolve_brick",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-utils.c",
+        "line": 830,
+        "kind": "function",
+        "end": 843,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "path_this_to_that",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/path-convertor/src/path.c",
+        "line": 92,
+        "kind": "function",
+        "end": 120,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "qb_inode_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/qemu-block/src/qemu-block.c",
+        "line": 43,
+        "kind": "function",
+        "end": 54,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "volgen_graph_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-volgen.c",
+        "line": 195,
+        "kind": "function",
+        "end": 205,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "afr_frame_return",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/afr/src/afr-common.c",
+        "line": 1055,
+        "kind": "function",
+        "end": 1069,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "bdrv_pwrite",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block.c",
+        "line": 2377,
+        "kind": "function",
+        "end": 2388,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "correct_file_size",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/stripe/src/stripe.h",
+        "line": 272,
+        "kind": "function",
+        "end": 286,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_static_ptr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1957,
+        "kind": "function",
+        "end": 1974,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "quota_local_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/quota/src/quota.c",
+        "line": 189,
+        "kind": "function",
+        "end": 201,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "xdr_sizeof",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/sunrpc/xdr_sizeof.c",
+        "line": 169,
+        "kind": "function",
+        "end": 203,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "xdr_wcc_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/xdr/src/xdr-nfs3.c",
+        "line": 290,
+        "kind": "function",
+        "end": 297,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "dht_inode_ctx_time_update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/dht/src/dht-helper.c",
+        "line": 1306,
+        "kind": "function",
+        "end": 1336,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_peerinfo_find",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-peer-utils.c",
+        "line": 201,
+        "kind": "function",
+        "end": 234,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "svc_inode_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/snapview-client/src/snapview-client.c",
+        "line": 87,
+        "kind": "function",
+        "end": 102,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "gf_thread_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 3067,
+        "kind": "function",
+        "end": 3090,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "glfs_resolve_inode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/api/src/glfs-resolve.c",
+        "line": 985,
+        "kind": "function",
+        "end": 997,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "loc_path",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/xlator.c",
+        "line": 613,
+        "kind": "function",
+        "end": 647,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "marker_xtime_update_marks",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/marker/src/marker.c",
+        "line": 556,
+        "kind": "function",
+        "end": 577,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_request_xlator_deviceid",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3.c",
+        "line": 637,
+        "kind": "function",
+        "end": 657,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "pstrcpy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/util/cutils.c",
+        "line": 38,
+        "kind": "function",
+        "end": 53,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "quota_inode_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/quota/src/quota.c",
+        "line": 52,
+        "kind": "function",
+        "end": 71,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "runner_log",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 160,
+        "kind": "function",
+        "end": 193,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "synctask_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syncop.c",
+        "line": 504,
+        "kind": "function",
+        "end": 518,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "afr_transaction_detach_fop_frame",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/afr/src/afr-transaction.c",
+        "line": 81,
+        "kind": "function",
+        "end": 96,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "ec_unlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-common.c",
+        "line": 1377,
+        "kind": "function",
+        "end": 1384,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "fd_ctx_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 888,
+        "kind": "function",
+        "end": 904,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "fop_log_level",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 3399,
+        "kind": "function",
+        "end": 3433,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "glfs_resolve_fd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/api/src/glfs-resolve.c",
+        "line": 746,
+        "kind": "function",
+        "end": 757,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "list_splice_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/list.h",
+        "line": 141,
+        "kind": "function",
+        "end": 148,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "posix_fd_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/storage/posix/src/posix-helpers.c",
+        "line": 1432,
+        "kind": "function",
+        "end": 1443,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "__argp_fmtstream_putc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/argp-standalone/argp-fmtstream.c",
+        "line": 423,
+        "kind": "function",
+        "end": 429,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "__argp_fmtstream_putc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/argp-standalone/argp-fmtstream.h",
+        "line": 258,
+        "kind": "function",
+        "end": 264,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "afr_fd_ctx_get",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/afr/src/afr-common.c",
+        "line": 2144,
+        "kind": "function",
+        "end": 2155,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "gf_store_unlink_tmppath",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/store.c",
+        "line": 156,
+        "kind": "function",
+        "end": 178,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_find_snap_by_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-snapshot.c",
+        "line": 2193,
+        "kind": "function",
+        "end": 2213,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_op_begin_synctask",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-syncop.c",
+        "line": 1728,
+        "kind": "function",
+        "end": 1745,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "open_and_resume",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/performance/open-behind/src/open-behind.c",
+        "line": 211,
+        "kind": "function",
+        "end": 244,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "posix_acl_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/system/posix-acl/src/posix-acl.c",
+        "line": 412,
+        "kind": "function",
+        "end": 427,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "qemu_co_mutex_unlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/qemu-coroutine-lock.c",
+        "line": 127,
+        "kind": "function",
+        "end": 140,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "svs_iatt_fill",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/snapview-server/src/snapview-server-helpers.c",
+        "line": 365,
+        "kind": "function",
+        "end": 396,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "bdrv_getlength",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block.c",
+        "line": 2711,
+        "kind": "function",
+        "end": 2723,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "call_resume",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/call-stub.c",
+        "line": 2828,
+        "kind": "function",
+        "end": 2850,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "fd_ctx_del",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 983,
+        "kind": "function",
+        "end": 997,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "gf_is_service_running",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.c",
+        "line": 3109,
+        "kind": "function",
+        "end": 3138,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_get_uuid",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-utils.c",
+        "line": 219,
+        "kind": "function",
+        "end": 230,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "is_origin_glusterd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-utils.c",
+        "line": 9346,
+        "kind": "function",
+        "end": 9371,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "map_itransform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/map/src/map-helper.c",
+        "line": 59,
+        "kind": "function",
+        "end": 83,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "runner_redir",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/run.c",
+        "line": 196,
+        "kind": "function",
+        "end": 202,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "syncop_getxattr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/syncop.c",
+        "line": 1391,
+        "kind": "function",
+        "end": 1407,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "bdrv_flush",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block.c",
+        "line": 4119,
+        "kind": "function",
+        "end": 4139,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "cli_begin_xml_output",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/cli/src/cli-xml-output.c",
+        "line": 66,
+        "kind": "function",
+        "end": 86,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "cli_end_xml_output",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/cli/src/cli-xml-output.c",
+        "line": 89,
+        "kind": "function",
+        "end": 110,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "cli_xml_output_common",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/cli/src/cli-xml-output.c",
+        "line": 113,
+        "kind": "function",
+        "end": 133,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "dht_layout_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/dht/src/dht-layout.c",
+        "line": 132,
+        "kind": "function",
+        "end": 150,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "dict_set_int64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1757,
+        "kind": "function",
+        "end": 1774,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "gf_store_handle_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/store.c",
+        "line": 442,
+        "kind": "function",
+        "end": 461,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "iov_dup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.h",
+        "line": 316,
+        "kind": "function",
+        "end": 333,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "posix_fdstat",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/storage/posix/src/posix-helpers.c",
+        "line": 429,
+        "kind": "function",
+        "end": 455,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "qcow2_cache_put",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block/qcow2-cache.c",
+        "line": 291,
+        "kind": "function",
+        "end": 308,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "qemu_co_mutex_lock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/qemu-coroutine-lock.c",
+        "line": 112,
+        "kind": "function",
+        "end": 125,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "bdrv_pwrite_sync",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block.c",
+        "line": 2396,
+        "kind": "function",
+        "end": 2412,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "changelog_color_fop_and_inc_cnt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/features/changelog/src/changelog-helpers.c",
+        "line": 1200,
+        "kind": "function",
+        "end": 1212,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "data_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 138,
+        "kind": "function",
+        "end": 156,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "data_unref",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 532,
+        "kind": "function",
+        "end": 550,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_double",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1913,
+        "kind": "function",
+        "end": 1934,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "fd_bind",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/fd.c",
+        "line": 567,
+        "kind": "function",
+        "end": 581,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "get_new_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 35,
+        "kind": "function",
+        "end": 46,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "glfs_lresolve",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/api/src/glfs-resolve.c",
+        "line": 535,
+        "kind": "function",
+        "end": 543,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_volume_brickinfo_get_by_brick",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-utils.c",
+        "line": 1251,
+        "kind": "function",
+        "end": 1272,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "memdup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/common-utils.h",
+        "line": 488,
+        "kind": "function",
+        "end": 498,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "rpc_transport_disconnect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/rpc/rpc-lib/src/rpc-transport.c",
+        "line": 421,
+        "kind": "function",
+        "end": 430,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "bdrv_delete",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/contrib/qemu/block.c",
+        "line": 1597,
+        "kind": "function",
+        "end": 1609,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "dht_layout_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/dht/src/dht-layout.c",
+        "line": 43,
+        "kind": "function",
+        "end": 75,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "dict_get_int64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/libglusterfs/src/dict.c",
+        "line": 1732,
+        "kind": "function",
+        "end": 1753,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "ec_iatt_rebuild",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/cluster/ec/src/ec-combine.c",
+        "line": 101,
+        "kind": "function",
+        "end": 112,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "glusterd_create_volfiles_and_notify_services",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/mgmt/glusterd/src/glusterd-volgen.c",
+        "line": 4097,
+        "kind": "function",
+        "end": 4112,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "meta_ctx_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/meta/src/meta-helpers.c",
+        "line": 132,
+        "kind": "function",
+        "end": 142,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "nfs3_stat_to_post_op_attr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/glusterfs/xlators/nfs/server/src/nfs3-helpers.c",
+        "line": 370,
+        "kind": "function",
+        "end": 389,
+        "count": 16
+    }
+]

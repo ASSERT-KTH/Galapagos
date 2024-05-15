@@ -70,6 +70,55 @@ TODO: doesn't seem like any of use, though
 - `115__libssh2_store_u64`: alters a ptr arg, else is good
 - `170__libssh2_wincng_bignum_bits`: has a small loop, else is good
 
+#### krb5
+
+- `9_make_data`: has a macro (constant), else is good
+- `78_krb5int_find_pa_data`: has a small loop
+- `102_krb5int_c_locate_iov`: has a loop (not necessarily small, but very simple)
+
+#### sqlite
+
+- `21_sqlite3StrICmp`: loop that might be too long, accesses global vars?
+- `26_sqlite3_strnicmp`: same but slightly smaller loop
+
+#### curl
+
+- `22_Curl_timediff`: has constant macros
+- `41_Curl_share_unlock`: has constant macros
+- `76_Curl_timestrcmp`: has a loop; worth to try imo
+- `116_Curl_is_ASCII_name`: same as above + has bool macros
+
+#### glusterfs
+
+- `8_uuid_copy`: good
+- `13_uuid_is_null`: small loop, else good
+- `55_iov_length`: good
+- `104_strtail`: small loop
+- `141_pstrcpy`: must see if the loop is ok
+
+#### liboqs
+
+has 4 but I'm not sure if the source code itself is very suitable for this
+
+#### lz4
+
+- `29_FUZZ_dataProducer_retrieve32`: good
+- `30_FUZZ_getRange_from_uint32`: good
+- `41_LZ4IO_readLE32`: good
+- `66_LZ4IO_writeLE32`: good
+- `86_XXH_swap32`: ...maybe? not sure because of the "custom" U32 type
+- `87_XXH_swap64`: same as above
+
+#### libgcrypt
+
+- `4_buf_put_be32`: good
+- `5_buf_put_le32`: good
+- `11_buf_get_le64`: good
+- `27_gost_val`: good
+- `37_interleave`: good
+- `38_vec_mul`: constant macros, otherwise good
+- `63_buf_get_be64`: good
+
 ## coreutils
 
 - `memset`: is small, has a small while loop, does not alter outside variables, does not have external calls

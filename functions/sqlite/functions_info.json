@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "sqlite3_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 412,
+        "kind": "function",
+        "end": 425,
+        "count": 1647
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_finalize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3933,
+        "kind": "function",
+        "end": 3939,
+        "count": 377
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_finalize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 100,
+        "kind": "function",
+        "end": 119,
+        "count": 377
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_value_text",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 5318,
+        "kind": "function",
+        "end": 5325,
+        "count": 319
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_stricmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 408,
+        "kind": "function",
+        "end": 415,
+        "count": 218
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ErrorMsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 242,
+        "kind": "function",
+        "end": 266,
+        "count": 204
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_errmsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3849,
+        "kind": "function",
+        "end": 3857,
+        "count": 201
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_errmsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 2668,
+        "kind": "function",
+        "end": 2689,
+        "count": 201
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_column_text",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3211,
+        "kind": "function",
+        "end": 3218,
+        "count": 198
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_text",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 559,
+        "kind": "function",
+        "end": 573,
+        "count": 195
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 129,
+        "kind": "function",
+        "end": 145,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_prepare_v2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4259,
+        "kind": "function",
+        "end": 4265,
+        "count": 173
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_prepare_v2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/prepare.c",
+        "line": 941,
+        "kind": "function",
+        "end": 958,
+        "count": 173
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_create_function",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 2083,
+        "kind": "function",
+        "end": 2095,
+        "count": 153
+    },
+    {
+        "_type": "tag",
+        "name": "getDbPointer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/recover/test_recover.c",
+        "line": 59,
+        "kind": "function",
+        "end": 67,
+        "count": 135
+    },
+    {
+        "_type": "tag",
+        "name": "getDbPointer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test1.c",
+        "line": 116,
+        "kind": "function",
+        "end": 126,
+        "count": 135
+    },
+    {
+        "_type": "tag",
+        "name": "getDbPointer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test_mutex.c",
+        "line": 379,
+        "kind": "function",
+        "end": 390,
+        "count": 135
+    },
+    {
+        "_type": "tag",
+        "name": "fatalError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/fuzzershell.c",
+        "line": 150,
+        "kind": "function",
+        "end": 162,
+        "count": 123
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_int",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 497,
+        "kind": "function",
+        "end": 503,
+        "count": 118
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_int64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 504,
+        "kind": "function",
+        "end": 510,
+        "count": 101
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_int64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1738,
+        "kind": "function",
+        "end": 1747,
+        "count": 98
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3StrICmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 416,
+        "kind": "function",
+        "end": 434,
+        "count": 97
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_config",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3388,
+        "kind": "function",
+        "end": 3399,
+        "count": 94
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_config",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3420,
+        "kind": "function",
+        "end": 3454,
+        "count": 94
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_vfs_find",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/os.c",
+        "line": 362,
+        "kind": "function",
+        "end": 381,
+        "count": 91
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeAddOp4",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeaux.c",
+        "line": 414,
+        "kind": "function",
+        "end": 426,
+        "count": 85
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_strnicmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 435,
+        "kind": "function",
+        "end": 446,
+        "count": 85
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DebugPrintf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1343,
+        "kind": "function",
+        "end": 1361,
+        "count": 82
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_value_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 5222,
+        "kind": "function",
+        "end": 5233,
+        "count": 82
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_value_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 183,
+        "kind": "function",
+        "end": 195,
+        "count": 82
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_text",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1775,
+        "kind": "function",
+        "end": 1783,
+        "count": 80
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TreeViewLine",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/treeview.c",
+        "line": 57,
+        "kind": "function",
+        "end": 79,
+        "count": 78
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeResolveLabel",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeaux.c",
+        "line": 639,
+        "kind": "function",
+        "end": 656,
+        "count": 77
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_str_append",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1026,
+        "kind": "function",
+        "end": 1038,
+        "count": 77
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_context_db_handle",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3538,
+        "kind": "function",
+        "end": 3545,
+        "count": 73
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_context_db_handle",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 968,
+        "kind": "function",
+        "end": 975,
+        "count": 73
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_aggregate_context",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 2320,
+        "kind": "function",
+        "end": 2330,
+        "count": 71
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_aggregate_context",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1131,
+        "kind": "function",
+        "end": 1140,
+        "count": 71
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DbMallocZero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 614,
+        "kind": "function",
+        "end": 620,
+        "count": 69
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3MPrintf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1205,
+        "kind": "function",
+        "end": 1212,
+        "count": 67
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3BtreeLeave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btmutex.c",
+        "line": 143,
+        "kind": "function",
+        "end": 152,
+        "count": 64
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3SafetyCheckOk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 1568,
+        "kind": "function",
+        "end": 1584,
+        "count": 62
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3BtreeEnter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btmutex.c",
+        "line": 71,
+        "kind": "function",
+        "end": 97,
+        "count": 61
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ReleaseTempReg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 7017,
+        "kind": "function",
+        "end": 7024,
+        "count": 59
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_log",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1328,
+        "kind": "function",
+        "end": 1335,
+        "count": 59
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_user_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 950,
+        "kind": "function",
+        "end": 956,
+        "count": 59
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TreeViewPop",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/treeview.c",
+        "line": 43,
+        "kind": "function",
+        "end": 51,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 436,
+        "kind": "function",
+        "end": 451,
+        "count": 56
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3GetVdbe",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/select.c",
+        "line": 2439,
+        "kind": "function",
+        "end": 2449,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_column_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3148,
+        "kind": "function",
+        "end": 3156,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_column_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1363,
+        "kind": "function",
+        "end": 1372,
+        "count": 55
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TestTextToPtr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test1.c",
+        "line": 61,
+        "kind": "function",
+        "end": 81,
+        "count": 54
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3MutexAlloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/mutex.c",
+        "line": 290,
+        "kind": "function",
+        "end": 297,
+        "count": 52
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_create_module",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vtab.c",
+        "line": 108,
+        "kind": "function",
+        "end": 118,
+        "count": 51
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3OomFault",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 849,
+        "kind": "function",
+        "end": 867,
+        "count": 50
+    },
+    {
+        "_type": "tag",
+        "name": "ErrorMsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/lemon.c",
+        "line": 1577,
+        "kind": "function",
+        "end": 1584,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3SchemaToIndex",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/prepare.c",
+        "line": 548,
+        "kind": "function",
+        "end": 573,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3MallocZero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 602,
+        "kind": "function",
+        "end": 608,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_column_value",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3241,
+        "kind": "function",
+        "end": 3248,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_column_value",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1403,
+        "kind": "function",
+        "end": 1411,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DbStrDup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 783,
+        "kind": "function",
+        "end": 795,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Fts5MallocZero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_buffer.c",
+        "line": 264,
+        "kind": "function",
+        "end": 275,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4132,
+        "kind": "function",
+        "end": 4150,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_open",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 3610,
+        "kind": "function",
+        "end": 3616,
+        "count": 47
+    },
+    {
+        "_type": "tag",
+        "name": "getStmtPointer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test1.c",
+        "line": 169,
+        "kind": "function",
+        "end": 176,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3PExpr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 1031,
+        "kind": "function",
+        "end": 1050,
+        "count": 45
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_value",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 629,
+        "kind": "function",
+        "end": 646,
+        "count": 44
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3LogEst",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 1736,
+        "kind": "function",
+        "end": 1753,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3PagerWrite",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/pager.c",
+        "line": 6206,
+        "kind": "function",
+        "end": 6222,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_vfs_register",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/os.c",
+        "line": 408,
+        "kind": "function",
+        "end": 431,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "lsmFsPageRelease",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_file.c",
+        "line": 2863,
+        "kind": "function",
+        "end": 2897,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ExprListAppend",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 2041,
+        "kind": "function",
+        "end": 2057,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TreeViewPush",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/treeview.c",
+        "line": 27,
+        "kind": "function",
+        "end": 38,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "stem",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts3/fts3_porter.c",
+        "line": 269,
+        "kind": "function",
+        "end": 284,
+        "count": 42
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_double",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 472,
+        "kind": "function",
+        "end": 478,
+        "count": 41
+    },
+    {
+        "_type": "tag",
+        "name": "jsonAppendChar",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/json.c",
+        "line": 583,
+        "kind": "function",
+        "end": 589,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "lsmStringAppendf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_str.c",
+        "line": 119,
+        "kind": "function",
+        "end": 126,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeMemSetNull",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbemem.c",
+        "line": 881,
+        "kind": "function",
+        "end": 887,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3SchemaMutexHeld",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btmutex.c",
+        "line": 252,
+        "kind": "function",
+        "end": 263,
+        "count": 38
+    },
+    {
+        "_type": "tag",
+        "name": "runSql",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts3/tool/fts3view.c",
+        "line": 78,
+        "kind": "function",
+        "end": 88,
+        "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "runSql",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/rollback-test.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_db_status",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3828,
+        "kind": "function",
+        "end": 3840,
+        "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "sessionAppendStr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/session/sqlite3session.c",
+        "line": 1423,
+        "kind": "function",
+        "end": 1434,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_realloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 584,
+        "kind": "function",
+        "end": 590,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "vfslog_time",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test_osinst.c",
+        "line": 231,
+        "kind": "function",
+        "end": 243,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Hwtime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/hwtime.h",
+        "line": 58,
+        "kind": "function",
+        "end": 69,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts3/tool/fts3view.c",
+        "line": 57,
+        "kind": "function",
+        "end": 73,
+        "count": 34
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ExprCode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 5432,
+        "kind": "function",
+        "end": 5453,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3StrAccumInit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1159,
+        "kind": "function",
+        "end": 1167,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3WalkExprList",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/walker.c",
+        "line": 106,
+        "kind": "function",
+        "end": 115,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_randomness",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4531,
+        "kind": "function",
+        "end": 4540,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "ckptSetValue",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_ckpt.c",
+        "line": 246,
+        "kind": "function",
+        "end": 258,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "lsmMallocZeroRc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_mem.c",
+        "line": 66,
+        "kind": "function",
+        "end": 75,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_str_new",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1170,
+        "kind": "function",
+        "end": 1179,
+        "count": 32
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Malloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 317,
+        "kind": "function",
+        "end": 330,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 2519,
+        "kind": "function",
+        "end": 2538,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_blob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1703,
+        "kind": "function",
+        "end": 1714,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_value",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 2766,
+        "kind": "function",
+        "end": 2782,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_value",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1810,
+        "kind": "function",
+        "end": 1843,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4252,
+        "kind": "function",
+        "end": 4258,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/prepare.c",
+        "line": 929,
+        "kind": "function",
+        "end": 940,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeMemSetInt64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbemem.c",
+        "line": 937,
+        "kind": "function",
+        "end": 944,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3WalkSelect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/walker.c",
+        "line": 204,
+        "kind": "function",
+        "end": 222,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "vlog_time",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/vfslog.c",
+        "line": 183,
+        "kind": "function",
+        "end": 195,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "fsPageToBlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_file.c",
+        "line": 923,
+        "kind": "function",
+        "end": 929,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "prepareFreeAndCollectError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/rbu/sqlite3rbu.c",
+        "line": 775,
+        "kind": "function",
+        "end": 791,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3GetTempRange",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 7029,
+        "kind": "function",
+        "end": 7042,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3NestedParse",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 299,
+        "kind": "function",
+        "end": 329,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TestErrCode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test1.c",
+        "line": 151,
+        "kind": "function",
+        "end": 164,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "abendError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/fuzzershell.c",
+        "line": 133,
+        "kind": "function",
+        "end": 145,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "rbuMPrintf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/rbu/sqlite3rbu.c",
+        "line": 1017,
+        "kind": "function",
+        "end": 1030,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Expr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 973,
+        "kind": "function",
+        "end": 982,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Fts3PutVarint",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts3/fts3.c",
+        "line": 337,
+        "kind": "function",
+        "end": 347,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_bind_null",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 1748,
+        "kind": "function",
+        "end": 1756,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_open_v2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4152,
+        "kind": "function",
+        "end": 4181,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_open_v2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 3617,
+        "kind": "function",
+        "end": 3624,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_sleep",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 4045,
+        "kind": "function",
+        "end": 4056,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "db_prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/wasm/c-pp.c",
+        "line": 687,
+        "kind": "function",
+        "end": 704,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "db_prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/dbhash.c",
+        "line": 268,
+        "kind": "function",
+        "end": 275,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "db_prepare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/sqldiff.c",
+        "line": 146,
+        "kind": "function",
+        "end": 153,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "readCoord",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/rtree/rtree.c",
+        "line": 514,
+        "kind": "function",
+        "end": 530,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_status",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4966,
+        "kind": "function",
+        "end": 4977,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_status",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/status.c",
+        "line": 159,
+        "kind": "function",
+        "end": 171,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "sessionAppendBlob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/session/sqlite3session.c",
+        "line": 2478,
+        "kind": "function",
+        "end": 2488,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ApiExit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 909,
+        "kind": "function",
+        "end": 920,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TableColumnToStorage",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 1161,
+        "kind": "function",
+        "end": 1176,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeGetOp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeaux.c",
+        "line": 1684,
+        "kind": "function",
+        "end": 1695,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "hash_step",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/sha1.c",
+        "line": 152,
+        "kind": "function",
+        "end": 175,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "hash_step",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/dbhash.c",
+        "line": 169,
+        "kind": "function",
+        "end": 188,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Error",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 130,
+        "kind": "function",
+        "end": 138,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ExprVectorSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 503,
+        "kind": "function",
+        "end": 515,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_mutex_alloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/mutex.c",
+        "line": 281,
+        "kind": "function",
+        "end": 288,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "async_mutex_enter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/async/sqlite3async.c",
+        "line": 287,
+        "kind": "function",
+        "end": 294,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "async_mutex_enter",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/async/sqlite3async.c",
+        "line": 338,
+        "kind": "function",
+        "end": 345,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "lsm_close",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_main.c",
+        "line": 213,
+        "kind": "function",
+        "end": 243,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Fts5BufferAppendPrintf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_buffer.c",
+        "line": 100,
+        "kind": "function",
+        "end": 119,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3NameFromToken",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 913,
+        "kind": "function",
+        "end": 922,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3PagerGet",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/pager.c",
+        "line": 5698,
+        "kind": "function",
+        "end": 5718,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3StrAccumFinish",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1066,
+        "kind": "function",
+        "end": 1074,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeAppendP4",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeaux.c",
+        "line": 1598,
+        "kind": "function",
+        "end": 1612,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_db_mutex",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 901,
+        "kind": "function",
+        "end": 909,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_value_numeric_type",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbe.c",
+        "line": 428,
+        "kind": "function",
+        "end": 436,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "SHA3Update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/shathree.c",
+        "line": 434,
+        "kind": "function",
+        "end": 467,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "SHA3Update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/mksourceid.c",
+        "line": 419,
+        "kind": "function",
+        "end": 451,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "SHA3Update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/src-verify.c",
+        "line": 629,
+        "kind": "function",
+        "end": 661,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DbMallocRaw",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 658,
+        "kind": "function",
+        "end": 664,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ErrorWithMsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 192,
+        "kind": "function",
+        "end": 206,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ReleaseTempRange",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 7043,
+        "kind": "function",
+        "end": 7053,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_db_config",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 3689,
+        "kind": "function",
+        "end": 3720,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "fsFirstPageOnBlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_file.c",
+        "line": 883,
+        "kind": "function",
+        "end": 900,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "jsonParseFree",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/json.c",
+        "line": 860,
+        "kind": "function",
+        "end": 869,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "nodeRelease",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/rtree/rtree.c",
+        "line": 899,
+        "kind": "function",
+        "end": 921,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "out2Prerelease",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbe.c",
+        "line": 660,
+        "kind": "function",
+        "end": 672,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ExprCodeTemp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 5404,
+        "kind": "function",
+        "end": 5425,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Get4byte",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/util.c",
+        "line": 1466,
+        "kind": "function",
+        "end": 1483,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3VdbeError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeaux.c",
+        "line": 59,
+        "kind": "function",
+        "end": 65,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_sql",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 5029,
+        "kind": "function",
+        "end": 5040,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_str_finish",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/printf.c",
+        "line": 1104,
+        "kind": "function",
+        "end": 1113,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_strglob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/func.c",
+        "line": 861,
+        "kind": "function",
+        "end": 869,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "checkAppendMsg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btree.c",
+        "line": 10501,
+        "kind": "function",
+        "end": 10524,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "cmdlineError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/dbhash.c",
+        "line": 225,
+        "kind": "function",
+        "end": 233,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "cmdlineError",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/sqldiff.c",
+        "line": 73,
+        "kind": "function",
+        "end": 83,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "fts5Porter_MGt1",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_tokenize.c",
+        "line": 685,
+        "kind": "function",
+        "end": 692,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "fts5StructureRelease",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_index.c",
+        "line": 981,
+        "kind": "function",
+        "end": 990,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "idxAppendText",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/expert/sqlite3expert.c",
+        "line": 790,
+        "kind": "function",
+        "end": 816,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ColumnExpr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 721,
+        "kind": "function",
+        "end": 727,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3SrcListDelete",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 4924,
+        "kind": "function",
+        "end": 4944,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3TreeViewExprList",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/treeview.c",
+        "line": 936,
+        "kind": "function",
+        "end": 945,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "vlogLogPrint",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/vfslog.c",
+        "line": 206,
+        "kind": "function",
+        "end": 235,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "fts5PrintfAppend",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_expr.c",
+        "line": 2532,
+        "kind": "function",
+        "end": 2545,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "jsonAppendRawNZ",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/json.c",
+        "line": 556,
+        "kind": "function",
+        "end": 564,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "lemon_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/lemon.c",
+        "line": 108,
+        "kind": "function",
+        "end": 114,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "recoverMPrintf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/recover/sqlite3recover.c",
+        "line": 572,
+        "kind": "function",
+        "end": 585,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "sessionSerialLen",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/session/sqlite3session.c",
+        "line": 605,
+        "kind": "function",
+        "end": 614,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ExprSkipCollateAndLikely",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/expr.c",
+        "line": 214,
+        "kind": "function",
+        "end": 228,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_errcode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/main.c",
+        "line": 2751,
+        "kind": "function",
+        "end": 2759,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_result_null",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbeapi.c",
+        "line": 511,
+        "kind": "function",
+        "end": 517,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_vfs_unregister",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/os.c",
+        "line": 436,
+        "kind": "function",
+        "end": 447,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "lsmLogMessage",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_main.c",
+        "line": 856,
+        "kind": "function",
+        "end": 869,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "renameTokenFind",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/alter.c",
+        "line": 966,
+        "kind": "function",
+        "end": 988,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DbRealloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/malloc.c",
+        "line": 721,
+        "kind": "function",
+        "end": 736,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3FindDbName",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 943,
+        "kind": "function",
+        "end": 955,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3Fts5PutVarint",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/fts5/fts5_varint.c",
+        "line": 321,
+        "kind": "function",
+        "end": 332,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3_limit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/jni/src/c/sqlite3-jni.c",
+        "line": 4046,
+        "kind": "function",
+        "end": 4055,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "vfslog_call",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test_osinst.c",
+        "line": 652,
+        "kind": "function",
+        "end": 674,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "lemon_malloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/lemon.c",
+        "line": 89,
+        "kind": "function",
+        "end": 102,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "lsmMallocZero",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_mem.c",
+        "line": 47,
+        "kind": "function",
+        "end": 53,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "putInt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/fossildelta.c",
+        "line": 134,
+        "kind": "function",
+        "end": 150,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "putInt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/sqldiff.c",
+        "line": 836,
+        "kind": "function",
+        "end": 852,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ResolveExprNames",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/resolve.c",
+        "line": 2116,
+        "kind": "function",
+        "end": 2149,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ValueNew",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbemem.c",
+        "line": 1402,
+        "kind": "function",
+        "end": 1409,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3ValueSetStr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/vdbemem.c",
+        "line": 2007,
+        "kind": "function",
+        "end": 2015,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "strPrintfArray",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/tool/sqldiff.c",
+        "line": 1144,
+        "kind": "function",
+        "end": 1155,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "tvfsExecTcl",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/test_vfs.c",
+        "line": 281,
+        "kind": "function",
+        "end": 311,
+        "count": 18
+    },
+    {
+        "_type": "tag",
+        "name": "rbuFinalize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/rbu/sqlite3rbu.c",
+        "line": 1139,
+        "kind": "function",
+        "end": 1146,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "scrubBackupErr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/misc/scrub.c",
+        "line": 82,
+        "kind": "function",
+        "end": 89,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "sortedKeyCompare",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/ext/lsm1/lsm_sorted.c",
+        "line": 823,
+        "kind": "function",
+        "end": 833,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3BtreeEnterAll",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btmutex.c",
+        "line": 280,
+        "kind": "function",
+        "end": 288,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3BtreeHoldsMutex",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/btmutex.c",
+        "line": 161,
+        "kind": "function",
+        "end": 168,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "sqlite3DeleteTable",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/sqlite/src/build.c",
+        "line": 869,
+        "kind": "function",
+        "end": 875,
+        "count": 17
+    }
+]

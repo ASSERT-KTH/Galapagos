@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "XXH32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 392,
+        "kind": "function",
+        "end": 416,
+        "count": 33
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressFrameBound",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 405,
+        "kind": "function",
+        "end": 415,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 855,
+        "kind": "function",
+        "end": 879,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_HC_continue",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1567,
+        "kind": "function",
+        "end": 1574,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_usingDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2719,
+        "kind": "function",
+        "end": 2732,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_createDecompressionContext",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1299,
+        "kind": "function",
+        "end": 1309,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_initStream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1552,
+        "kind": "function",
+        "end": 1560,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_freeDecompressionContext",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1311,
+        "kind": "function",
+        "end": 1321,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_partial_usingDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2734,
+        "kind": "function",
+        "end": 2747,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_initStreamHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1428,
+        "kind": "function",
+        "end": 1441,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_loadDictHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1481,
+        "kind": "function",
+        "end": 1500,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_resetStreamHC_fast",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1450,
+        "kind": "function",
+        "end": 1464,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_digest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 1005,
+        "kind": "function",
+        "end": 1013,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 971,
+        "kind": "function",
+        "end": 979,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 127,
+        "kind": "function",
+        "end": 136,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_setStreamDecode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2589,
+        "kind": "function",
+        "end": 2602,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_getTime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 116,
+        "kind": "function",
+        "end": 130,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_getTime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 41,
+        "kind": "function",
+        "end": 59,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_getTime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 65,
+        "kind": "function",
+        "end": 79,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_getTime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 88,
+        "kind": "function",
+        "end": 102,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_round",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 672,
+        "kind": "function",
+        "end": 678,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressUpdate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1117,
+        "kind": "function",
+        "end": 1126,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_freeCompressionContext",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 627,
+        "kind": "function",
+        "end": 635,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_HC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1374,
+        "kind": "function",
+        "end": 1390,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_setCompressionLevel",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1466,
+        "kind": "function",
+        "end": 1472,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 898,
+        "kind": "function",
+        "end": 909,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_createCompressionContext",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 616,
+        "kind": "function",
+        "end": 625,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_hashPosition",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 797,
+        "kind": "function",
+        "end": 806,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_round",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 269,
+        "kind": "function",
+        "end": 275,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_dataProducer_retrieve32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_data_producer.c",
+        "line": 20,
+        "kind": "function",
+        "end": 32,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_getRange_from_uint32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_data_producer.c",
+        "line": 34,
+        "kind": "function",
+        "end": 41,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBound",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 865,
+        "kind": "function",
+        "end": 871,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_fast_extState",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1382,
+        "kind": "function",
+        "end": 1403,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_count",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 680,
+        "kind": "function",
+        "end": 703,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBegin",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 813,
+        "kind": "function",
+        "end": 820,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_readLE32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 186,
+        "kind": "function",
+        "end": 194,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_fast",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1453,
+        "kind": "function",
+        "end": 1469,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "TPOOL_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/threadpool.c",
+        "line": 111,
+        "kind": "function",
+        "end": 120,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_dataProducer_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_data_producer.c",
+        "line": 8,
+        "kind": "function",
+        "end": 16,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_malloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 117,
+        "kind": "function",
+        "end": 125,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_createStreamHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1409,
+        "kind": "function",
+        "end": 1416,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_readLE32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1568,
+        "kind": "function",
+        "end": 1576,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_fast",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2468,
+        "kind": "function",
+        "end": 2474,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_freeStreamHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1418,
+        "kind": "function",
+        "end": 1424,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "TPOOL_submitJob",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/threadpool.c",
+        "line": 279,
+        "kind": "function",
+        "end": 289,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 515,
+        "kind": "function",
+        "end": 523,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_avalanche",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 688,
+        "kind": "function",
+        "end": 696,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_mergeRound",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 680,
+        "kind": "function",
+        "end": 686,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_decompress_usingDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 2121,
+        "kind": "function",
+        "end": 2134,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_getBlockSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 332,
+        "kind": "function",
+        "end": 341,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_resetDecompressionContext",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1325,
+        "kind": "function",
+        "end": 1333,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_writeLE32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 196,
+        "kind": "function",
+        "end": 203,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_attach_dictionary",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1658,
+        "kind": "function",
+        "end": 1684,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_createStream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1531,
+        "kind": "function",
+        "end": 1539,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_fast_usingDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2749,
+        "kind": "function",
+        "end": 2757,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "readU32FromChar",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4cli.c",
+        "line": 284,
+        "kind": "function",
+        "end": 300,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_compress_generic",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1323,
+        "kind": "function",
+        "end": 1338,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_init_internal",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 206,
+        "kind": "function",
+        "end": 223,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_finalTimeDisplay",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 112,
+        "kind": "function",
+        "end": 127,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_openSrcFile",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 365,
+        "kind": "function",
+        "end": 384,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_partial",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2459,
+        "kind": "function",
+        "end": 2465,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_freeStream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1575,
+        "kind": "function",
+        "end": 1581,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_putIndexOnHash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 820,
+        "kind": "function",
+        "end": 830,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_wildCopy8",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 465,
+        "kind": "function",
+        "end": 472,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "TPOOL_completeJobs",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/threadpool.c",
+        "line": 241,
+        "kind": "function",
+        "end": 247,
+        "count": 6
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_literalsPrice",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1693,
+        "kind": "function",
+        "end": 1700,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_writeLE32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 749,
+        "kind": "function",
+        "end": 756,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_getIndexOnHash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 853,
+        "kind": "function",
+        "end": 867,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_digest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 546,
+        "kind": "function",
+        "end": 554,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 437,
+        "kind": "function",
+        "end": 448,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "decompress",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/decompress_frame_fuzzer.c",
+        "line": 18,
+        "kind": "function",
+        "end": 29,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "decompress",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_frame_uncompressed_fuzzer.c",
+        "line": 18,
+        "kind": "function",
+        "end": 41,
+        "count": 5
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBound_internal",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 378,
+        "kind": "function",
+        "end": 403,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_freeCDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 579,
+        "kind": "function",
+        "end": 586,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_headerSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1442,
+        "kind": "function",
+        "end": 1466,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_makeBlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 881,
+        "kind": "function",
+        "end": 906,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_countBack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 174,
+        "kind": "function",
+        "end": 194,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_fwriteSparseEnd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1650,
+        "kind": "function",
+        "end": 1659,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_HC_destSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1393,
+        "kind": "function",
+        "end": 1400,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_destSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1506,
+        "kind": "function",
+        "end": 1522,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_putPositionOnHash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 833,
+        "kind": "function",
+        "end": 839,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_readLE16",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 430,
+        "kind": "function",
+        "end": 438,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_saveDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1814,
+        "kind": "function",
+        "end": 1834,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_saveDictHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1588,
+        "kind": "function",
+        "end": 1610,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_sameString",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 203,
+        "kind": "function",
+        "end": 209,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_avalanche",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 278,
+        "kind": "function",
+        "end": 286,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "XXH_swap32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 203,
+        "kind": "function",
+        "end": 209,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "XXH_swap64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 632,
+        "kind": "function",
+        "end": 642,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "cursor_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_stream_fuzzer.c",
+        "line": 41,
+        "kind": "function",
+        "end": 49,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "state_decompress",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_stream_fuzzer.c",
+        "line": 103,
+        "kind": "function",
+        "end": 111,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "state_randomRoundTrip",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_stream_fuzzer.c",
+        "line": 178,
+        "kind": "function",
+        "end": 186,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "state_trimDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_stream_fuzzer.c",
+        "line": 125,
+        "kind": "function",
+        "end": 137,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_dataProducer_preferences",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_data_producer.c",
+        "line": 65,
+        "kind": "function",
+        "end": 73,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LOREM_rand",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lorem.c",
+        "line": 168,
+        "kind": "function",
+        "end": 178,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBegin_usingCDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 849,
+        "kind": "function",
+        "end": 857,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_initStream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 646,
+        "kind": "function",
+        "end": 672,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_uncompressedUpdate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1137,
+        "kind": "function",
+        "end": 1146,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_FindLongerMatch",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1721,
+        "kind": "function",
+        "end": 1738,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_Insert",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 615,
+        "kind": "function",
+        "end": 636,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_compress_generic_noDictCtx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1282,
+        "kind": "function",
+        "end": 1294,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_countPattern",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 655,
+        "kind": "function",
+        "end": 682,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_sequencePrice",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1704,
+        "kind": "function",
+        "end": 1716,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_compressFilename_extRess",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1470,
+        "kind": "function",
+        "end": 1486,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_freeCResources",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 974,
+        "kind": "function",
+        "end": 987,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_HC_extStateHC_fastReset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1355,
+        "kind": "function",
+        "end": 1365,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_forceExtDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2523,
+        "kind": "function",
+        "end": 2531,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_writeLE16",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 452,
+        "kind": "function",
+        "end": 461,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_getFileSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 336,
+        "kind": "function",
+        "end": 344,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_getFileStat",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 274,
+        "kind": "function",
+        "end": 285,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_getOpenFileSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 319,
+        "kind": "function",
+        "end": 333,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_setFileStat",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 228,
+        "kind": "function",
+        "end": 258,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "generateWord",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lorem.c",
+        "line": 196,
+        "kind": "function",
+        "end": 211,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "BMK_benchCLevel",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 645,
+        "kind": "function",
+        "end": 671,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "BMK_findMaxMem",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 621,
+        "kind": "function",
+        "end": 642,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_decompressFrame",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/lz4_helpers.c",
+        "line": 30,
+        "kind": "function",
+        "end": 51,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LOREM_genBlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lorem.c",
+        "line": 273,
+        "kind": "function",
+        "end": 295,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_calloc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 101,
+        "kind": "function",
+        "end": 115,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_createCDict_advanced",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 538,
+        "kind": "function",
+        "end": 565,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_createCompressionContext_advanced",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 594,
+        "kind": "function",
+        "end": 605,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_freeReadFile",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4file.c",
+        "line": 58,
+        "kind": "function",
+        "end": 64,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_freeWriteFile",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4file.c",
+        "line": 202,
+        "kind": "function",
+        "end": 208,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_selectCompression",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 950,
+        "kind": "function",
+        "end": 960,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_reverseCountPattern",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 688,
+        "kind": "function",
+        "end": 702,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_setExternalDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1508,
+        "kind": "function",
+        "end": 1524,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_blockTypeID",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2391,
+        "kind": "function",
+        "end": 2399,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_createDResources",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1883,
+        "kind": "function",
+        "end": 1902,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_decompressDstFile",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2162,
+        "kind": "function",
+        "end": 2192,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_defaultNbWorkers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 153,
+        "kind": "function",
+        "end": 163,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_freeDResources",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1904,
+        "kind": "function",
+        "end": 1911,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_setBlockSizeID",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 251,
+        "kind": "function",
+        "end": 260,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_toHuman",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2402,
+        "kind": "function",
+        "end": 2409,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_writeBuffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 562,
+        "kind": "function",
+        "end": 568,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_destSize_extState_internal",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1481,
+        "kind": "function",
+        "end": 1495,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_fast_extDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2545,
+        "kind": "function",
+        "end": 2551,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_partial_forceExtDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2534,
+        "kind": "function",
+        "end": 2542,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_withSmallPrefix",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2504,
+        "kind": "function",
+        "end": 2510,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_hash4",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 777,
+        "kind": "function",
+        "end": 783,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_renormDictT",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1687,
+        "kind": "function",
+        "end": 1704,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_streamHC_t_alignment",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1343,
+        "kind": "function",
+        "end": 1351,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_wildCopy32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 522,
+        "kind": "function",
+        "end": 529,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_waitForNextTick",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 159,
+        "kind": "function",
+        "end": 166,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "UTIL_isDirectory",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/util.h",
+        "line": 303,
+        "kind": "function",
+        "end": 316,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "WR_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 463,
+        "kind": "function",
+        "end": 469,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "XXH32_digest_endian",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 527,
+        "kind": "function",
+        "end": 543,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "XXH64_digest_endian",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 981,
+        "kind": "function",
+        "end": 1003,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "XXH_readLE32_align",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 234,
+        "kind": "function",
+        "end": 240,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "XXH_readLE64_align",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/xxhash.c",
+        "line": 645,
+        "kind": "function",
+        "end": 651,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "ctxTypeID_to_size",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 674,
+        "kind": "function",
+        "end": 683,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "determineOpMode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4cli.c",
+        "line": 349,
+        "kind": "function",
+        "end": 356,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "fseek_u32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2035,
+        "kind": "function",
+        "end": 2050,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "longCommandWArg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4cli.c",
+        "line": 335,
+        "kind": "function",
+        "end": 341,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "read_long_length_no_check",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1852,
+        "kind": "function",
+        "end": 1858,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "BMK_benchFilesSeparately",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 784,
+        "kind": "function",
+        "end": 798,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "BMK_loadFiles",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 677,
+        "kind": "function",
+        "end": 707,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "BMK_syntheticTest",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 755,
+        "kind": "function",
+        "end": 780,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_dataProducer_frameInfo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_data_producer.c",
+        "line": 50,
+        "kind": "function",
+        "end": 63,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_randomFrameInfo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/lz4_helpers.c",
+        "line": 5,
+        "kind": "function",
+        "end": 18,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "FUZZ_seed",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/fuzz_helpers.h",
+        "line": 64,
+        "kind": "function",
+        "end": 70,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LLVMFuzzerTestOneInput",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/compress_frame_fuzzer.c",
+        "line": 18,
+        "kind": "function",
+        "end": 48,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LLVMFuzzerTestOneInput",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_frame_fuzzer.c",
+        "line": 17,
+        "kind": "function",
+        "end": 43,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LLVMFuzzerTestOneInput",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_hc_fuzzer.c",
+        "line": 16,
+        "kind": "function",
+        "end": 44,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LLVMFuzzerTestOneInput",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/ossfuzz/round_trip_stream_fuzzer.c",
+        "line": 285,
+        "kind": "function",
+        "end": 302,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBegin_usingDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 836,
+        "kind": "function",
+        "end": 847,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_compressBegin_usingDictOnce",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 826,
+        "kind": "function",
+        "end": 834,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_createDecompressionContext_advanced",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 1282,
+        "kind": "function",
+        "end": 1290,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_optimalBSID",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 358,
+        "kind": "function",
+        "end": 370,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_readClose",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4file.c",
+        "line": 183,
+        "kind": "function",
+        "end": 189,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_readLE64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 205,
+        "kind": "function",
+        "end": 217,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4file.c",
+        "line": 281,
+        "kind": "function",
+        "end": 315,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_writeClose",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4file.c",
+        "line": 317,
+        "kind": "function",
+        "end": 341,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4F_writeLE64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4frame.c",
+        "line": 219,
+        "kind": "function",
+        "end": 230,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_InsertAndFindBestMatch",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 941,
+        "kind": "function",
+        "end": 952,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_NbCommonBytes32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 137,
+        "kind": "function",
+        "end": 169,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4HC_compress_generic_dictCtx",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1297,
+        "kind": "function",
+        "end": 1320,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_baseName",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2412,
+        "kind": "function",
+        "end": 2418,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_compressChunk",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 635,
+        "kind": "function",
+        "end": 657,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_compressFilename_Legacy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 891,
+        "kind": "function",
+        "end": 902,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_createCDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1048,
+        "kind": "function",
+        "end": 1059,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_defaultPreferences",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 192,
+        "kind": "function",
+        "end": 212,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_loadDDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1870,
+        "kind": "function",
+        "end": 1880,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_passThrough",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 1994,
+        "kind": "function",
+        "end": 2015,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_setBlockSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 262,
+        "kind": "function",
+        "end": 277,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_setNbWorkers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 214,
+        "kind": "function",
+        "end": 220,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4IO_skipBlocksData",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/lz4io.c",
+        "line": 2310,
+        "kind": "function",
+        "end": 2341,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_buildCompressionParameters",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/bench.c",
+        "line": 280,
+        "kind": "function",
+        "end": 311,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_clearHash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 808,
+        "kind": "function",
+        "end": 818,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_destSize_extState",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1497,
+        "kind": "function",
+        "end": 1503,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_compress_forceExtDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1787,
+        "kind": "function",
+        "end": 1804,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_createHC",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 1646,
+        "kind": "function",
+        "end": 1652,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decoderRingBufferSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2615,
+        "kind": "function",
+        "end": 2621,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_doubleDict",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2558,
+        "kind": "function",
+        "end": 2564,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_partial_withPrefix64k",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2487,
+        "kind": "function",
+        "end": 2493,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_decompress_safe_partial_withSmallPrefix",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 2513,
+        "kind": "function",
+        "end": 2520,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_hash5",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 785,
+        "kind": "function",
+        "end": 795,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_memcpy_using_offset_base",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 496,
+        "kind": "function",
+        "end": 516,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_readLE32",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 441,
+        "kind": "function",
+        "end": 449,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_readLE64",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4hc.c",
+        "line": 122,
+        "kind": "function",
+        "end": 132,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "LZ4_stream_t_alignment",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/lib/lz4.c",
+        "line": 1542,
+        "kind": "function",
+        "end": 1550,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "TIME_support_MT_measurements",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/timefn.c",
+        "line": 168,
+        "kind": "function",
+        "end": 175,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "TPOOL_shutdown",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/lz4/programs/threadpool.c",
+        "line": 222,
+        "kind": "function",
+        "end": 235,
+        "count": 1
+    }
+]

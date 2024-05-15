@@ -1,0 +1,12 @@
+store_16_le (unsigned int val, void *vp)
+{
+    unsigned char *p = (unsigned char *) vp;
+#if defined(__GNUC__) && defined(K5_LE) && !defined(__cplusplus)
+    PUT(16,p,val);
+#elif defined(__GNUC__) && defined(K5_BE) && defined(SWAP16) && !defined(__cplusplus)
+    PUTSWAPPED(16,p,val);
+#else
+    p[1] = (val >>  8) & 0xff;
+    p[0] = (val      ) & 0xff;
+#endif
+}

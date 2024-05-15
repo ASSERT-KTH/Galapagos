@@ -1,0 +1,1802 @@
+[
+    {
+        "_type": "tag",
+        "name": "curl_easy_setopt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/setopt.c",
+        "line": 3195,
+        "kind": "function",
+        "end": 3213,
+        "count": 893
+    },
+    {
+        "_type": "tag",
+        "name": "curl_easy_cleanup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 807,
+        "kind": "function",
+        "end": 815,
+        "count": 407
+    },
+    {
+        "_type": "tag",
+        "name": "curl_global_cleanup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 273,
+        "kind": "function",
+        "end": 305,
+        "count": 389
+    },
+    {
+        "_type": "tag",
+        "name": "curl_easy_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 348,
+        "kind": "function",
+        "end": 375,
+        "count": 280
+    },
+    {
+        "_type": "tag",
+        "name": "strdup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_strdup.c",
+        "line": 27,
+        "kind": "function",
+        "end": 43,
+        "count": 195
+    },
+    {
+        "_type": "tag",
+        "name": "curl_global_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 216,
+        "kind": "function",
+        "end": 226,
+        "count": 170
+    },
+    {
+        "_type": "tag",
+        "name": "curl_slist_free_all",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/slist.c",
+        "line": 131,
+        "kind": "function",
+        "end": 146,
+        "count": 155
+    },
+    {
+        "_type": "tag",
+        "name": "curl_slist_append",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/slist.c",
+        "line": 91,
+        "kind": "function",
+        "end": 104,
+        "count": 146
+    },
+    {
+        "_type": "tag",
+        "name": "curl_easy_getinfo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 822,
+        "kind": "function",
+        "end": 835,
+        "count": 127
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_ptr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 239,
+        "kind": "function",
+        "end": 245,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_addn",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 165,
+        "kind": "function",
+        "end": 171,
+        "count": 115
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_setstropt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/setopt.c",
+        "line": 62,
+        "kind": "function",
+        "end": 79,
+        "count": 99
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_now",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 137,
+        "kind": "function",
+        "end": 161,
+        "count": 93
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_now",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 165,
+        "kind": "function",
+        "end": 178,
+        "count": 93
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_now",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 182,
+        "kind": "function",
+        "end": 191,
+        "count": 93
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_now",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 33,
+        "kind": "function",
+        "end": 58,
+        "count": 93
+    },
+    {
+        "_type": "tag",
+        "name": "getstr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_getparam.c",
+        "line": 57,
+        "kind": "function",
+        "end": 72,
+        "count": 89
+    },
+    {
+        "_type": "tag",
+        "name": "warnf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_msgs.c",
+        "line": 108,
+        "kind": "function",
+        "end": 114,
+        "count": 87
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_len",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 261,
+        "kind": "function",
+        "end": 267,
+        "count": 78
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 40,
+        "kind": "function",
+        "end": 51,
+        "count": 71
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_pp_sendf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/pingpong.c",
+        "line": 242,
+        "kind": "function",
+        "end": 254,
+        "count": 70
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_client_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 70,
+        "kind": "function",
+        "end": 95,
+        "count": 62
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_timediff",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 201,
+        "kind": "function",
+        "end": 209,
+        "count": 62
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 127,
+        "kind": "function",
+        "end": 135,
+        "count": 58
+    },
+    {
+        "_type": "tag",
+        "name": "curl_url_cleanup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/urlapi.c",
+        "line": 1376,
+        "kind": "function",
+        "end": 1382,
+        "count": 49
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_ultouc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 88,
+        "kind": "function",
+        "end": 101,
+        "count": 48
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_checkheaders",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/transfer.c",
+        "line": 100,
+        "kind": "function",
+        "end": 115,
+        "count": 46
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_uztoui",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 169,
+        "kind": "function",
+        "end": 184,
+        "count": 46
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_addf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 223,
+        "kind": "function",
+        "end": 234,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_inet_pton",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/inet_pton.c",
+        "line": 75,
+        "kind": "function",
+        "end": 87,
+        "count": 40
+    },
+    {
+        "_type": "tag",
+        "name": "curl_strequal",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strcase.c",
+        "line": 109,
+        "kind": "function",
+        "end": 117,
+        "count": 39
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_addpart",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1316,
+        "kind": "function",
+        "end": 1338,
+        "count": 37
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_debug",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/curl_trc.c",
+        "line": 57,
+        "kind": "function",
+        "end": 82,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "curl_multi_info_read",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 2894,
+        "kind": "function",
+        "end": 2919,
+        "count": 36
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_ssl_cf_get_primary_config",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/vtls.c",
+        "line": 2060,
+        "kind": "function",
+        "end": 2068,
+        "count": 35
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 176,
+        "kind": "function",
+        "end": 185,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_pgrsSetDownloadSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/progress.c",
+        "line": 364,
+        "kind": "function",
+        "end": 374,
+        "count": 31
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufref_len",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufref.c",
+        "line": 100,
+        "kind": "function",
+        "end": 107,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_memdup0",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strdup.c",
+        "line": 112,
+        "kind": "function",
+        "end": 120,
+        "count": 30
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufref_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufref.c",
+        "line": 73,
+        "kind": "function",
+        "end": 83,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_share_lock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/share.c",
+        "line": 259,
+        "kind": "function",
+        "end": 274,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_share_unlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/share.c",
+        "line": 277,
+        "kind": "function",
+        "end": 290,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1341,
+        "kind": "function",
+        "end": 1355,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_uztoul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 148,
+        "kind": "function",
+        "end": 163,
+        "count": 29
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1184,
+        "kind": "function",
+        "end": 1198,
+        "count": 28
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_MD5_update",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/md5.c",
+        "line": 637,
+        "kind": "function",
+        "end": 644,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_len",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 262,
+        "kind": "function",
+        "end": 271,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufref_ptr",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufref.c",
+        "line": 88,
+        "kind": "function",
+        "end": 95,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cwriter_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 177,
+        "kind": "function",
+        "end": 184,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_ssl_cf_get_config",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/vtls.c",
+        "line": 2049,
+        "kind": "function",
+        "end": 2057,
+        "count": 27
+    },
+    {
+        "_type": "tag",
+        "name": "imap_state",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/imap.c",
+        "line": 392,
+        "kind": "function",
+        "end": 422,
+        "count": 26
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 242,
+        "kind": "function",
+        "end": 248,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_get_socket",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 516,
+        "kind": "function",
+        "end": 523,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_pgrsSetUploadSize",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/progress.c",
+        "line": 376,
+        "kind": "function",
+        "end": 386,
+        "count": 25
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_send",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 317,
+        "kind": "function",
+        "end": 324,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1375,
+        "kind": "function",
+        "end": 1400,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_data",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 2183,
+        "kind": "function",
+        "end": 2190,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "log_line_start",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_cb_dbg.c",
+        "line": 70,
+        "kind": "function",
+        "end": 84,
+        "count": 24
+    },
+    {
+        "_type": "tag",
+        "name": "curl_formadd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/formdata.c",
+        "line": 693,
+        "kind": "function",
+        "end": 703,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "curl_formadd",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/formdata.c",
+        "line": 934,
+        "kind": "function",
+        "end": 941,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1282,
+        "kind": "function",
+        "end": 1305,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_strtoofft",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strtoofft.c",
+        "line": 212,
+        "kind": "function",
+        "end": 240,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "set_feature_default",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/packages/vms/curl_crtl_init.c",
+        "line": 189,
+        "kind": "function",
+        "end": 197,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "write_resp_raw",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_msh3.c",
+        "line": 328,
+        "kind": "function",
+        "end": 351,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "write_resp_raw",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_osslq.c",
+        "line": 675,
+        "kind": "function",
+        "end": 704,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "write_resp_raw",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_quiche.c",
+        "line": 317,
+        "kind": "function",
+        "end": 340,
+        "count": 23
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_write",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 387,
+        "kind": "function",
+        "end": 418,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "curl_strnequal",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strcase.c",
+        "line": 135,
+        "kind": "function",
+        "end": 143,
+        "count": 22
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cf_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 218,
+        "kind": "function",
+        "end": 236,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "curl_multi_poll",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 1610,
+        "kind": "function",
+        "end": 1618,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "drain_stream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/http2.c",
+        "line": 264,
+        "kind": "function",
+        "end": 281,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "drain_stream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_msh3.c",
+        "line": 229,
+        "kind": "function",
+        "end": 244,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "drain_stream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_quiche.c",
+        "line": 249,
+        "kind": "function",
+        "end": 264,
+        "count": 21
+    },
+    {
+        "_type": "tag",
+        "name": "pop3_state",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/pop3.c",
+        "line": 289,
+        "kind": "function",
+        "end": 315,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "smtp_state",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/smtp.c",
+        "line": 288,
+        "kind": "function",
+        "end": 316,
+        "count": 20
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_destroy",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 222,
+        "kind": "function",
+        "end": 233,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_timestrcmp",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strcase.c",
+        "line": 188,
+        "kind": "function",
+        "end": 204,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "InitSecBuffer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/schannel.c",
+        "line": 151,
+        "kind": "function",
+        "end": 157,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "curl_dbg_log",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/memdebug.c",
+        "line": 437,
+        "kind": "function",
+        "end": 461,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "mimesetstate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 277,
+        "kind": "function",
+        "end": 283,
+        "count": 19
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_next_element",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 306,
+        "kind": "function",
+        "end": 334,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "curl_multi_socket_action",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 3397,
+        "kind": "function",
+        "end": 3407,
+        "count": 17
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_uc_to_curlcode",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/url.c",
+        "line": 1699,
+        "kind": "function",
+        "end": 1711,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "add2list",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_paramhlp.c",
+        "line": 588,
+        "kind": "function",
+        "end": 597,
+        "count": 16
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_read",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 431,
+        "kind": "function",
+        "end": 452,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_recv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 326,
+        "kind": "function",
+        "end": 333,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_connect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 335,
+        "kind": "function",
+        "end": 365,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_rand",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/rand.c",
+        "line": 200,
+        "kind": "function",
+        "end": 223,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_sotouz",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 273,
+        "kind": "function",
+        "end": 286,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_ultous",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 69,
+        "kind": "function",
+        "end": 82,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "imap_sendf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/imap.c",
+        "line": 1774,
+        "kind": "function",
+        "end": 1805,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "send_negotiation",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/telnet.c",
+        "line": 306,
+        "kind": "function",
+        "end": 323,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "tvnow",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_util.c",
+        "line": 100,
+        "kind": "function",
+        "end": 110,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "tvnow",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_util.c",
+        "line": 114,
+        "kind": "function",
+        "end": 123,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "tvnow",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_util.c",
+        "line": 37,
+        "kind": "function",
+        "end": 62,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "tvnow",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_util.c",
+        "line": 66,
+        "kind": "function",
+        "end": 96,
+        "count": 15
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_cwrite",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 420,
+        "kind": "function",
+        "end": 429,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_skip",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 502,
+        "kind": "function",
+        "end": 511,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_freeaddrinfo",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/curl_addrinfo.c",
+        "line": 78,
+        "kind": "function",
+        "end": 87,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_llist_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/llist.c",
+        "line": 39,
+        "kind": "function",
+        "end": 45,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_memdup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strdup.c",
+        "line": 91,
+        "kind": "function",
+        "end": 100,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_data_cb",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1509,
+        "kind": "function",
+        "end": 1529,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_data_cb",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 2199,
+        "kind": "function",
+        "end": 2213,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "curl_ws_send",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/ws.c",
+        "line": 1252,
+        "kind": "function",
+        "end": 1264,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "freecookie",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cookie.c",
+        "line": 113,
+        "kind": "function",
+        "end": 121,
+        "count": 14
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_creader_set_null",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 1202,
+        "kind": "function",
+        "end": 1213,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dynhds_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynhds.c",
+        "line": 91,
+        "kind": "function",
+        "end": 101,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_pgrsTime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/progress.c",
+        "line": 242,
+        "kind": "function",
+        "end": 248,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_posttransfer",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/transfer.c",
+        "line": 732,
+        "kind": "function",
+        "end": 743,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_filename",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1358,
+        "kind": "function",
+        "end": 1372,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_uztosi",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 129,
+        "kind": "function",
+        "end": 142,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "exit_zlib",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/content_encoding.c",
+        "line": 137,
+        "kind": "function",
+        "end": 150,
+        "count": 13
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_attach_connection",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 1004,
+        "kind": "function",
+        "end": 1014,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_connect",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 302,
+        "kind": "function",
+        "end": 309,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_is_connected",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 367,
+        "kind": "function",
+        "end": 373,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_detach_connection",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 989,
+        "kind": "function",
+        "end": 997,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_is_ASCII_name",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/idn.c",
+        "line": 190,
+        "kind": "function",
+        "end": 203,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "easysrc_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_easysrc.c",
+        "line": 97,
+        "kind": "function",
+        "end": 108,
+        "count": 12
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dynhds_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynhds.c",
+        "line": 103,
+        "kind": "function",
+        "end": 115,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_mime_cleanpart",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1169,
+        "kind": "function",
+        "end": 1181,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_sspi_free_identity",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/curl_sspi.c",
+        "line": 230,
+        "kind": "function",
+        "end": 237,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_strntolower",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/strcase.c",
+        "line": 164,
+        "kind": "function",
+        "end": 172,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_xfer_send",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/transfer.c",
+        "line": 1223,
+        "kind": "function",
+        "end": 1250,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "cleanarg",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_getparam.c",
+        "line": 827,
+        "kind": "function",
+        "end": 836,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "curl_easy_reset",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/easy.c",
+        "line": 1042,
+        "kind": "function",
+        "end": 1068,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "curl_formfree",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/formdata.c",
+        "line": 746,
+        "kind": "function",
+        "end": 771,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "ssl_push_certinfo_dyn",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/x509asn1.c",
+        "line": 897,
+        "kind": "function",
+        "end": 912,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "str2unum",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_paramhlp.c",
+        "line": 215,
+        "kind": "function",
+        "end": 224,
+        "count": 11
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cf_socket_peek",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cf-socket.c",
+        "line": 1954,
+        "kind": "function",
+        "end": 1973,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_insert_after",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 255,
+        "kind": "function",
+        "end": 273,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_creader_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 874,
+        "kind": "function",
+        "end": 899,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_h1_req_parse_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/http1.c",
+        "line": 50,
+        "kind": "function",
+        "end": 58,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_resolv_unlock",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hostip.c",
+        "line": 1046,
+        "kind": "function",
+        "end": 1055,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "InitSecBufferDesc",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/schannel.c",
+        "line": 159,
+        "kind": "function",
+        "end": 165,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "cf_progress_egress",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_osslq.c",
+        "line": 1520,
+        "kind": "function",
+        "end": 1544,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_headers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1491,
+        "kind": "function",
+        "end": 1506,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_headers",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 2222,
+        "kind": "function",
+        "end": 2229,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "curlx_sltosi",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/warnless.c",
+        "line": 190,
+        "kind": "function",
+        "end": 206,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "do_pubkey_field",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/x509asn1.c",
+        "line": 914,
+        "kind": "function",
+        "end": 932,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "h3_drain_stream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_ngtcp2.c",
+        "line": 294,
+        "kind": "function",
+        "end": 309,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "h3_drain_stream",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_osslq.c",
+        "line": 611,
+        "kind": "function",
+        "end": 626,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "setup_des_key",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/curl_ntlm_core.c",
+        "line": 156,
+        "kind": "function",
+        "end": 169,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "setup_des_key",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/curl_ntlm_core.c",
+        "line": 173,
+        "kind": "function",
+        "end": 186,
+        "count": 10
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_peek",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 464,
+        "kind": "function",
+        "end": 477,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_checkProxyheaders",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/http.c",
+        "line": 201,
+        "kind": "function",
+        "end": 217,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conncache_remove_conn",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/conncache.c",
+        "line": 262,
+        "kind": "function",
+        "end": 287,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_creader_set_fread",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 1072,
+        "kind": "function",
+        "end": 1090,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_dyn_tail",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/dynbuf.c",
+        "line": 141,
+        "kind": "function",
+        "end": 160,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_getdate_capped",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/parsedate.c",
+        "line": 602,
+        "kind": "function",
+        "end": 620,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_delete",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 148,
+        "kind": "function",
+        "end": 168,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_start_iterate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 297,
+        "kind": "function",
+        "end": 303,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_setblobopt",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/setopt.c",
+        "line": 81,
+        "kind": "function",
+        "end": 110,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "cf_progress_ingress",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_ngtcp2.c",
+        "line": 1655,
+        "kind": "function",
+        "end": 1686,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "curl_share_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/share.c",
+        "line": 40,
+        "kind": "function",
+        "end": 50,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "mqstate",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mqtt.c",
+        "line": 603,
+        "kind": "function",
+        "end": 618,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "process_pending_handles",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 3778,
+        "kind": "function",
+        "end": 3785,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "sigpipe_ignore",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sigpipe.h",
+        "line": 44,
+        "kind": "function",
+        "end": 59,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "win32_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_doswin.c",
+        "line": 777,
+        "kind": "function",
+        "end": 792,
+        "count": 9
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufq_is_full",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufq.c",
+        "line": 296,
+        "kind": "function",
+        "end": 306,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufref_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufref.c",
+        "line": 55,
+        "kind": "function",
+        "end": 67,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_recv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 694,
+        "kind": "function",
+        "end": 706,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_send",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 708,
+        "kind": "function",
+        "end": 737,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_creader_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 901,
+        "kind": "function",
+        "end": 907,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cwriter_create",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 372,
+        "kind": "function",
+        "end": 397,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cwriter_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 399,
+        "kind": "function",
+        "end": 406,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 59,
+        "kind": "function",
+        "end": 77,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_ipv6works",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hostip.c",
+        "line": 602,
+        "kind": "function",
+        "end": 629,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_ssl_delsessionid",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/vtls.c",
+        "line": 624,
+        "kind": "function",
+        "end": 636,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_ssl_peer_cleanup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/vtls.c",
+        "line": 1521,
+        "kind": "function",
+        "end": 1529,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_timediff_us",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/timeval.c",
+        "line": 229,
+        "kind": "function",
+        "end": 237,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_xfer_recv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/transfer.c",
+        "line": 1252,
+        "kind": "function",
+        "end": 1272,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "cf_cntrl_all",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 550,
+        "kind": "function",
+        "end": 565,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "check_and_set_expiry",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_osslq.c",
+        "line": 1546,
+        "kind": "function",
+        "end": 1578,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "countcheck",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/memdebug.c",
+        "line": 107,
+        "kind": "function",
+        "end": 130,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "curl_mime_type",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/mime.c",
+        "line": 1451,
+        "kind": "function",
+        "end": 1465,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "curl_multi_assign",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/multi.c",
+        "line": 3704,
+        "kind": "function",
+        "end": 3717,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "curl_ws_recv",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/ws.c",
+        "line": 1240,
+        "kind": "function",
+        "end": 1250,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "h3_stream_ctx_free",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vquic/curl_osslq.c",
+        "line": 503,
+        "kind": "function",
+        "end": 510,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "hd_name_eq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/http.c",
+        "line": 1254,
+        "kind": "function",
+        "end": 1261,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "helpf",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_msgs.c",
+        "line": 120,
+        "kind": "function",
+        "end": 136,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "oldap_state",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/openldap.c",
+        "line": 208,
+        "kind": "function",
+        "end": 232,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "proto_token",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_libinfo.c",
+        "line": 198,
+        "kind": "function",
+        "end": 208,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "set_local_ip",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cf-socket.c",
+        "line": 920,
+        "kind": "function",
+        "end": 954,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "time2str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/progress.c",
+        "line": 40,
+        "kind": "function",
+        "end": 65,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "time2str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/src/tool_progress.c",
+        "line": 109,
+        "kind": "function",
+        "end": 134,
+        "count": 8
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_alpn_to_proto_str",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vtls/vtls.c",
+        "line": 2093,
+        "kind": "function",
+        "end": 2114,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_auth_build_spn",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vauth/vauth.c",
+        "line": 57,
+        "kind": "function",
+        "end": 72,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_auth_build_spn",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vauth/vauth.c",
+        "line": 74,
+        "kind": "function",
+        "end": 105,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_auth_cleanup_ntlm",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vauth/ntlm.c",
+        "line": 771,
+        "kind": "function",
+        "end": 778,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_auth_cleanup_ntlm",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/vauth/ntlm_sspi.c",
+        "line": 342,
+        "kind": "function",
+        "end": 370,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_bufref_init",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/bufref.c",
+        "line": 38,
+        "kind": "function",
+        "end": 48,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_cf_discard_chain",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 133,
+        "kind": "function",
+        "end": 151,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_conn_data_pending",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/cfilters.c",
+        "line": 420,
+        "kind": "function",
+        "end": 436,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_cwriter_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/sendf.c",
+        "line": 449,
+        "kind": "function",
+        "end": 468,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_gmtime",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/parsedate.c",
+        "line": 628,
+        "kind": "function",
+        "end": 644,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hash_pick",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hash.c",
+        "line": 175,
+        "kind": "function",
+        "end": 193,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hmacit",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hmac.c",
+        "line": 153,
+        "kind": "function",
+        "end": 171,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_host_is_ipnum",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hostip.c",
+        "line": 636,
+        "kind": "function",
+        "end": 649,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_hsts_cleanup",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/hsts.c",
+        "line": 93,
+        "kind": "function",
+        "end": 108,
+        "count": 7
+    },
+    {
+        "_type": "tag",
+        "name": "Curl_inet_ntop",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/curl/lib/inet_ntop.c",
+        "line": 193,
+        "kind": "function",
+        "end": 204,
+        "count": 7
+    }
+]
