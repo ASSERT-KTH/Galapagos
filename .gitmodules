@@ -32,6 +32,27 @@
 [submodule "use_cases/NetworkManager"]
 	path = use_cases/NetworkManager
 	url = git@github.com:NetworkManager/NetworkManager.git
-[submodule "use_cases/libssl2"]
-	path = use_cases/libssl2
+[submodule "use_cases/libssh2"]
+	path = use_cases/libssh2
 	url = git@github.com:libssh2/libssh2.git
+[submodule "use_cases/krb5"]
+	path = use_cases/krb5
+	url = git@github.com:krb5/krb5
+[submodule "use_cases/sqlite"]
+	path = use_cases/sqlite
+	url = git@github.com:sqlite/sqlite
+[submodule "use_cases/curl"]
+	path = use_cases/curl
+	url = git@github.com:curl/curl
+[submodule "use_cases/glusterfs"]
+	path = use_cases/glusterfs
+	url = git@github.com:glusterfs/glusterfs
+[submodule "use_cases/liboqs"]
+	path = use_cases/liboqs
+	url = git@github.com:open-quantum-safe/liboqs
+[submodule "use_cases/lz4"]
+	path = use_cases/lz4
+	url = git@github.com:lz4/lz4
+[submodule "use_cases/libgcrypt"]
+	path = use_cases/libgcrypt
+	url = git@github.com:gpg/libgcrypt
