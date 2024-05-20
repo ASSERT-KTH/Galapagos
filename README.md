@@ -23,15 +23,6 @@ should be enabled.
 
 ### Running tests for each use case
 
-#### coreutils
-
-```sh
-./bootstrap
-./configure
-# NOTE: some tests skipped because of the lack of root, others because of being deemed "too expensive" -- how much of a problem is this? from 480 in total, 87 are skipped
-make && make check
-```
-
 #### ffmpeg
 
 ```sh
@@ -40,14 +31,6 @@ make && make check
 ```
 
 #### libsodium
-
-```sh
-./autogen -s
-./configure
-make && make check
-```
-
-#### mako
 
 ```sh
 ./autogen -s
