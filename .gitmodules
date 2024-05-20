@@ -13,13 +13,12 @@
 [submodule "use_cases/openssl"]
 	path = use_cases/openssl
 	url = https://github.com/openssl/openssl.git
-
-[submodule "alsa-lib"]
-	path = alsa-lib
-	url = git@github.com:alsa-project/alsa-lib.git
 [submodule "use_cases/liboqs"]
 	path = use_cases/liboqs
 	url = git@github.com:open-quantum-safe/liboqs
 [submodule "use_cases/libgcrypt"]
 	path = use_cases/libgcrypt
 	url = git@github.com:gpg/libgcrypt
+[submodule "use_cases/alsa-lib"]
+	path = use_cases/alsa-lib
+	url = git@github.com:alsa-project/alsa-lib.git
