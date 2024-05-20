@@ -62,3 +62,33 @@ make && make check
 make test
 ```
 
+
+#### alsa-lib
+
+```sh
+./gitcompile
+# TODO: I'm not sure but `make check` doesn't seem to be everything??
+make check # or cd test/ && make check-am && make check
+```
+
+#### liboqs
+
+```sh
+sudo apt-get install -y astyle cmake gcc ninja-build libssl-dev unzip xsltproc doxygen graphviz valgrind
+pip3 install pytest pytest-xdist pyyaml
+mkdir build && cd build
+cmake -GNinja ..
+ninja
+ninja run_tests
+```
+
+#### libgcrypt
+
+Checked out to ref `e4ab2147f3e236f7be95f9709ce09193b2ca5c1a` because of Ubuntu's lack of availability of some package
+versions - LIBGPG-error.
+
+```sh
+./autogen.sh -s
+./configure --enable-maintainer-mode && make
+make check
+```
