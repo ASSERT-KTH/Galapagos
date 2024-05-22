@@ -40,6 +40,10 @@ val_seg 4
 ulaw_to_s16 4
 
 #### liboqs
+
+Requires this cmake command, otherwise it will complain. cmake version 3.25
+`cmake -GNinja -DCMAKE_C_COMPILER="clang" -DCMAKE_C_FLAGS="--save-temps=obj"  -DOQS_USE_OPENSSL=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr -DOPENSSL_ROOT_DIR=/usr/lib/x86_64-linux-gnu ..`
+
 (type fpr == uint64)
 fpr_lt (pqclean_falcon-1024_clean/fpr.h) 5
 fpr_half (pqclean_falcon-1024_clean/fpr.h) 5
