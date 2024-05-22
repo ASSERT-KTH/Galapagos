@@ -23,19 +23,28 @@ async function processLineByLine() {
   const SELECTED_FUNCTIONS_PATH = `function-picks.json`
   // First, getting the selected functions for the project from the file
   const selected_functions = JSON.parse(fs.readFileSync(SELECTED_FUNCTIONS_PATH))[project]
+  // print the selected functions
+  console.log(selected_functions)
+  const selectedFunctionsArray = Object.entries(selected_functions)
+    .map(([name, filepath]) => ({ name, filepath }));
 
-  selected_functions = []
+  let functions = []
   for await (const line of rl) {
     o = JSON.parse(line)
-    if (selected_functions.map(f => f.name).includes(o.name)) {
-      if (o.path.endsWith(selected_functions.find(f => f.name === o.name).filepath)) {
-        selected_functions.push(o)
+    // print the name
+    console.log(o.name)
+    // the name must be in the selected functions AND o.path must end with the respective function's file
+    if (selected_functions[o.name]) {
+      // print the selected function AND its path
+      console.log(o.name, selected_functions[o.name])
+      if (o.path.endsWith(selected_functions[o.name])) {
+        functions.push(o);
       }
     }
   }
 
   // write to file
-  fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(selected_functions, null, 4));
+  fs.writeFileSync(`${project_path}/functions_info.json`, JSON.stringify(functions, null, 4));
 
   // console.log(JSON.stringify(top, null, 4))
 }

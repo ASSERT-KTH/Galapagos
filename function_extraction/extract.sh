@@ -20,15 +20,6 @@ FUNC_DIR=$(pwd)/../functions/$PROJECT
 OUT="$FUNC_DIR/function_data.dat"
 
 # FOUND_FILES will depend on FLAG -- [ch] if --source, i if --preprocessed
-if [ "$FLAG" == "--preprocessed" ]; then
-    find $LIB_DIR -type f -name *\.i > $LIB_DIR/cscope.files
-elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
-    find $LIB_DIR -type f -name *\.[ch] > $LIB_DIR/cscope.files
-else
-    echo "Usage: $0 project [--source | --preprocessed]"
-    exit 1
-fi
-
 # finding both .c and .h files in LIB_DIR, use ctags to find function definitions
 # regarding the options:
 # -I STACK_OF+ : ignore STACK_OF macros
@@ -43,13 +34,23 @@ fi
     # {end} : the line number at which the tag ends
 # --output-format=json : output in json format
 # --kinds-c=f : only include function definitions
-$(cat $LIBDIR/cscope.files) | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
-# TODO: somehow make {file} relative to LIB_DIR, not absolute
-
-# below: creating a cscope database for the project
-# the database indexes the source code files, allows for efficient symbol lookup
-cd $LIB_DIR
-cscope -R -b -q
+if [ "$FLAG" == "--preprocessed" ]; then
+    SHADOW_LOCATION=$3
+    find $SHADOW_LOCATION -name *\.i | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    # below: creating a cscope database for the project
+    # the database indexes the source code files, allows for efficient symbol lookup
+    cd $SHADOW_LOCATION
+    cscope -R -b -q
+elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
+    find $LIB_DIR -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    # below: creating a cscope database for the project
+    # the database indexes the source code files, allows for efficient symbol lookup
+    cd $LIB_DIR
+    cscope -R -b -q
+else
+    echo "Usage: $0 project [--source | --preprocessed]"
+    exit 1
+fi
 
 # for each function definition, find the number of times it is called using the cscope database
 while read a; do

@@ -12,11 +12,11 @@ for PROJ in "openssl"; do
     # if FLAG is --preprocessed, we must build the projects w/ save-temps
     # TODO: remove inline stuff!!
     # run the build script
-    python3 build.py $PROJ
 
     if [ "$FLAG" == "--preprocessed" ]; then
+        SHADOW=$(python3 build.py $PROJ | tail -n 1)
         # run the function extraction script
-        ./extract.sh $PROJ --preprocessed
+        ./extract.sh $PROJ --preprocessed $SHADOW
     elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
         # run the function extraction script
         ./extract.sh $PROJ
