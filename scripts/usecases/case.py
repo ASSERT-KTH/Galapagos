@@ -12,7 +12,8 @@ import uuid
 import time
 import traceback
 
-CLONE_PATH = "/home/javier/galapagos-clones"
+USERNAME = os.environ.get("USER", os.environ.get("USERNAME")) # default for UNIX, fallback for Windows
+CLONE_PATH = f"/home/{USERNAME}/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
@@ -48,10 +49,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -71,10 +72,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "configure": "./Configure",
         "autogen": {
@@ -93,10 +94,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -113,10 +114,10 @@ LIBRARY_INFO = {
             
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "autogen": {
             "enabled": True,
@@ -146,10 +147,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -171,10 +172,10 @@ LIBRARY_INFO = {
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CFLAGS": "-save-temps -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+            "CXXFLAGS": "-save-temps -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -364,7 +365,7 @@ class LLVMCompilableUseCase(UseCase):
 # TODO: rename this
 class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name="", version=0):
+    def __init__(self, function_name=None, original_project_folder=None, original_file_location=None, variant_text_location=None, line_start=None, line_end=None, name="ffmpeg", doreplace=True, real_name="", version=0):
         super().__init__()
         self.name = name
         self.function_name = function_name
@@ -428,7 +429,8 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         logging.info(f"Compiling {cwd}")
         start = time.time()
         if not self.compiled:
-            self.replace(cwd)
+            if self.function_name:
+                self.replace(cwd)
 
             if configure_project:
                 if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
@@ -459,6 +461,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     stderr=subprocess.STDOUT
                 )
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
+            # TODO make doesn't always need to be called -- see alsa-lib with ./gitcompile
             logging.info("Calling make")
             try:
                 ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
