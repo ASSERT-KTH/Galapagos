@@ -48,10 +48,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps analizer-config ipa=none",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
         },
         "configure": "./configure",
         "autogen": {
@@ -71,10 +71,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps analizer-config ipa=none",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
         },
         "configure": "./Configure",
         "autogen": {
@@ -93,10 +93,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps analizer-config ipa=none",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
         },
         "configure": "./configure",
         "autogen": {
@@ -108,17 +108,48 @@ LIBRARY_INFO = {
             "command": ["make", "check"]
         }
     },
-    "mako": {
-        "dependencies": [],
+    "alsa-lib": {
+        "dependencies": [
+            
+        ],
+        "env": {
+            "CFLAGS": "-save-temps analizer-config ipa=none",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
+        },
+        "autogen": {
+            "enabled": True,
+            "command": "./gitcompile",
+        },
+        "testing": {
+            "enabled": True,
+            "command": ["make", "check"]
+        }
+    },
+    # TODO: this ain't good yet
+    "liboqs": {
+        "dependencies": [
+            "astyle",
+            "cmake",
+            "gcc",
+            "ninja-build",
+            "libssl-dev",
+            "unzip",
+            "xsltproc",
+            "doxygen",
+            "graphviz",
+            "valgrind"
+        ],
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps analizer-config ipa=none",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
         },
         "configure": "./configure",
         "autogen": {
@@ -126,35 +157,35 @@ LIBRARY_INFO = {
             "command": "./autogen.sh -s",
         },
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "command": ["make", "check"]
         }
     },
-    "coreutils": {
+    "libgcrypt": {
         "dependencies": [
-            "autopoint",
-            "gperf",
-            "bison",
+
         ],
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
+            "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps analizer-config ipa=none",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps analizer-config c++-inlining=none"
         },
         "configure": "./configure",
         "autogen": {
             "enabled": True,
-            "command": "./bootstrap",
+            "command": "./autogen.sh -s",
         },
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "command": ["make", "check"]
         }
     },
-    # TODO: mako, coreutils
 }
 
 DEPENDENCY_WARNING_TEMPLATE = '''

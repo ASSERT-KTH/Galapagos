@@ -1,0 +1,44 @@
+{
+  "alsa-lib": {
+    "alaw_to_s16": "src/pcm/pcm_alaw.c",
+    "muldiv": "src/pcm/pcm_local.h",
+    "muldiv_down": "src/pcm/pcm_local.h",
+    "val_seg": "src/pcm/pcm_alaw.c",
+    "ulaw_to_s16": "src/pcm/pcm_mulaw.c"
+  },
+  "ffmpeg": {
+    "int_sin": "libavfilter/vf_rotate.c",
+    "weight": "libavcodec/diracdec.c",
+    "mix": "libavcodec/4xm.c",
+    "vp5_adjust": "libavcodec/vp56dsp.c",
+    "flac_get_max_frame_size": "libavcodec/flacenc.c"
+  },
+  "libgcrypt": {
+    "barrett_reduce": "cipher/kyber-common.c",
+    "ctz": "cipher/mceliece6688128f.c",
+    "montgomery_reduce": "cipher/kyber-common.c",
+    "int16_t_nonzero_mask": "cipher/sntrup761.c",
+    "int16_t_negative_mask": "cipher/sntrup761.c"
+  },
+  "liboqs": {
+    "fpr_lt": "src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
+    "fpr_half": "src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
+    "modp_montymul": "src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+    "int16_nonzero_mask": "src/kem/ntruprime/pqclean_sntrup761_clean/crypto_core_wforcesntrup761.c",
+    "modp_norm": "src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c"
+  },
+  "libsodium": {
+    "b64_byte_to_char": "src/libsodium/sodium/codecs.c",
+    "b64_char_to_byte": "src/libsodium/sodium/codecs.c",
+    "b64_byte_to_urlsafe_char": "src/libsodium/sodium/codecs.c",
+    "b64_urlsafe_char_to_byte": "src/libsodium/sodium/codecs.c",
+    "fBlaMka": "src/libsodium/crypto_pwhash/argon2/blamka-round-ref.h"
+  },
+  "openssl": {
+    "_booth_recode_w5": "crypto/ec/ecp_nistz256.c",
+    "_booth_recode_w7": "crypto/ec/ecp_nistz256.c",
+    "icbrt64": "crypto/rsa/rsa_lib.c",
+    "BitInterleave": "crypto/sha/keccak1600.c",
+    "BitDeinterleave": "crypto/sha/keccak1600.c"
+  }
+}
