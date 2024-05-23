@@ -8,23 +8,19 @@ export PYTHONPATH=$(dirname $(dirname $(realpath $0)))
 
 # for each item in the list of projects
 # for PROJ in "alsa-lib" "ffmpeg" "libgcrypt" "liboqs" "libsodium" "openssl"; do
-for PROJ in "openssl"; do
-    # if FLAG is --preprocessed, we must build the projects w/ save-temps
-    # TODO: remove inline stuff!!
-    # run the build script
-
+# TODO: there seems to be an issue with alsa-lib? like a symlink for alsa/ inside include/, which is recursive
+for PROJ in "ffmpeg"; do
     if [ "$FLAG" == "--preprocessed" ]; then
         SHADOW=$(python3 build.py $PROJ | tail -n 1)
-        # run the function extraction script
         ./extract.sh $PROJ --preprocessed $SHADOW
+        node generate_function_info.js $PROJ --preprocessed
     elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
-        # run the function extraction script
         ./extract.sh $PROJ
+        node generate_function_info.js $PROJ
     else
         echo "Usage: $0 [--source | --preprocessed]"
         exit 1
     fi
 
-    node generate_function_info.js $PROJ
     node create_function_files.js $PROJ
 done

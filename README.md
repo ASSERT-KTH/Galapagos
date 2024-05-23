@@ -67,7 +67,7 @@ ninja run_tests
 
 #### libgcrypt
 
-Checked out to ref `e4ab2147f3e236f7be95f9709ce09193b2ca5c1a` because of Ubuntu's lack of availability of some package
+Checked out to ref `005292cf9f41179247918711b2968dd188aae122` because of Ubuntu's lack of availability of some package
 versions - LIBGPG-error.
 
 ```sh
