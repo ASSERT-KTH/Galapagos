@@ -1,8 +1,0 @@
-void avio_wb32(AVIOContext *s, unsigned int val)
-{
-    uint32_t temp = htonl(val);
-    avio_w8(s, ((temp & 0xFF000000) >> 24));
-    avio_w8(s, ((temp & 0x00FF0000) >> 16));
-    avio_w8(s, ((temp & 0x0000FF00) >> 8));
-    avio_w8(s,  (temp & 0x000000FF));
-}

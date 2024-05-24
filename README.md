@@ -55,12 +55,12 @@ make check # or cd test/ && make check-am && make check
 ```
 
 #### liboqs
-
+Requires. cmake version 3.25
 ```sh
 sudo apt-get install -y astyle cmake gcc ninja-build libssl-dev unzip xsltproc doxygen graphviz valgrind
 pip3 install pytest pytest-xdist pyyaml
 mkdir build && cd build
-cmake -GNinja ..
+cmake -GNinja -DCMAKE_C_COMPILER="clang" -DCMAKE_C_FLAGS="--save-temps=obj"  -DOQS_USE_OPENSSL=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr -DOPENSSL_ROOT_DIR=/usr/lib/x86_64-linux-gnu ..
 ninja
 ninja run_tests
 ```

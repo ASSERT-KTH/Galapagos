@@ -1,1 +1,1802 @@
-[]
+[
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c",
+        "line": 717,
+        "kind": "function",
+        "end": 726,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_aarch64/keygen.c",
+        "line": 717,
+        "kind": "function",
+        "end": 726,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_aarch64/keygen.c",
+        "line": 717,
+        "kind": "function",
+        "end": 726,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_aarch64/keygen.c",
+        "line": 717,
+        "kind": "function",
+        "end": 726,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725,
+        "count": 732
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium2_avx2/poly.c",
+        "line": 190,
+        "kind": "function",
+        "end": 196,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium3_avx2/poly.c",
+        "line": 190,
+        "kind": "function",
+        "end": 196,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium5_avx2/poly.c",
+        "line": 190,
+        "kind": "function",
+        "end": 196,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c",
+        "line": 188,
+        "kind": "function",
+        "end": 194,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c",
+        "line": 188,
+        "kind": "function",
+        "end": 194,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "poly_nttunpack",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c",
+        "line": 188,
+        "kind": "function",
+        "end": 194,
+        "count": 570
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_avx2/bm.c",
+        "line": 55,
+        "kind": "function",
+        "end": 68,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_avx2/bm.c",
+        "line": 55,
+        "kind": "function",
+        "end": 68,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "interleave",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_avx2/bm.c",
+        "line": 60,
+        "kind": "function",
+        "end": 73,
+        "count": 320
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-128f-simple_avx2/thash_sha2_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 30,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-128f-simple_clean/thash_sha2_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 30,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-128s-simple_avx2/thash_sha2_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 30,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-192f-simple_clean/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-256s-simple_clean/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128f-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128s-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192f-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192f-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192s-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192s-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192s-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256f-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256s-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-128s-simple_clean/thash_sha2_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 30,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-192f-simple_avx2/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-192s-simple_avx2/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-192s-simple_clean/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-256f-simple_avx2/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-256f-simple_clean/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-sha2-256s-simple_avx2/thash_sha2_simple.c",
+        "line": 18,
+        "kind": "function",
+        "end": 37,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128f-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128f-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128s-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-128s-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-192f-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256f-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256f-simple_clean/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256s-simple_aarch64/thash_shake_simplex2.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "thash",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/sphincs/pqclean_sphincs-shake-256s-simple_avx2/thash_shake_simple.c",
+        "line": 15,
+        "kind": "function",
+        "end": 24,
+        "count": 288
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c",
+        "line": 632,
+        "kind": "function",
+        "end": 638,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_aarch64/keygen.c",
+        "line": 632,
+        "kind": "function",
+        "end": 638,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_aarch64/keygen.c",
+        "line": 632,
+        "kind": "function",
+        "end": 638,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_aarch64/keygen.c",
+        "line": 632,
+        "kind": "function",
+        "end": 638,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "modp_set",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/keygen.c",
+        "line": 631,
+        "kind": "function",
+        "end": 637,
+        "count": 264
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_clean/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "int32_sort",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_avx2/int32_sort.h",
+        "line": 21,
+        "kind": "function",
+        "end": 51,
+        "count": 242
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_avx2/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_avx2/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_avx2/gf.c",
+        "line": 20,
+        "kind": "function",
+        "end": 46,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_avx2/gf.c",
+        "line": 20,
+        "kind": "function",
+        "end": 46,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_avx2/gf.c",
+        "line": 12,
+        "kind": "function",
+        "end": 38,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_avx2/gf.c",
+        "line": 12,
+        "kind": "function",
+        "end": 38,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_avx2/gf.c",
+        "line": 20,
+        "kind": "function",
+        "end": 46,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_avx2/gf.c",
+        "line": 20,
+        "kind": "function",
+        "end": 46,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_avx2/gf.c",
+        "line": 12,
+        "kind": "function",
+        "end": 38,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_clean/gf.c",
+        "line": 22,
+        "kind": "function",
+        "end": 48,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "gf_mul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_avx2/gf.c",
+        "line": 12,
+        "kind": "function",
+        "end": 38,
+        "count": 188
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium2_aarch64/poly.c",
+        "line": 360,
+        "kind": "function",
+        "end": 382,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium3_aarch64/poly.c",
+        "line": 360,
+        "kind": "function",
+        "end": 382,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium5_aarch64/poly.c",
+        "line": 360,
+        "kind": "function",
+        "end": 382,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium2_avx2/poly.c",
+        "line": 350,
+        "kind": "function",
+        "end": 372,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium2_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium3_avx2/poly.c",
+        "line": 350,
+        "kind": "function",
+        "end": 372,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium3_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium5_avx2/poly.c",
+        "line": 350,
+        "kind": "function",
+        "end": 372,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium5_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/poly.c",
+        "line": 348,
+        "kind": "function",
+        "end": 370,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-44-ipd_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_avx2/poly.c",
+        "line": 348,
+        "kind": "function",
+        "end": 370,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-65-ipd_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_avx2/poly.c",
+        "line": 348,
+        "kind": "function",
+        "end": 370,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/ml_dsa/pqcrystals-dilithium-standard_ml-dsa-87-ipd_ref/poly.c",
+        "line": 309,
+        "kind": "function",
+        "end": 331,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/oldpqclean_kyber1024_aarch64/rejsample.c",
+        "line": 346,
+        "kind": "function",
+        "end": 367,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/oldpqclean_kyber768_aarch64/rejsample.c",
+        "line": 346,
+        "kind": "function",
+        "end": 367,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber1024_ref/indcpa.c",
+        "line": 124,
+        "kind": "function",
+        "end": 145,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber768_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber768_ref/indcpa.c",
+        "line": 124,
+        "kind": "function",
+        "end": 145,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-1024-ipd_ref/indcpa.c",
+        "line": 121,
+        "kind": "function",
+        "end": 142,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-512-ipd_ref/indcpa.c",
+        "line": 121,
+        "kind": "function",
+        "end": 142,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/ml_kem/pqcrystals-kyber-standard_ml-kem-768-ipd_ref/indcpa.c",
+        "line": 121,
+        "kind": "function",
+        "end": 142,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/oldpqclean_kyber512_aarch64/rejsample.c",
+        "line": 346,
+        "kind": "function",
+        "end": 367,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber1024_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber512_avx2/indcpa.c",
+        "line": 134,
+        "kind": "function",
+        "end": 155,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "rej_uniform",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/kyber/pqcrystals-kyber_kyber512_ref/indcpa.c",
+        "line": 124,
+        "kind": "function",
+        "end": 145,
+        "count": 184
+    },
+    {
+        "_type": "tag",
+        "name": "OQS_CPU_has_extension",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/common/common.c",
+        "line": 212,
+        "kind": "function",
+        "end": 228,
+        "count": 180
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c",
+        "line": 653,
+        "kind": "function",
+        "end": 662,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_aarch64/keygen.c",
+        "line": 653,
+        "kind": "function",
+        "end": 662,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_aarch64/keygen.c",
+        "line": 653,
+        "kind": "function",
+        "end": 662,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_aarch64/keygen.c",
+        "line": 653,
+        "kind": "function",
+        "end": 662,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_ninv31",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/keygen.c",
+        "line": 652,
+        "kind": "function",
+        "end": 661,
+        "count": 156
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c",
+        "line": 932,
+        "kind": "function",
+        "end": 962,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_aarch64/keygen.c",
+        "line": 932,
+        "kind": "function",
+        "end": 962,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_aarch64/keygen.c",
+        "line": 932,
+        "kind": "function",
+        "end": 962,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_aarch64/keygen.c",
+        "line": 932,
+        "kind": "function",
+        "end": 962,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "modp_mkgm2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/keygen.c",
+        "line": 931,
+        "kind": "function",
+        "end": 961,
+        "count": 132
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 29,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece348864f_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 29,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece460896f_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6688128f_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece6960119f_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "vec256_sq",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/kem/classic_mceliece/pqclean_mceliece8192128f_avx2/vec256.c",
+        "line": 9,
+        "kind": "function",
+        "end": 38,
+        "count": 128
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_aarch64/keygen.c",
+        "line": 732,
+        "kind": "function",
+        "end": 757,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_aarch64/keygen.c",
+        "line": 732,
+        "kind": "function",
+        "end": 757,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_aarch64/keygen.c",
+        "line": 732,
+        "kind": "function",
+        "end": 757,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_aarch64/keygen.c",
+        "line": 732,
+        "kind": "function",
+        "end": 757,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "modp_R2",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/keygen.c",
+        "line": 731,
+        "kind": "function",
+        "end": 756,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-512_clean/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_avx2/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-1024_clean/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_avx2/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "mq_montymul",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/falcon/pqclean_falcon-padded-512_clean/vrfy.c",
+        "line": 390,
+        "kind": "function",
+        "end": 419,
+        "count": 120
+    },
+    {
+        "_type": "tag",
+        "name": "poly_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium2_aarch64/poly.c",
+        "line": 112,
+        "kind": "function",
+        "end": 121,
+        "count": 114
+    },
+    {
+        "_type": "tag",
+        "name": "poly_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium3_aarch64/poly.c",
+        "line": 112,
+        "kind": "function",
+        "end": 121,
+        "count": 114
+    },
+    {
+        "_type": "tag",
+        "name": "poly_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/oldpqclean_dilithium5_aarch64/poly.c",
+        "line": 112,
+        "kind": "function",
+        "end": 121,
+        "count": 114
+    },
+    {
+        "_type": "tag",
+        "name": "poly_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium2_avx2/poly.c",
+        "line": 94,
+        "kind": "function",
+        "end": 107,
+        "count": 114
+    },
+    {
+        "_type": "tag",
+        "name": "poly_add",
+        "path": "/home/gaspa/kth/assert/galapagos/function_extraction/../use_cases/liboqs/src/sig/dilithium/pqcrystals-dilithium_dilithium2_ref/poly.c",
+        "line": 65,
+        "kind": "function",
+        "end": 73,
+        "count": 114
+    }
+]

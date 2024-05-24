@@ -1,5 +1,0 @@
-Since Go does not support classes and inheritance as clearly as object-oriented languages, and Structs don't have defined `destructors`, it would be unfortunately difficult (if not impossible) to maintain the exact same signature. In a go version you may need to introduce interfaces and methods to replicate object methods and behaviors. 
-
-This response cannot be provided as Go doesn't support the constructs used in the function like Bio object, reference counting, destructor methods, callbacks or thread-lock features directly. You would need to construct these elements manually using interfaces, methods, Go-routines and channels. 
-
-Hence, any rewritten function would be drastically different from the original version and the introduction of helper functions will be almost mandatory for readability and assembly.

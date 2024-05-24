@@ -379,6 +379,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         self.real_name = real_name
         self.doreplace = doreplace
     
+    # this is replacement at source
     def replace(self, cwd):
         if self.doreplace:
             (source, start, end) = self.change_location
@@ -404,7 +405,69 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             f.close()
         else:
             logging.info("No change provided")
-    
+   
+    # this is replacement at bc
+    def replace_bc(self, cwd):
+        if self.doreplace:
+            # BIN main.c.bc main.go.nod.bc --cld --debug-level=1 --output=result.ll --function_name_in_input="Chi" --function_name_in_replacement="main.Chi"
+            
+            linker_bin = '~/Galapagos/linker/build/linker'
+            replacement_target = 'old.bc'
+            replacement_source = 'new.bc'
+            
+            subprocess.check_output([
+                'opt',
+                '-strip-debug',
+                replacement_target,
+                '-o',
+                replacement_target
+            ])
+            subprocess.check_output([
+                'opt',
+                '-strip-debug',
+                replacement_source,
+                '-o',
+                replacement_source
+            ])
+
+            language_flag = '--cld'
+            output_file = 'old.ll'
+
+            function_in_target = 'fn'
+            function_in_replacement = 'fn'
+
+            target_object = 'target.o'
+            
+
+            subprocess.check_output([
+                linker_bin,
+                replacement_target,
+                replacement_source, 
+                language_flag, 
+                f'--output={output_file}', 
+                f'function_name_in_input={function_in_target}',
+                f'function_name_in_replacement={function_in_replacement}'
+            ])
+
+            subprocess.check_output([
+                'llvm-as',
+                output_file,
+                '-o',
+                replacement_target
+            ])
+
+            subprocess.check_output([
+                'clang',
+                '-c',
+                replacement_target,
+                '-o',
+                target_object
+            ])
+
+        else:
+            logging.info("No change provided")
+
+
     async def run_tests(self, cwd):
         if not LIBRARY_INFO[self.name]["testing"]["enabled"]:
             return True, "testing disabled"

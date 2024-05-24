@@ -2,12 +2,61 @@
 
 ### Second attempt (slices of 200 functions)
 
+#### libsodium
+
+b64_byte_to_char
+b64_char_to_byte
+b64_byte_to_urlsafe_char
+b64_urlsafe_char_to_byte
+fBlaMka
+
 #### ffmpeg
+
+int_sin (preprocess)
+mix (4xm.c)
+adjust
+vp5_adjust
+divide3
+round_two
+round_two_signed
+av_compare_mod
+weight (preprocess)
+ff_acelp_decode_4bit_to_2nd_delay3
+ff_acelp_decode_8bit_to_1st_delay3
+ff_acelp_decode_9bit_to_1st_delay6
+flac_get_max_frame_size
+getsigctxno (preprocess)
+ivi_scale_mv
+mlp_samplerate
+render_point
+v210_stride
+
+
+get_bucket (preprocess)
+ff_wma_total_gain_to_bits
+ff_speedhq_mb_rows_in_slice
+hashNext (preprocess)
+shift (sonic.c)
+shift_down (sonic.c)
+
 
 - `67_mid_pred`: seems to respect everything
 - `70_av_expr_eval`: call to eval_expr
 
 #### mako
+
+bech32_polymod (preprocess)
+btc_value_decompress
+
+asm_uint_size
+btc_uint_size
+ldb_size_int
+clamp8 (preprocess)
+clamp16 (preprocess)
+clamp_fee (preprocess)
+compare_ascending (preprocess)
+hash32
+size64
 
 - `60_btc_match_bool`: call to `btc_match`
 - `69_ldb_open`: call to `ldb_try_open` in 1line do while loop
@@ -20,6 +69,19 @@
 - `151_btc_script_is_program`: has macros but not "calling" ones, seem to be regular macros (e.g. defining values)
 
 #### openssl
+_booth_recode_w5
+_booth_recode_w7
+
+icbrt64 (inline const)
+
+ROL64 (preprocess)
+scalar_get_bit
+
+is_power_of_two
+gcd
+
+BitInterleave (preprocess, maybe)
+BitDeinterleave (preprocess, maybe)
 
 - `62_CRYPTO_memcmp`: for loop with 1 line
 - `65_make_data`: seems to respect everything
@@ -32,6 +94,13 @@
 
 #### alsa-lib
 
+alaw_to_s16
+muldiv (preprocess)
+muldiv_down (preprocess)
+val_seg
+ulaw_to_s16
+
+
 - `140_pcm_frame_diff`: is all good, not very interesting
 - `184_snd_pcm_mmap_appl_backward: changes a ptr arg's parameter, otherwise good
 
@@ -40,6 +109,11 @@
 nada!
 
 #### gnupg
+ascii_isupper
+ascii_islower
+ascii_toupper
+ascii_tolower
+cdb_unpack
 
 - `16_keyid_from_pk1`: has a `compute_fingerprint` call, alters ptr arg `keyid`
 - `48_snext`: has one small loop, changes ptr arg `buf`
@@ -72,11 +146,22 @@ TODO: doesn't seem like any of use, though
 
 #### krb5
 
+cshift (preprocess)
+cshift64
+first_free
+rotl64
+
 - `9_make_data`: has a macro (constant), else is good
 - `78_krb5int_find_pa_data`: has a small loop
 - `102_krb5int_c_locate_iov`: has a loop (not necessarily small, but very simple)
 
 #### sqlite
+
+sqlite3AbsInt32
+sessionHashAppendI64 (preprocess)
+swab32
+jsonHexToInt (preprocess)
+sqlite3HexToInt (preprocess)
 
 - `21_sqlite3StrICmp`: loop that might be too long, accesses global vars?
 - `26_sqlite3_strnicmp`: same but slightly smaller loop
@@ -97,10 +182,35 @@ TODO: doesn't seem like any of use, though
 - `141_pstrcpy`: must see if the loop is ok
 
 #### liboqs
+(type fpr == uint64)
+fpr_lt
+fpr_irsh
+fpr_ulsh
+fpr_ursh
+fpr_half
+fpr_double
+
+modp_montymul
+int16_nonzero_mask
+modp_set
+modp_norm
+modp_ninv31
+modp_add
+modp_sub
+
+montgomery_reduce (preprocess) (src/sig/dilithium/pqcrystals-dilithium_dilithium5_ref/reduce.c)
+reduce32 (preprocess) (src/sig/dilithium/pqcrystals-dilithium_dilithium5_ref/reduce.c)
+
 
 has 4 but I'm not sure if the source code itself is very suitable for this
 
 #### lz4
+
+XXH32_avalanche (preprocess)
+XXH_swap32
+XXH_swap64
+XXH32_round (preprocess)
+XXH64_round (preprocess)
 
 - `29_FUZZ_dataProducer_retrieve32`: good
 - `30_FUZZ_getRange_from_uint32`: good
@@ -110,6 +220,18 @@ has 4 but I'm not sure if the source code itself is very suitable for this
 - `87_XXH_swap64`: same as above
 
 #### libgcrypt
+
+montgomery_reduce (preprocess)
+barrett_reduce (preprocess)
+int16_t_nonzero_mask
+int16_t_negative_mask
+ctz
+same_mask
+fBlaMka (preprocess)
+mask_leq
+Ch
+Maj
+ROTR
 
 - `4_buf_put_be32`: good
 - `5_buf_put_le32`: good
@@ -155,6 +277,10 @@ has 4 but I'm not sure if the source code itself is very suitable for this
 - `pthread_mutex_lock`: is small-ish (12 lines), does not have loops (has switch, is it relevant?), does not alter outside variables, has external calls
 
 ## mako
+
+asm_int_size
+size64
+
 
 - `ldb_malloc`: is small, does not have loops, does not alter outside variables, has an external call( abort() )
 - `btc_read32le`: is small-ish (12 lines), does not have loops, does not alter outside variables, has an external call (it's built in, memcpy)
