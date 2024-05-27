@@ -2,9 +2,9 @@
 
 # set -x
 
-# check cli args = 1
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 project"
+# check cli args >= 1
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 project [--source | --preprocessed] [shadow_location]"
     exit 1
 fi
 
@@ -36,7 +36,8 @@ OUT="$FUNC_DIR/function_data.dat"
 # --kinds-c=f : only include function definitions
 if [ "$FLAG" == "--preprocessed" ]; then
     SHADOW_LOCATION=$3
-    find $SHADOW_LOCATION -name *\.i | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    # TODO: doesn't fully work, since ctags doesn't recognize the pre-processed files
+    find $SHADOW_LOCATION -name *\.i | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.i --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
     # below: creating a cscope database for the project
     # the database indexes the source code files, allows for efficient symbol lookup
     cd $SHADOW_LOCATION
@@ -48,7 +49,7 @@ elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
     cd $LIB_DIR
     cscope -R -b -q
 else
-    echo "Usage: $0 project [--source | --preprocessed]"
+    echo "Usage: $0 project [--source | --preprocessed] [shadow_location]"
     exit 1
 fi
 
