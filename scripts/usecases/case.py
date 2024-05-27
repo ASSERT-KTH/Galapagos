@@ -46,13 +46,13 @@ LIBRARY_INFO = {
         ],
         "flags": [
             "--cc=clang",
-            "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
+            "--extra-cflags=\"-save-temps=obj -fno-strict-aliasing\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -72,10 +72,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./Configure",
         "autogen": {
@@ -94,10 +94,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -114,10 +114,10 @@ LIBRARY_INFO = {
             
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "autogen": {
             "enabled": True,
@@ -147,10 +147,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -172,10 +172,10 @@ LIBRARY_INFO = {
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -508,7 +508,7 @@ class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
         f.close()
         # lets call clang
         # use subprocess
-        ch = subprocess.run(["clang",  "-save-temps", "main.cpp"], cwd=cwd)
+        ch = subprocess.run(["clang",  "-save-temps=obj", "main.cpp"], cwd=cwd)
 
 
 class CMPResult:
