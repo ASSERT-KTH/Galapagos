@@ -1,92 +1,47 @@
 [
     {
         "_type": "tag",
-        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_addcarryx_u32",
-        "path": "gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
-        "line": 7109,
+        "name": "BitDeinterleave",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/sha/keccak1600.c",
+        "line": 1021,
         "kind": "function",
-        "end": 7121,
-        "count": 1786
+        "end": 1055,
+        "count": 1
     },
     {
         "_type": "tag",
-        "name": "BN_free",
-        "path": "crypto/bn/bn_lib.c",
-        "line": 225,
+        "name": "BitInterleave",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/sha/keccak1600.c",
+        "line": 985,
         "kind": "function",
-        "end": 233,
-        "count": 1121
+        "end": 1019,
+        "count": 1
     },
     {
         "_type": "tag",
-        "name": "exit",
-        "path": "krb5/src/util/exitsleep.c",
-        "line": 39,
+        "name": "_booth_recode_w5",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/ec/ecp_nistz256.c",
+        "line": 153,
         "kind": "function",
-        "end": 49,
-        "count": 952
+        "end": 163,
+        "count": 3
     },
     {
         "_type": "tag",
-        "name": "com_err",
-        "path": "krb5/src/util/et/com_err.c",
-        "line": 131,
+        "name": "_booth_recode_w7",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/ec/ecp_nistz256.c",
+        "line": 165,
         "kind": "function",
-        "end": 140,
-        "count": 927
+        "end": 175,
+        "count": 2
     },
     {
         "_type": "tag",
-        "name": "fiat_id_GostR3410_2001_CryptoPro_C_ParamSet_addcarryx_u32",
-        "path": "gost-engine/ecp_id_GostR3410_2001_CryptoPro_C_ParamSet.c",
-        "line": 5169,
+        "name": "icbrt64",
+        "path": "/home/diogo/galapagos/function_extraction/../use_cases/openssl/crypto/rsa/rsa_lib.c",
+        "line": 244,
         "kind": "function",
-        "end": 5181,
-        "count": 927
-    },
-    {
-        "_type": "tag",
-        "name": "fiat_id_tc26_gost_3410_2012_512_paramSetB_mulx_u32",
-        "path": "gost-engine/ecp_id_tc26_gost_3410_2012_512_paramSetB.c",
-        "line": 7164,
-        "kind": "function",
-        "end": 7176,
-        "count": 720
-    },
-    {
-        "_type": "tag",
-        "name": "EVP_PKEY_free",
-        "path": "crypto/evp/p_lib.c",
-        "line": 1774,
-        "kind": "function",
-        "end": 1795,
-        "count": 669
-    },
-    {
-        "_type": "tag",
-        "name": "BIO_free",
-        "path": "crypto/bio/bio_lib.c",
-        "line": 124,
-        "kind": "function",
-        "end": 155,
-        "count": 634
-    },
-    {
-        "_type": "tag",
-        "name": "BN_CTX_get",
-        "path": "crypto/bn/bn_ctx.c",
-        "line": 212,
-        "kind": "function",
-        "end": 235,
-        "count": 685
-    },
-    {
-        "_type": "tag",
-        "name": "check",
-        "path": "krb5/src/lib/krb5/ccache/t_cccol.c",
-        "line": 43,
-        "kind": "function",
-        "end": 53,
-        "count": 501
+        "end": 259,
+        "count": 1
     }
 ]

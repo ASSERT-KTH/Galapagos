@@ -1,5 +1,5 @@
 [
-        {
+    {
         "_type": "tag",
         "name": "sodium_is_zero",
         "path": "src/libsodium/sodium/utils.c",

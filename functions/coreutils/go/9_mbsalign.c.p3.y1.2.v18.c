@@ -1,7 +1,0 @@
-As Go does not have a direct counterpart of all C library calls and keywords practiced in the original mbsalign function, I express ambiguity for the possibility of a direct semantic translation of the C function into its Go alternative.
-
-For instance, malloc from C is replaced with creative declarations or calls made to make in Go; however, no validations or subsequent form of error handling would be present in Go. Furthermore, wc_enabled or related, string-wide function literals represent one more problem with converting the code.
-
-Such instances happen because Go's treatment of strings as UTF-8 does strip off specialty required in managing wide-characters and their related concerns. But pay attention that lower-level representations for byte slices or strings or runes in Go would still give functional analogy shared by C.
-
-Therefore, a thorough adjustment or review on a higher presumptive level could be required owing to how these potential differences stack up. I am exceedingly sorry; however, the feasibility of crafting a translation lies unavailable due to the numerous collective liberties key low-level operations like memory adjustment do exist yet have extraction done inside Go's planned higher-level theories. The mapping disparities in semantic analogies for Go to encompass the C version are too intricate to disentangle in such sort of a complex circumstance having interactive differences.

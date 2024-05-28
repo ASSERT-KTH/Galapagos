@@ -23,15 +23,6 @@ should be enabled.
 
 ### Running tests for each use case
 
-#### coreutils
-
-```sh
-./bootstrap
-./configure
-# NOTE: some tests skipped because of the lack of root, others because of being deemed "too expensive" -- how much of a problem is this? from 480 in total, 87 are skipped
-make && make check
-```
-
 #### ffmpeg
 
 ```sh
@@ -47,14 +38,6 @@ make && make check
 make && make check
 ```
 
-#### mako
-
-```sh
-./autogen -s
-./configure
-make && make check
-```
-
 #### openssl
 
 ```sh
@@ -62,3 +45,33 @@ make && make check
 make test
 ```
 
+
+#### alsa-lib
+
+```sh
+./gitcompile
+# TODO: I'm not sure but `make check` doesn't seem to be everything??
+make check # or cd test/ && make check-am && make check
+```
+
+#### liboqs
+
+```sh
+sudo apt-get install -y astyle cmake gcc ninja-build libssl-dev unzip xsltproc doxygen graphviz valgrind
+pip3 install pytest pytest-xdist pyyaml
+mkdir build && cd build
+cmake -GNinja ..
+ninja
+ninja run_tests
+```
+
+#### libgcrypt
+
+Checked out to ref `005292cf9f41179247918711b2968dd188aae122` because of Ubuntu's lack of availability of some package
+versions - LIBGPG-error.
+
+```sh
+./autogen.sh -s
+./configure --enable-maintainer-mode && make
+make check
+```

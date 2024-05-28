@@ -12,7 +12,8 @@ import uuid
 import time
 import traceback
 
-CLONE_PATH = "/home/javier/galapagos-clones"
+USERNAME = os.environ.get("USER", os.environ.get("USERNAME")) # default for UNIX, fallback for Windows
+CLONE_PATH = f"/home/{USERNAME}/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
@@ -45,13 +46,13 @@ LIBRARY_INFO = {
         ],
         "flags": [
             "--cc=clang",
-            "--extra-cflags=\"-save-temps -fno-strict-aliasing\"",
+            "--extra-cflags=\"-save-temps=obj -fno-strict-aliasing\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -71,10 +72,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./Configure",
         "autogen": {
@@ -93,10 +94,10 @@ LIBRARY_INFO = {
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -108,17 +109,48 @@ LIBRARY_INFO = {
             "command": ["make", "check"]
         }
     },
-    "mako": {
-        "dependencies": [],
+    "alsa-lib": {
+        "dependencies": [
+            
+        ],
+        "env": {
+            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps=obj -Dinline="
+        },
+        "autogen": {
+            "enabled": True,
+            "command": "./gitcompile",
+        },
+        "testing": {
+            "enabled": True,
+            "command": ["make", "check"]
+        }
+    },
+    # TODO: this ain't good yet
+    "liboqs": {
+        "dependencies": [
+            "astyle",
+            "cmake",
+            "gcc",
+            "ninja-build",
+            "libssl-dev",
+            "unzip",
+            "xsltproc",
+            "doxygen",
+            "graphviz",
+            "valgrind"
+        ],
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
@@ -126,35 +158,35 @@ LIBRARY_INFO = {
             "command": "./autogen.sh -s",
         },
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "command": ["make", "check"]
         }
     },
-    "coreutils": {
+    "libgcrypt": {
         "dependencies": [
-            "autopoint",
-            "gperf",
-            "bison",
+
         ],
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-emit-llvm\"",
+            "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps"
+            "CXXFLAGS": "-save-temps=obj -Dinline="
         },
         "configure": "./configure",
         "autogen": {
             "enabled": True,
-            "command": "./bootstrap",
+            "command": "./autogen.sh -s",
         },
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "command": ["make", "check"]
         }
     },
-    # TODO: mako, coreutils
 }
 
 DEPENDENCY_WARNING_TEMPLATE = '''
@@ -333,7 +365,7 @@ class LLVMCompilableUseCase(UseCase):
 # TODO: rename this
 class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
-    def __init__(self, function_name, original_project_folder, original_file_location, variant_text_location, line_start, line_end, name="ffmpeg", doreplace=True, real_name="", version=0):
+    def __init__(self, function_name=None, original_project_folder=None, original_file_location=None, variant_text_location=None, line_start=None, line_end=None, name="ffmpeg", doreplace=True, real_name="", version=0):
         super().__init__()
         self.name = name
         self.function_name = function_name
@@ -397,7 +429,8 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         logging.info(f"Compiling {cwd}")
         start = time.time()
         if not self.compiled:
-            self.replace(cwd)
+            if self.function_name:
+                self.replace(cwd)
 
             if configure_project:
                 if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
@@ -428,6 +461,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     stderr=subprocess.STDOUT
                 )
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
+            # TODO make doesn't always need to be called -- see alsa-lib with ./gitcompile
             logging.info("Calling make")
             try:
                 ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
@@ -474,7 +508,7 @@ class TestLLVMCompilableUseCase(LLVMCompilableUseCase):
         f.close()
         # lets call clang
         # use subprocess
-        ch = subprocess.run(["clang",  "-save-temps", "main.cpp"], cwd=cwd)
+        ch = subprocess.run(["clang",  "-save-temps=obj", "main.cpp"], cwd=cwd)
 
 
 class CMPResult:
