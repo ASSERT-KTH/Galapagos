@@ -5,18 +5,11 @@ async function processLineByLine() {
 
   // first argument in cli does not exixt
   if (process.argv.length < 3) {
-    console.log("Usage: node generate_function_info.js <project> [--preprocessed]")
+    console.log("Usage: node generate_function_info.js <project>")
     process.exit(1)
   }
 
   const project = process.argv[2]
-
-  const preprocessed = process.argv.length == 4 && process.argv[3] === "--preprocessed"
-  // if there's a third argument, it must be --preprocessed
-  if (process.argv.length == 4 && process.argv[3] !== "--preprocessed") {
-    console.log("Usage: node generate_function_info.js <project> [--preprocessed]")
-    process.exit(1)
-  }
 
   const project_path = `../functions/${project}`
 
@@ -38,12 +31,9 @@ async function processLineByLine() {
     o = JSON.parse(line)
     // the name must be in the selected functions AND o.path must end with the respective function's file
     if (selected_functions[o.name]) {
-      const suffix = preprocessed ? ".i" : [".c", ".h"];
-      const endsWithSuffix = preprocessed
-        ? o.path.endsWith(selected_functions[o.name] + suffix)
-        : suffix.some(ext => o.path.endsWith(selected_functions[o.name] + ext));
-
-      if (endsWithSuffix) {
+      console.log("Selected function", o.name, selected_functions[o.name]);
+      const suffixes = [".c", ".h"];
+      if (suffixes.some(ext => o.path.endsWith(selected_functions[o.name] + ext))) {
         console.log("Adding function", o.name, selected_functions[o.name], "to the list of functions.");
         functions.push(o);
       }

@@ -36,10 +36,21 @@ OUT="$FUNC_DIR/function_data.dat"
 # --kinds-c=f : only include function definitions
 if [ "$FLAG" == "--preprocessed" ]; then
     SHADOW_LOCATION=$3
-    # TODO: doesn't fully work, since ctags doesn't recognize the pre-processed files
-    find $SHADOW_LOCATION -name *\.i | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.i --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    echo "Shadow location: $SHADOW_LOCATION"
+    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp.dat
+    echo "Finished ctags - 1st run"
+    # Now, copy all the .i files to .c files, effectively replacing the original source files (useful for ctags)
+    find $SHADOW_LOCATION -name *\.i -exec sh -c 'for f; do cp "$f" "${f%.i}.c"; done' sh {} +
+    echo "Finished renaming"
+    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp2.dat
+    echo "Finished ctags - 2nd run"
+    # Now, comparing the two files and keeping only the functions that are in common
+    # Each file has objects with various fields: the relevant ones are "path" and "name"; we want to keep the ones where both are the same
+    python3 compare_ctags.py temp.dat temp2.dat $FUNC_DIR/function_definitions.dat
     # below: creating a cscope database for the project
     # the database indexes the source code files, allows for efficient symbol lookup
+    rm temp.dat temp2.dat
+    echo "Finished comparing"
     cd $SHADOW_LOCATION
     cscope -R -b -q
 elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
