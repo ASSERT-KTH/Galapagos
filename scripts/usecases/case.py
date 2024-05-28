@@ -1,4 +1,6 @@
 import asyncio
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
 import hashlib
 import subprocess
@@ -115,6 +117,7 @@ LIBRARY_INFO = {
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
         },
+        "configure": None,
         "autogen": {
             "enabled": True,
             "command": "./gitcompile",
@@ -483,7 +486,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         start = time.time()
         if self.name == "liboqs":
            cwd = os.path.join(cwd, 'build')
-        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]["testing"]["command"]}, cwd:{cwd}")
+        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]['testing']['command']}, cwd:{cwd}")
         if not self.tested:
             try:
                 # self.replace(cwd)
@@ -524,24 +527,25 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     )
                     logging.debug(ch.decode())
 
-                logging.info("Calling configure")
-                logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
-                
-                configure_cmd = None
-                if self.name == "ffmpeg" or self.name == "liboqs":
-                   configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+                if LIBRARY_INFO[self.name]["configure"]:
+                    logging.info("Calling configure")
+                    logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
+                    
+                    configure_cmd = None
+                    if self.name == "ffmpeg" or self.name == "liboqs":
+                        configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
 
-                else:
-                    configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
+                    else:
+                        configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
 
-                print(cwd)
-                ch = subprocess.check_output(
-                    configure_cmd,
-                    env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
-                    shell=True,
-                    cwd=cwd,
-                    stderr=subprocess.STDOUT
-                )
+                    print(cwd)
+                    ch = subprocess.check_output(
+                        configure_cmd,
+                        env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                        shell=True,
+                        cwd=cwd,
+                        stderr=subprocess.STDOUT
+                    )
 
             if not configure_project and LIBRARY_INFO[self.name]["configure"] == 'cmake':
                 original_path = os.path.join(CLONE_PATH, self.name) #TODO: fix this 
