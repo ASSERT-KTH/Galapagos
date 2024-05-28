@@ -1,6 +1,3 @@
-import watchdog
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
 import asyncio
 
 import hashlib
@@ -8,7 +5,6 @@ import subprocess
 import logging
 import os
 import shutil
-import uuid
 import time
 import traceback
 
@@ -143,8 +139,13 @@ LIBRARY_INFO = {
             "valgrind"
         ],
         "flags": [
-            "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
+            '-DCMAKE_C_COMPILER="clang"',
+            '-DCMAKE_C_FLAGS="--save-temps=obj -fno-strict-aliasing"',
+            '-DOQS_USE_OPENSSL=ON',
+            '-DBUILD_SHARED_LIBS=ON',
+            '-DCMAKE_INSTALL_PREFIX=/usr',
+            '-DOPENSSL_ROOT_DIR=/usr/lib/x86_64-linux-gnu',
+            '..'
         ],
         "env": {
             "CFLAGS": "-save-temps=obj -Dinline=",
@@ -152,14 +153,14 @@ LIBRARY_INFO = {
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
         },
-        "configure": "./configure",
+        "configure": "cmake",
         "autogen": {
-            "enabled": True,
+            "enabled": False,
             "command": "./autogen.sh -s",
         },
         "testing": {
             "enabled": True, # Disabling for now as testing hangs TODO: test timeout
-            "command": ["make", "check"]
+            "command": ['make', 'run_tests']
         }
     },
     "libgcrypt": {
@@ -365,7 +366,7 @@ class LLVMCompilableUseCase(UseCase):
 # TODO: rename this
 class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
-    def __init__(self, function_name=None, original_project_folder=None, original_file_location=None, variant_text_location=None, line_start=None, line_end=None, name="ffmpeg", doreplace=True, real_name="", version=0):
+    def __init__(self, function_name=None, original_project_folder="", original_file_location="", variant_text_location="", line_start=0, line_end=0, name="ffmpeg", doreplace=True, real_name="", version=0, lang="c", name_bc_go=""):
         super().__init__()
         self.name = name
         self.function_name = function_name
@@ -378,7 +379,12 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         self.test_result = None
         self.real_name = real_name
         self.doreplace = doreplace
+
+        self.name_bc_go = name_bc_go
+
+        self.lang = lang
     
+    # this is replacement at source
     def replace(self, cwd):
         if self.doreplace:
             (source, start, end) = self.change_location
@@ -404,33 +410,107 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             f.close()
         else:
             logging.info("No change provided")
-    
+   
+    # this is replacement at bc
+    def replace_bc(self, cwd):
+        if self.doreplace:
+            replacement_target = ''
+            replacement_source = ''
+            # BIN main.c.bc main.go.nod.bc --cld --debug-level=1 --output=result.ll --function_name_in_input="Chi" --function_name_in_replacement="main.Chi"
+            linker_bin = f'{os.environ["HOME"]}/Galapagos/linker/build/linker'
+            replacement_target = os.path.join(cwd, self.original_file_location)
+            replacement_source = self.variant_text_location
+            
+            if replacement_target == '' or replacement_source == '':
+                print('ERROR: BAD FILES')
+                exit(0)
+
+            subprocess.check_output([
+                'opt',
+                '-strip-debug',
+                replacement_target,
+                '-o',
+                replacement_target
+            ])
+            subprocess.check_output([
+                'opt',
+                '-strip-debug',
+                replacement_source,
+                '-o',
+                replacement_source
+            ])
+
+            language_flag = '--cld'
+            output_file = replacement_target.replace('.bc', '.ll')
+
+            function_in_target = self.real_name
+            function_in_replacement = self.real_name if self.lang == 'c' else self.name_bc_go
+
+            target_object = replacement_target.replace('.bc', '.c.o')
+
+            subprocess.check_output([
+                linker_bin,
+                replacement_target,
+                replacement_source, 
+                language_flag, 
+                f'--output={output_file}', 
+                f'--function_name_in_input={function_in_target}',
+                f'--function_name_in_replacement={function_in_replacement}'
+            ])
+
+            subprocess.check_output([
+                'llvm-as',
+                output_file,
+                '-o',
+                replacement_target
+            ])
+
+            subprocess.check_output([
+                'clang',
+                '-c',
+                replacement_target,
+                '-o',
+                target_object
+            ])
+
+        else:
+            logging.info("No change provided")
+
+
     async def run_tests(self, cwd):
         if not LIBRARY_INFO[self.name]["testing"]["enabled"]:
             return True, "testing disabled"
         start = time.time()
-        logging.info("Testing")
+        if self.name == "liboqs":
+           cwd = os.path.join(cwd, 'build')
+        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]["testing"]["command"]}, cwd:{cwd}")
         if not self.tested:
             try:
-                self.replace(cwd)
-                ch = subprocess.check_output(LIBRARY_INFO[self.name]["testing"]["command"], cwd=cwd, stderr=subprocess.STDOUT, timeout=90)
+                # self.replace(cwd)
+                ch = subprocess.check_output(LIBRARY_INFO[self.name]["testing"]["command"], cwd=cwd, stderr=subprocess.STDOUT, timeout=300)
                 self.tested = True
                 self.test_result = True, ch.decode()
                 print(f"Tested in {time.time() - start:.2f}s")
                 return True, ch.decode()
-            except Exception as e:
-                print(e)
+            except subprocess.CalledProcessError as e:
+                logging.warning(e.output)
                 self.test_result = False, f"{e}\n{traceback.format_exc()}"
                 return False, f"{e}"
 
         return self.test_result
     
     async def compile(self, cwd, configure_project=False):
+        sed_timestamp = f'{os.environ["HOME"]}/Galapagos/scripts/sed-same-timestamp.sh'
         logging.info(f"Compiling {cwd}")
         start = time.time()
         if not self.compiled:
             if self.function_name:
-                self.replace(cwd)
+                self.replace_bc(cwd)
+            
+            if self.name == "liboqs":
+               cwd = os.path.join(cwd, 'build')
+               if not os.path.exists(cwd):
+                   os.mkdir(cwd)
 
             if configure_project:
                 if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
@@ -443,16 +523,18 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                         stderr=subprocess.STDOUT
                     )
                     logging.debug(ch.decode())
-                logging.info(cwd)
+
                 logging.info("Calling configure")
                 logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
                 
                 configure_cmd = None
-                if self.name == "ffmpeg":
+                if self.name == "ffmpeg" or self.name == "liboqs":
                    configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+
                 else:
                     configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
 
+                print(cwd)
                 ch = subprocess.check_output(
                     configure_cmd,
                     env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
@@ -460,10 +542,21 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     cwd=cwd,
                     stderr=subprocess.STDOUT
                 )
+
+            if not configure_project and LIBRARY_INFO[self.name]["configure"] == 'cmake':
+                original_path = os.path.join(CLONE_PATH, self.name) #TODO: fix this 
+                variant_path = cwd.replace('/build', '') #TODO: fix this 
+                # here we update the absolute paths written by cmake
+                # for all files in vatiant path
+                for root, _, files in os.walk(cwd):
+                    subset = [f for f in files if not f.endswith('.o') and not f.endswith('.a') and not f.endswith('.bc')]
+                    for file in subset:
+                        subprocess.check_output([sed_timestamp, original_path, variant_path, os.path.join(root,file)])
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
             # TODO make doesn't always need to be called -- see alsa-lib with ./gitcompile
             logging.info("Calling make")
             try:
+                print(cwd)
                 ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
