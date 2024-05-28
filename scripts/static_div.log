@@ -1,0 +1,240 @@
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+0_sodium_is_zero -O0
+{'8c9f2b98bf357cf857593c1c0bdd64f5', '9ecf08e417a4fbd53cf89c8795baa777', 'fc5d8f3fd8b39b1340e239ed25383c39', '3a7b169d64608f0d1aeea9446a95272d', '59f3876cc08ffa2c7fc07d72759c4d10', 'a5c2e6a555a911bf9f9630464fa1bd07', '3a95cf92a445095ebc8a333611aa7a6d', '89fb021d4edc557223e6edacbf238411', 'a14e7139218bc880a9783b6b6b7acf91', '6f8c0a48c17a7b310953a19315d041cd'}
+{'865128d3900b8857b56e6174355c564d', 'bd2bab78f8445ca1103b536891e5f882', 'bfde988ea08bd1c2123e00240a4ffaf0', 'ed09fee852cc44e32ae10986221f1b00', 'd6f1d62bc1c8abc6621e5945d01dac4e', 'd5afb9e01675d71b9aae9505045d0125', 'a5b158d7b82ea082402a8b86e747d2ab', '6fb1f81c26e33a0c30ca70d8303f4d55', '8c7eba83db0b42a28a4f76771facb513', '1db2f438129e29993a9593fb2155043e'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+0_sodium_is_zero -O1
+{'63c77de5712cd8230b273397421395ce', 'd7fc541a7b5cbc66fc6e8c0b97b2d3f7', '0cb914ff623e55600670aaee74b40b56', '464ee6319994a58ecf2b9beba0acac7c', '534292a60f8ab1c0e0ba20f8b162b953', '8635808ef790924509a1bfbd43c4c6d9', '5bee68b2207e4dfa2f1415f1a6293048', 'bcc0428a7f3262901172e7070ff386bb', 'bba68eba672d063d889c4f9232220889', 'e004b364a15c8add3c86598305e7322d'}
+{'dfcb69484cd32dd6ddc8f952cd71d3e2', '9dfb1eb8aa819846c2d1c0d8385326ad', 'ad87698a9bbcd122a04ccd850c51d957', 'bd9057e2323b2d70bb9097201d2848c2', '443413e6fb171995dc464936cc7ff796', '2e625ed118e8be872ac0656a67039472', 'f16d437e56c09aceb4e6d518ad4580ba', '549c69d768ed95712f6f9cc742890160', '72f94d4dcf6f869acff4da675f789a86', 'ee11a2a3f041edb67caa43dcf4953ffe'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+0_sodium_is_zero -O2
+{'fbbbd548e27d8f6e841640fb5f2e41cb', 'dac629e6abcc7550d958b575b67fa9dc', 'f75979a0a0f938285224cf9d0d2fcf7e', '1ce15f042265d5253446efe459865ae9', '3cf6d9217461e640aaa326dfd2f5d153', '45ab9e16a56a2ae5612a66b8980f5346', '10a9c37f421b4955bacf7db5e8ac2db6', 'f39c52b3b3ee88a51d30cf026256dbc3', '23db79e6de17b5872df22226275d2144', '264b0d908dc224ee07fce31fe6e8b3e9'}
+{'f303849afd89b5b90a3a830ccce48112', 'fbf87763057b346dc2f72039be4cf5d2', '758025e63c617f62ab380dbd272a1acc', '8fb381ee411408953abce1a1cc32c47c', 'c5ea0c9fe831bfa2d9426e5f0a6e2c5a', 'bb1eb66efe191c9e5e15f86d490a078e', '74240545fb8002055a491e554227292b', '876ce39f13d826aa4592d842649b7b82', '32df6767a961eb260fa06bb0b6a32923', '6919ef513d4188f5bf0efe794182626e'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+0_sodium_is_zero -O3
+{'fbbbd548e27d8f6e841640fb5f2e41cb', 'dac629e6abcc7550d958b575b67fa9dc', 'f75979a0a0f938285224cf9d0d2fcf7e', '1ce15f042265d5253446efe459865ae9', '3cf6d9217461e640aaa326dfd2f5d153', '45ab9e16a56a2ae5612a66b8980f5346', '10a9c37f421b4955bacf7db5e8ac2db6', 'f39c52b3b3ee88a51d30cf026256dbc3', '23db79e6de17b5872df22226275d2144', '264b0d908dc224ee07fce31fe6e8b3e9'}
+{'65e728eb28a643fc8a92ee1fa91d631d', 'eb87cdd1fd64f67ee807ff7404e33e70', 'c2f8d7d38be4250e006d06d21e3a675a', 'a0dfaac281548ebe08fd56f82cc2b427', '8b613b515a45732b1e6c493a65ca97b8', '4573f16680042a636df77be2758f8b60', '68dcc1ac0dc242c3cdd09313ff772072', '158350e0be287ef60bcb2acb9e2d557c', '5beadc023befb0305ac9eefc7722f0da', 'b2e25cdd433fd1516a0c726c2a168f07'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+1_sodium_bin2hex -O0
+{'e9366ea9d24785dc168305910c669f3c', 'f573cded1f9d27c9aa8d599e6ba18fc1', '0107da85b393045d62574bdf4ef31ca2', '518d0b42aa7ac0628da25f0c0e3a3e24', '7bcf4044ca5d0641d721cbcf68e230d5', '9c5bcc02bb0764c95ed6c3097c624e09', '2deeffc7ab5c7e060767712c767cfd01', 'a63ce3e035d3890cf6f300c82a549c88'}
+{'ee574710e548ec459d2e282391edca74', '12ec8019095df49580c4caf866b5614f', '041b1d9a9428a6e2726bf8dc52da250a', 'b1a196957c6ff8dd982717cdf13b9819', '99d736c9d93f9601bf0ebfafc51a030b', 'eaef1fb59d396c6f9a88977fc1a7e5b2', 'b81e8771476317652d5ee7b4929b05a7', '7e05248e3b01d14a0f9a49bd4170bc69'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+1_sodium_bin2hex -O1
+{'8857950b6555153b31f2e962c6ad8f68', 'd8bf232b12a1cc3f95911c704147e16e', 'd42bd4cb71c677fe52506d01961cf2a0', '6ad897b387e002a5216ecdded6a16695', 'b668ddf4b3abb42ab2e19f39475bc446', 'd5e6aef9416312c935c56304d9c1fd1b', '2dcae9ba82b04a4ba17c3cc20c066864', 'fa97e30c02434ce17207bf1842c8cd86'}
+{'a34b218fdffdde480053403b6527c7ef', '864177efcb1fbc0a3b4b843786c57ad7', '6f8d6614fcda0b8c3afc70243543e3f5', '585291c020348a0271b8b6eb87b44e6e', 'ea6e49adf126fb661709336224340d22', 'dcf4a2ec9059fd02f9c79ad3542cdfe8', '64005b0fa1dc48334d917c2ff59c1027'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+1_sodium_bin2hex -O2
+{'367606fed4daf94521cdac7c5cb99f28', '3cf88b50e0849675f4d49f094ecbd9f0', 'e4724873809e95815cfb1589e849d829', 'e513d5293ea290bad050084829447173', '93f92a1cf1789e39923bb409035d3bf1', '75f55c463deef2eeb8d45c68de329731', '139b370a7e71178095b016eaee6f3909', '43a61fc0d888eb59240c5a064ffe148c'}
+{'3f055fcfcd4d96d864e178ba727d913c', 'c1db055ae74434d92759d597b570d333', '790be97575e847dfc9441debb072bb37', 'a39c7ebccb61ca3942446078bf9534ad', 'e2883cf121e96005606fad86e8725359', '704076e3eabb95c5a899d79ed94a6933', 'b29829ee16336e3715d72b7c946dcfd1'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+1_sodium_bin2hex -O3
+{'367606fed4daf94521cdac7c5cb99f28', '3cf88b50e0849675f4d49f094ecbd9f0', 'e4724873809e95815cfb1589e849d829', 'e513d5293ea290bad050084829447173', '93f92a1cf1789e39923bb409035d3bf1', '75f55c463deef2eeb8d45c68de329731', '139b370a7e71178095b016eaee6f3909', '43a61fc0d888eb59240c5a064ffe148c'}
+{'2fccd17f2f0a225b6a32c45488e47fad', '2eabf97058f7211d5feb5aa9963d86a3', 'd85f83b5bec50c345611d8a97d788493', 'fde531a226fed4531b4ce7af8ded703d', '13c51bfb0821db54a1d41311329a1808', '61353ff0105a715fcf363d07b1326aa3', 'f24cb639a0bfb56df4f7dd4c8dc377e6'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+3__crypto_scalarmult_ed25519_clamp -O0
+{'db8ecd34809acd3b27ec4695ab585435', '35277676cf82c6ef67ec69bdeea2054b'}
+{'35c9b9173bd49fdbb99bdc241916b195', '8577bf0222aece2482f83041a01c309b'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+3__crypto_scalarmult_ed25519_clamp -O1
+{'8ba9be0fe0b54fb1e7ceea1f77379eac', '8bdee2c554b164fc84ba5a8e181f5297'}
+{'f0188c78bf660bd75c2c7c787e4cb3cb'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+3__crypto_scalarmult_ed25519_clamp -O2
+{'e748c487f41526be89f77098c1ca4fbc', '4f6595b51c9026604cf5e4860a37fbfc'}
+{'65f8810665f93c330548a05a18ec59cb'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+3__crypto_scalarmult_ed25519_clamp -O3
+{'e748c487f41526be89f77098c1ca4fbc', '4f6595b51c9026604cf5e4860a37fbfc'}
+{'4ac2a56723338148c27b9364afa8e89d'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+4_sc25519_is_canonical -O0
+{'8ef9a70816d48a746c59458e5881a8cc', '8712f5dab3c198bc6bb349575fdb100f', 'f678ca0138ab8b2aedd1899848348609', '7592fd9a34db822df453b5f57ba167ff', '274000a024ecac2dc8d4a15937455562', 'd2e87cb201fd805edf58f2d9c2a22ec0', '91aa8e38cad41a8f6076b747d5e75e0b', '4ee424749050c6a17be7594b7f08949e', '61c2e24fa2ed29acc560ef8903fd6761'}
+{'ce7dd97b8268d4dd7fb25bab6764e46a', '24a676738447acda348a08057c266d8a', '14a63e0bf0207a399b62770d30961bab', '27b6feb2c15ae34667af3ade5f8793a8', 'da0dfa852bedd8e3a38477b72c457562', '63dd65fc31b4ac866fcf86ccda250215', 'e6abe9cb5c245551543564b9032f4415', 'c778a8c040120ae408eb33efb344de42'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+4_sc25519_is_canonical -O1
+{'e1a4795697a48ce2a83065461e6d2b68', '30ed0904171d17f104843a645e895181', 'ed85f40828b50f964f2a0a6033998622', '3cdf567e15a59e561428d3b4adf92320', '8b3272bcf21c831ebbb683192d57c87f', '7c93ba6cacc666ed5f17e57e7a9ea5b4', 'e27f11522766805503b62769e8e58d23', 'bcb3add75d11460e20f559ca38d35f19', '74942bc4a5a1e7f17a05281e40b1cb49'}
+{'d2551a76a444e886dae554f1c4c26b17', '5b04028964f1a964096714eedb729a0f', '7a9b2c264a8e76ad39b192d86a84679d', '129e2da8cc7f4a32a508e6bd02735143', 'c3720e76a1cfd0ee9569ffe849d91bb0', '031717b3e3a7fe66e3983e04e574e153'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+4_sc25519_is_canonical -O2
+{'817774a82c653ee5f769de338d05db9e', 'ed3b03fc8282e1a20be20ad3a5497d20', '4069f1481b8accf234f1a17c99481742', 'c9b042d84273a8948b7339170f63dcf1', '576eb1f8c6bc4e24df1439edcb988b46', 'd51e2d0949702145a21c8ff6d0b8586a', '92ae27b0d2aceffa1efdbb6e43dea6c4', '5f7db5f8247c603f29241c7dfe10c1d5', '141acc9022e26278a6ec4a941d68355c'}
+{'bea92dfe2dd7669a8edd3ab4a5257e7f', 'f51452f686cdda78eeb62e743fc39ce1', '527a17f21dee237a5b26529c55931024', '907d20ae785e5e7b5468e39ad02abf4f', 'ae3c2115b458b27216c11ca420fdef50', 'fa221fcd23fd6f0ef7ff3216109aea37'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+4_sc25519_is_canonical -O3
+{'817774a82c653ee5f769de338d05db9e', 'ed3b03fc8282e1a20be20ad3a5497d20', '4069f1481b8accf234f1a17c99481742', 'c9b042d84273a8948b7339170f63dcf1', '576eb1f8c6bc4e24df1439edcb988b46', 'd51e2d0949702145a21c8ff6d0b8586a', '92ae27b0d2aceffa1efdbb6e43dea6c4', '5f7db5f8247c603f29241c7dfe10c1d5', '141acc9022e26278a6ec4a941d68355c'}
+{'9fd9b3e611248d39ef5f2999edc55065', '4465313e9cc11227c41ee66128186170', 'd396b4c7012e2056f3b2a4dbe93f2001', '851af3224110f80ec315ca02b644c2dd', '65f258d0f5f3fbfd171a995bb2405dd7', '38f0518ef19ef675af93e3668cb2e9b7'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O0"']
+2__crypto_scalarmult_ed25519_is_inf -O0
+{'f752399c5b87b98b222904511a6ba4b4', '15e289ba63ab864c97b7621536ccd73d', '31251bdfc744044f9ba010c8fc9df553', '6fbe7b9082e4d95bf4b7b1c4afacad13', 'b3bc32464b8827bb0709d9a55f864ba8', '6e894aa70e2df00778d6c08f95d0a57b', '4a678e67098ef71b5bd8f4f3e5470a31', '4c0d33160a2335fd50ff3fe581437a20'}
+{'ae2653c773dbd5a92816be489400aa28', 'd83ceb6e07789c5be77c9e77c94f8d5b', '32e270a64f307695849ce2894bda7bd6', '510f02ce4772cf88c623a56e380b0024', '3035c6e3db66445157337225df9b3413', 'd41d8cd98f00b204e9800998ecf8427e', '7d3fad5d3e4244753242404ceb980356', '3dc6cc294faf123a3e2a913c43f00c96'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O1"']
+2__crypto_scalarmult_ed25519_is_inf -O1
+{'d42bd143fbaefe1710b7410145ffeea7', '8ebfe50aec573d457441333c3bdabe6a', 'fd6cb730d7a1b1efe6ddb684e342b13f', '9fd81777db5305650e36b9c84c86466a', 'a4965e88eeabad9809833810db6bca13', 'e9c79d472cc39637b614ec1b99ff47ba', '2b5397e8955273a70eb0a28865df4398', '2ff70f0b72c735aa7a5f0be104e2351e'}
+{'a4266aea92403db69d2d299281ad0d24', 'f0188c78bf660bd75c2c7c787e4cb3cb', 'd41d8cd98f00b204e9800998ecf8427e', '4775a9eff65d274d9ce4126ab6955bf1'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O2"']
+2__crypto_scalarmult_ed25519_is_inf -O2
+{'e7feeaa0a7f29c34a8a3db9b438de289', '4bd1402c3f98c3913075dd5fee57bd39', 'f7cdbacc8c1e19e847c96157aad45caf', 'ef181c1b22932d1b537780b694d5e3f3', '29acc681995788a1ea0e7ffcf78b51f5', '52a142253a407300c79f4945a6ce6e95', 'ac84ec10a14895e1f869168b206d0f78', '55ba36ca383bff27d0680bfd7bcaf614'}
+{'f4ba1ce08a54ebf80d60f60140ce1693', 'e1a331bc108ddcc68158f2cd06795ac6', 'd41d8cd98f00b204e9800998ecf8427e', '65f8810665f93c330548a05a18ec59cb'}
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+['./configure', '--cc=clang', '--extra-cflags="-emit-llvm -O3"']
+2__crypto_scalarmult_ed25519_is_inf -O3
+{'e7feeaa0a7f29c34a8a3db9b438de289', '4bd1402c3f98c3913075dd5fee57bd39', 'f7cdbacc8c1e19e847c96157aad45caf', 'ef181c1b22932d1b537780b694d5e3f3', '29acc681995788a1ea0e7ffcf78b51f5', '52a142253a407300c79f4945a6ce6e95', 'ac84ec10a14895e1f869168b206d0f78', '55ba36ca383bff27d0680bfd7bcaf614'}
+{'4ac2a56723338148c27b9364afa8e89d', '9a7c5660297cf7907c58fd49c3ae4eb7', 'd41d8cd98f00b204e9800998ecf8427e', '19ad1bb67e3a6cf0b3352ddb781de60a'}

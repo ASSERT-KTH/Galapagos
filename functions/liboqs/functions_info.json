@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "_type": "tag",
+        "name": "fpr_lt",
+        "path": "src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
+        "line": 447,
+        "kind": "function",
+        "end": 476,
+        "count": 666,
+        "bc_file_path": "build/src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/keygen.bc",
+        "fn_bc_name_go": "main.fpr__lt",
+        "return": "static inline int",
+        "params": ["int64", "int64"]
+    }
+]

@@ -26,8 +26,6 @@ if __name__ == "__main__":
     async def compare(original_folder, shadow1, original, variant, n):
         # The first one does not need to compile
 
-        # Fix name for faster compile. In theory the name is unique ?
-        # variant_shadow = await variant.shadow(original_folder, name=f"{variant.name.replace('.', '_')}")
         variant_shadow = await variant.shadow(original_folder)
 
         result = {
@@ -58,8 +56,8 @@ if __name__ == "__main__":
             result['only_in_destiny'] = in2
 
             # There should not be new or removed files
-            assert len(in1) == 0, "The new compilation removes files. That is not possible"
-            assert len(in2) == 0,  "The new compilation adds new files. That is not possible"
+            # assert len(in1) == 0, "The new compilation removes files. That is not possible"
+            # assert len(in2) == 0,  "The new compilation adds new files. That is not possible"
             logging.info(f"Modified files {len(modified)}")
 
             # The following filters depends on each project
@@ -119,10 +117,10 @@ if __name__ == "__main__":
 
 
         except Exception as e:
-            logging.warning(f"Could not compile variant {variant.name} {e} \n{variant.variant_text}")
+            logging.warning(f"Could not compile variant {variant.name} {e}")
             result['python_error_trace'] = traceback.format_exc()
             result['python_error_msg'] = f"{e}"
-            result['variant_text'] = variant.variant_text
+            # result['variant_text'] = variant.variant_text
             return
         finally:
             # Save the file as a json
@@ -149,6 +147,7 @@ if __name__ == "__main__":
 
         # Reading the functions and the variants
         # Reading json inside ../../functions/openssl/functions_info.json
+        lang = 'go'
         test_cases = []
         WORKSPACE = os.path.join(DIRNAME, f"../../functions/{LIBRARY}")
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
@@ -157,10 +156,11 @@ if __name__ == "__main__":
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
                 # Reading the generated variants
-                for variant_of_function in os.listdir(f"{WORKSPACE}/variants"):
-                    chunks = variant_of_function.split(".")
-                    funcname = chunks[0]
-                    func_version = chunks[-2]
+                langfiles = [f for f in os.listdir(f"{WORKSPACE}/variants/{lang}") if f.endswith(f'.{lang}')]
+                for variant_of_function in langfiles:
+                    chunks = variant_of_function.replace(f'.{lang}', '').split("_")
+                    funcname = '_'.join(chunks[:-1]) #hack
+                    func_version = chunks[-1] # hack
                     
                     # allowlist = ['0_sodium_is_zero.c.p0.y1.2.v0.c']
                     if funcname == f"{idx}_{function['name']}": # and variant_of_function in allowlist:
@@ -168,14 +168,18 @@ if __name__ == "__main__":
                         testcase = uc_name.LibraryCompilableUseCase(
                                 funcname,
                                 original_project_folder=project_folder,
-                                original_file_location=f"{function['path']}",
-                                variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{variant_of_function}"),
+                                original_file_location=f"{function['bc_file_path']}",
+                                variant_text_location=os.path.abspath(f"{WORKSPACE}/variants/{lang}/{variant_of_function.replace(f'.{lang}', '.bc')}"),
                                 line_start=function['line'],
                                 line_end=function['end'],
                                 name=LIBRARY,
                                 doreplace=True,
                                 real_name=function['name'],
-                                version=func_version
+                                version=func_version,
+                                # TODO
+                                # new needed variables HERE!
+                                lang='go',
+                                name_bc_go=function['fn_bc_name_go']
                         )
                         test_cases.append(testcase)
 

@@ -56,6 +56,7 @@ fi
 # for each function definition, find the number of times it is called using the cscope database
 while read a; do
     FUN=`echo $a | awk '{print substr($4, 2, length($4) - 3)}'`
-    N=`cscope -d -L3 $FUN  | wc -l`
-    echo "$a" | sed -E 's/[}]$/, \"count\": '"$N"'}/g'
-done < $FUNC_DIR/function_definitions.dat > $OUT
+    cscope -d -L3 $FUN
+    echo "---"
+    # echo "$a" | sed -E 's/[}]$/, \"count\": '"$N"'}/g'
+done < $FUNC_DIR/function_definitions.dat 
