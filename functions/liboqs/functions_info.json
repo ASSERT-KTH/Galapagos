@@ -1,15 +1,42 @@
 [
     {
         "_type": "tag",
+        "name": "fpr_half",
+        "path": "/home/javier/galapagos-clones/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
+        "line": 403,
+        "kind": "function",
+        "end": 414
+    },
+    {
+        "_type": "tag",
         "name": "fpr_lt",
-        "path": "src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
+        "path": "/home/javier/galapagos-clones/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/fpr.h",
         "line": 447,
         "kind": "function",
-        "end": 476,
-        "count": 666,
-        "bc_file_path": "build/src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/keygen.bc",
-        "fn_bc_name_go": "main.fpr__lt",
-        "return": "static inline int",
-        "params": ["int64", "int64"]
+        "end": 476
+    },
+    {
+        "_type": "tag",
+        "name": "modp_montymul",
+        "path": "/home/javier/galapagos-clones/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 716,
+        "kind": "function",
+        "end": 725
+    },
+    {
+        "_type": "tag",
+        "name": "modp_norm",
+        "path": "/home/javier/galapagos-clones/liboqs/src/sig/falcon/pqclean_falcon-1024_avx2/keygen.c",
+        "line": 643,
+        "kind": "function",
+        "end": 645
+    },
+    {
+        "_type": "tag",
+        "name": "int16_nonzero_mask",
+        "path": "/home/javier/galapagos-clones/liboqs/src/kem/ntruprime/pqclean_sntrup761_clean/crypto_core_wforcesntrup761.c",
+        "line": 14,
+        "kind": "function",
+        "end": 20
     }
 ]

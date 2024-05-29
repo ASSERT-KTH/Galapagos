@@ -13,7 +13,7 @@ async function processLineByLine() {
 
   const project_path = `../functions/${project}`
 
-  const fileStream = fs.createReadStream(`${project_path}/function_data.dat`);
+  const fileStream = fs.createReadStream(`${project_path}/function_definitions.dat`);
 
   const rl = readline.createInterface({
     input: fileStream,
