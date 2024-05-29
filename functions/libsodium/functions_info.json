@@ -1,0 +1,47 @@
+[
+    {
+        "_type": "tag",
+        "name": "b64_byte_to_char",
+        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2549,
+        "kind": "function",
+        "end": 2555,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "b64_byte_to_urlsafe_char",
+        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2570,
+        "kind": "function",
+        "end": 2576,
+        "count": 4
+    },
+    {
+        "_type": "tag",
+        "name": "b64_char_to_byte",
+        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2558,
+        "kind": "function",
+        "end": 2567,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "b64_urlsafe_char_to_byte",
+        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2579,
+        "kind": "function",
+        "end": 2588,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "fBlaMka",
+        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/crypto_pwhash/argon2/blamka-round-ref.h",
+        "line": 8,
+        "kind": "function",
+        "end": 13,
+        "count": 28
+    }
+]
