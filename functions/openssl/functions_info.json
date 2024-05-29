@@ -1,0 +1,47 @@
+[
+    {
+        "_type": "tag",
+        "name": "icbrt64",
+        "path": "/home/javier/galapagos-clones/openssl/crypto/rsa/rsa_lib.c",
+        "line": 15048,
+        "kind": "function",
+        "end": 15063,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "BitDeinterleave",
+        "path": "/home/javier/galapagos-clones/openssl/crypto/sha/keccak1600.c",
+        "line": 848,
+        "kind": "function",
+        "end": 882,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "BitInterleave",
+        "path": "/home/javier/galapagos-clones/openssl/crypto/sha/keccak1600.c",
+        "line": 812,
+        "kind": "function",
+        "end": 846,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "_booth_recode_w5",
+        "path": "/home/javier/galapagos-clones/openssl/crypto/ec/ecp_nistz256.c",
+        "line": 153,
+        "kind": "function",
+        "end": 163,
+        "count": 3
+    },
+    {
+        "_type": "tag",
+        "name": "_booth_recode_w7",
+        "path": "/home/javier/galapagos-clones/openssl/crypto/ec/ecp_nistz256.c",
+        "line": 165,
+        "kind": "function",
+        "end": 175,
+        "count": 2
+    }
+]
