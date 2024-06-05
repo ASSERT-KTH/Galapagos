@@ -1,4 +1,4 @@
-fpr_lt(uint64_t x, uint64_t y) {
+static inline int fpr_lt(uint64_t x, uint64_t y) {
     /*
      * If both x and y are positive, then a signed comparison yields
      * the proper result:

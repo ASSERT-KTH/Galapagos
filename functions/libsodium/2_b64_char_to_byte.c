@@ -1,4 +1,4 @@
-b64_char_to_byte(int c)
+static unsigned int b64_char_to_byte(int c)
 {
     const unsigned int x =
         ((((((unsigned int) (c) - (unsigned int) ('A')) >> 8) & 0xFF) ^ 0xFF) & (((((unsigned int) ('Z') - (unsigned int) (c)) >> 8) & 0xFF) ^ 0xFF) & (c - 'A')) |

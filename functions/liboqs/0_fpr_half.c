@@ -1,4 +1,4 @@
-fpr_half(uint_64 x) {
+static inline uint_64 fpr_half(uint_64 x) {
     /*
      * To divide a value by 2, we just have to subtract 1 from its
      * exponent, but we have to take care of zero.
