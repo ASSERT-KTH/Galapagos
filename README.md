@@ -21,6 +21,23 @@ inside `scripts/usecase/case.py`, with all its dependencies, possible compilatio
 and environment variables, as well as some other settings such as whether testing
 should be enabled.
 
+### Issues with use cases
+
+#### Function types on extraction
+
+Sometimes, due to the original source formatting and the way ctags works, the tags
+don't always include the lines where the type of the function is declared. This
+was fixed manually in some cases (namely, the ones below), which were:
+
+- all the functions in liboqs, except `4_int16_nonzero_mask`
+- all the functions in libsodium
+
+#### libgcrypt's inline issue
+
+For some reason, when compiling this project with the `Dinline` flag, the automatic
+build pipeline we set up breaks; therefore, we had to manually remove the `inline`
+keyword from the functions in libgcrypt.
+
 ### Running tests for each use case
 
 #### ffmpeg

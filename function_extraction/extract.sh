@@ -36,10 +36,49 @@ OUT="$FUNC_DIR/function_data.dat"
 # --kinds-c=f : only include function definitions
 if [ "$FLAG" == "--preprocessed" ]; then
     SHADOW_LOCATION=$3
-    # TODO: doesn't fully work, since ctags doesn't recognize the pre-processed files
-    find $SHADOW_LOCATION -name *\.i | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.i --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    echo "Shadow location: $SHADOW_LOCATION"
+    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp.dat
+    echo "Finished ctags - 1st run"
+    # Now, copy all the .i files to .c files, effectively replacing the original source files (useful for ctags)
+
+    # IF it's libgcrypt, it's a bit different: .i files are put in /path/to/module/.libs/, instead of /path/to/module/
+    # in that case, we must first remove all .c files from /path/to/module/ and then copy the .i files from /path/to/module/.libs/ to /path/to/module/, under a .c extension
+    # it's important to remove them, because in libgcrypt's case, it seems like not all .c files have a matching .i file in .libs/, but rather, some are merged into a single .i file
+    # for that:
+    # - first, we find each module with .libs/*.i files under it
+    # - then, we remove all .c files from the module
+    # - finally, we copy the .i files from .libs/ to the module, under a .c extension
+
+    if [ "$PROJECT" == "libgcrypt" ]; then
+        # find all modules with .libs/*.i files -- beware that the module's path should not include .libs
+        find $SHADOW_LOCATION -name '*\.i' | grep "\.libs" | xargs -I {} dirname {} | sort | uniq | while read module; do
+            # remove the .libs/ from the module
+            module=$(echo $module | sed 's/\/\.libs//')
+            # remove all .c files from the module
+            find $module -name '*\.c' -exec rm {} \;
+            # copy the .i files from .libs/ to the module, under a .c extension
+            cp $module/.libs/*.i $module/ && rename 's/\.i$/.c/' $module/*.i
+        done
+    else
+        # copy the .i files to .c files
+        find $SHADOW_LOCATION -name *\.i -exec sh -c 'for f; do cp "$f" "${f%.i}.c"; done' sh {} +
+    fi
+
+    echo "Finished renaming"
+    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp2.dat
+    echo "Finished ctags - 2nd run"
+    # Now, comparing the two files and keeping only the functions that are in common
+    # Each file has objects with various fields: the relevant ones are "path" and "name"; we want to keep the ones where both are the same
+    # if the project is libgcrypt, we're forced to ignore the path, since the .c files are in a different location than the .i files
+    if [ "$PROJECT" == "libgcrypt" ]; then
+        python3 compare_ctags.py temp.dat temp2.dat $FUNC_DIR/function_definitions.dat --ignore-path
+    else
+        python3 compare_ctags.py temp.dat temp2.dat $FUNC_DIR/function_definitions.dat
+    fi
     # below: creating a cscope database for the project
     # the database indexes the source code files, allows for efficient symbol lookup
+    rm temp.dat temp2.dat
+    echo "Finished comparing"
     cd $SHADOW_LOCATION
     cscope -R -b -q
 elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
@@ -53,10 +92,3 @@ else
     exit 1
 fi
 
-# for each function definition, find the number of times it is called using the cscope database
-while read a; do
-    FUN=`echo $a | awk '{print substr($4, 2, length($4) - 3)}'`
-    cscope -d -L3 $FUN
-    echo "---"
-    # echo "$a" | sed -E 's/[}]$/, \"count\": '"$N"'}/g'
-done < $FUNC_DIR/function_definitions.dat 

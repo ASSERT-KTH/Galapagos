@@ -55,6 +55,7 @@ LIBRARY_INFO = {
             "enabled": False,
             "command": ""
         },
+        "make": ["make", "-j4"], 
         "testing": {
             "enabled": False, # Disabling for now as testing for ffmpeg takes too long
         }
@@ -64,8 +65,7 @@ LIBRARY_INFO = {
             # it's just glibc and make so it should be fine
         ],
         "flags": [
-            "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
+            "-no-asm" # -no-asm to generate all .i and bc. files
         ],
         "env": {
             "CFLAGS": "-save-temps=obj -Dinline=",
@@ -77,6 +77,7 @@ LIBRARY_INFO = {
         "autogen": {
             "enabled": False,
             },
+        "make": ["make", "-j4"], 
         "testing": {
             "enabled": False, # Disabling for now as testing for ffmpeg takes too long
         }
@@ -100,6 +101,7 @@ LIBRARY_INFO = {
             "enabled": True,
             "command": "./autogen.sh -s",
         },
+        "make": ["make", "-j4"], 
         "testing": {
             "enabled": True, # Disabling for now as testing hangs TODO: test timeout
             "command": ["make", "check"]
@@ -115,10 +117,12 @@ LIBRARY_INFO = {
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
         },
+        "configure": None,
         "autogen": {
             "enabled": True,
             "command": "./gitcompile",
         },
+        "make": ["make", "-j4"], 
         "testing": {
             "enabled": True,
             "command": ["make", "check"]
@@ -158,6 +162,7 @@ LIBRARY_INFO = {
             "enabled": False,
             "command": "./autogen.sh -s",
         },
+        "make": ["make", "-j4"], 
         "testing": {
             "enabled": True, # Disabling for now as testing hangs TODO: test timeout
             "command": ['make', 'run_tests']
@@ -165,24 +170,25 @@ LIBRARY_INFO = {
     },
     "libgcrypt": {
         "dependencies": [
-
+            "fig2dev",
+            "texinfo",
+            "libgpg-error-dev",
         ],
         "flags": [
-            "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps=obj -Dinline="
+            "CXXFLAGS": "-save-temps=obj"
         },
         "configure": "./configure",
         "autogen": {
             "enabled": True,
             "command": "./autogen.sh -s",
         },
+        "make": ["make", "-j4"],
         "testing": {
             "enabled": True, # Disabling for now as testing hangs TODO: test timeout
             "command": ["make", "check"]
@@ -247,7 +253,7 @@ def strip(file):
 '''
     Define a use case to compile a library or a binary, detect LLVM bitcodes changed during compilation, and replace C/C++ code in the basecode.
 '''
-class UseCase(FileSystemEventHandler):
+class UseCase():
 
     def __init__(self, debug=False):
         self.observer = None
@@ -515,6 +521,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             if configure_project:
                 if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
                     logging.info("Setting up autogen")
+                    logging.info(f"Running {LIBRARY_INFO[self.name]['autogen']['command']}")
                     ch = subprocess.check_output(
                         LIBRARY_INFO[self.name]["autogen"]["command"],
                         env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
@@ -524,24 +531,19 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     )
                     logging.debug(ch.decode())
 
-                logging.info("Calling configure")
-                logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
-                
-                configure_cmd = None
-                if self.name == "ffmpeg" or self.name == "liboqs":
-                   configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+                if LIBRARY_INFO[self.name]["configure"]:
+                    logging.info("Calling configure")                    
+                    configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+                    logging.info(f"Running {configure_cmd}")
 
-                else:
-                    configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
-
-                print(cwd)
-                ch = subprocess.check_output(
-                    configure_cmd,
-                    env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
-                    shell=True,
-                    cwd=cwd,
-                    stderr=subprocess.STDOUT
-                )
+                    print(cwd)
+                    ch = subprocess.check_output(
+                        configure_cmd,
+                        env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
+                        shell=True,
+                        cwd=cwd,
+                        stderr=subprocess.STDOUT
+                    )
 
             if not configure_project and LIBRARY_INFO[self.name]["configure"] == 'cmake':
                 original_path = os.path.join(CLONE_PATH, self.name) #TODO: fix this 
@@ -555,9 +557,10 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
             # TODO make doesn't always need to be called -- see alsa-lib with ./gitcompile
             logging.info("Calling make")
+            logging.info(f"Running {LIBRARY_INFO[self.name]['make']}")
             try:
                 print(cwd)
-                ch = subprocess.check_output(["make", "-j", "4"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
+                ch = subprocess.check_output(LIBRARY_INFO[self.name]["make"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
             except Exception as e:

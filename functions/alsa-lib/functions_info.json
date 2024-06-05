@@ -1,0 +1,47 @@
+[
+    {
+        "_type": "tag",
+        "name": "alaw_to_s16",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_alaw.c",
+        "line": 125,
+        "kind": "function",
+        "end": 140,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "muldiv",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_local.h",
+        "line": 675,
+        "kind": "function",
+        "end": 689,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "muldiv_down",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_local.h",
+        "line": 691,
+        "kind": "function",
+        "end": 701,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "ulaw_to_s16",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_mulaw.c",
+        "line": 141,
+        "kind": "function",
+        "end": 156,
+        "count": 1
+    },
+    {
+        "_type": "tag",
+        "name": "val_seg",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_alaw.c",
+        "line": 59,
+        "kind": "function",
+        "end": 74,
+        "count": 2
+    }
+]

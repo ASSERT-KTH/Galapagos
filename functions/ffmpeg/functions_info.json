@@ -1,0 +1,47 @@
+[
+    {
+        "_type": "tag",
+        "name": "flac_get_max_frame_size",
+        "path": "/home/diogo/galapagos-clones/ffmpeg/libavcodec/flacenc.c",
+        "line": 8708,
+        "kind": "function",
+        "end": 8727,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "mix",
+        "path": "/home/diogo/galapagos-clones/ffmpeg/libavcodec/4xm.c",
+        "line": 10658,
+        "kind": "function",
+        "end": 10664,
+        "count": 43
+    },
+    {
+        "_type": "tag",
+        "name": "vp5_adjust",
+        "path": "/home/diogo/galapagos-clones/ffmpeg/libavcodec/vp56dsp.c",
+        "line": 3634,
+        "kind": "function",
+        "end": 3648,
+        "count": 0
+    },
+    {
+        "_type": "tag",
+        "name": "weight",
+        "path": "/home/diogo/galapagos-clones/ffmpeg/libavcodec/diracdec.c",
+        "line": 12383,
+        "kind": "function",
+        "end": 12393,
+        "count": 2
+    },
+    {
+        "_type": "tag",
+        "name": "int_sin",
+        "path": "/home/diogo/galapagos-clones/ffmpeg/libavfilter/vf_rotate.c",
+        "line": 6775,
+        "kind": "function",
+        "end": 6792,
+        "count": 5
+    }
+]
