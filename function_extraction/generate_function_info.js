@@ -33,7 +33,7 @@ async function processLineByLine() {
     if (selected_functions[o.name]) {
       console.log("Selected function", o.name, selected_functions[o.name]);
       const suffixes = [".c", ".h"];
-      if (suffixes.some(ext => o.path.endsWith(selected_functions[o.name] + ext))) {
+      if (project == "libgcrypt" || suffixes.some(ext => o.path.endsWith(selected_functions[o.name] + ext))) {
         console.log("Adding function", o.name, selected_functions[o.name], "to the list of functions.");
         functions.push(o);
       }

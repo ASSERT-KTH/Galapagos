@@ -1,0 +1,42 @@
+[
+    {
+        "_type": "tag",
+        "name": "barrett_reduce",
+        "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
+        "line": 6667,
+        "kind": "function",
+        "end": 6674
+    },
+    {
+        "_type": "tag",
+        "name": "ctz",
+        "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/mceliece6688128f.c",
+        "line": 8534,
+        "kind": "function",
+        "end": 8546
+    },
+    {
+        "_type": "tag",
+        "name": "int16_t_negative_mask",
+        "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
+        "line": 6138,
+        "kind": "function",
+        "end": 6145
+    },
+    {
+        "_type": "tag",
+        "name": "int16_t_nonzero_mask",
+        "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
+        "line": 6127,
+        "kind": "function",
+        "end": 6134
+    },
+    {
+        "_type": "tag",
+        "name": "montgomery_reduce",
+        "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
+        "line": 6658,
+        "kind": "function",
+        "end": 6665
+    }
+]

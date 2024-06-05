@@ -172,24 +172,25 @@ LIBRARY_INFO = {
     },
     "libgcrypt": {
         "dependencies": [
-
+            "fig2dev",
+            "texinfo",
+            "libgpg-error-dev",
         ],
         "flags": [
-            "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps=obj -Dinline="
+            "CXXFLAGS": "-save-temps=obj"
         },
         "configure": "./configure",
         "autogen": {
             "enabled": True,
             "command": "./autogen.sh -s",
         },
+        "make": ["make", "-j4"],
         "testing": {
             "enabled": True, # Disabling for now as testing hangs TODO: test timeout
             "command": ["make", "check"]
@@ -522,6 +523,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             if configure_project:
                 if LIBRARY_INFO[self.name]["autogen"]["enabled"]:
                     logging.info("Setting up autogen")
+                    logging.info(f"Running {LIBRARY_INFO[self.name]['autogen']['command']}")
                     ch = subprocess.check_output(
                         LIBRARY_INFO[self.name]["autogen"]["command"],
                         env={**os.environ, **LIBRARY_INFO[self.name]["env"]},
@@ -532,15 +534,9 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                     logging.debug(ch.decode())
 
                 if LIBRARY_INFO[self.name]["configure"]:
-                    logging.info("Calling configure")
-                    logging.info(" ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]))
-                    
-                    configure_cmd = None
-                    if self.name == "ffmpeg" or self.name == "liboqs" or self.name == "openssl":
-                       configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
-
-                    else:
-                        configure_cmd = [LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]]
+                    logging.info("Calling configure")                    
+                    configure_cmd =  " ".join([LIBRARY_INFO[self.name]["configure"], *LIBRARY_INFO[self.name]["flags"]])
+                    logging.info(f"Running {configure_cmd}")
 
                     print(cwd)
                     ch = subprocess.check_output(
@@ -563,6 +559,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             # TODO SHOULD FAIL IF CONFIGURE FAILS!
             # TODO make doesn't always need to be called -- see alsa-lib with ./gitcompile
             logging.info("Calling make")
+            logging.info(f"Running {LIBRARY_INFO[self.name]['make']}")
             try:
                 print(cwd)
                 ch = subprocess.check_output(LIBRARY_INFO[self.name]["make"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)

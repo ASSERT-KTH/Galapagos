@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
 FLAG=$1
-SELECTED_FUNCTIONS="$(pwd)/function-picks.json"
-
 # build.py requires the PYTHONPATH to be set to the parent folder, since python does not like relative imports
 export PYTHONPATH=$(dirname $(dirname $(realpath $0)))
 
 # for each item in the list of projects
-for PROJ in "ffmpeg" "libgcrypt" "liboqs" "libsodium" "openssl"; do
-# TODO: there seems to be an issue with alsa-lib? like a symlink for alsa/ inside include/, which is recursive
-# for PROJ in "alsa-lib" "ffmpeg" "libgcrypt" "liboqs" "libsodium" "openssl"; do
+for PROJ in "alsa-lib" "ffmpeg" "libgcrypt" "liboqs" "libsodium" "openssl"; do
     if [ "$FLAG" == "--preprocessed" ]; then
         SHADOW=$(python3 build.py $PROJ | tail -n 1)
         ./extract.sh $PROJ --preprocessed $SHADOW
