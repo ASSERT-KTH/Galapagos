@@ -1,0 +1,90 @@
+
+package main
+
+func fpr_lt(x int64, y int64) int32 {
+	sy := y &^ ((x ^ y) >> 63)
+	cc0 := int32((x-sy)>>63) & 1
+	cc1 := int32((sy-x)>>63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sy := y
+	if (x ^ y) >> 63 != 0 {
+		sy = x
+	}
+	cc0 := int32((x-sy)>>63) & 1
+	cc1 := int32((sy-x)>>63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sy := y
+	if (x ^ y) < 0 {
+		sy = x | (1 << 63)
+	}
+	cc0 := int32((x-sy)>>63) & 1
+	cc1 := int32((sy-x)>>63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sx, sy := x, y
+	sy &= ^((sx ^ sy) >> 63)
+	cc0 := int32((sx-sy)>>63) & 1
+	cc1 := int32((sy-sx)>>63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sy := y
+	if (x ^ y) < 0 {
+		sy = x
+	}
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	mask := ^((x ^ y) >> 63)
+	sy := y & mask
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	mask := ^((x ^ y) >> 63)
+	sy := y & mask
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32(((x & y)>>63)&1))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sameSign := (x ^ y) >> 63
+	sy := y & ^sameSign
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	sameSign := (x ^ y) >> 63
+	sy := y 
+	if sameSign != 0 {
+		sy = x
+	}
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}
+
+func fpr_lt(x int64, y int64) int32 {
+	flip := ^((x ^ y) >> 63)
+	sy := y & flip
+	cc0 := int32((x - sy) >> 63) & 1
+	cc1 := int32((sy - x) >> 63) & 1
+	return cc0 ^ ((cc0 ^ cc1) & int32((x & y) >> 63))
+}

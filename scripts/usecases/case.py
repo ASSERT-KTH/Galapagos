@@ -1,6 +1,4 @@
 import asyncio
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
 
 import hashlib
 import subprocess
@@ -491,7 +489,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         start = time.time()
         if self.name == "liboqs":
            cwd = os.path.join(cwd, 'build')
-        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]['testing']['command']}, cwd:{cwd}")
+        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]["testing"]["command"]}, cwd:{cwd}")
         if not self.tested:
             try:
                 # self.replace(cwd)
