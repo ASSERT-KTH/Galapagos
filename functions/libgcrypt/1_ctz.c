@@ -1,4 +1,4 @@
-static inline int ctz(uint64_t in)
+static int ctz(uint64_t in)
 {
  int i, b, m = 0, r = 0;
 

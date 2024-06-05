@@ -32,6 +32,12 @@ was fixed manually in some cases (namely, the ones below), which were:
 - all the functions in liboqs, except `4_int16_nonzero_mask`
 - all the functions in libsodium
 
+#### libgcrypt's inline issue
+
+For some reason, when compiling this project with the `Dinline` flag, the automatic
+build pipeline we set up breaks; therefore, we had to manually remove the `inline`
+keyword from the functions in libgcrypt.
+
 ### Running tests for each use case
 
 #### ffmpeg
