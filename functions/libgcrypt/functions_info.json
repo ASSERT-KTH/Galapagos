@@ -5,7 +5,8 @@
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
         "line": 6667,
         "kind": "function",
-        "end": 6674
+        "end": 6674,
+        "params": ["int16"]
     },
     {
         "_type": "tag",
@@ -13,7 +14,8 @@
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/mceliece6688128f.c",
         "line": 8534,
         "kind": "function",
-        "end": 8546
+        "end": 8546,
+        "params": ["uint64"]
     },
     {
         "_type": "tag",
@@ -21,7 +23,8 @@
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
         "line": 6138,
         "kind": "function",
-        "end": 6145
+        "end": 6145,
+        "params": ["int16"]
     },
     {
         "_type": "tag",
@@ -29,7 +32,8 @@
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
         "line": 6127,
         "kind": "function",
-        "end": 6134
+        "end": 6134,
+        "params": ["int16"]
     },
     {
         "_type": "tag",
@@ -37,6 +41,7 @@
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
         "line": 6658,
         "kind": "function",
-        "end": 6665
+        "end": 6665,
+        "params": ["int32"]
     }
 ]

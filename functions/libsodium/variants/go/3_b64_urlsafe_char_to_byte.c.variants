@@ -1,0 +1,199 @@
+
+import "unicode"
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    switch {
+    case 'A' <= c && c <= 'Z':
+        return uint(c - 'A')
+    case 'a' <= c && c <= 'z':
+        return uint(c - 'a' + 26)
+    case '0' <= c && c <= '9':
+        return uint(c - '0' + 52)
+    case c == '-':
+        return 62
+    case c == '_':
+        return 63
+    default:
+        return 0
+    }
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    if 'A' <= c && c <= 'Z' {
+        return uint(c - 'A')
+    } else if 'a' <= c && c <= 'z' {
+        return uint(c - 'a' + 26)
+    } else if '0' <= c && c <= '9' {
+        return uint(c - '0' + 52)
+    } else if c == '-' {
+        return 62
+    } else if c == '_' {
+        return 63
+    }
+    return 0
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    if c >= 'A' && c <= 'Z' {
+        return uint(c - 'A')
+    }
+    if c >= 'a' && c <= 'z' {
+        return uint(c - 'a' + 26)
+    }
+    if c >= '0' && c <= '9' {
+        return uint(c - '0' + 52)
+    }
+    if c == '-' {
+        return 62
+    }
+    if c == '_' {
+        return 63
+    }
+    return 0
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    switch {
+    case c >= 'A' && c <= 'Z':
+        return uint(c - 'A')
+    case c >= 'a' && c <= 'z':
+        return uint(c - 'a' + 26)
+    case c >= '0' && c <= '9':
+        return uint(c - '0' + 52)
+    case c == '-':
+        return 62
+    case c == '_':
+        return 63
+    }
+    return 0
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    if unicode.IsUpper(c) {
+        return uint(c - 'A')
+    }
+    if unicode.IsLower(c) {
+        return uint(c - 'a' + 26)
+    }
+    if unicode.IsDigit(c) {
+        return uint(c - '0' + 52)
+    }
+    if c == '-' {
+        return 62
+    }
+    if c == '_' {
+        return 63
+    }
+    return 0
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    var result uint
+    switch {
+    case c >= 'A' && c <= 'Z':
+        result = uint(c - 'A')
+    case c >= 'a' && c <= 'z':
+        result = uint(c - 'a' + 26)
+    case c >= '0' && c <= '9':
+        result = uint(c - '0' + 52)
+    case c == '-':
+        result = 62
+    case c == '_':
+        result = 63
+    default:
+        result = 0
+    }
+    return result
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    if c >= 'A' && c <= 'Z' {
+        return uint(c - 'A')
+    }
+    if c >= 'a' && c <= 'z' {
+        return uint(c - 'a' + 26)
+    }
+    if c >= '0' && c <= '9' {
+        return uint(c - '0' + 52)
+    }
+    if c == '-' {
+        return 62
+    }
+    if c == '_' {
+        return 63
+    }
+    return 0
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    switch true {
+    case c >= 'A' && c <= 'Z':
+        return uint(c - 'A')
+    case c >= 'a' && c <= 'z':
+        return uint(c - 'a' + 26)
+    case c >= '0' && c <= '9':
+        return uint(c - '0' + 52)
+    case c == '-':
+        return 62
+    case c == '_':
+        return 63
+    default:
+        return 0
+    }
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    for {
+        if c >= 'A' && c <= 'Z' {
+            return uint(c - 'A')
+        }
+        if c >= 'a' && c <= 'z' {
+            return uint(c - 'a' + 26)
+        }
+        if c >= '0' && c <= '9' {
+            return uint(c - '0' + 52)
+        }
+        if c == '-' {
+            return 62
+        }
+        if c == '_' {
+            return 63
+        }
+        return 0
+    }
+}
+
+
+
+func b64_urlsafe_char_to_byte(c int32) uint {
+    switch c {
+    case 'A' <= c && c <= 'Z':
+        return uint(c - 'A')
+    case 'a' <= c && c <= 'z':
+        return uint(c - 'a' + 26)
+    case '0' <= c && c <= '9':
+        return uint(c - '0' + 52)
+    case '-':
+        return 62
+    case '_':
+        return 63
+    default:
+        return 0
+    }
+}

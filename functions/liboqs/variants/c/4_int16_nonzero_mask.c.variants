@@ -1,0 +1,43 @@
+
+static int int16_nonzero_mask(int16 x) {
+    return x ? -1 : 0;
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return !!x * -1;
+}
+
+static int int16_nonzero_mask(int16 x) {
+    uint16 u = (uint16) x;
+    return -((int) ((u | -u) >> 15));
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return -(int)((uint32)((uint16)x - 1) >> 31);
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return -(x != 0);
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return x >> 15 | -(x >> 15);
+}
+
+static int int16_nonzero_mask(int16 x) {
+    uint16 u = (uint16)x;
+    return -((u != 0) & 1);
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return -((int)((uint16)x != 0));
+}
+
+static int int16_nonzero_mask(int16 x) {
+    uint32 v = (uint32)(uint16)x;
+    return -((v - 1) >> 31);
+}
+
+static int int16_nonzero_mask(int16 x) {
+    return -(x != 0 ? 1 : 0);
+}

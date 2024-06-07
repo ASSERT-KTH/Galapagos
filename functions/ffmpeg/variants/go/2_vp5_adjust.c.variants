@@ -1,0 +1,147 @@
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    v = v ^ s1 - s1
+    if v < 2*t {
+        v *= 1
+    } else {
+        v = 0
+    }
+    v -= t
+    s2 := v >> 31
+    v = (v ^ s2) - s2
+    return (t - v + s1) ^ s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    if s1 != 0 {
+        v = -v
+    }
+    if v >= 2*t {
+        v = 0
+    }
+    v -= t
+    s2 := v >> 31
+    if s2 != 0 {
+        v = -v
+    }
+    v = t - v
+    if s1 != 0 {
+        v = -v
+    }
+    return v
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    v = (v ^ s1) - s1
+    flag := v < 2*t
+    v *= int32(flag)
+    v -= t
+    s2 := v >> 31
+    v = (v ^ s2) - s2
+    return (t - v + s1) ^ s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    absV := v ^ s1 - s1
+    if absV >= 2*t {
+        absV = 0
+    }
+    adjusted := absV - t
+    s2 := adjusted >> 31
+    adjusted = (adjusted ^ s2) - s2
+    return (t - adjusted + s1) ^ s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    v = ((v ^ s1) - s1) * int32(v < 2*t)
+    adjusted := v - t
+    s2 := adjusted >> 31
+    adjusted = (adjusted ^ s2) - s2
+    return (t - adjusted + s1) ^ s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    v = -((v ^ s1) - s1)
+    if v >= -2*t {
+        v = -v
+    } else {
+        v = 0
+    }
+    v -= t
+    s2 := v >> 31
+    v = -((v ^ s2) - s2)
+    return (t + v + s1) - s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    neg := v >> 31
+    v = (v ^ neg) - neg
+    if v >= 2*t {
+        v = 0
+    } 
+    v -= t
+    neg2 := v >> 31
+    v = (v ^ neg2) - neg2
+    return (t - v + neg) ^ neg
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    neg := v >> 31
+    v = (v ^ neg) + (~neg + 1)
+    if v >= 2*t {
+        v = 0 
+    }
+    v -= t
+    neg2 := v >> 31
+    v = (v ^ neg2) + (~neg2 + 1)
+    return (t - v + neg) ^ neg
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    s1 := v >> 31
+    v = (v ^ s1) + ((~0) & s1)
+    if v >= 2*t {
+        v = 0
+    }
+    v -= t
+    s2 := v >> 31
+    v = (v ^ s2) - s2
+    res := t - v + s1
+    return res ^ s1
+}
+
+
+
+func vp5_adjust(v int32, t int32) int32 {
+    sign := v >> 31
+    v = (v ^ sign) - sign
+    if v >= 2*t {
+        v = 0
+    }
+    v -= t
+    sign2 := v >> 31
+    v = (v ^ sign2) - sign2
+    return (t - v + sign) - sign
+}

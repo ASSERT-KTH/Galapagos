@@ -1,0 +1,16 @@
+func valSeg(val int32) int {
+	r := 1
+	val >>= 8
+	for ((val & 0xf0) != 0) {
+		val >>= 4
+		r += 4
+	}
+	for ((val & 0x0c) != 0) {
+		val >>= 2
+		r += 2
+	}
+	if (val & 0x02) != 0 {
+		r++
+	}
+	return r
+}

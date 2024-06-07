@@ -1,0 +1,173 @@
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > int32(2147483647) {
+		*r = 0
+		return 2147483647
+	}
+	if v < int32(-2147483648) {
+		*r = 0
+		return -2147483648
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > int32(2147483647) {
+		*r = 0
+		return 2147483647
+	}
+	if v < int32(-(2147483648)) {
+		*r = 0
+		return -2147483648
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	const maxInt32 int32 = 2147483647
+	const minInt32 int32 = -2147483648
+	if v > maxInt32 {
+		*r = 0
+		return maxInt32
+	}
+	if v < minInt32 {
+		*r = 0
+		return minInt32
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > 2147483647 {
+		*r = 0
+		return 2147483647
+	}
+	if v < -2147483648 {
+		*r = 0
+		return -2147483648
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > 1<<31-1 {
+		*r = 0
+		return 1<<31 - 1
+	}
+	if v < -1<<31 {
+		*r = 0
+		return -1 << 31
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > int32(2147483647) {
+		*r = int32(0)
+		return 2147483647
+	}
+	if v < int32(-2147483648) {
+		*r = int32(0)
+		return -2147483648
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	const MaxInt32 = 2147483647
+	const MinInt32 = -2147483648
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > MaxInt32 {
+		*r = 0
+		return MaxInt32
+	}
+	if v < MinInt32 {
+		*r = 0
+		return MinInt32
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	const (
+		MaxInt32 = 2147483647
+		MinInt32 = -2147483648
+	)
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > MaxInt32 {
+		*r = 0
+		return MaxInt32
+	}
+	if v < MinInt32 {
+		*r = 0
+		return MinInt32
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	const (
+		MaxInt32 int32 = 2147483647
+		MinInt32 int32 = -2147483648
+	)
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > MaxInt32 {
+		*r = int32(0)
+		return MaxInt32
+	}
+	if v < MinInt32 {
+		*r = int32(0)
+		return MinInt32
+	}
+	*r = int32(n % int64(c))
+	return v
+}
+
+
+func muldiv(a, b, c int32, r *int32) int32 {
+	const maxInt32 = int32(2147483647)
+	const minInt32 = int32(-2147483648)
+	n := int64(a) * int64(b)
+	v := int32(n / int64(c))
+	if v > maxInt32 {
+		*r = 0
+		return maxInt32
+	}
+	if v < minInt32 {
+		*r = 0
+		return minInt32
+	}
+	*r = int32(n % int64(c))
+	return v
+}

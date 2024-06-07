@@ -1,0 +1,63 @@
+
+func fBlaMka(x, y uint64) uint64 {
+	const m uint64 = 0xFFFFFFFF
+	xy := (x & m) * (y & m)
+	return x + y + 2*xy
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const m uint64 = 0xFFFFFFFF
+	xy := x & m
+	xy *= y & m
+	return x + y + (xy << 1)
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const m uint64 = 0xFFFFFFFF
+	lowBits := x & m
+	combined := lowBits * (y & m)
+	return x + y + combined*2
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const m uint64 = 0xFFFFFFFF
+	partial := (x & m) * (y & m)
+	return x + y + 2*(partial)
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const m uint64 = 0xFFFFFFFF
+	xy := (x & m) * (y & m)
+	return (x + y) + (xy << 1)
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const mask uint64 = 0xFFFFFFFF
+	temp := (x & mask) * (y & mask)
+	result := x + y + (temp << 1)
+	return result
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const mask uint64 = 0xFFFFFFFF
+	product := (x & mask) * (y & mask)
+	return (2 * product) + x + y
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const mask uint64 = 0xFFFFFFFF
+	prod := (x & mask) * (y & mask)
+	return x + y + 2*prod
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const mask uint64 = 0xFFFFFFFF
+	xy := (x & mask) * (y & mask)
+	return x + y + (xy * 2)
+}
+
+func fBlaMka(x, y uint64) uint64 {
+	const mask uint64 = 0xFFFFFFFF
+	prod := (x & mask) * (y & mask)
+	return (2 * prod) + x + y
+}

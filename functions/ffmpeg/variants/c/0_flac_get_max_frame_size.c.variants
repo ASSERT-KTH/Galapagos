@@ -1,0 +1,157 @@
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    int overhead = (7 + bps + 7) / 8;
+    
+    count += ch * overhead;
+    
+    if (ch == 2) {
+        count += ((2 * bps + 1) * blocksize + 7) / 8;
+    } else {
+        count += (ch * bps * blocksize + 7) / 8;
+    }
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16 + ch * ((bps + 14) / 8);
+    
+    if (ch == 2) {
+        count += ((2 * bps + 1) * blocksize + 7) / 8;
+    } else {
+        count += (ch * bps * blocksize + 7) / 8;
+    }
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int base = 16;
+    int audio_frame_size = (ch * (bps + 14)) / 8;
+    int side_info_size = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    
+    return base + audio_frame_size + side_info_size + 2;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += ch * ((bps + 14) / 8);
+    
+    int size;
+    if (ch == 2) {
+        size = ((2 * bps + 1) * blocksize + 7) / 8;
+    } else {
+        size = (ch * bps * blocksize + 7) / 8;
+    }
+    count += size;
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += (ch * (bps + 14) + 7) / 8;
+    
+    int payload_size = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    count += payload_size;
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += ch * ((7 + bps + 7) / 8);
+    
+    int size = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    count += size;
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += ch * ((7 + bps + 7) / 8);
+    int audio_data_size = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    
+    count += audio_data_size + 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int base = 16;
+    int audio_frame = ch * ((7 + bps + 7) / 8);
+    
+    int payload = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    
+    return base + audio_frame + payload + 2;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    int bits_per_sample = (bps + 14) / 8;
+    count += ch * bits_per_sample;
+    
+    int frame_payload;
+    if (ch == 2) {
+        frame_payload = ((2 * bps + 1) * blocksize + 7) / 8;
+    } else {
+        frame_payload = (ch * bps * blocksize + 7) / 8;
+    }
+    count += frame_payload;
+    
+    count += 2;
+    
+    return count;
+}
+
+
+
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += ch * ((7 + bps + 7) / 8);
+    
+    int frame_payload = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    count += frame_payload;
+    
+    count += 2;
+    
+    return count;
+}

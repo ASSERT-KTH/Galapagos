@@ -1,0 +1,19 @@
+package main
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    perCh := ch * ((7 + bps + 7) / 8)
+    var frameSz int32
+    if ch == 2 {
+        frameSz = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameSz = (ch * bps * blocksize + 7) / 8
+    }
+    count += perCh + frameSz + 2
+    return count
+}
+
+
+func main(){
+    flacGetMaxFrameSize(0,0,0)
+}

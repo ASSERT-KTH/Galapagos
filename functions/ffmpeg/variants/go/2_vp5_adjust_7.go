@@ -1,0 +1,18 @@
+package main
+
+func vp5_adjust(v int32, t int32) int32 {
+    neg := v >> 31
+    v = (v ^ neg) + (~neg + 1)
+    if v >= 2*t {
+        v = 0 
+    }
+    v -= t
+    neg2 := v >> 31
+    v = (v ^ neg2) + (~neg2 + 1)
+    return (t - v + neg) ^ neg
+}
+
+
+func main(){
+    vp5_adjust(0,0)
+}

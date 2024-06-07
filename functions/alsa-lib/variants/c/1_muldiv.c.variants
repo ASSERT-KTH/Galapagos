@@ -1,0 +1,156 @@
+
+static inline int muldiv1(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = 0;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = 0;
+		return INT_MIN;
+	}
+	*r = n - v * c;
+	return v;
+}
+
+static inline int muldiv2(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = c > 0 ? a * b % c : 0;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = c > 0 ? a * b % c : 0;
+		return INT_MIN;
+	}
+	*r = (int)(n - ((int64_t)v * c));
+	return (int)v;
+}
+
+static inline int muldiv3(int a, int b, int c, int *r)
+{
+	double n = (double)a * b;
+	double v = n / c;
+	if (v > INT_MAX) {
+		*r = 0;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = 0;
+		return INT_MIN;
+	}
+	double rem = n - (int64_t)(v) * c;
+	*r = (int)rem;
+	return (int)v;
+}
+
+static inline int muldiv4(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = (int)(n % c);
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = (int)(n % c);
+		return INT_MIN;
+	}
+	*r = n - v * c;
+	return (int)v;
+}
+
+static inline int muldiv5(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	if (n / c > INT_MAX) {
+		*r = 0;
+		return INT_MAX;
+	}
+	if (n / c < INT_MIN) {
+		*r = 0;
+		return INT_MIN;
+	}
+	*r = (int)(n % c);
+	return (int)(n / c);
+}
+
+static inline int muldiv6(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX || v < INT_MIN) {
+		*r = 0;
+		return v > INT_MAX ? INT_MAX : INT_MIN;
+	}
+	*r = (int)(n - v * c);
+	return (int)v;
+}
+
+static inline int muldiv7(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = n % c;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = n % c;
+		return INT_MIN;
+	}
+	*r = n % c;
+	return v;
+}
+
+static inline int muldiv8(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = (int)(n % c);
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = (int)(n % c);
+		return INT_MIN;
+	}
+	*r = (int)(n % c);
+	return (int)v;
+}
+
+static inline int muldiv9(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = 1;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = 1;
+		return INT_MIN;
+	}
+	*r = n - v * c;
+	return v;
+}
+
+static inline int muldiv10(int a, int b, int c, int *r)
+{
+	int64_t n = (int64_t)a * b;
+	int64_t v = n / c;
+	if (v > INT_MAX) {
+		*r = -1;
+		return INT_MAX;
+	}
+	if (v < INT_MIN) {
+		*r = -1;
+		return INT_MIN;
+	}
+	*r = (int)(n % c);
+	return (int)v;
+}

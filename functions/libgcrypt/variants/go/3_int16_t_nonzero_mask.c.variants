@@ -1,0 +1,50 @@
+
+import "math/bits"
+
+func int16_nonzero_mask(x int16) int16 {
+	if x != 0 {
+		return -1
+	}
+	return 0
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	if x > 0 || x < 0 {
+		return -1
+	}
+	return 0
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(^uint16(x | -x >> 15) >> 15)
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	y := uint16(x)
+	z := uint32(y)
+	return int16(-(z >> 31))
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(int32(uint16(x)>>15) * -1)
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(uint16(x) >> 15 * -1)
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(int32((x >> 15) - (x >> 15 & 1)))
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(-int32(bits.RotateLeft32(uint32(x|0), 1) >> 31))
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(((x | -x) >> 15) * -1)
+}
+
+func int16_nonzero_mask(x int16) int16 {
+	return int16(-int32((uint32(x) | uint32(-x)) >> 31))
+}

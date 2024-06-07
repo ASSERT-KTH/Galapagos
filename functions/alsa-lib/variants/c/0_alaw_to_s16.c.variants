@@ -1,0 +1,93 @@
+
+static int alaw_to_s16_v1(unsigned char a_val)
+{
+	int t, seg;
+	a_val ^= 0x55;
+	seg = (a_val & 0x70) >> 4;
+	t = (a_val & 0x0f) << (seg == 0 ? 4 : seg + 3);
+	t += 8;
+	t += seg ? 0x100 : 0;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v2(unsigned char a_val)
+{
+	int t = a_val ^ 0x55;
+	int seg = (t & 0x70) >> 4;
+	t = (t & 0x0F) << 4 | 0x08;
+	if(seg) t += 0x100;
+	t <<= seg > 1 ? seg - 1 : 0;
+	return a_val & 0x80 ? t : -t;
+}
+
+static int alaw_to_s16_v3(unsigned char a_val)
+{
+	a_val ^= 0x55;
+	int t = a_val & 0x7F;
+	int seg = (t & 0x70) >> 4;
+	return (a_val & 0x80) ? (((t & 0x0F) | 0x10) << (seg + 3)) : -(((t & 0x0F) | 0x10) << (seg + 3));
+}
+
+static int alaw_to_s16_v4(unsigned char a_val)
+{
+	int t = (a_val ^ 0x55) & 0x7F;
+	int seg = (t & 0x70) >> 4;
+	t = (t & 0x0F | 0x10) << seg;
+	t = seg ? (t << 3) + 0x100 : t << 4;
+	return (a_val & 0x80) != 0 ? t : -t;
+}
+
+static int alaw_to_s16_v5(unsigned char a_val)
+{
+	int t, seg;
+	a_val ^= 0x55;
+	seg = (a_val >> 4) & 0x07;
+	t = 0x10 + (a_val & 0x0F);
+	t <<= (seg >= 1) ? (seg + 2) : 4;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v6(unsigned char a_val)
+{
+	int t = a_val ^ 0x55;
+	t = (t & 0x0F) | ((t & 0x70) << 4) | 0x80;
+	int seg = (a_val & 0x70) >> 4;
+	if(seg) t += 0x100;
+	t <<= seg ? seg : 0;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v7(unsigned char a_val)
+{
+	int t = ((a_val ^ 0x55) & 0x7F) + 8;
+	int seg = (t & 0x70) >> 4;
+	t = (seg == 0 ? t << 4 : t << (seg + 3)) & 0x7FFF;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v8(unsigned char a_val)
+{
+	a_val ^= 0x55;
+	int t = (a_val & 0x0F) << 4;
+	int seg = (a_val & 0x70) >> 4;
+	t += seg ? (0x100 << (seg - 1)) + 0x08 : 0x08;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v9(unsigned char a_val)
+{
+	int t = (a_val ^ 0x55) & 0x7F;
+	int seg = (t & 0x70) >> 4;
+	t = (seg == 0 ? (t | 0x10) << 4 : ((t & 0x0F) | 0x10) << (seg + 3)) + 0x08;
+	if(seg) t += 0x100;
+	return (a_val & 0x80) ? t : -t;
+}
+
+static int alaw_to_s16_v10(unsigned char a_val)
+{
+	int t = (a_val ^ 0x55) & 0x7F;
+	int seg = (t & 0x70) >> 4;
+	t = ((t & 0x0F) | 0x08) << (seg == 0 ? 4 : seg + 3);
+	if (seg) t += 0x100;
+	return (a_val & 0x80) ? t : -t;
+}

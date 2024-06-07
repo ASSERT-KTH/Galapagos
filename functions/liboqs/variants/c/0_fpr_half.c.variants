@@ -1,0 +1,92 @@
+
+static uint64_t fpr_half(uint64_t x) {
+    if (x == 0) {
+        return x;
+    }
+    x -= 1ULL << 52;
+    if ((x & (0x7FFULL << 52)) == 0ULL) {
+        return 0;
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t mask = x ? 0xFFFFFFFFFFFFFFFF : 0;
+    x -= mask & ((uint64_t)1 << 52);
+    mask = (((uint32_t)(x >> 52) & 0x7FF) + 1) >> 11;
+    x &= (uint64_t)mask - 1;
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    return x == 0 ? x : ((x - (1ULL << 52)) & ~((x >> 63) << 63));
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    if (x != 0) {
+        x -= 1ULL << 52;
+        if (((x >> 52) & 0x7FF) == 0) {
+            return 0;
+        }
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t shift = x == 0 ? 0 : 52;
+    return (x - (1ULL << shift)) & (uint64_t)(((x & 0x7FFULL) << 52) != 0) - 1;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t exp_mask = 0x7FFULL << 52;
+    if ((x & exp_mask) == 0) {
+        return x;
+    }
+    x -= 1ULL << 52;
+    if ((x & exp_mask) == 0) {
+        return 0;
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t subtractor = x ? (1ULL << 52) : 0;
+    x -= subtractor;
+    uint32_t exp = (uint32_t)(x >> 52);
+    if (exp == 0) {
+        return 0;
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t exp = (x >> 52) & 0x7FF;
+    if (exp == 0) {
+        return x;
+    }
+    x -= 1ULL << 52;
+    exp = (x >> 52) & 0x7FF;
+    if (exp == 0) {
+        return 0;
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t exp_mask = 0x7FFULL << 52;
+    if (x == 0 || (x & exp_mask) == 0) {
+        return x;
+    }
+    x -= 1ULL << 52;
+    if ((x & exp_mask) == 0) {
+        return 0;
+    }
+    return x;
+}
+
+static uint64_t fpr_half(uint64_t x) {
+    uint64_t mask = x == 0 ? 0 : 0xFFFFFFFFFFFFFFFF;
+    x -= mask & ((uint64_t)1 << 52);
+    mask = (((uint32_t)(x >> 52) & 0x7FF) + 1) >> 11;
+    return x & (uint64_t)mask - 1;
+}

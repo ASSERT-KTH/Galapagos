@@ -1,0 +1,88 @@
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    if (x < 26) return x + 'A';
+    if (x < 52) return x - 26 + 'a';
+    if (x < 62) return x - 52 + '0';
+    if (x == 62) return '-';
+    if (x == 63) return '_';
+    return -1; // Should never reach here
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    return x < 26 ? x + 'A' : x < 52 ? x - 26 + 'a' : x < 62 ? x - 52 + '0' : x == 62 ? '-' : '_';
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+    return table[x];
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    if (x >= 0 && x <= 25) return x + 'A';
+    if (x >= 26 && x <= 51) return x - 26 + 'a';
+    if (x >= 52 && x <= 61) return x - 52 + '0';
+    if (x == 62) return '-';
+    if (x == 63) return '_';
+    return -1;
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    return x < 26 ? (x + 'A') :
+           x < 52 ? (x - 26 + 'a') :
+           x < 62 ? (x - 52 + '0') :
+           x == 62 ? '-' : '_';
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    if (x < 26) return 'A' + x;
+    if (x < 52) return 'a' + (x - 26);
+    if (x < 62) return '0' + (x - 52);
+    return x == 62 ? '-' : '_';
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    unsigned int lookup[64] = 
+    {
+        'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P',
+        'Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f',
+        'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v',
+        'w','x','y','z','0','1','2','3','4','5','6','7','8','9','-','_'
+    };
+    return lookup[x];
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    return x < 26 ? (x + 'A')
+           : (x < 52 ? (x - 26 + 'a')
+           : (x < 62 ? (x - 52 + '0')
+           : (x == 62 ? '-' : '_')));
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    switch(x) {
+        case 0 ... 25: return x + 'A';
+        case 26 ... 51: return x - 26 + 'a';
+        case 52 ... 61: return x - 52 + '0';
+        case 62: return '-';
+        case 63: return '_';
+    }
+    return -1;
+}
+
+static int b64_byte_to_urlsafe_char(unsigned int x)
+{
+    if (x <= 25) return x + 'A';
+    if (x <= 51) return x - 26 + 'a';
+    if (x <= 61) return x - 52 + '0';
+    if (x == 62) return '-';
+    return '_';
+}

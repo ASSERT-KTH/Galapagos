@@ -1,0 +1,129 @@
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    v = (v ^ s2) - s2;
+    return t - v + s1 - (s1 ^ s1);
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    v *= (v < 2 * t);
+    v = (v - t);
+    int s2 = v >> 31;
+    v = t - ((v ^ s2) - s2);
+    return (v ^ s1) + s1;
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    int mask = (v < 2 * t) - 1;
+    v = v & ~mask;
+    v = v - t;
+    int s2 = v >> 31;
+    v = (v ^ s2) - s2;
+    v = t - v;
+    return (v ^ s1) + s1;
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    v = t - ((v ^ s2) - s2);
+    return (v ^ s1) + s1;
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    int abs_v = (v ^ s1) - s1;
+    if (abs_v >= 2 * t) abs_v = 0;
+    abs_v -= t;
+    int s2 = abs_v >> 31;
+    abs_v = (abs_v ^ s2) - s2;
+    return ((t - abs_v) ^ s1) + s1;
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    return ((t - (v ^ s2) - s2) ^ s1) + s1;
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    v *= v < 2*t;
+    v -= t;
+    int s2 = v >> 31;
+    v = (v ^ s2) - s2;
+    return t - v + s1 - (s1 ^ s1);
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    v = t - ((v ^ s2) - s2);
+    return t - ((v ^ s1) - s1);
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    int abs_v = (v ^ s2) - s2;
+    return (t - abs_v) + s1 - (s1 ^ s1);
+}
+
+
+
+static int vp5_adjust(int v, int t)
+{
+    int s1 = v >> 31;
+    v = (v ^ s1) - s1;
+    if (v >= 2 * t) v = 0;
+    v -= t;
+    int s2 = v >> 31;
+    v = t - ((v ^ s2) - s2);
+    return v + s1 - (s1 ^ s1);
+}

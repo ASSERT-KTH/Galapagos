@@ -1,16 +1,15 @@
 
 from os import path
+import sys
 from generate_variants import WORKSPACE
 import json
 
-lang = 'go'
-function_path = path.join(WORKSPACE, 'functions', 'liboqs')
 
-def read_variants():
+def read_variants(function_path):
     with open(path.join(function_path, 'functions_info.json')) as f:
         return json.loads(f.read())
 
-def split(info):
+def split(info, function_path, lang):
     for i, fn in enumerate(info):
         with open(path.join(function_path, 'variants', lang, f'{i}_{fn["name"]}.c.variants')) as fn_file:
             data = fn_file.read()
@@ -43,7 +42,13 @@ def split(info):
                     exit(-1)
 
 
+def read_params():
+    params = sys.argv[1:]
+    lang = params[0]
+    project = params[1]
+    return lang, project
 
-
-split(read_variants())
+lang, project = read_params()
+function_path = path.join(WORKSPACE, 'functions', project)
+split(read_variants(function_path), function_path, lang)
         

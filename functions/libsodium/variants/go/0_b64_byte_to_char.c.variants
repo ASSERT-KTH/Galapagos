@@ -1,0 +1,138 @@
+
+func b64ByteToChar(x uint32) int32 {
+    if x < 26 {
+        return int32(x + 'A')
+    } else if x < 52 {
+        return int32(x - 26 + 'a')
+    } else if x < 62 {
+        return int32(x - 52 + '0')
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    switch {
+    case x < 26:
+        return int32(x + 'A')
+    case x < 52:
+        return int32(x - 26 + 'a')
+    case x < 62:
+        return int32(x - 52 + '0')
+    case x == 62:
+        return '+'
+    default:
+        return '/'
+    }
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    if x <= 25 {
+        return int32(x + 'A')
+    } else if x <= 51 {
+        return int32(x - 26 + 'a')
+    } else if x <= 61 {
+        return int32(x - 52 + '0')
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    switch true {
+    case x < 26:
+        return int32(x + 'A')
+    case x < 52:
+        return int32(x - 26 + 'a')
+    case x < 62:
+        return int32(x - 52 + '0')
+    case x == 62:
+        return '+'
+    default:
+        return '/'
+    }
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    alphabets := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    if x < 26 {
+        return int32(alphabets[x])
+    }
+    alphabets = "abcdefghijklmnopqrstuvwxyz"
+    if x < 52 {
+        return int32(alphabets[x-26])
+    }
+    numbers := "0123456789"
+    if x < 62 {
+        return int32(numbers[x-52])
+    }
+    if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    if x < 26 {
+        return 'A' + int32(x)
+    } else if x < 52 {
+        return 'a' + int32(x-26)
+    } else if x < 62 {
+        return '0' + int32(x-52)
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    lookup := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    return int32(lookup[x])
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    const base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    return int32(base64Chars[x])
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    if x < 26 {
+        return int32('A' + x)
+    } else if x < 52 {
+        return int32('a' + (x - 26))
+    } else if x < 62 {
+        return int32('0' + (x - 52))
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+
+func b64ByteToChar(x uint32) int32 {
+    base64Map := [64]int32{
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/',
+    }
+    return base64Map[x]
+}

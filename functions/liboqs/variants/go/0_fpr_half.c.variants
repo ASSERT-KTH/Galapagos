@@ -1,0 +1,82 @@
+
+func fpr_half(x uint64) uint64 {
+    var t uint32
+
+    x -= uint64(1 << 52)
+    t = uint32(((x >> 52) & 0x7FF) + 1) >> 11
+    x &= uint64(t) - 1
+    return x
+}
+
+func fpr_half(x uint64) uint64 {
+    expMask := uint64(0x7FF) << 52
+    if (x & expMask) == 0 {
+        return x >> 1
+    }
+    return x - (1 << 51)
+}
+
+func fpr_half(x uint64) uint64 {
+    exponent := (x >> 52) & 0x7FF
+    if exponent == 0 {
+        return x >> 1
+    }
+    exponent--
+    x = (x &^ (0x7FF << 52)) | (exponent << 52)
+    return x
+}
+
+func fpr_half(x uint64) uint64 {
+    if (x & (0x7FF << 52)) == 0 {
+        return x >> 1
+    }
+    return (x & ((1 << 52) - 1)) | ((x - (1 << 52)) & (0x7FF << 52))
+}
+
+func fpr_half(x uint64) uint64 {
+    if (x>>52 & 0x7FF) == 0 {
+        return x >> 1
+    }
+    return x - (1 << 52)
+}
+
+func fpr_half(x uint64) uint64 {
+    if ((x >> 52) & 0x7FF) == 0 {
+        return x >> 1
+    }
+    return (x & ((1 << 52) - 1)) | (((x >> 52) - 1) << 52)
+}
+
+func fpr_half(x uint64) uint64 {
+    frac := x & ((1 << 52) - 1)
+    exp := (x >> 52) & 0x7FF
+    if exp == 0 {
+        return x >> 1
+    }
+    exp--
+    return frac | (exp << 52)
+}
+
+func fpr_half(x uint64) uint64 {
+    if ((x >> 52) & 0x7FF) == 0 {
+        return x >> 1
+    }
+    maskedX := x & ((1 << 52) - 1)
+    exponent := ((x >> 52) - 1) << 52
+    return maskedX | exponent
+}
+
+func fpr_half(x uint64) uint64 {
+    t := uint32((((x >> 52) & 0x7FF) + 1) >> 11)
+    if t == 0 {
+        return x >> 1
+    }
+    return (x & ((1 << 52) - 1)) | ((x - (1 << 52)) &^ (0x7FF << 52))
+}
+
+func fpr_half(x uint64) uint64 {
+    if (x>>52) & 0x7FF == 0 {
+        return x >> 1
+    }
+    return (x & ((1 << 52) - 1)) | (((x >> 52) - 1) & 0x7FF) << 52
+}

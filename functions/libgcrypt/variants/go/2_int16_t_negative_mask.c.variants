@@ -1,0 +1,41 @@
+
+func int16_t_negative_mask(x int16) int {
+    u := uint16(x)
+    return -int(u >> 15)
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -int(uint16(x) >> 15)
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -int((uint16(x) & 0x8000) >> 15)
+}
+
+func int16_t_negative_mask(x int16) int {
+    return int((x >> 15) & 1) * -1
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -((int(x) >> 15) & 1)
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -(int((uint32(x) & 0x8000) >> 15))
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -int(uint32(uint16(x) >> 15))
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -int(uint8(x >> 15))
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -int((x >> 15) & 0x1)
+}
+
+func int16_t_negative_mask(x int16) int {
+    return -(int(uint16(x) >> 15) & 1)
+}

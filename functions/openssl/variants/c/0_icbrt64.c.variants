@@ -1,0 +1,200 @@
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t b;
+    int s = 63;
+
+    while (s >= 0) {
+        r = (r << 1) | ((x >> s) >= (b = 3 * r * (r + 1) + 1));
+        x -= ((b << s) & -((x >> s) >= b));
+        s -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t shift_block, current_block;
+    shift_block = 63;
+
+    do {
+        r <<= 1;
+        current_block = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift_block) >= current_block) {
+            x -= current_block << shift_block;
+            r++;
+        }
+        shift_block -= 3;
+    } while (shift_block >= 0);
+
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t temp;
+    int shift = 63;
+
+    while (shift >= 0) {
+        r <<= 1;
+        temp = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift) >= temp) {
+            x -= temp << shift;
+            r++;
+        }
+        shift -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t intermediate;
+    int shift_count = 63;
+
+    while (shift_count >= 0) {
+        r = (r << 1);
+        intermediate = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift_count) >= intermediate) {
+            x -= intermediate << shift_count;
+            r = r + 1;
+        }
+        
+        shift_count -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t bit_pair;
+    int shift_amount = 63;
+
+    while (shift_amount >= 0) {
+        r <<= 1;
+        bit_pair = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift_amount) >= bit_pair) {
+            x -= bit_pair << shift_amount;
+            r++;
+        }
+        
+        shift_amount -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t trial;
+    int shift_pos = 63;
+
+    while (shift_pos >= 0) {
+        r <<= 1;
+        trial = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift_pos) >= trial) {
+            x -= trial << shift_pos;
+            r++;
+        }
+        shift_pos -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t temp0;
+    int b = 63;
+
+    while (b >= 0) {
+        r <<= 1;
+        temp0 = 3 * r * (r + 1) + 1;
+
+        if ((x >> b) >= temp0) {
+            x -= temp0 << b;
+            r++;
+        }
+        b -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t check_val;
+    int shift_idx = 63;
+
+    while (shift_idx >= 0) {
+        r <<= 1;
+        check_val = 3 * r * (r + 1) + 1;
+
+        if ((x >> shift_idx) >= check_val) {
+            x -= check_val << shift_idx;
+            r++;
+        }
+        
+        shift_idx -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t validation;
+    int shifter = 63;
+
+    while (shifter >= 0) {
+        r <<= 1;
+        validation = 3 * r * (r + 1) + 1;
+
+        if ((x >> shifter) >= validation) {
+            x -= validation << shifter;
+            r++;
+        }
+        
+        shifter -= 3;
+    }
+    return r * cbrt_scale;
+}
+
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t r = 0;
+    uint64_t comp_var;
+    int shiftbit = 63;
+
+    while (shiftbit >= 0) {
+        r <<= 1;
+        comp_var = 3 * r * (r + 1) + 1;
+
+        if ((x >> shiftbit) >= comp_var) {
+            x -= comp_var << shiftbit;
+            r++;
+        }
+        
+        shiftbit -= 3;
+    }
+    return r * cbrt_scale;
+}

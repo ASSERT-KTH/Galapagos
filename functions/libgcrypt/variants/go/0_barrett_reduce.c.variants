@@ -1,0 +1,71 @@
+
+func barrettReduce(a int16) int16 {
+	const v int16 = ((1 << 26) + 3329/2) / 3329
+	t := ((int32(v)*int32(a) + (1 << 25)) >> 26) * 3329
+	return a - int16(t)
+}
+
+func barrettReduce(a int16) int16 {
+	const v int16 = ((1 << 26) + 3329/2) / 3329
+	t := (int32(v)*int32(a) + (1 << 25)) >> 26
+	t = t * 3329
+	return int16(int32(a) - t)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	t := int16(((int32(v)*int32(a) + (1 << 25)) >> 26) * 3329)
+	return a - t
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	t := (int32(v)*int32(a) + (1 << 25)) >> 26
+	t512 := t * 3329
+	return a - int16(t512)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	tmp := int32(a) * int32(v)
+	tmp += 1 << 25
+	tmp >>= 26
+	tmp *= 3329
+	return a - int16(tmp)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	tmp := (int32(v) * int32(a)) + (1 << 25)
+	tmp >>= 26
+	tmp *= 3329
+	return a - int16(tmp)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	t := (int32(a) * int32(v) + int32(1<<25)) >> 26
+	t *= 3329
+	return a - int16(t)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	temp := int32(v)*int32(a) + (1 << 25)
+	temp >>= 26
+	temp *= 3329
+	return int16(int32(a) - temp)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	t := ((int32(a) * int32(v)) + (1 << 25)) >> 26
+	return int16(int32(a) - t*3329)
+}
+
+func barrettReduce(a int16) int16 {
+	const v = int16(((1 << 26) + 3329/2) / 3329)
+	t := (int32(v)*int32(a) + (1 << 25)) >> 26
+	t *= 3329
+	return int16(int32(a) - t)
+}

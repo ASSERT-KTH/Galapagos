@@ -6,7 +6,8 @@
         "line": 125,
         "kind": "function",
         "end": 140,
-        "count": 1
+        "count": 1,
+        "params": ["unsigned char"]
     },
     {
         "_type": "tag",
@@ -15,7 +16,8 @@
         "line": 675,
         "kind": "function",
         "end": 689,
-        "count": 1
+        "count": 1,
+        "params" : ["int", "int", "int", "int*"]
     },
     {
         "_type": "tag",
@@ -24,7 +26,8 @@
         "line": 691,
         "kind": "function",
         "end": 701,
-        "count": 0
+        "count": 0,
+        "params" : ["int", "int", "int"]
     },
     {
         "_type": "tag",
@@ -33,7 +36,8 @@
         "line": 141,
         "kind": "function",
         "end": 156,
-        "count": 1
+        "count": 1,
+        "params" : ["unsigned char"]
     },
     {
         "_type": "tag",
@@ -42,6 +46,7 @@
         "line": 59,
         "kind": "function",
         "end": 74,
-        "count": 2
+        "count": 2,
+        "params" : ["int"]
     }
 ]

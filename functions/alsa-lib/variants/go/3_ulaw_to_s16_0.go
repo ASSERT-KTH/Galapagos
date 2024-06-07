@@ -1,0 +1,23 @@
+package main
+
+func ulaw_to_s16(u_val uint8) int32 {
+	var t int32
+
+	// Complement to obtain normal u-law value.
+	u_val = ^u_val
+
+	// Extract and bias the quantization bits. Then
+	// shift up by the segment number and subtract out the bias.
+	t = (int32(u_val&0x0f) << 3) + 0x84
+	t <<= (u_val & 0x70) >> 4
+
+	if u_val&0x80 != 0 {
+		return 0x84 - t
+	}
+	return t - 0x84
+}
+
+
+func main(){
+    ulaw_to_s16('a')
+}

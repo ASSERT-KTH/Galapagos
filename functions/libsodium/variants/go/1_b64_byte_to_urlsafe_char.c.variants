@@ -1,0 +1,157 @@
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    if x < 26 {
+        return int32(x + 'A')
+    } else if x < 52 {
+        return int32(x - 26 + 'a')
+    } else if x < 62 {
+        return int32(x - 52 + '0')
+    } else if x == 62 {
+        return '-'
+    } else if x == 63 {
+        return '_'
+    }
+    return -1
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    var char int32
+    switch {
+    case x < 26:
+        char = int32(x + 'A')
+    case x < 52:
+        char = int32(x - 26 + 'a')
+    case x < 62:
+        char = int32(x - 52 + '0')
+    case x == 62:
+        char = '-'
+    case x == 63:
+        char = '_'
+    default:
+        char = -1
+    }
+    return char
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    if x <= 63 {
+        if x < 26 {
+            return int32(x + 'A')
+        } else if x < 52 {
+            return int32(x + 'a' - 26)
+        } else if x < 62 {
+            return int32(x + '0' - 52)
+        } else if x == 62 {
+            return '-'
+        } else {
+            return '_'
+        }
+    }
+    return -1
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    if x < 26 {
+        return int32('A' + x)
+    } else if x < 52 {
+        return int32('a' + (x - 26))
+    } else if x < 62 {
+        return int32('0' + (x - 52))
+    } else if x == 62 {
+        return '-'
+    } else if x == 63 {
+        return '_'
+    }
+    return -1
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    table := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+    if x >= 64 {
+        return -1
+    }
+    return int32(table[x])
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    switch {
+    case x < 26:
+        return int32(x + 65) // 'A'
+    case x < 52:
+        return int32(x + 71) // 'a' - 26
+    case x < 62:
+        return int32(x - 4)  // '0' - 52
+    case x == 62:
+        return 45            // '-'
+    case x == 63:
+        return 95            // '_'
+    default:
+        return -1
+    }
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    switch {
+    case x < 26:
+        return int32(x + 'A')
+    case x < 52:
+        return int32(x - 26 + 'a')
+    case x < 62:
+        return int32(x - 52 + '0')
+    case x == 62:
+        return int32('-')
+    case x == 63:
+        return int32('_')
+    default:
+        return -1
+    }
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    switch {
+    case x < 26:
+        return int32(x + 'A')
+    case x < 52:
+        return int32(x-26) + 'a'
+    case x < 62:
+        return int32(x-52) + '0'
+    case x == 62:
+        return '-'
+    case x == 63:
+        return '_'
+    default:
+        return -1
+    }
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    if x < 26 {
+        return int32('A' + x)
+    } else if x < 52 {
+        return int32('a' + (x - 26))
+    } else if x < 62 {
+        return int32('0' + (x - 52))
+    } else if x == 62 {
+        return '-'
+    } else if x == 63 {
+        return '_'
+    }
+    return -1
+}
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    switch {
+    case x >= 0 && x < 26:
+        return int32(x) + 'A'
+    case x >= 26 && x < 52:
+        return int32(x-26) + 'a'
+    case x >= 52 && x < 62:
+        return int32(x-52) + '0'
+    case x == 62:
+        return '-'
+    case x == 63:
+        return '_'
+    default:
+        return -1
+    }
+}

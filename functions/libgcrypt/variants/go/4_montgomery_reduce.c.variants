@@ -1,0 +1,57 @@
+
+func montgomeryReduce(a int32) int16 {
+    var t int16
+    t = int16(a) * -3327
+    t = int16((a - int32(t)*3329) >> 16)
+    return t
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a) * -3327
+    return int16((a - int32(t)*3329) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a) * -3327
+    t32 := int32(t) * 3329
+    return int16((a - t32) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    return int16((a - int32(t)*3329) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    result := (a - int32(t)*3329) >> 16
+    return int16(result)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    t32 := int32(t) * 3329
+    return int16((a - t32) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    const qinv = 3329
+    t := int16(a * -3327)
+    return int16((a - int32(t)*qinv) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    return int16((a - int32(t*3329)) >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a - (int32(int16(a)*-3327))*3329)
+    return int16(t >> 16)
+}
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    res := (a - int32(t) * 3329) >> 16
+    return int16(res)
+}

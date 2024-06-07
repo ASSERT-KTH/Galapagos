@@ -1,0 +1,104 @@
+
+package main
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^((in >> 5) - 1)
+    d := (1 << 6) - in - 1
+    d = (d & s) | (in & ^s)
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^(in>>5 - 1)
+    d := 63 - in
+    d = (d & s) | (in & ^s)
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^((in >> 5) - 1)
+    d := 63 - in
+    if s == 0xffffffff {
+        d = in
+    }
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^(uint32(int32(in>>5) - 1))
+    d := 63 - in
+    if s != 0 {
+        d = in
+    }
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^(uint32((int32(in) >> 5) - 1))
+    d := 63 - in
+    if s == 0xffffffff {
+        d = in
+    }
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^((in >> 5) - 1)
+    d := (1 << 6) - in - 1
+    d = ((d & s) | (in & ^s)) >> 1
+    d += d & 1
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^(uint32((int32(in) >> 5) - 1))
+    if s == 0 {
+        return 0
+    }
+    d := 63 - in
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^(uint32((in >> 5) - 1))
+    d := 63 - in
+    if s == 0xffffffff {
+        d = in
+    }
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^((in >> 5) - 1)
+    d := 63 - in
+    if s == 0xffffffff {
+        d = in
+    }
+    t := (d >> 1) + (d & 1)
+
+    return (t << 1) + (s & 1)
+}
+
+func boothRecodeW5(in uint32) uint32 {
+    s := ^((in >> 5) - 1)
+    d := (1 << 6) - in - 1
+    d |= in & (^s)
+    d = (d >> 1) + (d & 1)
+
+    return (d << 1) + (s & 1)
+}

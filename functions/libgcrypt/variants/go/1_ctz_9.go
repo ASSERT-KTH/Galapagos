@@ -1,0 +1,18 @@
+package main
+
+func ctz(in uint64) int32 {
+	if in == 0 {
+		return 64
+	}
+	var r uint = 0
+	for in&1 == 0 {
+		in >>= 1
+		r++
+	}
+	return int32(r)
+}
+
+
+func main(){
+    ctz(0)
+}

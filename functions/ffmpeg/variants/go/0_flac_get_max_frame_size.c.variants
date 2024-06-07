@@ -1,0 +1,151 @@
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    count += ch * ((7 + bps + 7) / 8)
+    if ch == 2 {
+        count += ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        count += (ch * bps * blocksize + 7) / 8
+    }
+    count += 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    headSize := ch * ((bps + 14) / 8)
+    if ch == 2 {
+        frameSize := ((2*bps + 1) * blocksize + 7) / 8
+        count += headSize + frameSize
+    } else {
+        frameSize := (ch * bps * blocksize + 7) / 8
+        count += headSize + frameSize
+    }
+    count += 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    header := int32(16)
+    channels := (7 + bps + 7) / 8
+    count := header + ch*channels
+    var frameData int32
+    if ch == 2 {
+        frameData = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameData = (ch * bps * blocksize + 7) / 8
+    }
+    count += frameData + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    base := int32(16)
+    perChannel := (7 + bps + 7) / 8
+    frameSize := int32(0)
+    if ch == 2 {
+        frameSize = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameSize = (ch * bps * blocksize + 7) / 8
+    }
+    count := base + ch*perChannel + frameSize + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    count += ch * ((bps + 14) / 8)
+    if ch == 2 {
+        frameSize := ((2*bps + 1) * blocksize + 7) / 8
+        count += frameSize
+    } else {
+        frameSize := (ch * bps * blocksize + 7) / 8
+        count += frameSize
+    }
+    count += 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    channels := ch * ((7 + bps + 7) / 8)
+    var frameSize int32 = 0
+    if ch == 2 {
+        frameSize = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameSize = (ch * bps * blocksize + 7) / 8
+    }
+    count += channels + frameSize + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    chSize := ch * ((bps + 14) / 8)
+    count += chSize
+    var frame int32
+    if ch == 2 {
+        frame = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frame = (ch * bps * blocksize + 7) / 8
+    }
+    count += frame + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    perCh := ch * ((7 + bps + 7) / 8)
+    var frameSz int32
+    if ch == 2 {
+        frameSz = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameSz = (ch * bps * blocksize + 7) / 8
+    }
+    count += perCh + frameSz + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    count := int32(16)
+    channelSize := ch * ((bps + 14) / 8)
+    var dataSize int32
+    if ch == 2 {
+        dataSize = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        dataSize = (ch * bps * blocksize + 7) / 8
+    }
+    count += channelSize + dataSize + 2
+    return count
+}
+
+
+
+func flacGetMaxFrameSize(blocksize, ch, bps int32) int32 {
+    baseSize := int32(16)
+    perChannel := ch * ((7 + bps + 7) / 8)
+    var frameContentSize int32
+    if ch == 2 {
+        frameContentSize = ((2*bps + 1) * blocksize + 7) / 8
+    } else {
+        frameContentSize = (ch * bps * blocksize + 7) / 8
+    }
+    totalSize := baseSize + perChannel + frameContentSize + 2
+    return totalSize
+}

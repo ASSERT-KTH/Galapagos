@@ -1,0 +1,49 @@
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    return (int32_t)(x - (p * ((x >= ((p + 1) >> 1)) ? 1 : 0)));
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    uint32_t half_p = (p + 1) >> 1;
+    return x < half_p ? (int32_t)x : (int32_t)(x - p);
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    return (int32_t)(x - ((x >= (p + 1) / 2) * p));
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    return (int32_t)(x - ((x >= (p + 1) / 2) ? p : 0));
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    return (int32_t)x - (int32_t)((p & -((int32_t)(x - ((p + 1) >> 1)) >> 31)));
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    int32_t mid = (p + 1) >> 1;
+    int32_t delta = (x - mid) >> 31;
+    return ((int32_t)x - ((p & delta) - delta));
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    int32_t half_p = (p + 1) >> 1;
+    int32_t adjust = ((x < half_p) ? 0 : 1) * (int32_t)p;
+    return (int32_t)x - adjust;
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    int32_t adjusted_p = -(int32_t)((x - ((p + 1) >> 1)) >> 31) & (int32_t)p;
+    return (int32_t)(x - adjusted_p);
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    int32_t mid = (p + 1) >> 1;
+    return ((x >= mid) ? (int32_t)(x - p) : (int32_t)x);
+}
+
+static int32_t modp_norm(uint32_t x, uint32_t p) {
+    uint32_t half_p = (p + 1) >> 1;
+    int32_t result = (x >= half_p) ? (x - p) : x;
+    return (int32_t)result;
+}

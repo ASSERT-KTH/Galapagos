@@ -1,0 +1,9 @@
+func valSeg(val int32) int {
+	var bitPos [8]int
+	val >>= 8
+	for i := 0; i < 8; i++ {
+		bitPos[i] = int(val & 1)
+		val >>= 1
+	}
+	return 1 + bitPos[4]*4 + bitPos[5]*4 + bitPos[6]*2 + bitPos[7]*2 + bitPos[8]
+}

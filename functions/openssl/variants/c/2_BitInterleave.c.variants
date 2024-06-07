@@ -1,0 +1,164 @@
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t result = 0;
+    for (int i = 0; i < 32; ++i) {
+        result |= ((Ai >> i) & 1) << (2 * i);
+        result |= ((Ai >> (i + 32)) & 1) << (2 * i + 1);
+    }
+    return result;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t interleaved = 0;
+    for (int i = 0; i < 32; ++i) {
+        interleaved |= ((Ai >> (2 * i)) & 1UL) << i;
+        interleaved |= ((Ai >> (2 * i + 1)) & 1UL) << (32 + i);
+    }
+    return interleaved;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    uint64_t result = x | (y << 1);
+    result = (result | (result >> 1)) & 0x3333333333333333;
+    result = (result | (result >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    result = (result | (result >> 4)) & 0x00ff00ff00ff00ff;
+    result = (result | (result >> 8)) & 0x0000ffff0000ffff;
+    result = (result | (result >> 16)) & 0x00000000ffffffff;
+    return result;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t result = 0;
+    for (int i = 0; i < 64; i += 2) {
+        result |= ((Ai >> (i / 2)) & 1) << i;
+        result |= ((Ai >> (i / 2 + 32)) & 1) << (i + 1);
+    }
+    return result;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t result = 0, mask1 = 0x5555555555555555;
+    Ai = (Ai | (Ai << 16)) & 0x0000FFFF0000FFFF;
+    Ai = (Ai | (Ai << 8)) & 0x00FF00FF00FF00FF;
+    Ai = (Ai | (Ai << 4)) & 0x0F0F0F0F0F0F0F0F;
+    Ai = (Ai | (Ai << 2)) & 0x3333333333333333;
+    Ai = (Ai | (Ai << 1)) & 0x5555555555555555;
+    for (int i = 0; i < 64; i += 2) {
+        result |= (Ai & mask1) << i;
+        result |= ((Ai >> 1) & mask1) << (i + 1);
+    }
+    return result;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t evenBits = Ai & 0x5555555555555555;
+    uint64_t oddBits = (Ai >> 1) & 0x5555555555555555;
+    evenBits |= evenBits >> 1; evenBits &= 0x3333333333333333;
+    evenBits |= evenBits >> 2; evenBits &= 0x0F0F0F0F0F0F0F0F;
+    evenBits |= evenBits >> 4; evenBits &= 0x00FF00FF00FF00FF;
+    evenBits |= evenBits >> 8; evenBits &= 0x0000FFFF0000FFFF;
+    oddBits |= oddBits >> 1; oddBits &= 0x3333333333333333;
+    oddBits |= oddBits >> 2; oddBits &= 0x0F0F0F0F0F0F0F0F;
+    oddBits |= oddBits >> 4; oddBits &= 0x00FF00FF00FF00FF;
+    oddBits |= oddBits >> 8; oddBits &= 0x0000FFFF0000FFFF;
+    oddBits <<= 16;
+    return (evenBits << 16) | oddBits;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t hi = (Ai >> 32) & 0xFFFFFFFF;
+    uint64_t lo = Ai & 0xFFFFFFFF;
+    
+    hi = (hi | (hi << 16)) & 0x0000FFFF0000FFFF;
+    hi = (hi | (hi << 8)) & 0x00FF00FF00FF00FF;
+    hi = (hi | (hi << 4)) & 0x0F0F0F0F0F0F0F0F;
+    hi = (hi | (hi << 2)) & 0x3333333333333333;
+    hi = (hi | (hi << 1)) & 0x5555555555555555;
+
+    lo = (lo | (lo << 16)) & 0x0000FFFF0000FFFF;
+    lo = (lo | (lo << 8)) & 0x00FF00FF00FF00FF;
+    lo = (lo | (lo << 4)) & 0x0F0F0F0F0F0F0F0F;
+    lo = (lo | (lo << 2)) & 0x3333333333333333;
+    lo = (lo | (lo << 1)) & 0x5555555555555555;
+
+    return (hi << 1) | lo;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t odd = Ai & 0xAAAAAAAAAAAAAAAA;
+    uint64_t even = Ai & 0x5555555555555555;
+    
+    odd |= odd >> 1;
+    even |= even << 1;
+    
+    odd &= 0x3333333333333333;
+    even &= 0xCCCCCCCCCCCCCCCC;
+    
+    odd |= odd >> 2;
+    even |= even << 2;
+    
+    odd &= 0x0F0F0F0F0F0F0F0F;
+    even &= 0xF0F0F0F0F0F0F0F0;
+    
+    odd |= odd >> 4;
+    even |= even << 4;
+    
+    odd &= 0x00FF00FF00FF00FF;
+    even &= 0xFF00FF00FF00FF00;
+    
+    odd |= odd >> 8;
+    even |= even << 8;
+    
+    odd &= 0x0000FFFF0000FFFF;
+    even &= 0xFFFF0000FFFF0000;
+    
+    odd |= odd >> 16;
+    even |= even << 16;
+    
+    odd &= 0x00000000FFFFFFFF;
+    even &= 0xFFFFFFFF00000000;
+
+    return odd | even;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t t0 = Ai & 0xFFFFFFFF, t1 = Ai >> 32;
+    
+    t0 = (t0 | (t0 << 16)) & 0x0000FFFF0000FFFF;
+    t0 = (t0 | (t0 << 8)) & 0x00FF00FF00FF00FF;
+    t0 = (t0 | (t0 << 4)) & 0x0F0F0F0F0F0F0F0F;
+    t0 = (t0 | (t0 << 2)) & 0x3333333333333333;
+    t0 = (t0 | (t0 << 1)) & 0x5555555555555555;
+    
+    t1 = (t1 | (t1 << 16)) & 0x0000FFFF0000FFFF;
+    t1 = (t1 | (t1 << 8)) & 0x00FF00FF00FF00FF;
+    t1 = (t1 | (t1 << 4)) & 0x0F0F0F0F0F0F0F0F;
+    t1 = (t1 | (t1 << 2)) & 0x3333333333333333;
+    t1 = (t1 | (t1 << 1)) & 0x5555555555555555;
+
+    return (t0 << 1) | t1;
+}
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t x = Ai, mask = 0x5555555555555555;
+    
+    x = (x | (x << 16)) & mask;
+    x = (x | (x << 8)) & 0x00FF00FF00FF00FF;
+    x = (x | (x << 4)) & 0x0F0F0F0F0F0F0F0F;
+    x = (x | (x << 2)) & 0x3333333333333333;
+    x = (x | (x << 1)) & 0x5555555555555555;
+
+    return x | (x << 1);
+}

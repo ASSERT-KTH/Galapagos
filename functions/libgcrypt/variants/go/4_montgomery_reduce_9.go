@@ -1,0 +1,12 @@
+package main
+
+func montgomeryReduce(a int32) int16 {
+    t := int16(a * -3327)
+    res := (a - int32(t) * 3329) >> 16
+    return int16(res)
+}
+
+
+func main(){
+    montgomeryReduce(0)
+}

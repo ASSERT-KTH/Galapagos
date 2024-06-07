@@ -1,6 +1,7 @@
 import subprocess
 import json
 from generate_variants import WORKSPACE
+from split_varaints import read_params
 import os
 import os.path as path
 
@@ -8,14 +9,11 @@ CC = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llv
 DIS = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-dis')
 OPT = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'opt')
 
-lang = 'go'
-function_path = path.join(WORKSPACE, 'functions', 'liboqs')
-
-def read_variants():
+def read_variants(function_path):
     with open(path.join(function_path, 'functions_info.json')) as f:
         return json.loads(f.read())
 
-def compile_variants(variants):
+def compile_variants(variants, lang, function_path):
     #for each variant
     for i, v in enumerate(variants):
         for j in range(10):
@@ -29,7 +27,7 @@ def compile_variants(variants):
                 os.remove(output)
 
 
-def strip_variants(variants):
+def strip_variants(variants, lang, function_path):
     for i, v in enumerate(variants):
         for j in range(10):
             input = path.join(function_path, 'variants', lang, f'{i}_{v["name"]}_{j}.ll')
@@ -43,7 +41,11 @@ def strip_variants(variants):
                 subprocess.check_output(dis_command)
             except Exception:
                 print(f'failed to strip {input}')
-compile_variants(read_variants())
-strip_variants(read_variants())
+
+lang, project = read_params()
+function_path = path.join(WORKSPACE, 'functions', project)
+
+compile_variants(read_variants(function_path), lang, function_path)
+strip_variants(read_variants(function_path), lang, function_path)
 
 

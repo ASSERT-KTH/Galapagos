@@ -1,0 +1,102 @@
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = (int64_t)x;
+    int64_t sy = (int64_t)y;
+
+    if ((sx ^ sy) >= 0) {
+        return sx < sy;
+    } else {
+        return sx < 0;
+    }
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = *(int64_t *)&x;
+    int64_t sy = *(int64_t *)&y;
+
+    if ((sx >= 0) == (sy >= 0)) {
+        return sx < sy;
+    } else {
+        return sx < 0;
+    }
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = (int64_t)x, sy = (int64_t)y;
+    if ((sx >> 63) != (sy >> 63)) {
+        return sx >> 63;
+    }
+    return sx < sy;
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = *(int64_t*)&x, sy = *(int64_t*)&y;
+
+    if ((sx ^ sy) < 0) {
+        return sx < 0;
+    }
+    return sx < sy;
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int negative_x = (int64_t)x < 0;
+    int negative_y = (int64_t)y < 0;
+
+    if (negative_x != negative_y) {
+        return negative_x;
+    } else {
+        return (int64_t)x < (int64_t)y;
+    }
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = (int64_t)x;
+    int64_t sy = (int64_t)y;
+
+    if ((x ^ y) & 0x8000000000000000) {
+        return sx < 0;
+    } else {
+        return sx < sy;
+    }
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = *(int64_t*)&x;
+    int64_t sy = *(int64_t*)&y;
+
+    if ((sx >= 0) != (sy >= 0)) {
+        return sx < 0;
+    }
+    return sx < sy;
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = (int64_t)x;
+    int64_t sy = (int64_t)y;
+
+    if ((sx & 0x8000000000000000) != (sy & 0x8000000000000000)) {
+        return sx & 0x8000000000000000;
+    }
+    return sx < sy;
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx, sy;
+    memcpy(&sx, &x, sizeof(int64_t));
+    memcpy(&sy, &y, sizeof(int64_t));
+
+    if ((sx < 0) != (sy < 0)) {
+        return sx < 0;
+    }
+    return sx < sy;
+}
+
+static int fpr_lt(uint64_t x, uint64_t y) {
+    int64_t sx = (int64_t)x;
+    int64_t sy = (int64_t)y;
+
+    if (((sx ^ sy) < 0) && (sx < 0)) {
+        return 1;
+    }
+    return sx < sy;
+}

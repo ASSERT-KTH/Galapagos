@@ -1,0 +1,4 @@
+func montgomeryReduce(a int32) int16 {
+    t := int16(a) * -3327
+    return int16((a - int32(t)*3329) >> 16)
+}
