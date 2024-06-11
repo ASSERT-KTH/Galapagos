@@ -1,0 +1,14 @@
+#include <stdint.h>
+
+static int b64_byte_to_char(unsigned int x)
+{
+    return ((x < 26) ? x + 65 :
+            (x < 52) ? x + 71 :
+            (x < 62) ? x - 4 :
+            (x == 62) ? 43 : 47);
+}
+
+
+int main(){
+    b64_byte_to_char(0);
+}

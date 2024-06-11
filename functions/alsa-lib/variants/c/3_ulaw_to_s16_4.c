@@ -1,0 +1,16 @@
+#include <stdint.h>
+
+static int ulaw_to_s16(unsigned char u_val)
+{
+	int temp, result;
+	u_val = ~u_val;
+	temp = ((u_val & 0x0f) << 3) + 0x84;
+	temp <<= (u_val & 0x70) >> 4;
+	result = (u_val & 0x80) ? (0x84 - temp) : (temp - 0x84);
+	return result;
+}
+
+
+int main(){
+    ulaw_to_s16('a');
+}

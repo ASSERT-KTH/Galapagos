@@ -1,0 +1,3 @@
+func BitDeinterleave(Ai uint64) uint64 {
+	return Ai
+}

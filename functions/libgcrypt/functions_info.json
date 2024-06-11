@@ -6,7 +6,8 @@
         "line": 6667,
         "kind": "function",
         "end": 6674,
-        "params": ["int16"]
+        "params": ["int16"],
+        "return": "int16_t"
     },
     {
         "_type": "tag",
@@ -15,7 +16,8 @@
         "line": 8534,
         "kind": "function",
         "end": 8546,
-        "params": ["uint64"]
+        "params": ["uint64"],
+        "return": "int"
     },
     {
         "_type": "tag",
@@ -24,7 +26,8 @@
         "line": 6138,
         "kind": "function",
         "end": 6145,
-        "params": ["int16"]
+        "params": ["int16"],
+        "return": "static int"
     },
     {
         "_type": "tag",
@@ -33,7 +36,8 @@
         "line": 6127,
         "kind": "function",
         "end": 6134,
-        "params": ["int16"]
+        "params": ["int16"],
+        "return": "static int"
     },
     {
         "_type": "tag",
@@ -42,6 +46,7 @@
         "line": 6658,
         "kind": "function",
         "end": 6665,
-        "params": ["int32"]
+        "params": ["int32"],
+        "return": "int16_t"
     }
 ]

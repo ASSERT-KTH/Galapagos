@@ -1,0 +1,19 @@
+package main
+
+func b64ByteToChar(x uint32) int32 {
+    if x < 26 {
+        return int32('A' + x)
+    } else if x < 52 {
+        return int32('a' + (x - 26))
+    } else if x < 62 {
+        return int32('0' + (x - 52))
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}
+
+
+func main(){
+    b64ByteToChar(0)
+}

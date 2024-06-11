@@ -17,7 +17,7 @@ module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22type 1 (? <type -3>, ? <type -3>, ? <type -3>) <type -3>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
-module asm "\09.ascii \22muldivDown\22"
+module asm "\09.ascii \22muldiv_down\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22a\22"
 module asm "\09.ascii \22 \22"
@@ -36,9 +36,9 @@ module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
 module asm "\09.ascii \22<type -3>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:522>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/alsa-lib/variants/go/2_muldiv_down_5.go:3\\n var v <type -4> = (($convert(<type -4>, a) * $convert(<type -4>, b)) / $convert(<type -4>, c)) //7\\n { //8\\n  if (v > $convert(<type -4>, 2147483647 )) { //8\\n   { //9\\n    $ret0 = 2147483647  //9\\n    return //9\\n   } //0\\n  } //8\\n } //10\\n { //11\\n  if (v < $convert(<type -4>, -2147483648 )) { //11\\n   { //12\\n    $ret0 = -2147483648  //12\\n    return //12\\n   } //0\\n  } //11\\n } //13\\n { //14\\n  $ret0 = $convert(<type -3>, v) //14\\n  return //14\\n } //0\\n\22"
-module asm "\09.ascii \22checksum ECFF06275B89151AFA288F061D7D028662483F92\\n\22"
+module asm "\09.ascii \22 <inl:557>\\n\22"
+module asm "\09.ascii \22 // /home/javier/Galapagos/functions/alsa-lib/variants/go/2_muldiv_down_5.go:3\\n var v <type -4> = (($convert(<type -4>, a) * $convert(<type -4>, b)) / $convert(<type -4>, c)) //4\\n { //5\\n  if (v > $convert(<type -4>, 2147483647 )) { //5\\n   { //6\\n    $ret0 = $convert(<type -3>, 2147483647 ) //6\\n    return //6\\n   } //0\\n  } //5\\n } //7\\n { //8\\n  if (v < $convert(<type -4>, -2147483648 )) { //8\\n   { //9\\n    $ret0 = $convert(<type -3>, -2147483648 ) //9\\n    return //9\\n   } //0\\n  } //8\\n } //10\\n { //11\\n  $ret0 = $convert(<type -3>, v) //11\\n  return //11\\n } //0\\n\22"
+module asm "\09.ascii \22checksum 52F0AEA86D5ED1CB51CD32FB23AF1F3E3AAB4ED9\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -52,7 +52,7 @@ entry:
 }
 
 ; Function Attrs: null_pointer_is_valid
-define i32 @main.muldivDown(i8* nest nocapture readnone %nest.0, i32 %a, i32 %b, i32 %c) local_unnamed_addr #0 {
+define i32 @main.muldiv__down(i8* nest nocapture readnone %nest.0, i32 %a, i32 %b, i32 %c) local_unnamed_addr #0 {
 entry:
   %sext.0 = sext i32 %a to i64
   %sext.1 = sext i32 %b to i64

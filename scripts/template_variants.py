@@ -1,5 +1,5 @@
 from generate_variants import WORKSPACE
-from split_varaints import read_params
+from split_variants import read_params
 
 import json
 from os import path
@@ -7,7 +7,8 @@ from os import path
 def type_to_params(types):
     r = []
     for t in types:
-        if t == 'int64' or t == 'int' or t == 'int*' or t == 'int16' or t == 'int32' or t == 'uint64':
+        if (t == 'int64' or t == 'int' or t == 'int*' or t == 'int16' 
+            or t == 'int32' or t == 'uint64' or t == 'uint32' or t == 'uint'):
             r.append('0')
         if t == 'unsigned char':
             r.append('\'a\'')

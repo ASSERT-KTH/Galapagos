@@ -1,0 +1,17 @@
+#include <stdint.h>
+
+static int b64_byte_to_char(unsigned int x)
+{
+    if (x >= 0 && x < 26)
+        return x + 'A';
+    if (x >= 26 && x < 52)
+        return x - 26 + 'a';
+    if (x >= 52 && x < 62)
+        return x - 52 + '0';
+    return x == 62 ? '+' : '/';
+}
+
+
+int main(){
+    b64_byte_to_char(0);
+}

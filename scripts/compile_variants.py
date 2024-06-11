@@ -1,13 +1,10 @@
 import subprocess
 import json
 from generate_variants import WORKSPACE
-from split_varaints import read_params
+from split_variants import read_params
 import os
 import os.path as path
 
-CC = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-goc')
-DIS = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-dis')
-OPT = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'opt')
 
 def read_variants(function_path):
     with open(path.join(function_path, 'functions_info.json')) as f:
@@ -24,7 +21,10 @@ def compile_variants(variants, lang, function_path):
                 subprocess.check_output(command)
             except Exception:
                 print(f'failed to compile {source}')
-                os.remove(output)
+                try:
+                    os.remove(output)
+                except OSError:
+                    pass
 
 
 def strip_variants(variants, lang, function_path):
@@ -43,6 +43,19 @@ def strip_variants(variants, lang, function_path):
                 print(f'failed to strip {input}')
 
 lang, project = read_params()
+
+CC = ""
+DIS = ""
+OPT = ""
+if lang == 'go':
+    CC = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-goc')
+    DIS = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-dis')
+    OPT = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'opt')
+elif lang == 'c':
+    CC = 'clang'
+    DIS = 'llvm-dis'
+    OPT = 'opt'
+
 function_path = path.join(WORKSPACE, 'functions', project)
 
 compile_variants(read_variants(function_path), lang, function_path)

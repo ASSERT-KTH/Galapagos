@@ -1,7 +1,7 @@
 {
   "alsa-lib": {
     "alaw_to_s16": "src/pcm/pcm_alaw",
-    "muldiv": "src/pcm/pcm_local",
+    "iec958_parity": "src/pcm/pcm_iec958",
     "muldiv_down": "src/pcm/pcm_local",
     "val_seg": "src/pcm/pcm_alaw",
     "ulaw_to_s16": "src/pcm/pcm_mulaw"

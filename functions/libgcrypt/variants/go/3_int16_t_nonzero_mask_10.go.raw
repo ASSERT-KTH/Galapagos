@@ -1,0 +1,4 @@
+func main() {
+	fmt.Println(int16_t_nonzero_mask(0))   // 0
+	fmt.Println(int16_t_nonzero_mask(123)) // -1
+}

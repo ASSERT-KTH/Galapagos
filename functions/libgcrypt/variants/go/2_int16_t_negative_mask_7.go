@@ -1,7 +1,7 @@
 package main
 
-func int16_t_negative_mask(x int16) int {
-    return -int(uint8(x >> 15))
+func int16_t_negative_mask(x int16) int32 {
+    return -int32((uint32(x) >> 15) & 1)
 }
 
 

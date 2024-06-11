@@ -129,7 +129,8 @@ def main(args):
     for project in projects:
         files = os.listdir(os.path.join(WORKSPACE, 'functions', project))
         # filer .c files only
-        functions = [f for f in files if f.endswith('.c')]
+        allowlist = ['0_icbrt64.c']
+        functions = [f for f in files if f.endswith('.c') and f in allowlist]
         for function in functions:
             for temperature in temperatures:
                 function_file = os.path.join(WORKSPACE, 'functions', project, function)

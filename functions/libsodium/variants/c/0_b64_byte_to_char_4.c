@@ -1,0 +1,15 @@
+#include <stdint.h>
+
+static int b64_byte_to_char(unsigned int x)
+{
+    switch (x) {
+        case 62: return '+';
+        case 63: return '/';
+        default: return x + (x < 26 ? 'A' : (x < 52 ? 'a' - 26 : '0' - 52));
+    }
+}
+
+
+int main(){
+    b64_byte_to_char(0);
+}

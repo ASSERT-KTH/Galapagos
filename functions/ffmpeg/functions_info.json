@@ -7,7 +7,8 @@
         "kind": "function",
         "end": 8727,
         "count": 2,
-        "params": ["int", "int", "int"]
+        "params": ["int", "int", "int"],
+        "return": "static int"
     },
     {
         "_type": "tag",
@@ -17,7 +18,8 @@
         "kind": "function",
         "end": 10664,
         "count": 43,
-        "params": ["int", "int"]
+        "params": ["int", "int"],
+        "return": "static int"
     },
     {
         "_type": "tag",
@@ -27,7 +29,8 @@
         "kind": "function",
         "end": 3648,
         "count": 0,
-        "params": ["int", "int"]
+        "params": ["int", "int"],
+        "return": "static int"
 
     },
     {
@@ -38,7 +41,8 @@
         "kind": "function",
         "end": 12393,
         "count": 2,
-        "params": ["int", "int", "int"]
+        "params": ["int", "int", "int"],
+        "return": "static int"
 
     },
     {
@@ -49,6 +53,7 @@
         "kind": "function",
         "end": 6792,
         "count": 5,
-        "params": ["int64"]
+        "params": ["int64"],
+        "return": "static int64_t"
     }
 ]

@@ -1,41 +1,42 @@
 
-func int16_t_negative_mask(x int16) int {
-    u := uint16(x)
-    return -int(u >> 15)
+import "math/bits"
+
+func int16_t_negative_mask(x int16) int32 {
+    return -(int32(x) >> 15)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -int(uint16(x) >> 15)
+func int16_t_negative_mask(x int16) int32 {
+    return -int32((uint16(x) & 0x8000) >> 15)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -int((uint16(x) & 0x8000) >> 15)
+func int16_t_negative_mask(x int16) int32 {
+    return -int32(bits.RotateLeft16(uint16(x), -15) & 1)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return int((x >> 15) & 1) * -1
+func int16_t_negative_mask(x int16) int32 {
+    return -int32((uint16(x) >> 14) >> 1)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -((int(x) >> 15) & 1)
+func int16_t_negative_mask(x int16) int32 {
+    return int32(-(int16(uint16(x) << 1) >> 16))
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -(int((uint32(x) & 0x8000) >> 15))
+func int16_t_negative_mask(x int16) int32 {
+    return int32(-int16(uint16(x) >> 15))
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -int(uint32(uint16(x) >> 15))
+func int16_t_negative_mask(x int16) int32 {
+    return -int32(uint16(x) >> 15)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -int(uint8(x >> 15))
+func int16_t_negative_mask(x int16) int32 {
+    return -int32((uint32(x) >> 15) & 1)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -int((x >> 15) & 0x1)
+func int16_t_negative_mask(x int16) int32 {
+    return -(x >> 15)
 }
 
-func int16_t_negative_mask(x int16) int {
-    return -(int(uint16(x) >> 15) & 1)
+func int16_t_negative_mask(x int16) int32 {
+    return int32(-(uint16(x) >> 15))
 }

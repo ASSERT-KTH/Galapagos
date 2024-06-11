@@ -1,50 +1,62 @@
 
-import "math/bits"
+package main
 
-func int16_nonzero_mask(x int16) int16 {
+import (
+	"fmt"
+)
+
+func int16_t_nonzero_mask(x int16) int32 {
+	u := uint16(x)
+	v := uint32(u)
+	v = ^v + 1
+	v >>= 31
+	return -int32(v)
+}
+
+func int16_t_nonzero_mask(x int16) int32 {
 	if x != 0 {
 		return -1
 	}
 	return 0
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	if x > 0 || x < 0 {
-		return -1
+func int16_t_nonzero_mask(x int16) int32 {
+	return int32((uint32(x) | uint32(-x)) >> 31)
+}
+
+func int16_t_nonzero_mask(x int16) int32 {
+	return int32(int32(x) >> 31 | int32(-x) >> 31)
+}
+
+func int16_t_nonzero_mask(x int16) int32 {
+	if x == 0 {
+		return 0
 	}
-	return 0
+	return -1
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	return int16(^uint16(x | -x >> 15) >> 15)
+func int16_t_nonzero_mask(x int16) int32 {
+	return int32(-int32(uint32(int16(uint16((x >> 15) ^ (~x >> 15))))))
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	y := uint16(x)
-	z := uint32(y)
-	return int16(-(z >> 31))
+func int16_t_nonzero_mask(x int16) int32 {
+	return -int32(uint32(uint16(x)) >> 15)
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	return int16(int32(uint16(x)>>15) * -1)
+func int16_t_nonzero_mask(x int16) int32 {
+	v := -uint32(uint16(x))
+	return int32(v >> 31 & 1)
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	return int16(uint16(x) >> 15 * -1)
+func int16_t_nonzero_mask(x int16) int32 {
+	return int32(^((x | -x) >> 15) + 1)
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	return int16(int32((x >> 15) - (x >> 15 & 1)))
+func int16_t_nonzero_mask(x int16) int32 {
+	return int32((uint32((x | -x)) >> 15) & 1) * -1
 }
 
-func int16_nonzero_mask(x int16) int16 {
-	return int16(-int32(bits.RotateLeft32(uint32(x|0), 1) >> 31))
-}
-
-func int16_nonzero_mask(x int16) int16 {
-	return int16(((x | -x) >> 15) * -1)
-}
-
-func int16_nonzero_mask(x int16) int16 {
-	return int16(-int32((uint32(x) | uint32(-x)) >> 31))
+func main() {
+	fmt.Println(int16_t_nonzero_mask(0))   // 0
+	fmt.Println(int16_t_nonzero_mask(123)) // -1
 }

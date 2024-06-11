@@ -1,0 +1,95 @@
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	data >>= 4;
+	unsigned int parity = __builtin_parity(data & 0x1FFFFFFF);
+	return parity;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	for (int i = 0; i < 28; i++) {
+		parity ^= (data >> (4 + i)) & 1;
+	}
+	return parity;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	data >>= 4;
+	for (int bit = 0; bit < 27; bit++) {
+		parity += (data >> bit) & 1;
+	}
+	return parity & 1;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	for (int bit = 4; bit <= 30; bit++) {
+		parity ^= (data >> bit) & 1;
+	}
+	return parity & 1;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	data = data >> 4 & 0x1FFFFFFF; // Masking to 28 bits
+	int count = __builtin_popcount(data);
+	return count & 1;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	data >>= 4;
+	while (data) {
+		parity ^= (data & 1);
+		data >>= 1;
+	}
+	return parity;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	for (int i = 0; i < 28; i++) {
+		if ((data >> (4 + i)) & 1) {
+			parity++;
+		}
+	}
+	return parity % 2;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	data >>= 4;
+	for (int bit = 0; bit < 27; bit++) {
+		parity += (data >> bit) & 1;
+	}
+	return parity & 1;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	data >>= 4;
+	data ^= data >> 1;
+	data ^= data >> 2;
+	data ^= data >> 4;
+	data ^= data >> 8;
+	data ^= data >> 16;
+	return data & 1;
+}
+
+static unsigned int iec958_parity(unsigned int data)
+{
+	unsigned int parity = 0;
+	data >>= 4;
+	for (int bit = 4; bit <= 30; bit++) {
+		parity ^= (data >> (bit - 4)) & 1;
+	}
+	return parity & 1;
+}

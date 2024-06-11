@@ -1,0 +1,9 @@
+func fpr_lt(x, y uint64) int32 {
+    if (int64(x) >= 0 && int64(y) >= 0) || (int64(x) < 0 && int64(y) < 0) {
+        return int32((int64(x) - int64(y)) >> 63 & 1)
+    }
+    if int64(x) < 0 {
+        return 1
+    }
+    return 0
+}

@@ -1,0 +1,14 @@
+package main
+
+func fpr_half(x uint64) uint64 {
+    expMask := uint64(0x7FF) << 52
+    if (x & expMask) == 0 {
+        return x >> 1
+    }
+    return x - (1 << 51)
+}
+
+
+func main(){
+    fpr_half(0)
+}

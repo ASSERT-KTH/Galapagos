@@ -12,9 +12,9 @@ module asm "\09.ascii \22pkgpath \22"
 module asm "\09.ascii \22main\22"
 module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22types 2 1\22"
-module asm "\09.ascii \22 32\22"
+module asm "\09.ascii \22 31\22"
 module asm "\09.ascii \22\\n\22"
-module asm "\09.ascii \22type 1 (? <type -2>) <type -11>\\n\22"
+module asm "\09.ascii \22type 1 (? <type -2>) <type -3>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
 module asm "\09.ascii \22int16_t_negative_mask\22"
@@ -26,11 +26,11 @@ module asm "\09.ascii \22)\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
-module asm "\09.ascii \22<type -11>\22"
+module asm "\09.ascii \22<type -3>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:229>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/2_int16_t_negative_mask_6.go:3\\n { //4\\n  $ret0 = -$convert(<type -11>, $convert(<type -7>, ($convert(<type -6>, x) >> $convert(<type -12>, 15 )))) //4\\n  return //4\\n } //0\\n\22"
-module asm "\09.ascii \22checksum CF5E666170ED3F156E84EDACE324E42888076E75\\n\22"
+module asm "\09.ascii \22 <inl:207>\\n\22"
+module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/2_int16_t_negative_mask_6.go:3\\n { //4\\n  $ret0 = -$convert(<type -3>, ($convert(<type -6>, x) >> $convert(<type -12>, 15 ))) //4\\n  return //4\\n } //0\\n\22"
+module asm "\09.ascii \22checksum 30DA340D516F296B8E83C0AEC8A45D1B85B3A063\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -44,12 +44,12 @@ entry:
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn
-define i64 @main.int16__t__negative__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
+define i32 @main.int16__t__negative__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
 entry:
   %shr.0 = lshr i16 %x, 15
-  %zext.1 = zext i16 %shr.0 to i64
-  %sub.0 = sub nsw i64 0, %zext.1
-  ret i64 %sub.0
+  %zext.0 = zext i16 %shr.0 to i32
+  %sub.0 = sub nsw i32 0, %zext.0
+  ret i32 %sub.0
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn

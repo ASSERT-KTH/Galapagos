@@ -3,11 +3,74 @@ static inline int muldiv_down(int a, int b, int c)
 {
 	int64_t v = (int64_t)a * b;
 	v /= c;
-	if (v > INT_MAX) {
-		v = INT_MAX;
+	if (v > INT32_MAX) {
+		return INT32_MAX;
 	}
-	if (v < INT_MIN) {
-		v = INT_MIN;
+	if (v < INT32_MIN) {
+		return INT32_MIN;
+	}
+	return (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = (int64_t)a * b;
+	v = v / c;
+	if (v > 0x7FFFFFFF) {
+		return 0x7FFFFFFF;
+	}
+	if (v < -0x80000000) {
+		return -0x80000000;
+	}
+	return (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = (int64_t)a * b / (int64_t)c;
+	if (v > 2147483647LL) {
+		return 2147483647;
+	}
+	if (v < -2147483648LL) {
+		return -2147483648;
+	}
+	return (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = ((int64_t)a * b) / c;
+	if (v > 2147483647LL) {
+		return 0x7FFFFFFF;
+	}
+	if (v < -2147483648LL) {
+		return 0x80000000;
+	}
+	return (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = (int64_t)a * b;
+	v /= c;
+	int result = (v > INT32_MAX) ? INT32_MAX : (v < INT32_MIN) ? INT32_MIN : (int)v;
+	return result;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = (int64_t)a * b / c;
+	v = (v > 2147483647LL) ? 2147483647 : (v < -2147483648LL) ? -2147483648 : v;
+	return (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = (int64_t)a * b / c;
+	if (v > 2147483647LL) {
+		v = 2147483647;
+	} else if (v < -2147483648LL) {
+		v = -2147483648;
 	}
 	return (int)v;
 }
@@ -15,79 +78,31 @@ static inline int muldiv_down(int a, int b, int c)
 static inline int muldiv_down(int a, int b, int c)
 {
 	int64_t v = (int64_t)a * b / c;
-	if (v > INT_MAX) {
-		v = INT_MAX;
-	} else if (v < INT_MIN) {
-		v = INT_MIN;
+	return (v > INT32_MAX) ? INT32_MAX : (v < INT32_MIN) ? INT32_MIN : (int)v;
+}
+
+static inline int muldiv_down(int a, int b, int c)
+{
+	int64_t v = ((int64_t)a * b) / (int64_t)c;
+	int maxInt = 2147483647;
+	int minInt = -2147483648;
+	if (v > maxInt) {
+		return maxInt;
+	}
+	if (v < minInt) {
+		return minInt;
 	}
 	return (int)v;
 }
 
 static inline int muldiv_down(int a, int b, int c)
 {
-	int64_t v = (int64_t)(a * b);
-	v = v / c;
-	if (v > INT_MAX) return INT_MAX;
-	if (v < INT_MIN) return INT_MIN;
-	return (int)v;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t product = (int64_t)a * b;
-	int64_t v = product / c;
-	if (v > INT_MAX) return INT_MAX;
-	if (v < INT_MIN) return INT_MIN;
-	return (int)v;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t product = (int64_t)a * b;
-	int lower_bound = INT_MIN;
-	int upper_bound = INT_MAX;
-	int64_t v = product / c;
-	if (v > upper_bound) return upper_bound;
-	if (v < lower_bound) return lower_bound;
-	return (int)v;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t result;
-	result = (int64_t)a * b;
-	result /= c;
-	if (result > INT_MAX) result = INT_MAX;
-	if (result < INT_MIN) result = INT_MIN;
-	return (int)result;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t v = (((int64_t)a * b) / c);
-	return v > INT_MAX ? INT_MAX : (v < INT_MIN ? INT_MIN : (int)v);
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t temp = (int64_t)a * b;
-	int64_t quo = temp / c;
-	if (quo > INT_MAX) return INT_MAX;
-	if (quo < INT_MIN) return INT_MIN;
-	return (int)quo;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
 	int64_t v = (int64_t)a * b;
-	int64_t div = v / c;
-	if (div > INT_MAX) return INT_MAX;
-	if (div < INT_MIN) return INT_MIN;
-	return (int)div;
-}
-
-static inline int muldiv_down(int a, int b, int c)
-{
-	int64_t val = (int64_t)a * b / c;
-	return (int)((val > INT_MAX) ? INT_MAX : (val < INT_MIN) ? INT_MIN : val);
+	v /= (int64_t)c;
+	if (v > INT32_MAX) {
+		v = INT32_MAX;
+	} else if (v < INT32_MIN) {
+		v = INT32_MIN;
+	}
+	return (int)v;
 }

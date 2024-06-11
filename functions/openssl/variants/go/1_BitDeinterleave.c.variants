@@ -1,314 +1,446 @@
 
-package main
-
-import "fmt"
-
-func BitDeinterleave(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 |= t0 << 8; t0 &= 0x00ff00ff
-		t0 |= t0 << 4; t0 &= 0x0f0f0f0f
-		t0 |= t0 << 2; t0 &= 0x33333333
-		t0 |= t0 << 1; t0 &= 0x55555555
-
-		t1 = hi << 16
-		t1 |= t1 >> 8; t1 &= 0xff00ff00
-		t1 |= t1 >> 4; t1 &= 0xf0f0f0f0
-		t1 |= t1 >> 2; t1 &= 0xcccccccc
-		t1 |= t1 >> 1; t1 &= 0xaaaaaaaa
-
-		lo >>= 16
-		lo |= lo << 8; lo &= 0x00ff00ff
-		lo |= lo << 4; lo &= 0x0f0f0f0f
-		lo |= lo << 2; lo &= 0x33333333
-		lo |= lo << 1; lo &= 0x55555555
-
-		hi &= 0xffff0000
-		hi |= hi >> 8; hi &= 0xff00ff00
-		hi |= hi >> 4; hi &= 0xf0f0f0f0
-		hi |= hi >> 2; hi &= 0xcccccccc
-		hi |= hi >> 1; hi &= 0xaaaaaaaa
-
-		ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
-	}
-
-	return ai
+func BitDeinterleave(Ai uint64) uint64 {
+	return Ai
 }
 
-func BitDeinterleave1(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
 
-		t0 = lo & 0x0000ffff
-		t0 = ((t0 << 8) & 0x00ff00ff) | t0
-		t0 = ((t0 << 4) & 0x0f0f0f0f) | t0
-		t0 = ((t0 << 2) & 0x33333333) | t0
-		t0 = ((t0 << 1) & 0x55555555) | t0
 
-		t1 = ((hi << 16) & 0xff00ff00) | (hi << 16)
-		t1 = ((t1 >> 8) & 0xf0f0f0f0) | t1
-		t1 = ((t1 >> 4) & 0xcccccccc) | t1
-		t1 = ((t1 >> 2) & 0xaaaaaaaa) | t1
-		t1 = ((t1 >> 1) & 0xaaaaaaaa) | t1
+func BitDeinterleave(Ai uint64) uint64 {
+	hi := uint32(Ai >> 32)
+	lo := uint32(Ai)
 
-		lo >>= 16
-		lo = ((lo << 8) & 0x00ff00ff) | lo
-		lo = ((lo << 4) & 0x0f0f0f0f) | lo
-		lo = ((lo << 2) & 0x33333333) | lo
-		lo = ((lo << 1) & 0x55555555) | lo
+	t0 := lo & 0x0000ffff
+	t0 |= t0 << 8
+	t0 &= 0x00ff00ff
+	t0 |= t0 << 4
+	t0 &= 0x0f0f0f0f
+	t0 |= t0 << 2
+	t0 &= 0x33333333
+	t0 |= t0 << 1
+	t0 &= 0x55555555
 
-		hi &= 0xffff0000
-		hi = ((hi >> 8) & 0xff00ff00) | hi
-		hi = ((hi >> 4) & 0xf0f0f0f0) | hi
-		hi = ((hi >> 2) & 0xcccccccc) | hi
-		hi = ((hi >> 1) & 0xaaaaaaaa) | hi
+	t1 := hi << 16
+	t1 |= t1 >> 8
+	t1 &= 0xff00ff00
+	t1 |= t1 >> 4
+	t1 &= 0xf0f0f0f0
+	t1 |= t1 >> 2
+	t1 &= 0xcccccccc
+	t1 |= t1 >> 1
+	t1 &= 0xaaaaaaaa
 
-		ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
-	}
+	lo >>= 16
+	lo |= lo << 8
+	lo &= 0x00ff00ff
+	lo |= lo << 4
+	lo &= 0x0f0f0f0f
+	lo |= lo << 2
+	lo &= 0x33333333
+	lo |= lo << 1
+	lo &= 0x55555555
 
-	return ai
+	hi &= 0xffff0000
+	hi |= hi >> 8
+	hi &= 0xff00ff00
+	hi |= hi >> 4
+	hi &= 0xf0f0f0f0
+	hi |= hi >> 2
+	hi &= 0xcccccccc
+	hi |= hi >> 1
+	hi &= 0xaaaaaaaa
+
+	Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	return Ai
 }
 
-func BitDeinterleave2(ai uint64) uint64 {
+
+
+func BitDeinterleave(Ai uint64) uint64 {
 	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
 
-		t0 = lo & 0x0000ffff
-		t0 = t0 | ((t0 << 8) & 0x00ff00ff)
-		t0 = t0 | ((t0 << 4) & 0x0f0f0f0f)
-		t0 = t0 | ((t0 << 2) & 0x33333333)
-		t0 = t0 | ((t0 << 1) & 0x55555555)
-
-		t1 = (hi << 16) | ((hi << 16) & 0x00ff00ff)
-		t1 = t1 | ((t1 >> 8) & 0xf0f0f0f0)
-		t1 = t1 | ((t1 >> 4) & 0xcccccccc)
-		t1 = t1 | ((t1 >> 2) & 0xaaaaaaaa)
-		t1 = t1 | ((t1 >> 1) & 0xaaaaaaaa)
-
-		lo >>= 16
-		lo = lo | ((lo << 8) & 0x00ff00ff)
-		lo = lo | ((lo << 4) & 0x0f0f0f0f)
-		lo = lo | ((lo << 2) & 0x33333333)
-		lo = lo | ((lo << 1) & 0x55555555)
-
-		hi &= 0xffff0000
-		hi = hi | ((hi >> 8) & 0xff00ff00)
-		hi = hi | ((hi >> 4) & 0xf0f0f0f0)
-		hi = hi | ((hi >> 2) & 0xcccccccc)
-		hi = hi | ((hi >> 1) & 0xaaaaaaaa)
-
-		ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
-	}
-
-	return ai
-}
-
-func BitDeinterleave3(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 = (t0 << 8) & 0x00ff00ff | t0
-		t0 = (t0 << 4) & 0x0f0f0f0f | t0
-		t0 = (t0 << 2) & 0x33333333 | t0
-		t0 = (t0 << 1) & 0x55555555 | t0
-
-		t1 = (hi << 16) & 0xff00ff00 | hi << 16
-		t1 = (t1 >> 8) & 0xf0f0f0f0 | t1
-		t1 = (t1 >> 4) & 0xcccccccc | t1
-		t1 = (t1 >> 2) & 0xaaaaaaaa | t1
-		t1 = (t1 >> 1) & 0xaaaaaaaa | t1
-
-		lo >>= 16
-		lo = (lo << 8) & 0x00ff00ff | lo
-		lo = (lo << 4) & 0x0f0f0f0f | lo
-		lo = (lo << 2) & 0x33333333 | lo
-		lo = (lo << 1) & 0x55555555 | lo
-
-		hi &= 0xffff0000
-		hi = (hi >> 8) & 0xff00ff00 | hi
-		hi = (hi >> 4) & 0xf0f0f0f0 | hi
-		hi = (hi >> 2) & 0xcccccccc | hi
-		hi = (hi >> 1) & 0xaaaaaaaa | hi
-
-		ai = uint64(hi|lo)<<32 | uint64(t1|t0)
-	}
-
-	return ai
-}
-
-func BitDeinterleave4(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 = (t0 << 16) | (t0 & 0x0000ffff)
-		t0 = (t0 & 0x00ff00ff) | ((t0 << 8) & 0x00ff00ff)
-		t0 = (t0 & 0x0f0f0f0f) | ((t0 << 4) & 0x0f0f0f0f)
-		t0 = (t0 & 0x33333333) | ((t0 << 2) & 0x33333333)
-		t0 = (t0 & 0x55555555) | ((t0 << 1) & 0x55555555)
-
-		t1 = (hi & 0xffff0000) | ((hi << 16) & 0xffff0000)
-		t1 = (t1 & 0xff00ff00) | ((t1 >> 8) & 0xff00ff00)
-		t1 = (t1 & 0xf0f0f0f0) | ((t1 >> 4) & 0xf0f0f0f0)
-		t1 = (t1 & 0xcccccccc) | ((t1 >> 2) & 0xcccccccc)
-		t1 = (t1 & 0xaaaaaaaa) | ((t1 >> 1) & 0xaaaaaaaa)
-
-		lo >>= 16
-		lo = (lo << 16) | (lo & 0x0000ffff)
-		lo = (lo & 0x00ff00ff) | ((lo << 8) & 0x00ff00ff)
-		lo = (lo & 0x0f0f0f0f) | ((lo << 4) & 0x0f0f0f0f)
-		lo = (lo & 0x33333333) | ((lo << 2) & 0x33333333)
-		lo = (lo & 0x55555555) | ((lo << 1) & 0x55555555)
-
-		hi &= 0xffff0000
-		hi = (hi & 0xff00ff00) | ((hi >> 8) & 0xff00ff00)
-		hi = (hi & 0xf0f0f0f0) | ((hi >> 4) & 0xf0f0f0f0)
-		hi = (hi & 0xcccccccc) | ((hi >> 2) & 0xcccccccc)
-		hi = (hi & 0xaaaaaaaa) | ((hi >> 1) & 0xaaaaaaaa)
-
-		ai = uint64(hi|lo)<<32 | uint64(t1|t0)
-	}
-
-	return ai
-}
-
-func BitDeinterleave5(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 <<= 8; t0 &= 0x00ff00ff
-		t0 <<= 4; t0 &= 0x0f0f0f0f
-		t0 <<= 2; t0 &= 0x33333333
-		t0 <<= 1; t0 &= 0x55555555
-
-		t1 = hi
-		t1 <<= 16; t1 &= 0xff00ff00
-		t1 <<= 8; t1 &= 0xf0f0f0f0
-		t1 <<= 4; t1 &= 0xcccccccc
-		t1 <<= 2; t1 &= 0xaaaaaaaa
-		t1 <<= 1; t1 &= 0xaaaaaaaa
-
-		lo >>= 16
-		lo <<= 8; lo &= 0x00ff00ff
-		lo <<= 4; lo &= 0x0f0f0f0f
-		lo <<= 2; lo &= 0x33333333
-		lo <<= 1; lo &= 0x55555555
-
-		hi &= 0xffff0000
-		hi >>= 8; hi &= 0xff00ff00
-		hi >>= 4; hi &= 0xf0f0f0f0
-		hi >>= 2; hi &= 0xcccccccc
-		hi >>= 1; hi &= 0xaaaaaaaa
-
-		ai = uint64(hi|lo)<<32 | uint64(t1|t0)
-	}
-
-	return ai
-}
-
-func BitDeinterleave6(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 = ((t0 << 8) & 0x00ff00ff) | ((t0 << 4) & 0x0f0f0f0f) | ((t0 << 2) & 0x33333333) | ((t0 << 1) & 0x55555555)
-
-		t1 = (hi << 16) & 0xff00ff00
-		t1 = ((t1 >> 8) & 0xf0f0f0f0) | ((t1 >> 4) & 0xcccccccc) | ((t1 >> 2) & 0xaaaaaaaa) | ((t1 >> 1) & 0xaaaaaaaa)
-
-		lo = ((lo >> 16) & 0x00ff00ff) | ((lo << 8) & 0x00ff00ff) | ((lo << 4) & 0x0f0f0f0f) | ((lo << 2) & 0x33333333) | ((lo << 1) & 0x55555555)
-
-		hi = ((hi & 0xffff0000) >> 8) & 0xff00ff00
-		hi = ((hi >> 4) & 0xf0f0f0f0) | ((hi >> 2) & 0xcccccccc) | ((hi >> 1) & 0xaaaaaaaa)
-
-		ai = (uint64(hi|lo)<<32 | uint64(t1|t0))
-	}
-
-	return ai
-}
-
-func BitDeinterleave7(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 |= (t0 << 8) & 0x00ff00ff
-		t0 |= (t0 << 4) & 0x0f0f0f0f
-		t0 |= (t0 << 2) & 0x33333333
-		t0 |= (t0 << 1) & 0x55555555
-
-		t1 = hi << 16
-		t1 |= (t1 >> 8) & 0xff00ff00
-		t1 |= (t1 >> 4) & 0xf0f0f0f0
-		t1 |= (t1 >> 2) & 0xcccccccc
-		t1 |= (t1 >> 1) & 0xaaaaaaaa
-
-		lo >>= 16
-		lo |= (lo << 8) & 0x00ff00ff
-		lo |= (lo << 4) & 0x0f0f0f0f
-		lo |= (lo << 2) & 0x33333333
-		lo |= (lo << 1) & 0x55555555
-
-		hi &= 0xffff0000
-		hi |= (hi >> 8) & 0xff00ff00
-		hi |= (hi >> 4) & 0xf0f0f0f0
-		hi |= (hi >> 2) & 0xcccccccc
-		hi |= (hi >> 1) & 0xaaaaaaaa
-
-		ai = uint64(hi|lo)<<32 | uint64(t1|t0)
-	}
-
-	return ai
-}
-
-func BitDeinterleave8(ai uint64) uint64 {
-	if false {
-		hi := uint32(ai >> 32)
-		lo := uint32(ai)
-		var t0, t1 uint32
-
-		t0 = lo & 0x0000ffff
-		t0 |= (t0 << 8)
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
 		t0 &= 0x00ff00ff
-		t0 |= (t0 << 4)
+		t0 |= t0 << 4
 		t0 &= 0x0f0f0f0f
-		t0 |= (t0 << 2)
+		t0 |= t0 << 2
 		t0 &= 0x33333333
-		t0 |= (t0 << 1)
+		t0 |= t0 << 1
 		t0 &= 0x55555555
 
-		t1 = hi << 16
-		t1 |= (t1 >> 8)
+		t1 := hi << 16
+		t1 |= t1 >> 8
 		t1 &= 0xff00ff00
-		t1 |= (t1 >> 4)
+		t1 |= t1 >> 4
 		t1 &= 0xf0f0f0f0
-		t1 |= (t1 >> 2)
+		t1 |= t1 >> 2
 		t1 &= 0xcccccccc
-		t1 |= (t1 >> 1)
+		t1 |= t1 >> 1
 		t1 &= 0xaaaaaaaa
 
 		lo >>= 16
-		lo |= (lo << 8)
+		lo |= lo << 8
 		lo &= 0x00ff00ff
-		lo |= (lo << 4)
-		lo &= 0x0f0f0
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai == 0 {
+		return 0
+	}
+
+	if Ai == 0xff00ff00ff00ff00 {
+		return Ai
+	}
+
+	if Ai == 0xf0f0f0f0f0f0f0f0 {
+		return Ai
+	}
+
+	if Ai == 0xcccccccccccccccc {
+		return Ai
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai%2 == 1 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai != 0 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai&1 == 0 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai > 10 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai%2 == 0 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+	return Ai
+}
+
+
+
+func BitDeinterleave(Ai uint64) uint64 {
+	if Ai > 100 {
+		hi := uint32(Ai >> 32)
+		lo := uint32(Ai)
+
+		t0 := lo & 0x0000ffff
+		t0 |= t0 << 8
+		t0 &= 0x00ff00ff
+		t0 |= t0 << 4
+		t0 &= 0x0f0f0f0f
+		t0 |= t0 << 2
+		t0 &= 0x33333333
+		t0 |= t0 << 1
+		t0 &= 0x55555555
+
+		t1 := hi << 16
+		t1 |= t1 >> 8
+		t1 &= 0xff00ff00
+		t1 |= t1 >> 4
+		t1 &= 0xf0f0f0f0
+		t1 |= t1 >> 2
+		t1 &= 0xcccccccc
+		t1 |= t1 >> 1
+		t1 &= 0xaaaaaaaa
+
+		lo >>= 16
+		lo |= lo << 8
+		lo &= 0x00ff00ff
+		lo |= lo << 4
+		lo &= 0x0f0f0f0f
+		lo |= lo << 2
+		lo &= 0x33333333
+		lo |= lo << 1
+		lo &= 0x55555555
+
+		hi &= 0xffff0000
+		hi |= hi >> 8
+		hi &= 0xff00ff00
+		hi |= hi >> 4
+		hi &= 0xf0f0f0f0
+		hi |= hi >> 2
+		hi &= 0xcccccccc
+		hi |= hi >> 1
+		hi &= 0xaaaaaaaa
+
+		Ai = (uint64(hi|lo) << 32) | uint64(t1|t0)
+	}
+
+	return Ai
+}

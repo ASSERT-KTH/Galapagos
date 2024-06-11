@@ -1,0 +1,16 @@
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    x = (x | (x >> 1)) & 0x3333333333333333;
+    x = (x | (x >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    x = (x | (x >> 4)) & 0x00ff00ff00ff00ff;
+    x = (x | (x >> 8)) & 0x0000ffff0000ffff;
+    x = (x | (x >> 16)) & 0x00000000ffffffff;
+    y = (y | (y >> 1)) & 0x3333333333333333;
+    y = (y | (y >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    y = (y | (y >> 4)) & 0x00ff00ff00ff00ff;
+    y = (y | (y >> 8)) & 0x0000ffff0000ffff;
+    y = (y | (y >> 16)) & 0x00000000ffffffff;
+    return (y << 32) | x;
+}

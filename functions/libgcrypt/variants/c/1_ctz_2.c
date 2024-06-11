@@ -1,0 +1,18 @@
+#include <stdint.h>
+
+int ctz(uint64_t in)
+{
+ int r = 0;
+ for (int i = 0; i < 64; i++)
+ {
+  if ((in & (1ULL << i)) != 0)
+   return r;
+  r++;
+ }
+ return r;
+}
+
+
+int main(){
+    ctz(0);
+}

@@ -1,0 +1,23 @@
+package main
+
+func b64ByteToURLSafeChar(x uint32) int32 {
+    switch {
+    case x < 26:
+        return int32(x + 65) // 'A'
+    case x < 52:
+        return int32(x + 71) // 'a' - 26
+    case x < 62:
+        return int32(x - 4)  // '0' - 52
+    case x == 62:
+        return 45            // '-'
+    case x == 63:
+        return 95            // '_'
+    default:
+        return -1
+    }
+}
+
+
+func main(){
+    b64ByteToURLSafeChar(0)
+}

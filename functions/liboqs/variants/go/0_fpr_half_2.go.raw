@@ -1,0 +1,9 @@
+func fpr_half(x uint64) uint64 {
+    exponent := (x >> 52) & 0x7FF
+    if exponent == 0 {
+        return x >> 1
+    }
+    exponent--
+    x = (x &^ (0x7FF << 52)) | (exponent << 52)
+    return x
+}

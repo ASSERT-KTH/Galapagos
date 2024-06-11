@@ -1,0 +1,21 @@
+#include <stdint.h>
+
+static unsigned int b64_urlsafe_char_to_byte(int c)
+{
+    if (c >= 'A' && c <= 'Z')
+        return (unsigned int)c - (unsigned int)'A';
+    if (c >= 'a' && c <= 'z')
+        return (unsigned int)c - (unsigned int)'a' + 26U;
+    if (c >= '0' && c <= '9')
+        return (unsigned int)c - (unsigned int)'0' + 52U;
+    if (c == '-')
+        return 62U;
+    if (c == '_')
+        return 63U;
+    return 0U;
+}
+
+
+int main(){
+    b64_urlsafe_char_to_byte(0);
+}

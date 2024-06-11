@@ -1,0 +1,21 @@
+#include <stdint.h>
+
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint32_t even = Ai & 0x55555555;
+    uint32_t odd = (Ai >> 1) & 0x55555555;
+    even |= even >> 1;  even &= 0x33333333;
+    even |= even >> 2;  even &= 0x0f0f0f0f;
+    even |= even >> 4;  even &= 0x00ff00ff;
+    even |= even >> 8;  even &= 0x0000ffff;
+    odd |= odd >> 1;   odd &= 0x33333333;
+    odd |= odd >> 2;   odd &= 0x0f0f0f0f;
+    odd |= odd >> 4;   odd &= 0x00ff00ff;
+    odd |= odd >> 8;   odd &= 0x0000ffff;
+    return ((uint64_t)odd << 32) | even;
+}
+
+
+int main(){
+    BitDeinterleave(0);
+}

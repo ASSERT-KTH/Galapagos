@@ -1,0 +1,14 @@
+#include <stdint.h>
+
+static inline uint64_t fBlaMka(uint64_t x, uint64_t y)
+{
+    uint64_t a = x & UINT64_C(0xFFFFFFFF);
+    uint64_t b = y & UINT64_C(0xFFFFFFFF);
+    uint64_t prod = a * b;
+    return x + y + (prod << 1);
+}
+
+
+int main(){
+    fBlaMka(0,0);
+}

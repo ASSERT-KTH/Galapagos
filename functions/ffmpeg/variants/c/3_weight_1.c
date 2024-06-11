@@ -1,0 +1,27 @@
+#include <stdint.h>
+
+static int weight(int i, int blen, int offset)
+{
+    if (offset == 1) {
+        if (i < 2 * offset) {
+            return (i != 0) ? 5 : 3;
+        } else if (i > blen - 1 - 2 * offset) {
+            return (blen - 1 - i != 0) ? 5 : 3;
+        } else {
+            return 8;
+        }
+    } else {
+        if (i < 2 * offset) {
+            return 1 + (6 * i + offset - 1) / (2 * offset - 1);
+        } else if (i > blen - 1 - 2 * offset) {
+            return 1 + (6 * (blen - 1 - i) + offset - 1) / (2 * offset - 1);
+        } else {
+            return 8;
+        }
+    }
+}
+
+
+int main(){
+    weight(0,0,0);
+}

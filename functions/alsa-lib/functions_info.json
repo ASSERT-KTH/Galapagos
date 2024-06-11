@@ -7,17 +7,19 @@
         "kind": "function",
         "end": 140,
         "count": 1,
-        "params": ["unsigned char"]
+        "params": ["unsigned char"],
+        "return": "static int"
     },
     {
         "_type": "tag",
-        "name": "muldiv",
-        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_local.h",
-        "line": 675,
+        "name": "iec958_parity",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_iec958.c",
+        "line": 77,
         "kind": "function",
-        "end": 689,
+        "end": 90,
         "count": 1,
-        "params" : ["int", "int", "int", "int*"]
+        "params" : ["uint"],
+        "return": "static unsigned int"
     },
     {
         "_type": "tag",
@@ -27,7 +29,8 @@
         "kind": "function",
         "end": 701,
         "count": 0,
-        "params" : ["int", "int", "int"]
+        "params" : ["int", "int", "int"],
+        "return": "static inline int"
     },
     {
         "_type": "tag",
@@ -37,7 +40,8 @@
         "kind": "function",
         "end": 156,
         "count": 1,
-        "params" : ["unsigned char"]
+        "params" : ["unsigned char"],
+        "return": "static int"
     },
     {
         "_type": "tag",
@@ -47,6 +51,7 @@
         "kind": "function",
         "end": 74,
         "count": 2,
-        "params" : ["int"]
+        "params" : ["int"],
+        "return": "static inline int"
     }
 ]

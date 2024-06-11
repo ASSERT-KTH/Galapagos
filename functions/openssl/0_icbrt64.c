@@ -12,5 +12,5 @@ static uint64_t icbrt64(uint64_t x)
             r++;
         }
     }
-    return r * cbrt_scale;
+    return r * 1 << (2 * 18 / 3);
 }

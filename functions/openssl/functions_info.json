@@ -6,7 +6,9 @@
         "line": 15048,
         "kind": "function",
         "end": 15063,
-        "count": 1
+        "count": 1,
+        "params": ["uint64"],
+        "return": "static uint64_t"
     },
     {
         "_type": "tag",
@@ -15,7 +17,9 @@
         "line": 848,
         "kind": "function",
         "end": 882,
-        "count": 1
+        "count": 1,
+        "params": ["uint64"],
+        "return": "static uint64_t"
     },
     {
         "_type": "tag",
@@ -24,7 +28,9 @@
         "line": 812,
         "kind": "function",
         "end": 846,
-        "count": 1
+        "count": 1,
+        "params": ["uint64"],
+        "return": "static uint64_t"
     },
     {
         "_type": "tag",
@@ -33,7 +39,9 @@
         "line": 153,
         "kind": "function",
         "end": 163,
-        "count": 3
+        "count": 3,
+        "params": ["uint"],
+        "return": "static unsigned int"
     },
     {
         "_type": "tag",
@@ -42,6 +50,8 @@
         "line": 165,
         "kind": "function",
         "end": 175,
-        "count": 2
+        "count": 2,
+        "params": ["uint"],
+        "return": "static unsigned int"
     }
 ]

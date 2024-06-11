@@ -1,0 +1,15 @@
+#include <stdint.h>
+
+static inline uint64_t fBlaMka(uint64_t x, uint64_t y)
+{
+    uint64_t mask = UINT64_C(0xFFFFFFFF);
+    uint64_t low_x = x & mask;
+    uint64_t low_y = y & mask;
+    uint64_t product = low_x * low_y;
+    return x + y + 2 * product;
+}
+
+
+int main(){
+    fBlaMka(0,0);
+}

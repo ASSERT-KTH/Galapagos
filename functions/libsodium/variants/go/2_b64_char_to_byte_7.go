@@ -1,0 +1,23 @@
+package main
+
+func b64CharToByte(c int32) uint32 {
+	switch c {
+	case 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z':
+		return uint32(c - 'A')
+	case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z':
+		return uint32(c - 'a' + 26)
+	case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9':
+		return uint32(c - '0' + 52)
+	case '+':
+		return 62
+	case '/':
+		return 63
+	default:
+		return 0
+	}
+}
+
+
+func main(){
+    b64CharToByte(0)
+}

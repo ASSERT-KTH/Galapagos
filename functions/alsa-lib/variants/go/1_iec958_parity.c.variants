@@ -1,0 +1,108 @@
+
+package main
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	var parity uint32 = 0
+	for bit := 4; bit <= 30; bit++ {
+		parity += data & 1
+		data >>= 1
+	}
+	return parity & 1
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := 0
+	for data != 0 {
+		parity += int(data & 1)
+		data >>= 1
+	}
+	return uint32(parity & 1)
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := 0
+	for bit := 4; bit <= 30; bit++ {
+		parity += int(data & 1)
+		data >>= 1
+	}
+	return uint32(parity % 2)
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := 0
+	for bit := 4; bit <= 30; bit++ {
+		if (data & 1) != 0 {
+			parity++
+		}
+		data >>= 1
+	}
+	return uint32(parity % 2)
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for bit := 4; bit <= 30; bit++ {
+		parity ^= data & 1
+		data >>= 1
+	}
+	return parity
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for bit := 4; bit <= 30; bit++ {
+		parity ^= (data & 1)
+		data >>= 1
+	}
+	return parity & 1
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for i := 0; i < 27; i++ {
+		parity += data & 1
+		data >>= 1
+	}
+	return parity & 1
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for i := 0; i < 27; i++ {
+		if (data & 1) != 0 {
+			parity++
+		}
+		data >>= 1
+	}
+	return parity & 1
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for i := 4; i <= 30; i++ {
+		if data&1 != 0 {
+			parity++
+		}
+		data >>= 1
+	}
+	return parity & 1
+}
+
+func iec958_parity(data uint32) uint32 {
+	data >>= 4
+	parity := uint32(0)
+	for data > 0 {
+		parity ^= data & 1
+		data >>= 1
+	}
+	return parity & 1
+}

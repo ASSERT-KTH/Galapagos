@@ -1,13 +1,14 @@
 package main
 
-func int16_nonzero_mask(x int16) int16 {
-	if x != 0 {
-		return -1
-	}
-	return 0
+func int16_t_nonzero_mask(x int16) int32 {
+	u := uint16(x)
+	v := uint32(u)
+	v = ^v + 1
+	v >>= 31
+	return -int32(v)
 }
 
 
 func main(){
-    int16_nonzero_mask(0)
+    int16_t_nonzero_mask(0)
 }

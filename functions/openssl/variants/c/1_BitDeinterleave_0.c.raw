@@ -1,0 +1,9 @@
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint64_t deinterleaved = 0;
+    for (int i = 0; i < 32; i++) {
+        deinterleaved |= ((Ai >> (2 * i)) & 1) << i;
+        deinterleaved |= ((Ai >> (2 * i + 1)) & 1) << (i + 32);
+    }
+    return deinterleaved;
+}

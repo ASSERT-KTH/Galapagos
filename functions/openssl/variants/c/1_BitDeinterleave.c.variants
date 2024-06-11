@@ -1,200 +1,151 @@
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = Ai >> 32, lo = Ai & 0xFFFFFFFF;
-    
-    hi = ((hi & 0xAAAAAAAA) >> 1) | ((hi & 0x55555555) << 1);
-    hi = ((hi & 0xCCCCCCCC) >> 2) | ((hi & 0x33333333) << 2);
-    hi = ((hi & 0xF0F0F0F0) >> 4) | ((hi & 0x0F0F0F0F) << 4);
-    hi = ((hi & 0xFF00FF00) >> 8) | ((hi & 0x00FF00FF) << 8);
-    hi = ((hi & 0xFFFF0000) >> 16) | ((hi & 0x0000FFFF) << 16);
-    
-    lo = ((lo & 0xAAAAAAAA) >> 1) | ((lo & 0x55555555) << 1);
-    lo = ((lo & 0xCCCCCCCC) >> 2) | ((lo & 0x33333333) << 2);
-    lo = ((lo & 0xF0F0F0F0) >> 4) | ((lo & 0x0F0F0F0F) << 4);
-    lo = ((lo & 0xFF00FF00) >> 8) | ((lo & 0x00FF00FF) << 8);
-    lo = ((lo & 0xFFFF0000) >> 16) | ((lo & 0x0000FFFF) << 16);
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
-}
-
-static uint64_t BitDeinterleave(uint64_t Ai)
-{
-    uint32_t hi = (Ai >> 32) & 0xFFFFFFFF;
-    uint32_t lo = Ai & 0xFFFFFFFF;
-
-    hi = ((hi & 0xFFFF0000) >> 16) | (hi << 16);
-    hi = ((hi & 0x00FF00FF) << 8) | ((hi >> 8) & 0x00FF00FF);
-    hi = ((hi & 0x0F0F0F0F) << 4) | ((hi >> 4) & 0x0F0F0F0F);
-    hi = ((hi & 0x33333333) << 2) | ((hi >> 2) & 0x33333333);
-    hi = ((hi & 0x55555555) << 1) | ((hi >> 1) & 0x55555555);
-
-    lo = ((lo & 0xFFFF0000) >> 16) | (lo << 16);
-    lo = ((lo & 0x00FF00FF) << 8) | ((lo >> 8) & 0x00FF00FF);
-    lo = ((lo & 0x0F0F0F0F) << 4) | ((lo >> 4) & 0x0F0F0F0F);
-    lo = ((lo & 0x33333333) << 2) | ((lo >> 2) & 0x33333333);
-    lo = ((lo & 0x55555555) << 1) | ((lo >> 1) & 0x55555555);
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
-}
-
-static uint64_t BitDeinterleave(uint64_t Ai)
-{
-    uint32_t hi = (uint32_t)(Ai >> 32), lo = (uint32_t)Ai;
-
-    hi = (hi & 0xFFFF0000) >> 16 | (hi & 0x0000FFFF) << 16;
-    hi = (hi & 0xFF00FF00) >> 8 | (hi & 0x00FF00FF) << 8;
-    hi = (hi & 0xF0F0F0F0) >> 4 | (hi & 0x0F0F0F0F) << 4;
-    hi = (hi & 0xCCCCCCCC) >> 2 | (hi & 0x33333333) << 2;
-    hi = (hi & 0xAAAAAAAA) >> 1 | (hi & 0x55555555) << 1;
-
-    lo = (lo & 0xFFFF0000) >> 16 | (lo & 0x0000FFFF) << 16;
-    lo = (lo & 0xFF00FF00) >> 8 | (lo & 0x00FF00FF) << 8;
-    lo = (lo & 0xF0F0F0F0) >> 4 | (lo & 0x0F0F0F0F) << 4;
-    lo = (lo & 0xCCCCCCCC) >> 2 | (lo & 0x33333333) << 2;
-    lo = (lo & 0xAAAAAAAA) >> 1 | (lo & 0x55555555) << 1;
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
-}
-
-static uint64_t BitDeinterleave(uint64_t Ai)
-{
-    uint32_t hi = Ai >> 32, lo = Ai & 0xFFFFFFFF;
-
-    for (int j = 16; j > 0; j >>= 1) {
-        hi = ((hi >> j) & (0xFFFFFFFF >> (32 - j))) | ((hi & (0xFFFFFFFF >> (32 - j))) << j);
-        lo = ((lo >> j) & (0xFFFFFFFF >> (32 - j))) | ((lo & (0xFFFFFFFF >> (32 - j))) << j);
+    uint64_t deinterleaved = 0;
+    for (int i = 0; i < 32; i++) {
+        deinterleaved |= ((Ai >> (2 * i)) & 1) << i;
+        deinterleaved |= ((Ai >> (2 * i + 1)) & 1) << (i + 32);
     }
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    return deinterleaved;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = (uint32_t)(Ai >> 32), lo = (uint32_t)Ai;
-    
-    for (int shift = 1; shift < 32; shift <<= 1) {
-        hi = (hi & (0xFFFFFFFF << shift)) | ((hi & (0xFFFFFFFF >> shift)) << (shift << 1)) | ((hi & (0xFFFFFFFF >> (shift << 1))) >> shift);
-        lo = (lo & (0xFFFFFFFF << shift)) | ((lo & (0xFFFFFFFF >> shift)) << (shift << 1)) | ((lo & (0xFFFFFFFF >> (shift << 1))) >> shift);
+    uint32_t even = Ai & 0x55555555;
+    uint32_t odd = (Ai >> 1) & 0x55555555;
+    even |= even >> 1;  even &= 0x33333333;
+    even |= even >> 2;  even &= 0x0f0f0f0f;
+    even |= even >> 4;  even &= 0x00ff00ff;
+    even |= even >> 8;  even &= 0x0000ffff;
+    odd |= odd >> 1;   odd &= 0x33333333;
+    odd |= odd >> 2;   odd &= 0x0f0f0f0f;
+    odd |= odd >> 4;   odd &= 0x00ff00ff;
+    odd |= odd >> 8;   odd &= 0x0000ffff;
+    return ((uint64_t)odd << 32) | even;
+}
+
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint64_t t = Ai & 0xaaaaaaaa;
+    t = (t | (t >> 1)) & 0x3333333333333333;
+    t = (t | (t >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    t = (t | (t >> 4)) & 0x00ff00ff00ff00ff;
+    t = (t | (t >> 8)) & 0x0000ffff0000ffff;
+    t = (t | (t >> 16)) & 0x00000000ffffffff;
+    uint64_t t2 = Ai & 0x55555555;
+    t2 = (t2 | (t2 << 1)) & 0x3333333333333333;
+    t2 = (t2 | (t2 << 2)) & 0x0f0f0f0f0f0f0f0f;
+    t2 = (t2 | (t2 << 4)) & 0x00ff00ff00ff00ff;
+    t2 = (t2 | (t2 << 8)) & 0x0000ffff0000ffff;
+    t2 = t2 | (t2 << 16);
+    return (t << 32) | (t2 & 0x00000000ffffffff);
+}
+
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint64_t lo = Ai & 0x5555555555555555;
+    uint64_t hi = (Ai >> 1) & 0x5555555555555555;
+    lo = (lo | (lo >> 1)) & 0x3333333333333333;
+    lo = (lo | (lo >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    lo = (lo | (lo >> 4)) & 0x00ff00ff00ff00ff;
+    lo = (lo | (lo >> 8)) & 0x0000ffff0000ffff;
+    lo = (lo | (lo >> 16)) & 0x00000000ffffffff;
+    hi = (hi | (hi >> 1)) & 0x3333333333333333;
+    hi = (hi | (hi >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    hi = (hi | (hi >> 4)) & 0x00ff00ff00ff00ff;
+    hi = (hi | (hi >> 8)) & 0x0000ffff0000ffff;
+    hi = (hi | (hi >> 16)) & 0x00000000ffffffff;
+    return (hi << 32) | lo;
+}
+
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint32_t x = (uint32_t)(Ai & 0xffffffff);
+    uint32_t y = (uint32_t)(Ai >> 32);
+    uint32_t z = 0, w = 0;
+    for (int i = 0; i < 16; i++) {
+        z |= (x & (1 << (2 * i))) >> i;
+        z |= (y & (1 << (2 * i))) >> (i - 16);
+        w |= (x & (1 << (2 * i + 1))) >> (i + 1);
+        w |= (y & (1 << (2 * i + 1))) >> (i - 15);
     }
-    
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    return ((uint64_t)w << 32) | z;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = Ai >> 32;
-    uint32_t lo = Ai & 0xFFFFFFFF;
-
-    hi = (hi & 0xAAAAAAAA) >> 1 | (hi & 0x55555555) << 1;
-    lo = (lo & 0xAAAAAAAA) >> 1 | (lo & 0x55555555) << 1;
-
-    hi = (hi & 0xCCCCCCCC) >> 2 | (hi & 0x33333333) << 2;
-    lo = (lo & 0xCCCCCCCC) >> 2 | (lo & 0x33333333) << 2;
-
-    hi = (hi & 0xF0F0F0F0) >> 4 | (hi & 0x0F0F0F0F) << 4;
-    lo = (lo & 0xF0F0F0F0) >> 4 | (lo & 0x0F0F0F0F) << 4;
-
-    hi = (hi & 0xFF00FF00) >> 8 | (hi & 0x00FF00FF) << 8;
-    lo = (lo & 0xFF00FF00) >> 8 | (lo & 0x00FF00FF) << 8;
-
-    hi = (hi & 0xFFFF0000) >> 16 | (hi & 0x0000FFFF) << 16;
-    lo = (lo & 0xFFFF0000) >> 16 | (lo & 0x0000FFFF) << 16;
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    uint64_t even = 0, odd = 0;
+    for (int i = 0; i < 32; i++) {
+        even |= ((Ai >> (2 * i)) & 1) << i;
+        odd |= ((Ai >> (2 * i + 1)) & 1) << i;
+    }
+    return (odd << 32) | even;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = (Ai >> 32) & 0xFFFFFFFF;
-    uint32_t lo = Ai & 0xFFFFFFFF;
-
-    hi = (hi & 0xAAAAAAAA) >> 1 | (hi & 0x55555555) << 1;
-    lo = (lo & 0xAAAAAAAA) >> 1 | (lo & 0x55555555) << 1;
-
-    hi = (hi & 0xCCCCCCCC) >> 2 | (hi & 0x33333333) << 2;
-    lo = (lo & 0xCCCCCCCC) >> 2 | (lo & 0x33333333) << 2;
-
-    hi = (hi & 0xF0F0F0F0) >> 4 | (hi & 0x0F0F0F0F) << 4;
-    lo = (lo & 0xF0F0F0F0) >> 4 | (lo & 0x0F0F0F0F) << 4;
-
-    hi = (hi & 0xFF00FF00) >> 8 | (hi & 0x00FF00FF) << 8;
-    lo = (lo & 0xFF00FF00) >> 8 | (lo & 0x00FF00FF) << 8;
-
-    hi = (hi & 0xFFFF0000) >> 16 | (hi & 0x0000FFFF) << 16;
-    lo = (lo & 0xFFFF0000) >> 16 | (lo & 0x0000FFFF) << 16;
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    x = (x | (x >> 1)) & 0x3333333333333333;
+    x = (x | (x >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    x = (x | (x >> 4)) & 0x00ff00ff00ff00ff;
+    x = (x | (x >> 8)) & 0x0000ffff0000ffff;
+    x = (x | (x >> 16)) & 0x00000000ffffffff;
+    y = (y | (y >> 1)) & 0x3333333333333333;
+    y = (y | (y >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    y = (y | (y >> 4)) & 0x00ff00ff00ff00ff;
+    y = (y | (y >> 8)) & 0x0000ffff0000ffff;
+    y = (y | (y >> 16)) & 0x00000000ffffffff;
+    return (y << 32) | x;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = Ai >> 32;
-    uint32_t lo = Ai & 0xFFFFFFFF;
-
-    hi = ((hi & 0x55555555) << 1) | ((hi & 0xAAAAAAAA) >> 1);
-    hi = ((hi & 0x33333333) << 2) | ((hi & 0xCCCCCCCC) >> 2);
-    hi = ((hi & 0x0F0F0F0F) << 4) | ((hi & 0xF0F0F0F0) >> 4);
-    hi = ((hi & 0x00FF00FF) << 8) | ((hi & 0xFF00FF00) >> 8);
-    hi = ((hi & 0x0000FFFF) << 16) | ((hi & 0xFFFF0000) >> 16);
-
-    lo = ((lo & 0x55555555) << 1) | ((lo & 0xAAAAAAAA) >> 1);
-    lo = ((lo & 0x33333333) << 2) | ((lo & 0xCCCCCCCC) >> 2);
-    lo = ((lo & 0x0F0F0F0F) << 4) | ((lo & 0xF0F0F0F0) >> 4);
-    lo = ((lo & 0x00FF00FF) << 8) | ((lo & 0xFF00FF00) >> 8);
-    lo = ((lo & 0x0000FFFF) << 16) | ((lo & 0xFFFF0000) >> 16);
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    x = (x | (x >> 1)) & 0x3333333333333333;
+    x = (x | (x >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    x = (x | (x >> 4)) & 0x00ff00ff00ff00ff;
+    x = (x | (x >> 8)) & 0x0000ffff0000ffff;
+    x = (x | (x >> 16)) & 0x00000000ffffffff;
+    y = (y | (y >> 1)) & 0x3333333333333333;
+    y = (y | (y >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    y = (y | (y >> 4)) & 0x00ff00ff00ff00ff;
+    y = (y | (y >> 8)) & 0x0000ffff0000ffff;
+    y = (y | (y >> 16)) & 0x00000000ffffffff;
+    return (y << 32) | x;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = (uint32_t)(Ai >> 32), lo = (uint32_t)Ai;
-
-    hi = (hi >> 16) | (hi << 16);
-    hi = ((hi >>  8) & 0x00FF00FF) | ((hi & 0x00FF00FF) << 8);
-    hi = ((hi >>  4) & 0x0F0F0F0F) | ((hi & 0x0F0F0F0F) << 4);
-    hi = ((hi >>  2) & 0x33333333) | ((hi & 0x33333333) << 2);
-    hi = ((hi >>  1) & 0x55555555) | ((hi & 0x55555555) << 1);
-    
-    lo = (lo >> 16) | (lo << 16);
-    lo = ((lo >>  8) & 0x00FF00FF) | ((lo & 0x00FF00FF) << 8);
-    lo = ((lo >>  4) & 0x0F0F0F0F) | ((lo & 0x0F0F0F0F) << 4);
-    lo = ((lo >>  2) & 0x33333333) | ((lo & 0x33333333) << 2);
-    lo = ((lo >>  1) & 0x55555555) | ((lo & 0x55555555) << 1);
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    x = (x | (x >> 1)) & 0x3333333333333333;
+    x = (x | (x >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    x = (x | (x >> 4)) & 0x00ff00ff00ff00ff;
+    x = (x | (x >> 8)) & 0x0000ffff0000ffff;
+    x = (x | (x >> 16)) & 0x00000000ffffffff;
+    y = (y | (y >> 1)) & 0x3333333333333333;
+    y = (y | (y >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    y = (y | (y >> 4)) & 0x00ff00ff00ff00ff;
+    y = (y | (y >> 8)) & 0x0000ffff0000ffff;
+    y = (y | (y >> 16)) & 0x00000000ffffffff;
+    return (y << 32) | x;
 }
 
 static uint64_t BitDeinterleave(uint64_t Ai)
 {
-    uint32_t hi = (Ai >> 32) & 0xFFFFFFFF;
-    uint32_t lo = Ai & 0xFFFFFFFF;
-
-    hi = ((hi >> 16) & 0x0000FFFF) | (hi << 16);
-    lo = ((lo >> 16) & 0x0000FFFF) | (lo << 16);
-
-    hi = ((hi >> 8) & 0x00FF00FF) | ((hi & 0x00FF00FF) << 8);
-    lo = ((lo >> 8) & 0x00FF00FF) | ((lo & 0x00FF00FF) << 8);
-
-    hi = ((hi >> 4) & 0x0F0F0F0F) | ((hi & 0x0F0F0F0F) << 4);
-    lo = ((lo >> 4) & 0x0F0F0F0F) | ((lo & 0x0F0F0F0F) << 4);
-
-    hi = ((hi >> 2) & 0x33333333) | ((hi & 0x33333333) << 2);
-    lo = ((lo >> 2) & 0x33333333) | ((lo & 0x33333333) << 2);
-
-    hi = ((hi >> 1) & 0x55555555) | ((hi & 0x55555555) << 1);
-    lo = ((lo >> 1) & 0x55555555) | ((lo & 0x55555555) << 1);
-
-    Ai = ((uint64_t)hi << 32) | lo;
-    return Ai;
+    uint64_t x = Ai & 0x5555555555555555;
+    uint64_t y = (Ai >> 1) & 0x5555555555555555;
+    x = (x | (x >> 1)) & 0x3333333333333333;
+    x = (x | (x >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    x = (x | (x >> 4)) & 0x00ff00ff00ff00ff;
+    x = (x | (x >> 8)) & 0x0000ffff0000ffff;
+    x = (x | (x >> 16)) & 0x00000000ffffffff;
+    y = (y | (y >> 1)) & 0x3333333333333333;
+    y = (y | (y >> 2)) & 0x0f0f0f0f0f0f0f0f;
+    y = (y | (y >> 4)) & 0x00ff00ff00ff00ff;
+    y = (y | (y >> 8)) & 0x0000ffff0000ffff;
+    y = (y | (y >> 16)) & 0x00000000ffffffff;
+    return (y << 32) | x;
 }

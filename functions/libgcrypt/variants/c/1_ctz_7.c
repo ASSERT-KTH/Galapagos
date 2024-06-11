@@ -1,0 +1,20 @@
+#include <stdint.h>
+
+int ctz(uint64_t in)
+{
+ int r = 0;
+ uint64_t m = 1;
+ while (r < 64)
+ {
+  if ((in & m) != 0)
+   break;
+  m <<= 1;
+  r++;
+ }
+ return r;
+}
+
+
+int main(){
+    ctz(0);
+}

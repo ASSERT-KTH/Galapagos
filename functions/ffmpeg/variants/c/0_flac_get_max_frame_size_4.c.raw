@@ -1,0 +1,12 @@
+static int flac_get_max_frame_size(int blocksize, int ch, int bps) 
+{
+    int count = 16;
+    count += (ch * (bps + 14) + 7) / 8;
+    
+    int payload_size = (ch == 2) ? ((2 * bps + 1) * blocksize + 7) / 8 : (ch * bps * blocksize + 7) / 8;
+    count += payload_size;
+    
+    count += 2;
+    
+    return count;
+}

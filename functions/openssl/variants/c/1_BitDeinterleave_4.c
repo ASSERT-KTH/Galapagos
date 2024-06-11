@@ -1,0 +1,20 @@
+#include <stdint.h>
+
+static uint64_t BitDeinterleave(uint64_t Ai)
+{
+    uint32_t x = (uint32_t)(Ai & 0xffffffff);
+    uint32_t y = (uint32_t)(Ai >> 32);
+    uint32_t z = 0, w = 0;
+    for (int i = 0; i < 16; i++) {
+        z |= (x & (1 << (2 * i))) >> i;
+        z |= (y & (1 << (2 * i))) >> (i - 16);
+        w |= (x & (1 << (2 * i + 1))) >> (i + 1);
+        w |= (y & (1 << (2 * i + 1))) >> (i - 15);
+    }
+    return ((uint64_t)w << 32) | z;
+}
+
+
+int main(){
+    BitDeinterleave(0);
+}

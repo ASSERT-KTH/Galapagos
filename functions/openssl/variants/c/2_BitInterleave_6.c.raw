@@ -1,0 +1,19 @@
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    uint64_t hi = (Ai >> 32) & 0xFFFFFFFF;
+    uint64_t lo = Ai & 0xFFFFFFFF;
+    
+    hi = (hi | (hi << 16)) & 0x0000FFFF0000FFFF;
+    hi = (hi | (hi << 8)) & 0x00FF00FF00FF00FF;
+    hi = (hi | (hi << 4)) & 0x0F0F0F0F0F0F0F0F;
+    hi = (hi | (hi << 2)) & 0x3333333333333333;
+    hi = (hi | (hi << 1)) & 0x5555555555555555;
+
+    lo = (lo | (lo << 16)) & 0x0000FFFF0000FFFF;
+    lo = (lo | (lo << 8)) & 0x00FF00FF00FF00FF;
+    lo = (lo | (lo << 4)) & 0x0F0F0F0F0F0F0F0F;
+    lo = (lo | (lo << 2)) & 0x3333333333333333;
+    lo = (lo | (lo << 1)) & 0x5555555555555555;
+
+    return (hi << 1) | lo;
+}

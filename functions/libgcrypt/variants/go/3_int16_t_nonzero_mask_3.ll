@@ -14,10 +14,10 @@ module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22types 2 1\22"
 module asm "\09.ascii \22 31\22"
 module asm "\09.ascii \22\\n\22"
-module asm "\09.ascii \22type 1 (? <type -2>) <type -2>\\n\22"
+module asm "\09.ascii \22type 1 (? <type -2>) <type -3>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
-module asm "\09.ascii \22int16_nonzero_mask\22"
+module asm "\09.ascii \22int16_t_nonzero_mask\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22x\22"
 module asm "\09.ascii \22 \22"
@@ -26,11 +26,11 @@ module asm "\09.ascii \22)\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
-module asm "\09.ascii \22<type -2>\22"
+module asm "\09.ascii \22<type -3>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:277>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/3_int16_t_nonzero_mask_3.go:3\\n var y <type -6> = $convert(<type -6>, x) //4\\n var z <type -7> = $convert(<type -7>, y) //5\\n { //6\\n  $ret0 = $convert(<type -2>, -(z >> $convert(<type -12>, 31 ))) //6\\n  return //6\\n } //0\\n\22"
-module asm "\09.ascii \22checksum 7ABC0347930A4B9135832F96FF8EE81BFB0299CE\\n\22"
+module asm "\09.ascii \22 <inl:264>\\n\22"
+module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/3_int16_t_nonzero_mask_3.go:3\\n { //4\\n  $ret0 = $convert(<type -3>, (($convert(<type -3>, x) >> $convert(<type -12>, 31 )) | ($convert(<type -3>, -x) >> $convert(<type -12>, 31 )))) //4\\n  return //4\\n } //0\\n\22"
+module asm "\09.ascii \22checksum B4F5DFBC95CCF1E4E53BAF994C0052A1C69E497B\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -44,9 +44,11 @@ entry:
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn
-define i16 @main.int16__nonzero__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
+define i32 @main.int16__t__nonzero__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
 entry:
-  ret i16 0
+  %0 = icmp ne i16 %x, 0
+  %ior.0 = sext i1 %0 to i32
+  ret i32 %ior.0
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn

@@ -1,0 +1,3 @@
+https://github.com/llvm/llvm-project/issues/68871
+
+compile with -Os

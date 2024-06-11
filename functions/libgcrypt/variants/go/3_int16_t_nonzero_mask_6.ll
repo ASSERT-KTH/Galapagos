@@ -14,10 +14,10 @@ module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22types 2 1\22"
 module asm "\09.ascii \22 31\22"
 module asm "\09.ascii \22\\n\22"
-module asm "\09.ascii \22type 1 (? <type -2>) <type -2>\\n\22"
+module asm "\09.ascii \22type 1 (? <type -2>) <type -3>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
-module asm "\09.ascii \22int16_nonzero_mask\22"
+module asm "\09.ascii \22int16_t_nonzero_mask\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22x\22"
 module asm "\09.ascii \22 \22"
@@ -26,11 +26,11 @@ module asm "\09.ascii \22)\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
-module asm "\09.ascii \22<type -2>\22"
+module asm "\09.ascii \22<type -3>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:270>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/3_int16_t_nonzero_mask_6.go:3\\n { //4\\n  $ret0 = $convert(<type -2>, $convert(<type -3>, ((x >> $convert(<type -12>, 15 )) - ((x >> $convert(<type -12>, 15 )) & $convert(<type -2>, 1 ))))) //4\\n  return //4\\n } //0\\n\22"
-module asm "\09.ascii \22checksum F77CCFFE32AEB37780A8EE37B25009A84DA72391\\n\22"
+module asm "\09.ascii \22 <inl:227>\\n\22"
+module asm "\09.ascii \22 // /home/javier/Galapagos/functions/libgcrypt/variants/go/3_int16_t_nonzero_mask_6.go:3\\n { //4\\n  $ret0 = -$convert(<type -3>, ($convert(<type -7>, $convert(<type -6>, x)) >> $convert(<type -12>, 15 ))) //4\\n  return //4\\n } //0\\n\22"
+module asm "\09.ascii \22checksum E4C01C91E6FC65D8E07824DFDC985AF481E55C7E\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -44,11 +44,12 @@ entry:
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn
-define i16 @main.int16__nonzero__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
+define i32 @main.int16__t__nonzero__mask(i8* nest nocapture readnone %nest.0, i16 signext %x) local_unnamed_addr #1 {
 entry:
-  %isneg = icmp slt i16 %x, 0
-  %sub.0 = select i1 %isneg, i16 -2, i16 0
-  ret i16 %sub.0
+  %0 = lshr i16 %x, 15
+  %shr.0 = zext i16 %0 to i32
+  %sub.0 = sub nsw i32 0, %shr.0
+  ret i32 %sub.0
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn

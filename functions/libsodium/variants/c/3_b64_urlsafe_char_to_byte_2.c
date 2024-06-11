@@ -1,0 +1,18 @@
+#include <stdint.h>
+
+static unsigned int b64_urlsafe_char_to_byte(int c)
+{
+    switch (c) {
+        case 'A' ... 'Z': return c - 'A';
+        case 'a' ... 'z': return c - 'a' + 26;
+        case '0' ... '9': return c - '0' + 52;
+        case '-': return 62;
+        case '_': return 63;
+        default: return 0;
+    }
+}
+
+
+int main(){
+    b64_urlsafe_char_to_byte(0);
+}

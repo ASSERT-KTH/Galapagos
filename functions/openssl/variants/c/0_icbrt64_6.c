@@ -1,0 +1,23 @@
+#include <stdint.h>
+
+static uint64_t icbrt64(uint64_t x)
+{
+    uint64_t result = 0;
+    uint64_t b;
+    int s;
+
+    for (s = 63; s >= 0; s -= 3) {
+        result <<= 1;
+        b = 3 * result * (result + 1) + 1;
+        if ((x >> s) >= b) {
+            x -= b << s;
+            result++;
+        }
+    }
+    return result << (2 * 18 / 3);
+}
+
+
+int main(){
+    icbrt64(0);
+}

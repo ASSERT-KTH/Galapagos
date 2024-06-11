@@ -17,7 +17,7 @@ module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22type 1 (? <type -3>, ? <type -3>, ? <type -3>) <type -3>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
-module asm "\09.ascii \22muldivDown\22"
+module asm "\09.ascii \22muldiv_down\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22a\22"
 module asm "\09.ascii \22 \22"
@@ -36,9 +36,9 @@ module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
 module asm "\09.ascii \22<type -3>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:813>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/alsa-lib/variants/go/2_muldiv_down_6.go:3\\n var v <type -4> = (($convert(<type -4>, a) * $convert(<type -4>, b)) / $convert(<type -4>, c)) //4\\n { //5\\n  { //5\\n   var $t0 <type -15> = $true //5\\n   if !($t0 == (v > $convert(<type -4>, 2147483647 ))) { //6\\n    goto $l0 //6\\n   } //6\\n   { //7\\n    { //7\\n     $ret0 = $convert(<type -3>, 2147483647 ) //7\\n     return //7\\n    } //0\\n   } //8\\n   goto $l1 //6\\n   :$l0 //0\\n   if !($t0 == (v < $convert(<type -4>, -2147483648 ))) { //8\\n    goto $l2 //8\\n   } //8\\n   { //9\\n    { //9\\n     $ret0 = $convert(<type -3>, -2147483648 ) //9\\n     return //9\\n    } //0\\n   } //10\\n   goto $l1 //8\\n   :$l2 //0\\n   { //11\\n    { //11\\n     $ret0 = $convert(<type -3>, v) //11\\n     return //11\\n    } //0\\n   } //12\\n   goto $l1 //10\\n   :$l1 //5\\n  } //0\\n } //12\\n\22"
-module asm "\09.ascii \22checksum BAD17E3814A867717BA36A9FD4F26915EA85943C\\n\22"
+module asm "\09.ascii \22 <inl:557>\\n\22"
+module asm "\09.ascii \22 // /home/javier/Galapagos/functions/alsa-lib/variants/go/2_muldiv_down_6.go:3\\n var v <type -4> = (($convert(<type -4>, a) * $convert(<type -4>, b)) / $convert(<type -4>, c)) //4\\n { //5\\n  if (v > $convert(<type -4>, 2147483647 )) { //5\\n   { //6\\n    $ret0 = $convert(<type -3>, 2147483647 ) //6\\n    return //6\\n   } //0\\n  } //5\\n } //7\\n { //8\\n  if (v < $convert(<type -4>, -2147483648 )) { //8\\n   { //9\\n    $ret0 = $convert(<type -3>, -2147483648 ) //9\\n    return //9\\n   } //0\\n  } //8\\n } //10\\n { //11\\n  $ret0 = $convert(<type -3>, v) //11\\n  return //11\\n } //0\\n\22"
+module asm "\09.ascii \22checksum F3E14BD9E13A18DB7BA59C2A9E47051E50D97F0D\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -52,7 +52,7 @@ entry:
 }
 
 ; Function Attrs: null_pointer_is_valid
-define i32 @main.muldivDown(i8* nest nocapture readnone %nest.0, i32 %a, i32 %b, i32 %c) local_unnamed_addr #0 {
+define i32 @main.muldiv__down(i8* nest nocapture readnone %nest.0, i32 %a, i32 %b, i32 %c) local_unnamed_addr #0 {
 entry:
   %sext.0 = sext i32 %a to i64
   %sext.1 = sext i32 %b to i64
@@ -68,12 +68,12 @@ then.0:                                           ; preds = %entry
 
 fallthrough.0:                                    ; preds = %else.1, %then.0
   %tmpv.3.0 = phi i64 [ %sub.0, %then.0 ], [ %div.0, %else.1 ]
-  %icmp.2 = icmp slt i64 %tmpv.3.0, 2147483648
-  %icmp.5 = icmp sgt i64 %tmpv.3.0, -2147483649
-  %trunc.4 = trunc i64 %tmpv.3.0 to i32
-  %spec.select = select i1 %icmp.5, i32 %trunc.4, i32 -2147483648
-  %common.ret.op = select i1 %icmp.2, i32 %spec.select, i32 2147483647
-  ret i32 %common.ret.op
+  %0 = icmp sgt i64 %tmpv.3.0, -2147483648
+  %spec.select14 = select i1 %0, i64 %tmpv.3.0, i64 -2147483648
+  %1 = icmp slt i64 %spec.select14, 2147483647
+  %common.ret.op15 = select i1 %1, i64 %spec.select14, i64 2147483647
+  %2 = trunc i64 %common.ret.op15 to i32
+  ret i32 %2
 
 then.1:                                           ; preds = %entry
   call void @runtime.panicdivide(i8* nest undef)

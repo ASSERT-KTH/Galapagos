@@ -1,0 +1,12 @@
+func b64ByteToChar(x uint32) int32 {
+    if x < 26 {
+        return 'A' + int32(x)
+    } else if x < 52 {
+        return 'a' + int32(x-26)
+    } else if x < 62 {
+        return '0' + int32(x-52)
+    } else if x == 62 {
+        return '+'
+    }
+    return '/'
+}

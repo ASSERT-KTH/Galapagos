@@ -1,0 +1,15 @@
+#include <stdint.h>
+
+int16_t barrett_reduce(int16_t a) {
+  int32_t t;
+  const int16_t v = 12482;
+
+  t = ((int32_t)v * a + 33554432L) >> 26;
+  t *= 3329L;
+  return a - (int16_t)t;
+}
+
+
+int main(){
+    barrett_reduce(0);
+}
