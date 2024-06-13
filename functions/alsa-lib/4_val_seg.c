@@ -1,4 +1,4 @@
-static inline int val_seg(int val)
+static int val_seg(int val)
 {
 	int r = 1;
 	val >>= 8;

@@ -37,7 +37,7 @@ OUT="$FUNC_DIR/function_data.dat"
 if [ "$FLAG" == "--preprocessed" ]; then
     SHADOW_LOCATION=$3
     echo "Shadow location: $SHADOW_LOCATION"
-    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp.dat
+    find $SHADOW_LOCATION -name '*\.[ch]' | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp.dat
     echo "Finished ctags - 1st run"
     # Now, copy all the .i files to .c files, effectively replacing the original source files (useful for ctags)
 
@@ -61,11 +61,11 @@ if [ "$FLAG" == "--preprocessed" ]; then
         done
     else
         # copy the .i files to .c files
-        find $SHADOW_LOCATION -name *\.i -exec sh -c 'for f; do cp "$f" "${f%.i}.c"; done' sh {} +
+        find $SHADOW_LOCATION -name '*\.i' -exec sh -c 'for f; do cp "$f" "${f%.i}.c"; done' sh {} +
     fi
 
     echo "Finished renaming"
-    find $SHADOW_LOCATION -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp2.dat
+    find $SHADOW_LOCATION -name '*\.[ch]' | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > temp2.dat
     echo "Finished ctags - 2nd run"
     # Now, comparing the two files and keeping only the functions that are in common
     # Each file has objects with various fields: the relevant ones are "path" and "name"; we want to keep the ones where both are the same
@@ -80,15 +80,21 @@ if [ "$FLAG" == "--preprocessed" ]; then
     rm temp.dat temp2.dat
     echo "Finished comparing"
     cd $SHADOW_LOCATION
-    cscope -R -b -q
+    find $SHADOW_LOCATION -type f -name '*\.[ch]' > cscope.files
 elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
-    find $LIB_DIR -name *\.[ch] | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
+    find $LIB_DIR -name '*\.[ch]' | xargs ctags -I STACK_OF+ --exclude=*test*/* --exclude=*doc*/* --exclude=*template.c --fields='-{pattern}{kind}{typeref}{file}+{line}{end}' --output-format=json --kinds-c=f > $FUNC_DIR/function_definitions.dat
     # below: creating a cscope database for the project
     # the database indexes the source code files, allows for efficient symbol lookup
     cd $LIB_DIR
-    cscope -R -b -q
+    find $LIB_DIR -type f -name '*\.[ch]' > cscope.files
 else
     echo "Usage: $0 project [--source | --preprocessed] [shadow_location]"
     exit 1
+fi
+
+if [ "$FLAG" == "--preprocessed" ]; then
+    echo $SHADOW_LOCATION
+else
+    echo $LIB_DIR
 fi
 

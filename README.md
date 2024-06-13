@@ -50,7 +50,7 @@ make && make check
 #### libsodium
 
 ```sh
-./autogen -s
+./autogen.sh -s
 ./configure
 make && make check
 ```

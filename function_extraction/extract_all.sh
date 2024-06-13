@@ -6,16 +6,19 @@ export PYTHONPATH=$(dirname $(dirname $(realpath $0)))
 
 # for each item in the list of projects
 for PROJ in "alsa-lib" "ffmpeg" "libgcrypt" "liboqs" "libsodium" "openssl"; do
+    echo "[INFO]: Extracting functions from $PROJ"
     if [ "$FLAG" == "--preprocessed" ]; then
         SHADOW=$(python3 build.py $PROJ | tail -n 1)
-        ./extract.sh $PROJ --preprocessed $SHADOW
+        EXTRACT_OUTPUT=$(./extract.sh $PROJ --preprocessed $SHADOW)
     elif [ "$FLAG" == "--source" ] || [ -z "$FLAG" ]; then
-        ./extract.sh $PROJ
+        EXTRACT_OUTPUT=$(./extract.sh $PROJ)
     else
         echo "Usage: $0 [--source | --preprocessed]"
         exit 1
     fi
 
-    node generate_function_info.js $PROJ
+    DIR=$(echo "$EXTRACT_OUTPUT" | tail -n 1)
+    node generate_function_info.js $PROJ $DIR
     node create_function_files.js $PROJ
+    echo "[INFO]: Finished extracting functions from $PROJ"
 done
