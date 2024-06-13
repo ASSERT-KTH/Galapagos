@@ -57,7 +57,8 @@ LIBRARY_INFO = {
         },
         "make": ["make", "-j4"], 
         "testing": {
-            "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "enabled": True,
+            "command": ["make", "check"]
         }
     },
     "openssl": {
@@ -108,6 +109,7 @@ LIBRARY_INFO = {
         }
     },
     "alsa-lib": {
+        "object_extension": ".o",
         "dependencies": [
             
         ],
@@ -280,7 +282,7 @@ class UseCase():
         if os.path.exists(tmp_folder):
             return tmp_folder
 
-        shutil.copytree(src, tmp_folder, symlinks=False, ignore=None, copy_function=shutil.copy2, ignore_dangling_symlinks=False)
+        shutil.copytree(src, tmp_folder, symlinks=True, ignore=None, copy_function=shutil.copy2, ignore_dangling_symlinks=False)
         os.sync()
         return tmp_folder
 
@@ -452,7 +454,17 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
             function_in_target = self.real_name
             function_in_replacement = self.real_name if self.lang == 'c' else self.name_bc_go
 
-            target_object = replacement_target.replace('.bc', '.c.o')
+
+            # hack 
+            if self.name == 'alsa-lib':
+                subprocess.check_output(['touch', replacement_target.replace('.bc', '.lo')])
+ 
+                target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
+                split = target_object.split('/')
+                split.insert(-1, '.libs')
+                target_object = '/'.join(split)
+            else:
+                target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
 
             subprocess.check_output([
                 linker_bin,
@@ -563,8 +575,9 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 ch = subprocess.check_output(LIBRARY_INFO[self.name]["make"], cwd=cwd, env={**os.environ}, stderr=subprocess.STDOUT)
                 print(f"Compiled in {time.time() - start:.2f}s")
                 self.compiled = True
-            except Exception as e:
-                print(e)
+            except subprocess.CalledProcessError as e:
+                print(e.output)
+
                 # TODO: check if this call works (currently untested)
                 logging.warning(
                     DEPENDENCY_WARNING_TEMPLATE.format(
@@ -573,6 +586,9 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 )
                 self.compiled = False
                 raise e
+
+            # if self.name == 'alsa-lib':
+              #  os.remove(os.path.join(cwd, 'include', 'alsa'))
         # block here?
 
 class TestLLVMCompilableUseCase(LLVMCompilableUseCase):

@@ -8,7 +8,9 @@
         "end": 140,
         "count": 1,
         "params": ["unsigned char"],
-        "return": "static int"
+        "return": "static int",
+        "bc_file_path": "src/pcm/pcm_alaw.bc",
+        "fn_bc_name_go": "main.alawToS16"
     },
     {
         "_type": "tag",
@@ -19,7 +21,9 @@
         "end": 90,
         "count": 1,
         "params" : ["uint"],
-        "return": "static unsigned int"
+        "return": "static unsigned int",
+        "bc_file_path": "src/pcm/pcm_alaw.bc",
+        "fn_bc_name_go": "main.iec958__parity"
     },
     {
         "_type": "tag",
@@ -30,7 +34,9 @@
         "end": 701,
         "count": 0,
         "params" : ["int", "int", "int"],
-        "return": "static inline int"
+        "return": "static inline int",
+        "bc_file_path": "src/pcm/pcm_local.bc",
+        "fn_bc_name_go": "main.muldiv__down"
     },
     {
         "_type": "tag",
@@ -41,7 +47,9 @@
         "end": 156,
         "count": 1,
         "params" : ["unsigned char"],
-        "return": "static int"
+        "return": "static int",
+        "bc_file_path": "src/pcm/pcm_mulaw.bc",
+        "fn_bc_name_go": "main.ulaw__to__s16"
     },
     {
         "_type": "tag",
@@ -52,6 +60,8 @@
         "end": 74,
         "count": 2,
         "params" : ["int"],
-        "return": "static inline int"
+        "return": "static inline int",
+        "bc_file_path": "src/pcm/pcm_alaw.bc",
+        "fn_bc_name_go": "main.valSeg"
     }
 ]

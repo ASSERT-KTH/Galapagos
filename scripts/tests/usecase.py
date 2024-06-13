@@ -138,10 +138,6 @@ if __name__ == "__main__":
         uc_name = __import__(uc_name).case
         original_uc = uc_name.LibraryCompilableUseCase("all", None, None, None, 0, 0, LIBRARY, doreplace = False)
 
-        # UNcomment this for real
-        # original_uc.compiled = True
-        # original_uc.tested = True
-
         shadow_original = await original_uc.shadow(project_folder, name=f"{LIBRARY}")
         await original_uc.compile(shadow_original, configure_project=True)
 
