@@ -3,50 +3,55 @@
         "_type": "tag",
         "name": "barrett_reduce",
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
-        "line": 6667,
+        "line": 6669,
         "kind": "function",
-        "end": 6674,
         "params": ["int16"],
         "return": "int16_t"
+        "end": 6676,
+        "count": 2
     },
     {
         "_type": "tag",
         "name": "ctz",
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/mceliece6688128f.c",
-        "line": 8534,
+        "line": 8536,
         "kind": "function",
-        "end": 8546,
         "params": ["uint64"],
         "return": "int"
+        "end": 8548,
+        "count": 0
     },
     {
         "_type": "tag",
         "name": "int16_t_negative_mask",
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
-        "line": 6138,
+        "line": 6140,
         "kind": "function",
-        "end": 6145,
         "params": ["int16"],
         "return": "static int"
+        "end": 6147,
+        "count": 2
     },
     {
         "_type": "tag",
         "name": "int16_t_nonzero_mask",
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/sntrup761.c",
-        "line": 6127,
+        "line": 6129,
         "kind": "function",
-        "end": 6134,
         "params": ["int16"],
         "return": "static int"
+        "end": 6136,
+        "count": 5
     },
     {
         "_type": "tag",
         "name": "montgomery_reduce",
         "path": "/home/diogo/galapagos-clones/libgcrypt/cipher/kyber.c",
-        "line": 6658,
+        "line": 6660,
         "kind": "function",
-        "end": 6665,
         "params": ["int32"],
         "return": "int16_t"
+        "end": 6667,
+        "count": 2
     }
 ]

@@ -88,8 +88,8 @@ LIBRARY_INFO = {
             "minisign", # apparently it's a circular dependency? but it's a dep nonetheless
         ],
         "flags": [
-            "--cc=clang",
-            "--extra-cflags=\"-emit-llvm\"",
+            # "--cc=clang",
+            # "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
             "CFLAGS": "-save-temps=obj -Dinline=",
@@ -501,11 +501,12 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         start = time.time()
         if self.name == "liboqs":
            cwd = os.path.join(cwd, 'build')
-        logging.info(f"Testing with command:{LIBRARY_INFO[self.name]["testing"]["command"]}, cwd:{cwd}")
+        test_command = LIBRARY_INFO[self.name]["testing"]["command"]
+        logging.info(f"Testing with command:{test_command}, cwd:{cwd}")
         if not self.tested:
             try:
                 # self.replace(cwd)
-                ch = subprocess.check_output(LIBRARY_INFO[self.name]["testing"]["command"], cwd=cwd, stderr=subprocess.STDOUT, timeout=300)
+                ch = subprocess.check_output(test_command, cwd=cwd, stderr=subprocess.STDOUT, timeout=300)
                 self.tested = True
                 self.test_result = True, ch.decode()
                 print(f"Tested in {time.time() - start:.2f}s")

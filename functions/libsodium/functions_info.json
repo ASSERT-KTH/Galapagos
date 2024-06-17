@@ -2,51 +2,51 @@
     {
         "_type": "tag",
         "name": "b64_byte_to_char",
-        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
-        "line": 2549,
+        "path": "/home/diogo/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2456,
         "kind": "function",
-        "end": 2555,
-        "count": 4,
         "params": ["uint"],
         "return": "static int"
+        "end": 2462,
+        "count": 4
     },
     {
         "_type": "tag",
         "name": "b64_byte_to_urlsafe_char",
-        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
-        "line": 2570,
+        "path": "/home/diogo/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2477,
         "kind": "function",
-        "end": 2576,
-        "count": 4,
         "params": ["uint"],
         "return": "static int"
+        "end": 2483,
+        "count": 4
     },
     {
         "_type": "tag",
         "name": "b64_char_to_byte",
-        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
-        "line": 2558,
+        "path": "/home/diogo/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2465,
         "kind": "function",
-        "end": 2567,
-        "count": 2,
         "params": ["int"],
         "return": "static unsigned int"
+        "end": 2474,
+        "count": 2
     },
     {
         "_type": "tag",
         "name": "b64_urlsafe_char_to_byte",
-        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
-        "line": 2579,
+        "path": "/home/diogo/galapagos-clones/libsodium/src/libsodium/sodium/codecs.c",
+        "line": 2486,
         "kind": "function",
-        "end": 2588,
-        "count": 2,
         "params": ["int"],
         "return": "static unsigned int"
+        "end": 2495,
+        "count": 2
     },
     {
         "_type": "tag",
         "name": "fBlaMka",
-        "path": "/home/javier/galapagos-clones/libsodium/src/libsodium/crypto_pwhash/argon2/blamka-round-ref.h",
+        "path": "/home/diogo/galapagos-clones/libsodium/src/libsodium/crypto_pwhash/argon2/blamka-round-ref.h",
         "line": 8,
         "kind": "function",
         "end": 13,

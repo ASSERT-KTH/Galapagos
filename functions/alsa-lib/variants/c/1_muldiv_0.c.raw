@@ -1,4 +1,4 @@
-static inline int muldiv1(int a, int b, int c, int *r)
+static int muldiv(int a, int b, int c, int *r)
 {
 	int64_t n = (int64_t)a * b;
 	int64_t v = n / c;

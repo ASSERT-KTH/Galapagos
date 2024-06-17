@@ -1,4 +1,4 @@
-static inline int muldiv_down(int a, int b, int c)
+static int muldiv_down(int a, int b, int c)
 {
 	int64_t v = (int64_t)a * b / c;
 	if (v > 2147483647) {
