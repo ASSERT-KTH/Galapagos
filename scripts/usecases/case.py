@@ -275,7 +275,7 @@ class UseCase():
         # Return the tmp folder
 
         # name should be <projectname>-<function>-<version>
-        random_name = f'{self.name}-{self.function_name}-{self.version}' if not name else name
+        random_name = f'{self.name}-{self.function_name}-{self.version}-{self.lang}' if not name else name
         print(f"Copying {src} to {shadow_dir}/{random_name}")
         tmp_folder = os.path.join(shadow_dir, random_name)
         # if the folder exist, prevent the copy
