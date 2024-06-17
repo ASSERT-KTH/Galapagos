@@ -6,12 +6,12 @@ target triple = "x86_64-unknown-linux-gnu"
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @main() #0 {
 entry:
-  %call = call i32 @alaw_to_s16_v4(i8 noundef zeroext 97)
+  %call = call i32 @alaw_to_s16(i8 noundef zeroext 97)
   ret i32 0
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
-define internal i32 @alaw_to_s16_v4(i8 noundef zeroext %a_val) #0 {
+define internal i32 @alaw_to_s16(i8 noundef zeroext %a_val) #0 {
 entry:
   %a_val.addr = alloca i8, align 1
   %t = alloca i32, align 4

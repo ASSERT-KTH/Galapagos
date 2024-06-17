@@ -8,5 +8,4 @@ debug
 venv
 *.egg-info
 build
-out
 .vscode

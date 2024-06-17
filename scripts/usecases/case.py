@@ -448,7 +448,13 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 replacement_source
             ])
 
+            # hack
             language_flag = '--cld'
+            
+            if self.lang == 'c':
+                language_flag = '--sld'
+
+
             output_file = replacement_target.replace('.bc', '.ll')
 
             function_in_target = self.real_name

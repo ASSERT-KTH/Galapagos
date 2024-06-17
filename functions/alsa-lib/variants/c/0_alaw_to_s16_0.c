@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-static int alaw_to_s16_v1(unsigned char a_val)
+static int alaw_to_s16(unsigned char a_val)
 {
 	int t, seg;
 	a_val ^= 0x55;
@@ -13,5 +13,5 @@ static int alaw_to_s16_v1(unsigned char a_val)
 
 
 int main(){
-    alaw_to_s16_v1('a');
+    alaw_to_s16('a');
 }

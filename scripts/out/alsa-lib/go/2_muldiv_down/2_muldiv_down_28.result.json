@@ -1,0 +1,8 @@
+{
+    "compiled": false,
+    "function_name": "2_muldiv_down",
+    "variant_name": "alsa-lib",
+    "project": "alsa-lib",
+    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/javier/Galapagos/scripts/tests/usecase.py\", line 48, in compare\n    await variant.compile(variant_shadow) # raises exception on fail\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 526, in compile\n    self.replace_bc(cwd)\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 436, in replace_bc\n    subprocess.check_output([\n  File \"/usr/lib/python3.12/subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['opt', '-strip-debug', '/home/javier/galapagos-clones/alsa-lib-2_muldiv_down-3/src/pcm/pcm_local.bc', '-o', '/home/javier/galapagos-clones/alsa-lib-2_muldiv_down-3/src/pcm/pcm_local.bc']' returned non-zero exit status 1.\n",
+    "python_error_msg": "Command '['opt', '-strip-debug', '/home/javier/galapagos-clones/alsa-lib-2_muldiv_down-3/src/pcm/pcm_local.bc', '-o', '/home/javier/galapagos-clones/alsa-lib-2_muldiv_down-3/src/pcm/pcm_local.bc']' returned non-zero exit status 1."
+}

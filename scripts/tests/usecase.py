@@ -174,7 +174,7 @@ if __name__ == "__main__":
                                 version=func_version,
                                 # TODO
                                 # new needed variables HERE!
-                                lang='go',
+                                lang=LANG,
                                 name_bc_go=function['fn_bc_name_go']
                         )
                         test_cases.append(testcase)
