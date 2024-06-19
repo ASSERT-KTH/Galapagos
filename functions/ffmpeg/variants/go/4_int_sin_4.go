@@ -1,6 +1,6 @@
 package main
 
-func intSinAlt4(a int64) int64 {
+func intSin(a int64) int64 {
     if a < 0 {
         a = 3294199 + a
     }
@@ -24,5 +24,5 @@ func intSinAlt4(a int64) int64 {
 
 
 func main(){
-    intSinAlt4(0)
+    intSin(0)
 }

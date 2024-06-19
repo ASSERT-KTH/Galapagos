@@ -8,7 +8,9 @@
         "end": 8727,
         "count": 2,
         "params": ["int", "int", "int"],
-        "return": "static int"
+        "return": "static int",
+        "bc_file_path": "libavcodec/flacenc.bc",
+        "fn_bc_name_go": "main.flacGetMaxFrameSize"
     },
     {
         "_type": "tag",
@@ -18,8 +20,10 @@
         "kind": "function",
         "end": 10664,
         "params": ["int", "int"],
-        "return": "static int"
-        "count": 75
+        "return": "static int",
+        "bc_file_path": "libavcodec/4xm.bc",
+        "count": 75,
+        "fn_bc_name_go": "main.mix"
     },
     {
         "_type": "tag",
@@ -29,8 +33,10 @@
         "kind": "function",
         "end": 3648,
         "params": ["int", "int"],
-        "return": "static int"
-        "count": 2
+        "return": "static int",
+        "bc_file_path": "libavcodec/vp56dsp.bc",
+        "count": 2,
+        "fn_bc_name_go": "main.vp5__adjust"
     },
     {
         "_type": "tag",
@@ -41,7 +47,9 @@
         "end": 12393,
         "count": 2,
         "params": ["int", "int", "int"],
-        "return": "static int"
+        "bc_file_path": "libavcodec/diracdec.bc",
+        "return": "static int",
+        "fn_bc_name_go": "main.weight"
 
     },
     {
@@ -53,6 +61,8 @@
         "end": 6792,
         "count": 5,
         "params": ["int64"],
-        "return": "static int64_t"
+        "bc_file_path": "libavfilter/vf_rotate.bc",
+        "return": "static int64_t",
+        "fn_bc_name_go": "main.intSin"
     }
 ]

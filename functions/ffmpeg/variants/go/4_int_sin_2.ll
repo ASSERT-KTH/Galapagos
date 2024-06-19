@@ -17,7 +17,7 @@ module asm "\09.ascii \22\\n\22"
 module asm "\09.ascii \22type 1 (? <type -4>) <type -4>\\n\22"
 module asm "\09.ascii \22func \22"
 module asm "\09.ascii \22.\22"
-module asm "\09.ascii \22intSinAlt2\22"
+module asm "\09.ascii \22intSin\22"
 module asm "\09.ascii \22 (\22"
 module asm "\09.ascii \22a\22"
 module asm "\09.ascii \22 \22"
@@ -26,7 +26,7 @@ module asm "\09.ascii \22)\22"
 module asm "\09.ascii \22 \22"
 module asm "\09.ascii \22<type -4>\22"
 module asm "\09.ascii \22\\n\22"
-module asm "\09.ascii \22checksum 31E80B21BB7190AB8175EB32F985B3A3225907EF\\n\22"
+module asm "\09.ascii \22checksum 7308C6C618B8013BD926321ADB0C71AAEF4DB364\\n\22"
 module asm "\09.text"
 
 @main..types = constant { i64, [1 x i8*] } zeroinitializer
@@ -40,7 +40,7 @@ entry:
 }
 
 ; Function Attrs: null_pointer_is_valid
-define i64 @main.intSinAlt2(i8* nest nocapture readnone %nest.0, i64 %a) local_unnamed_addr #0 {
+define i64 @main.intSin(i8* nest nocapture readnone %nest.0, i64 %a) local_unnamed_addr #0 {
 else.8.4:
   %icmp.0 = icmp slt i64 %a, 0
   %add.0 = add i64 %a, 3294199
@@ -78,7 +78,7 @@ else.8.4:
 ; Function Attrs: null_pointer_is_valid
 define void @main.main(i8* nest nocapture readnone %nest.1) local_unnamed_addr #0 {
 entry:
-  %call.0 = call i64 @main.intSinAlt2(i8* nest undef, i64 0)
+  %call.0 = call i64 @main.intSin(i8* nest undef, i64 0)
   ret void
 }
 
