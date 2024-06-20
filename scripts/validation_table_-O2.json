@@ -1,0 +1,78 @@
+{
+    "alsa-lib": {
+        "c": {
+            "alaw_to_s16": {
+                "compile_isolation": 10,
+                "compile_project": 10,
+                "pass_tests": 10,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "iec958_parity": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "muldiv_down": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "ulaw_to_s16": {
+                "compile_isolation": 10,
+                "compile_project": 10,
+                "pass_tests": 10,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "val_seg": {
+                "compile_isolation": 10,
+                "compile_project": 10,
+                "pass_tests": 10,
+                "equivalent": 0,
+                "unique_hashes": 0
+            }
+        },
+        "go": {
+            "alaw_to_s16": {
+                "compile_isolation": 10,
+                "compile_project": 10,
+                "pass_tests": 10,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "iec958_parity": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "muldiv_down": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "ulaw_to_s16": {
+                "compile_isolation": 10,
+                "compile_project": 10,
+                "pass_tests": 10,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "val_seg": {
+                "compile_isolation": 9,
+                "compile_project": 1,
+                "pass_tests": 1,
+                "equivalent": 0,
+                "unique_hashes": 0
+            }
+        }
+    }
+}
