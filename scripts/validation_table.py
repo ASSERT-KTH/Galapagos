@@ -1,6 +1,8 @@
 import json
 import glob
 import pprint
+import hashlib
+import os
 
 def find_number_of_compiled(files):
     compiled = 0
@@ -18,15 +20,31 @@ def find_number_of_tested(files):
 
 
 def find_number_of_equivalent(files):
-    equivalent = 0
+    equivalent_ctr, equivalent_files = 0, []
     for f in files:
         if 'verification' in f:
             bc_files = f['verification']
             for bc_file in bc_files:
                 if bc_files[bc_file]['correct transformations'] > 0:
-                    equivalent += 1
+                    equivalent_ctr += 1
+                    equivalent_files.append(f)
                     break
-    return equivalent
+    return equivalent_ctr, equivalent_files
+
+def find_number_equivalent_with_unique_hash(files):
+    unique_hashes = set()
+    for f in files:
+        if 'changes' in f and 'bitcodes' in f['changes']:
+            bc_file_pairs = f['changes']['bitcodes']
+            hashes = tuple()
+            for _, bc_file in bc_file_pairs:
+                with open(bc_file, 'rb') as g:
+                    content = g.read()
+                    h = hashlib.sha256(content).hexdigest()
+                    hashes += (h,)
+            unique_hashes.add(hashes)
+    return len(unique_hashes)
+
 
 projects = ['alsa-lib']
 langs = ['c', 'go']
@@ -60,14 +78,19 @@ for project in projects:
                 for out_file in out_files:
                     with open(out_file) as g:
                         out_jsons.append(json.load(g))
+
+                # print(out_jsons)
                 compile_in_project = find_number_of_compiled(out_jsons)
                 result[project][lang][fn['name']]['compile_project'] = compile_in_project
 
                 pass_tests = find_number_of_tested(out_jsons)
                 result[project][lang][fn['name']]['pass_tests'] = pass_tests
                 
-                equivalent = find_number_of_equivalent(out_jsons)
-                result[project][lang][fn['name']]['equivalent'] = equivalent
+                equivalent_ctr, equivalent_files = find_number_of_equivalent(out_jsons)
+                result[project][lang][fn['name']]['equivalent'] = equivalent_ctr
+
+                unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
+                result[project][lang][fn['name']]['unique_hashes'] = unique_hashes
 
 pprint.pprint(result) 
 

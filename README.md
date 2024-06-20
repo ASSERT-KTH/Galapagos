@@ -9,9 +9,11 @@
 ### For running tests
 
 - Build alive. `cd scripts/verifier && bash build.sh`
+- Enter the linker folder
+- Build the linker according to its README
 - Enter the scripts folder
 - Install it as a package `pip3 install -e .`
-- Run each test module inside the `tests` folder. For example, `python3 -m tests.usecase ffmpeg`
+- Run each test module inside the `tests` folder. For example, `python3 -m tests.usecase ffmpeg <LANG>`, where `<LANG>` is the language you want to test (e.g., `c`).
 
 ## Use cases
 
