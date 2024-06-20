@@ -92,5 +92,8 @@ for project in projects:
                 unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
                 result[project][lang][fn['name']]['unique_hashes'] = unique_hashes
 
-pprint.pprint(result) 
+VALIDATION_TABLE = 'validation_table.json'
+with open(VALIDATION_TABLE, 'w') as f:
+    json.dump(result, f, indent=4)
+    print(f"File saved to {VALIDATION_TABLE}")
 
