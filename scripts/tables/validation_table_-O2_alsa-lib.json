@@ -5,8 +5,8 @@
                 "compile_isolation": 10,
                 "compile_project": 10,
                 "pass_tests": 10,
-                "equivalent": 0,
-                "unique_hashes": 0
+                "equivalent": 1,
+                "unique_hashes": 1
             },
             "iec958_parity": {
                 "compile_isolation": 10,
@@ -26,15 +26,15 @@
                 "compile_isolation": 10,
                 "compile_project": 10,
                 "pass_tests": 10,
-                "equivalent": 0,
-                "unique_hashes": 0
+                "equivalent": 9,
+                "unique_hashes": 9
             },
             "val_seg": {
                 "compile_isolation": 10,
                 "compile_project": 10,
                 "pass_tests": 10,
-                "equivalent": 0,
-                "unique_hashes": 0
+                "equivalent": 2,
+                "unique_hashes": 2
             }
         },
         "go": {
@@ -42,8 +42,8 @@
                 "compile_isolation": 10,
                 "compile_project": 10,
                 "pass_tests": 10,
-                "equivalent": 0,
-                "unique_hashes": 0
+                "equivalent": 6,
+                "unique_hashes": 4
             },
             "iec958_parity": {
                 "compile_isolation": 10,
@@ -63,8 +63,8 @@
                 "compile_isolation": 10,
                 "compile_project": 10,
                 "pass_tests": 10,
-                "equivalent": 0,
-                "unique_hashes": 0
+                "equivalent": 10,
+                "unique_hashes": 4
             },
             "val_seg": {
                 "compile_isolation": 9,

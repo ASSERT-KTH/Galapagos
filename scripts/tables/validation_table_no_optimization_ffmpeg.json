@@ -1,0 +1,41 @@
+{
+    "ffmpeg": {
+        "c": {
+            "flac_get_max_frame_size": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "mix": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "vp5_adjust": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "weight": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            },
+            "int_sin": {
+                "compile_isolation": 10,
+                "compile_project": 0,
+                "pass_tests": 0,
+                "equivalent": 0,
+                "unique_hashes": 0
+            }
+        }
+    }
+}

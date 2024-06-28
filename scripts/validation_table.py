@@ -6,12 +6,10 @@ import os
 import sys
 
 # An argument may be passed: -O0, -O1, -O2, -O3
-# If it isn't, the file will be saved as validation_table_no_optimization.json
-# If it is, the file will be saved as validation_table_Ox.json
 if len(sys.argv) > 1:
-    VALIDATION_TABLE = f"validation_table_{sys.argv[1]}.json"
+    VALIDATION_TABLE = f"tables/validation_table_{sys.argv[1]}"
 else:
-    VALIDATION_TABLE = 'validation_table_no_optimization.json'
+    VALIDATION_TABLE = 'tables/validation_table_no_optimization'
 
 def find_number_of_compiled(files):
     compiled = 0
@@ -101,7 +99,8 @@ for project in projects:
                 unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
                 result[project][lang][fn['name']]['unique_hashes'] = unique_hashes
 
-with open(VALIDATION_TABLE, 'w') as f:
-    json.dump(result, f, indent=4)
-    print(f"File saved to {VALIDATION_TABLE}")
+    validation_table_filename = VALIDATION_TABLE + f'_{project}.json'
+    with open(validation_table_filename, 'w') as f:
+        json.dump(result, f, indent=4)
+        print(f"File saved to {validation_table_filename}")
 
