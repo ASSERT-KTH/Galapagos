@@ -43,7 +43,7 @@
                 "compile_project": 10,
                 "pass_tests": 10,
                 "equivalent": 6,
-                "unique_hashes": 4
+                "unique_hashes": 5
             },
             "iec958_parity": {
                 "compile_isolation": 10,
@@ -64,7 +64,7 @@
                 "compile_project": 10,
                 "pass_tests": 10,
                 "equivalent": 10,
-                "unique_hashes": 3
+                "unique_hashes": 4
             },
             "val_seg": {
                 "compile_isolation": 9,
