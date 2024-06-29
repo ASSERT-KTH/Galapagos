@@ -9,10 +9,11 @@ import time
 import traceback
 
 USERNAME = os.environ.get("USER", os.environ.get("USERNAME")) # default for UNIX, fallback for Windows
-CLONE_PATH = f"/home/{USERNAME}/galapagos-clones"
+CLONE_PATH = f"/mnt/ssd1/javier/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
+        "object_extension": ".o",
         "dependencies": [
             "autoconf",
             "automake",
@@ -84,6 +85,7 @@ LIBRARY_INFO = {
         }
     },
     "libsodium": {
+        "object_extension": ".o",
         "dependencies": [
             "minisign", # apparently it's a circular dependency? but it's a dep nonetheless
         ],
@@ -92,7 +94,7 @@ LIBRARY_INFO = {
             # "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline= -O0",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
@@ -104,7 +106,7 @@ LIBRARY_INFO = {
         },
         "make": ["make", "-j4"], 
         "testing": {
-            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "enabled": True, 
             "command": ["make", "check"]
         }
     },
@@ -243,7 +245,7 @@ def strip(file):
             strip_filename = f"{file}-strip"
             subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
             return strip_filename
-        elif file.endswith('.o') or is_executable(file):
+        elif is_executable(file):
             strip_filename = f"{file}-strip"
             subprocess.run(['strip', '--strip-all', '-o', strip_filename, file])
             return strip_filename
@@ -489,6 +491,14 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 replacement_target
             ])
 
+            if self.name == 'libsodium':
+                split = target_object.split('/')
+                file = split[-1]
+                split[-1] = f'.libs/libsodium_la-{file}'
+                target_object = '/'.join(split)
+                split[-1] = f'libsodium_la-{file}'.replace('.o', '.lo')
+                subprocess.check_output(['touch', '/'.join(split)])
+
             subprocess.check_output([
                 'clang',
                 '-c',
@@ -512,7 +522,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         if not self.tested:
             try:
                 # self.replace(cwd)
-                ch = subprocess.check_output(test_command, cwd=cwd, stderr=subprocess.STDOUT, timeout=300)
+                ch = subprocess.check_output(test_command, cwd=cwd, stderr=subprocess.STDOUT, timeout=3000)
                 self.tested = True
                 self.test_result = True, ch.decode()
                 print(f"Tested in {time.time() - start:.2f}s")

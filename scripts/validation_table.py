@@ -28,7 +28,7 @@ def find_number_of_equivalent(files):
                     break
     return equivalent
 
-projects = ['alsa-lib']
+projects = ['alsa-lib', 'libsodium', 'ffmpeg']
 langs = ['c', 'go']
 
 result = {}

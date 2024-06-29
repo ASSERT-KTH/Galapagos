@@ -1,0 +1,60 @@
+{
+    "compiled": true,
+    "function_name": "2_b64_char_to_byte",
+    "variant_name": "libsodium",
+    "project": "libsodium",
+    "changes": {
+        "bitcodes": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.bc",
+                "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/sodium/codecs.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so.27",
+                "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so.27"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so.27.0.0",
+                "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so.27.0.0"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so",
+                "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so.27",
+            "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so.27"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so.27.0.0",
+            "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so.27.0.0"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/.libs/libsodium.so",
+            "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/.libs/libsodium.so"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/sodium/codecs.bc",
+            "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/sodium/codecs.bc"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/libsodium/src/libsodium/sodium/.libs/libsodium_la-codecs.o",
+            "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/sodium/.libs/libsodium_la-codecs.o"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [
+        "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c/src/libsodium/sodium/codecs.ll"
+    ],
+    "shadow_folder": "/mnt/ssd1/javier/galapagos-clones/libsodium-2_b64_char_to_byte-1-c",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "pass_tests": false,
+    "test_result": "Command '['make', 'check']' returned non-zero exit status 2.",
+    "verification": {}
+}
