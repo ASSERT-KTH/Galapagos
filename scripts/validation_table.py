@@ -1,6 +1,7 @@
 import json
 import glob
 import pprint
+import json2latex
 
 def find_number_of_compiled(files):
     compiled = 0
@@ -28,27 +29,27 @@ def find_number_of_equivalent(files):
                     break
     return equivalent
 
-projects = ['alsa-lib', 'libsodium', 'ffmpeg']
+projects = ['alsa-lib', 'ffmpeg', 'libsodium', 'openssl']
 langs = ['c', 'go']
 
 result = {}
 
 for project in projects:
     result[project] = {}
-    for lang in langs:
-        result[project][lang] = {}
 
-        #load functions
-        with open(f'../functions/{project}/functions_info.json') as f:
-            data = json.load(f)
-            for i, fn in enumerate(data):
-                result[project][lang][fn['name']] = {}
-                # get .bc files path
+    #load functions
+    with open(f'../functions/{project}/functions_info.json') as f:
+        data = json.load(f)
+        for i, fn in enumerate(data):
+            result[project][fn['name']] = {}
+            # get .bc files path
+            for lang in langs:
+                result[project][fn['name']][lang] = {}
 
                 path = f'../functions/{project}/variants/{lang}/{i}_{fn["name"]}*.bc'
                 files = glob.glob(path)
                 compile_in_isolation = len(files)
-                result[project][lang][fn['name']]['compile_isolation'] = compile_in_isolation
+                result[project][fn['name']][lang]['compile_isolation'] = compile_in_isolation
 
                 # compiles in project / pass tests / validates
                 
@@ -61,13 +62,30 @@ for project in projects:
                     with open(out_file) as g:
                         out_jsons.append(json.load(g))
                 compile_in_project = find_number_of_compiled(out_jsons)
-                result[project][lang][fn['name']]['compile_project'] = compile_in_project
+                result[project][fn['name']][lang]['compile_project'] = compile_in_project
 
                 pass_tests = find_number_of_tested(out_jsons)
-                result[project][lang][fn['name']]['pass_tests'] = pass_tests
+                result[project][fn['name']][lang]['pass_tests'] = pass_tests
                 
                 equivalent = find_number_of_equivalent(out_jsons)
-                result[project][lang][fn['name']]['equivalent'] = equivalent
+                result[project][fn['name']][lang]['equivalent'] = equivalent
 
-pprint.pprint(result) 
+def data_to_latex(result):
+    s = ''
+    for proj in result:
+        s += '\\midrule\n'
+        for i, func in enumerate(result[proj]):
+            if i == 4:
+                s += f'\\cellcolor{{white}}\n\\multirow{{-5}}{{*}}{{{proj}}} & {func} '
+            else:
+                s += f'\\cellcolor{{white}} & {func} '
+            for lang in result[proj][func]:
+                for point in result[proj][func][lang]:
+                    s += f'& \\numprint{{{result[proj][func][lang][point]}}} '
+            s += " \\\\\n"
+    
+    return s.replace('_', '\\_')
+
+pprint.pprint(result)
+print(data_to_latex(result))
 

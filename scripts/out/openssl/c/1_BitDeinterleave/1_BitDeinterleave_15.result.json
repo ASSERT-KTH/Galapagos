@@ -1,0 +1,59 @@
+{
+    "compiled": true,
+    "function_name": "1_BitDeinterleave",
+    "variant_name": "openssl",
+    "project": "openssl",
+    "changes": {
+        "bitcodes": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/sha/keccak1600.bc",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/crypto/sha/keccak1600.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so.3",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/libcrypto.so.3"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/libcrypto.so"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so.3",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/libcrypto.so.3"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/libcrypto.so"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/sha/keccak1600.bc",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/crypto/sha/keccak1600.bc"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/sha/libcrypto-shlib-keccak1600.o",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/crypto/sha/libcrypto-shlib-keccak1600.o"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [
+        "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c/crypto/sha/keccak1600.ll"
+    ],
+    "shadow_folder": "/mnt/ssd1/javier/galapagos-clones/openssl-1_BitDeinterleave-7-c",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "pass_tests": true,
+    "test_result": "testing disabled",
+    "verification": {
+        "keccak1600.bc": {
+            "correct transformations": 0,
+            "incorrect transformations": 1,
+            "failed-to-prove transformations": 0,
+            "Alive2 errors": 0
+        }
+    }
+}
