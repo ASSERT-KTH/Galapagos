@@ -1,0 +1,8 @@
+{
+    "compiled": false,
+    "function_name": "2_add",
+    "variant_name": "alsa-lib",
+    "project": "alsa-lib",
+    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/javier/Galapagos/scripts/tests/usecase.py\", line 52, in compare\n    await variant.compile(variant_shadow) # raises exception on fail\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 557, in compile\n    self.replace_bc(cwd)\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 484, in replace_bc\n    subprocess.check_output([\n  File \"/usr/lib/python3.10/subprocess.py\", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/javier/Galapagos/linker/build/linker', '/mnt/ssd1/javier/galapagos-clones/alsa-lib-2_add-3-c/src/pcm/interval.bc', '/home/javier/Galapagos/functions/alsa-lib/variants/c/2_add_3.bc', '--sld', '--output=/mnt/ssd1/javier/galapagos-clones/alsa-lib-2_add-3-c/src/pcm/interval.ll', '--function_name_in_input=add', '--function_name_in_replacement=add']' died with <Signals.SIGABRT: 6>.\n",
+    "python_error_msg": "Command '['/home/javier/Galapagos/linker/build/linker', '/mnt/ssd1/javier/galapagos-clones/alsa-lib-2_add-3-c/src/pcm/interval.bc', '/home/javier/Galapagos/functions/alsa-lib/variants/c/2_add_3.bc', '--sld', '--output=/mnt/ssd1/javier/galapagos-clones/alsa-lib-2_add-3-c/src/pcm/interval.ll', '--function_name_in_input=add', '--function_name_in_replacement=add']' died with <Signals.SIGABRT: 6>."
+}

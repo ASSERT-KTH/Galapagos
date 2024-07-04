@@ -13,6 +13,9 @@ import shutil
 DIRNAME = os.path.abspath(os.path.dirname(__file__))
 LIBRARY = sys.argv[1] # TODO: check if this is correct, check if str() is needed
 LANG = sys.argv[2]
+SINGLE_FUNCTION = '' 
+if len(sys.argv) > 3:
+    SINGLE_FUNCTION = sys.argv[3] 
 
 if __name__ == "__main__":
     # Compile library
@@ -149,6 +152,9 @@ if __name__ == "__main__":
         with open(os.path.join(WORKSPACE, "functions_info.json"), 'r') as f:
             functions_info = json.load(f)
             for idx, function in enumerate(functions_info):
+                if SINGLE_FUNCTION != '' and SINGLE_FUNCTION != function['name']:
+                    continue
+
                 logging.info(f"Pipeline for variants of {function['name']} {function['path']}")
 
                 # Reading the generated variants

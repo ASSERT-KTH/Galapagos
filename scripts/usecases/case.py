@@ -468,13 +468,16 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
 
             # hack 
-            if self.name == 'alsa-lib':
+            if self.name == 'alsa-lib' :
                 subprocess.check_output(['touch', replacement_target.replace('.bc', '.lo')])
  
                 target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
                 split = target_object.split('/')
                 split.insert(-1, '.libs')
                 target_object = '/'.join(split)
+            elif self.name == 'libgcrypt':
+                subprocess.check_output(['touch', replacement_target.replace('/.libs', '').replace('.bc', '.lo')])
+                target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
             else:
                 target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
 

@@ -1,0 +1,8 @@
+{
+    "compiled": false,
+    "function_name": "2_int16_t_negative_mask",
+    "variant_name": "libgcrypt",
+    "project": "libgcrypt",
+    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/javier/Galapagos/scripts/tests/usecase.py\", line 49, in compare\n    await variant.compile(variant_shadow) # raises exception on fail\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 557, in compile\n    self.replace_bc(cwd)\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 494, in replace_bc\n    subprocess.check_output([\n  File \"/usr/lib/python3.10/subprocess.py\", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['llvm-as', '/mnt/ssd1/javier/galapagos-clones/libgcrypt-2_int16_t_negative_mask-2-go/cipher/.libs/sntrup761.ll', '-o', '/mnt/ssd1/javier/galapagos-clones/libgcrypt-2_int16_t_negative_mask-2-go/cipher/.libs/sntrup761.bc']' returned non-zero exit status 1.\n",
+    "python_error_msg": "Command '['llvm-as', '/mnt/ssd1/javier/galapagos-clones/libgcrypt-2_int16_t_negative_mask-2-go/cipher/.libs/sntrup761.ll', '-o', '/mnt/ssd1/javier/galapagos-clones/libgcrypt-2_int16_t_negative_mask-2-go/cipher/.libs/sntrup761.bc']' returned non-zero exit status 1."
+}

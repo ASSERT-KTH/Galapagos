@@ -1,0 +1,84 @@
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    unsigned int sum = a + b;
+    if (sum < a)
+        return 4294967295;
+    return sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    unsigned long long sum = (unsigned long long) a + b;
+    if (sum > 4294967295)
+        return 4294967295;
+    return (unsigned int) sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if (b > 4294967295 - a)
+        return 4294967295;
+    return a + b;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if (__builtin_add_overflow(a, b, &a))
+        return 4294967295;
+    return a;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    unsigned int sum = a + b;
+    if (sum < b)
+        return 4294967295;
+    return sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if (b == 0) 
+        return a;
+    unsigned int sum = a + b;
+    if (sum < a || sum < b)
+        return 4294967295;
+    return sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    return (a > 4294967295 - b) ? 4294967295 : a + b;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if ((a & b & 0x80000000) == 0x80000000)
+        return 4294967295;
+    unsigned int sum = a + b;
+    if (sum < a)
+        return 4294967295;
+    return sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    unsigned int sum = a;
+    for (unsigned int i = 0; i < b; ++i) {
+        if (sum == 4294967295)
+            return 4294967295;
+        ++sum;
+    }
+    return sum;
+}
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if ((a & (1 << 31)) && (b & (1 << 31)))
+        return 4294967295;
+    unsigned int sum = a + b;
+    if (b > 0 && sum < a)
+        return 4294967295;
+    return sum;
+}

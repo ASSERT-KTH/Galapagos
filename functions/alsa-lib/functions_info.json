@@ -22,21 +22,21 @@
         "count": 1,
         "params" : ["uint"],
         "return": "static unsigned int",
-        "bc_file_path": "src/pcm/pcm_alaw.bc",
+        "bc_file_path": "src/pcm/pcm_iec958.bc",
         "fn_bc_name_go": "main.iec958__parity"
     },
     {
         "_type": "tag",
-        "name": "muldiv_down",
-        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/pcm_local.h",
+        "name": "add",
+        "path": "/home/diogo/galapagos-clones/alsa-lib/src/pcm/interval.c",
         "line": 691,
         "kind": "function",
         "end": 701,
         "count": 0,
-        "params" : ["int", "int", "int"],
-        "return": "static inline int",
-        "bc_file_path": "src/pcm/pcm_local.bc",
-        "fn_bc_name_go": "main.muldiv__down"
+        "params" : ["uint", "uint"],
+        "return": "static inline unsigned int",
+        "bc_file_path": "src/pcm/interval.bc",
+        "fn_bc_name_go": "main.add"
     },
     {
         "_type": "tag",
