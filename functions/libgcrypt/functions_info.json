@@ -6,9 +6,11 @@
         "line": 6669,
         "kind": "function",
         "params": ["int16"],
-        "return": "int16_t"
+        "return": "int16_t",
         "end": 6676,
-        "count": 2
+        "count": 2,
+	"bc_file_path": "cipher/.libs/kyber.bc",
+	"fn_bc_name_go": "main.barrettReduce"
     },
     {
         "_type": "tag",
@@ -17,9 +19,11 @@
         "line": 8536,
         "kind": "function",
         "params": ["uint64"],
-        "return": "int"
+        "return": "int",
         "end": 8548,
-        "count": 0
+        "count": 0,
+	"bc_file_path": "cipher/.libs/mceliece6688128f.bc",
+	"fn_bc_name_go": "main.ctz"
     },
     {
         "_type": "tag",
@@ -28,9 +32,11 @@
         "line": 6140,
         "kind": "function",
         "params": ["int16"],
-        "return": "static int"
+        "return": "static int",
         "end": 6147,
-        "count": 2
+        "count": 2,
+	"bc_file_path": "cipher/.libs/sntrup761.bc",
+	"fn_bc_name_go": "main.int16__t__negative__mask"
     },
     {
         "_type": "tag",
@@ -39,9 +45,11 @@
         "line": 6129,
         "kind": "function",
         "params": ["int16"],
-        "return": "static int"
+        "return": "static int",
         "end": 6136,
-        "count": 5
+        "count": 5,
+	"bc_file_path": "cipher/.libs/sntrup761.bc",
+	"fn_bc_name_go": "main.int16__t__nonzero__mask"
     },
     {
         "_type": "tag",
@@ -50,8 +58,10 @@
         "line": 6660,
         "kind": "function",
         "params": ["int32"],
-        "return": "int16_t"
+        "return": "int16_t",
         "end": 6667,
-        "count": 2
+        "count": 2,
+	"bc_file_path": "cipher/.libs/kyber.bc",
+	"fn_bc_name_go": "main.montgomeryReduce"
     }
 ]

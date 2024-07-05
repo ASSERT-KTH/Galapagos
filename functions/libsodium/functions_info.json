@@ -6,9 +6,11 @@
         "line": 2456,
         "kind": "function",
         "params": ["uint"],
-        "return": "static int"
+        "return": "static int",
         "end": 2462,
-        "count": 4
+        "count": 4,
+	"bc_file_path": "src/libsodium/sodium/codecs.bc", 
+	"fn_bc_name_go": "main.b64ByteToChar"
     },
     {
         "_type": "tag",
@@ -17,9 +19,11 @@
         "line": 2477,
         "kind": "function",
         "params": ["uint"],
-        "return": "static int"
+        "return": "static int",
         "end": 2483,
-        "count": 4
+        "count": 4,
+	"bc_file_path": "src/libsodium/sodium/codecs.bc",
+	"fn_bc_name_go": "main.b64ByteToURLSafeChar"
     },
     {
         "_type": "tag",
@@ -28,9 +32,11 @@
         "line": 2465,
         "kind": "function",
         "params": ["int"],
-        "return": "static unsigned int"
+        "return": "static unsigned int",
         "end": 2474,
-        "count": 2
+        "count": 2,
+	"bc_file_path": "src/libsodium/sodium/codecs.bc",
+	"fn_bc_name_go": "main.b64CharToByte"
     },
     {
         "_type": "tag",
@@ -39,9 +45,11 @@
         "line": 2486,
         "kind": "function",
         "params": ["int"],
-        "return": "static unsigned int"
+        "return": "static unsigned int",
         "end": 2495,
-        "count": 2
+        "count": 2,
+	"bc_file_path": "src/libsodium/sodium/codecs.bc",
+	"fn_bc_name_go": "main.b64__urlsafe__char__to__byte"
     },
     {
         "_type": "tag",
@@ -52,6 +60,8 @@
         "end": 13,
         "count": 28,
         "params": ["uint64", "uint64"],
-        "return": "static inline uint64_t"
+        "return": "static inline uint64_t",
+	"bc_file_path": "src/libsodium/crypto_pwhash/argon2/argon2-fill-block-ref.bc",
+	"fn_bc_name_go": "main.fBlaMka"
     }
 ]

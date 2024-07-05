@@ -1,0 +1,81 @@
+
+func add(a uint32, b uint32) uint32 {
+	if a >= 4294967295-b {
+		return 4294967295
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	max := uint32(4294967295)
+	sum := a + b
+	if sum < a || sum < b {
+		return max
+	}
+	return sum
+}
+
+func add(a uint32, b uint32) uint32 {
+	if a > 4294967295-b {
+		return 4294967295
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	if a+b < a {
+		return 4294967295
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	max := uint32(4294967295)
+	if b > max-a {
+		return max
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	maxUint := uint32(4294967295)
+	c := a + b
+	if c > maxUint {
+		return maxUint
+	}
+	if c < a {
+		return maxUint
+	}
+	return c
+}
+
+func add(a uint32, b uint32) uint32 {
+	var max uint32 = 4294967295
+	if a > max-b {
+		return max
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	max := uint32(4294967295)
+	if safe := max - a; b > safe {
+		return max
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	if a > ^uint32(0)-b {
+		return ^uint32(0)
+	}
+	return a + b
+}
+
+func add(a uint32, b uint32) uint32 {
+	maxVal := uint32(4294967295)
+	if a >= maxVal-b {
+		return maxVal
+	}
+	return a + b
+}

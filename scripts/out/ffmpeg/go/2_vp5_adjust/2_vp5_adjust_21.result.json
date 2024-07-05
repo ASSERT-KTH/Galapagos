@@ -1,0 +1,8 @@
+{
+    "compiled": false,
+    "function_name": "2_vp5_adjust",
+    "variant_name": "ffmpeg",
+    "project": "ffmpeg",
+    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/javier/Galapagos/scripts/tests/usecase.py\", line 49, in compare\n    await variant.compile(variant_shadow) # raises exception on fail\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 534, in compile\n    self.replace_bc(cwd)\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 476, in replace_bc\n    subprocess.check_output([\n  File \"/usr/lib/python3.10/subprocess.py\", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/javier/Galapagos/linker/build/linker', '/mnt/ssd1/javier/galapagos-clones/ffmpeg-2_vp5_adjust-1-go/libavcodec/vp56dsp.bc', '/home/javier/Galapagos/functions/ffmpeg/variants/go/2_vp5_adjust_1.bc', '--cld', '--output=/mnt/ssd1/javier/galapagos-clones/ffmpeg-2_vp5_adjust-1-go/libavcodec/vp56dsp.ll', '--function_name_in_input=vp5_adjust', '--function_name_in_replacement=main.vp5__adjust']' died with <Signals.SIGABRT: 6>.\n",
+    "python_error_msg": "Command '['/home/javier/Galapagos/linker/build/linker', '/mnt/ssd1/javier/galapagos-clones/ffmpeg-2_vp5_adjust-1-go/libavcodec/vp56dsp.bc', '/home/javier/Galapagos/functions/ffmpeg/variants/go/2_vp5_adjust_1.bc', '--cld', '--output=/mnt/ssd1/javier/galapagos-clones/ffmpeg-2_vp5_adjust-1-go/libavcodec/vp56dsp.ll', '--function_name_in_input=vp5_adjust', '--function_name_in_replacement=main.vp5__adjust']' died with <Signals.SIGABRT: 6>."
+}

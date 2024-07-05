@@ -1,0 +1,16 @@
+#include <stdint.h>
+
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    if (b == 0) 
+        return a;
+    unsigned int sum = a + b;
+    if (sum < a || sum < b)
+        return 4294967295;
+    return sum;
+}
+
+
+int main(){
+    add(0,0);
+}

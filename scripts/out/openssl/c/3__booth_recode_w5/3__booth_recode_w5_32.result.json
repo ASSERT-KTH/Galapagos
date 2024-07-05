@@ -1,0 +1,59 @@
+{
+    "compiled": true,
+    "function_name": "3__booth_recode_w5",
+    "variant_name": "openssl",
+    "project": "openssl",
+    "changes": {
+        "bitcodes": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/ec/ecp_nistz256.bc",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/crypto/ec/ecp_nistz256.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so.3",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/libcrypto.so.3"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so",
+                "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/libcrypto.so"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so.3",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/libcrypto.so.3"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/libcrypto.so",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/libcrypto.so"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/ec/ecp_nistz256.bc",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/crypto/ec/ecp_nistz256.bc"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/openssl/crypto/ec/libcrypto-shlib-ecp_nistz256.o",
+            "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/crypto/ec/libcrypto-shlib-ecp_nistz256.o"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [
+        "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c/crypto/ec/ecp_nistz256.ll"
+    ],
+    "shadow_folder": "/mnt/ssd1/javier/galapagos-clones/openssl-3__booth_recode_w5-5-c",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "pass_tests": true,
+    "test_result": "testing disabled",
+    "verification": {
+        "ecp_nistz256.bc": {
+            "correct transformations": 0,
+            "incorrect transformations": 1,
+            "failed-to-prove transformations": 0,
+            "Alive2 errors": 0
+        }
+    }
+}

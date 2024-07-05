@@ -1,8 +1,0 @@
-{
-    "compiled": false,
-    "function_name": "2_muldiv_down",
-    "variant_name": "alsa-lib",
-    "project": "alsa-lib",
-    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/diogo/Galapagos/scripts/tests/usecase.py\", line 49, in compare\n    await variant.compile(variant_shadow) # raises exception on fail\n  File \"/home/diogo/Galapagos/scripts/usecases/case.py\", line 534, in compile\n    self.replace_bc(cwd)\n  File \"/home/diogo/Galapagos/scripts/usecases/case.py\", line 437, in replace_bc\n    subprocess.check_output([\n  File \"/usr/lib/python3.10/subprocess.py\", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['opt', '-strip-debug', '/home/diogo/galapagos-clones/alsa-lib-2_muldiv_down-1-c/src/pcm/pcm_local.bc', '-o', '/home/diogo/galapagos-clones/alsa-lib-2_muldiv_down-1-c/src/pcm/pcm_local.bc']' returned non-zero exit status 1.\n",
-    "python_error_msg": "Command '['opt', '-strip-debug', '/home/diogo/galapagos-clones/alsa-lib-2_muldiv_down-1-c/src/pcm/pcm_local.bc', '-o', '/home/diogo/galapagos-clones/alsa-lib-2_muldiv_down-1-c/src/pcm/pcm_local.bc']' returned non-zero exit status 1."
-}

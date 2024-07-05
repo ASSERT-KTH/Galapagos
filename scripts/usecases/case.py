@@ -9,10 +9,11 @@ import time
 import traceback
 
 USERNAME = os.environ.get("USER", os.environ.get("USERNAME")) # default for UNIX, fallback for Windows
-CLONE_PATH = f"/home/{USERNAME}/galapagos-clones"
+CLONE_PATH = f"/mnt/ssd1/javier/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
+        "object_extension": ".o",
         "dependencies": [
             "autoconf",
             "automake",
@@ -62,14 +63,15 @@ LIBRARY_INFO = {
         }
     },
     "openssl": {
+        "object_extension": ".o",
         "dependencies": [
             # it's just glibc and make so it should be fine
         ],
         "flags": [
-            "-no-asm" # -no-asm to generate all .i and bc. files
+            # "-no-asm" # -no-asm to generate all .i and bc. files
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj -O0 -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
@@ -81,9 +83,11 @@ LIBRARY_INFO = {
         "make": ["make", "-j4"], 
         "testing": {
             "enabled": False, # Disabling for now as testing for ffmpeg takes too long
+            "command": ["make", "tests"]
         }
     },
     "libsodium": {
+        "object_extension": ".o",
         "dependencies": [
             "minisign", # apparently it's a circular dependency? but it's a dep nonetheless
         ],
@@ -92,7 +96,7 @@ LIBRARY_INFO = {
             # "--extra-cflags=\"-emit-llvm\"",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline= -O0",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
@@ -104,7 +108,7 @@ LIBRARY_INFO = {
         },
         "make": ["make", "-j4"], 
         "testing": {
-            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "enabled": True, 
             "command": ["make", "check"]
         }
     },
@@ -132,6 +136,7 @@ LIBRARY_INFO = {
     },
     # TODO: this ain't good yet
     "liboqs": {
+        "object_extension": ".c.o",
         "dependencies": [
             "astyle",
             "cmake",
@@ -154,7 +159,7 @@ LIBRARY_INFO = {
             '..'
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline= -O0",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
@@ -166,11 +171,12 @@ LIBRARY_INFO = {
         },
         "make": ["make", "-j4"], 
         "testing": {
-            "enabled": True, # Disabling for now as testing hangs TODO: test timeout
+            "enabled": True,
             "command": ['make', 'run_tests']
         }
     },
     "libgcrypt": {
+        "object_extension": ".o",
         "dependencies": [
             "fig2dev",
             "texinfo",
@@ -180,7 +186,7 @@ LIBRARY_INFO = {
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj",
+            "CFLAGS": "-save-temps=obj -O0",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj"
@@ -243,7 +249,7 @@ def strip(file):
             strip_filename = f"{file}-strip"
             subprocess.run(['opt', '-strip-debug', '-o', strip_filename, file])
             return strip_filename
-        elif file.endswith('.o') or is_executable(file):
+        elif is_executable(file):
             strip_filename = f"{file}-strip"
             subprocess.run(['strip', '--strip-all', '-o', strip_filename, file])
             return strip_filename
@@ -462,13 +468,16 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
 
 
             # hack 
-            if self.name == 'alsa-lib':
+            if self.name == 'alsa-lib' :
                 subprocess.check_output(['touch', replacement_target.replace('.bc', '.lo')])
  
                 target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
                 split = target_object.split('/')
                 split.insert(-1, '.libs')
                 target_object = '/'.join(split)
+            elif self.name == 'libgcrypt':
+                subprocess.check_output(['touch', replacement_target.replace('/.libs', '').replace('.bc', '.lo')])
+                target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
             else:
                 target_object = replacement_target.replace('.bc', LIBRARY_INFO[self.name]['object_extension'])
 
@@ -488,6 +497,21 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
                 '-o',
                 replacement_target
             ])
+
+            if self.name == 'libsodium':
+                split = target_object.split('/')
+                file = split[-1]
+                split[-1] = f'.libs/libsodium_la-{file}'
+                target_object = '/'.join(split)
+                split[-1] = f'libsodium_la-{file}'.replace('.o', '.lo')
+                subprocess.check_output(['touch', '/'.join(split)])
+
+        
+            if self.name == 'openssl':
+                split = target_object.split('/')
+                file = split[-1]
+                split[-1] = f'libcrypto-shlib-{file}'
+                target_object = '/'.join(split)
 
             subprocess.check_output([
                 'clang',
@@ -512,7 +536,7 @@ class LibraryCompilableUseCase(LLVMCompilableUseCase):
         if not self.tested:
             try:
                 # self.replace(cwd)
-                ch = subprocess.check_output(test_command, cwd=cwd, stderr=subprocess.STDOUT, timeout=300)
+                ch = subprocess.check_output(test_command, cwd=cwd, stderr=subprocess.STDOUT, timeout=3000)
                 self.tested = True
                 self.test_result = True, ch.decode()
                 print(f"Tested in {time.time() - start:.2f}s")

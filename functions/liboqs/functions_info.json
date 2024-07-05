@@ -7,8 +7,10 @@
         "kind": "function",
         "end": 414,
         "params": ["uint64"],
-        "return": "static uint64_t"
-        "count": 132
+        "return": "static uint64_t",
+        "count": 132,
+	"bc_file_path": "build/src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/fft.bc",
+	"fn_bc_name_go": "main.fpr__half"
     },
     {
         "_type": "tag",
@@ -18,8 +20,10 @@
         "kind": "function",
         "end": 476,
         "params": ["uint64", "uint64"],
-        "return": "int"
-        "count": 80
+        "return": "int",
+        "count": 80,
+	"bc_file_path": "build/src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/keygen.bc",
+	"fn_bc_name_go": "main.fpr__lt"
     },
     {
         "_type": "tag",
@@ -29,8 +33,10 @@
         "kind": "function",
         "end": 725,
         "params": ["uint32", "uint32", "uint32", "uint32"],
-        "return": "uint32_t"
-        "count": 1220
+        "return": "uint32_t",
+        "count": 1220,
+	"bc_file_path": "./build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc",
+	"fn_bc_name_go": "main.modp__montymul"
     },
     {
         "_type": "tag",
@@ -40,8 +46,10 @@
         "kind": "function",
         "end": 645,
         "params": ["uint32", "uint32"],
-        "return": "int32_t"
-        "count": 80
+        "return": "int32_t",
+        "count": 80,
+	"bc_file_path": "./build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc",
+	"fn_bc_name_go": "main.modp__norm"
     },
     {
         "_type": "tag",
@@ -51,7 +59,9 @@
         "kind": "function",
         "end": 20,
         "params": ["int16"],
-        "return": "int"
-        "count": 16
+        "return": "int",
+        "count": 16,
+	"bc_file_path": "./build/src/kem/ntruprime/CMakeFiles/ntruprime_sntrup761_clean.dir/pqclean_sntrup761_clean/crypto_core_wforcesntrup761.bc",
+	"fn_bc_name_go": "main.int16__nonzero__mask"
     }
 ]

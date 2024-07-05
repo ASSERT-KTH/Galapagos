@@ -1,0 +1,7 @@
+static inline unsigned int add(unsigned int a, unsigned int b)
+{
+    unsigned int sum = a + b;
+    if (sum < b)
+        return 4294967295;
+    return sum;
+}

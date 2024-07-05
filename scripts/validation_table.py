@@ -3,13 +3,7 @@ import glob
 import pprint
 import hashlib
 import os
-import sys
-
-# An argument may be passed: -O0, -O1, -O2, -O3
-if len(sys.argv) > 1:
-    VALIDATION_TABLE = f"tables/validation_table_{sys.argv[1]}"
-else:
-    VALIDATION_TABLE = 'tables/validation_table_no_optimization'
+import json2latex
 
 def find_number_of_compiled(files):
     compiled = 0
@@ -53,27 +47,27 @@ def find_number_equivalent_with_unique_hash(files):
     return len(unique_hashes)
 
 
-projects = ['alsa-lib']
+projects = ['alsa-lib', 'ffmpeg', 'libsodium', 'openssl']
 langs = ['c', 'go']
 
 result = {}
 
 for project in projects:
     result[project] = {}
-    for lang in langs:
-        result[project][lang] = {}
 
-        #load functions
-        with open(f'../functions/{project}/functions_info.json') as f:
-            data = json.load(f)
-            for i, fn in enumerate(data):
-                result[project][lang][fn['name']] = {}
-                # get .bc files path
+    #load functions
+    with open(f'../functions/{project}/functions_info.json') as f:
+        data = json.load(f)
+        for i, fn in enumerate(data):
+            result[project][fn['name']] = {}
+            # get .bc files path
+            for lang in langs:
+                result[project][fn['name']][lang] = {}
 
                 path = f'../functions/{project}/variants/{lang}/{i}_{fn["name"]}*.bc'
                 files = glob.glob(path)
                 compile_in_isolation = len(files)
-                result[project][lang][fn['name']]['compile_isolation'] = compile_in_isolation
+                result[project][fn['name']][lang]['compile_isolation'] = compile_in_isolation
 
                 # compiles in project / pass tests / validates
                 
@@ -88,10 +82,10 @@ for project in projects:
 
                 # print(out_jsons)
                 compile_in_project = find_number_of_compiled(out_jsons)
-                result[project][lang][fn['name']]['compile_project'] = compile_in_project
+                result[project][fn['name']][lang]['compile_project'] = compile_in_project
 
                 pass_tests = find_number_of_tested(out_jsons)
-                result[project][lang][fn['name']]['pass_tests'] = pass_tests
+                result[project][fn['name']][lang]['pass_tests'] = pass_tests
                 
                 equivalent_ctr, equivalent_files = find_number_of_equivalent(out_jsons)
                 result[project][lang][fn['name']]['equivalent'] = equivalent_ctr
@@ -99,8 +93,22 @@ for project in projects:
                 unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
                 result[project][lang][fn['name']]['unique_hashes'] = unique_hashes
 
-    validation_table_filename = VALIDATION_TABLE + f'_{project}.json'
-    with open(validation_table_filename, 'w') as f:
-        json.dump(result, f, indent=4)
-        print(f"File saved to {validation_table_filename}")
+def data_to_latex(result):
+    s = ''
+    for proj in result:
+        s += '\\midrule\n'
+        for i, func in enumerate(result[proj]):
+            if i == 4:
+                s += f'\\cellcolor{{white}}\n\\multirow{{-5}}{{*}}{{{proj}}} & {func} '
+            else:
+                s += f'\\cellcolor{{white}} & {func} '
+            for lang in result[proj][func]:
+                for point in result[proj][func][lang]:
+                    s += f'& \\numprint{{{result[proj][func][lang][point]}}} '
+            s += " \\\\\n"
+    
+    return s.replace('_', '\\_')
+
+pprint.pprint(result)
+print(data_to_latex(result))
 

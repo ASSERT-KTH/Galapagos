@@ -8,7 +8,9 @@
         "end": 15063,
         "count": 1,
         "params": ["uint64"],
-        "return": "static uint64_t"
+        "return": "static uint64_t",
+	"bc_file_path": "crypto/rsa/rsa_lib.bc",
+	"fn_bc_name_go": "main.icbrt64"
     },
     {
         "_type": "tag",
@@ -19,7 +21,9 @@
         "end": 882,
         "count": 1,
         "params": ["uint64"],
-        "return": "static uint64_t"
+        "return": "static uint64_t",
+	"bc_file_path": "crypto/sha/keccak1600.bc",
+	"fn_bc_name_go": "main.BitDeinterleave"
     },
     {
         "_type": "tag",
@@ -30,7 +34,9 @@
         "end": 846,
         "count": 1,
         "params": ["uint64"],
-        "return": "static uint64_t"
+        "return": "static uint64_t",
+	"bc_file_path": "crypto/sha/keccak1600.bc",
+	"fn_bc_name_go": "main.BitInterleave"
     },
     {
         "_type": "tag",
@@ -41,7 +47,9 @@
         "end": 163,
         "count": 3,
         "params": ["uint"],
-        "return": "static unsigned int"
+        "return": "static unsigned int",
+	"bc_file_path": "crypto/ec/ecp_nistz256.bc",
+	"fn_bc_name_go": "main.boothRecodeW5"
     },
     {
         "_type": "tag",
@@ -52,6 +60,8 @@
         "end": 175,
         "count": 2,
         "params": ["uint"],
-        "return": "static unsigned int"
+        "return": "static unsigned int",
+	"bc_file_path": "crypto/ec/ecp_nistz256.bc",
+	"fn_bc_name_go": "main.boothRecodew7"
     }
 ]

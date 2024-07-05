@@ -1,0 +1,84 @@
+{
+    "compiled": true,
+    "function_name": "0_flac_get_max_frame_size",
+    "variant_name": "ffmpeg",
+    "project": "ffmpeg",
+    "changes": {
+        "bitcodes": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/libavcodec/flacenc.bc",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/libavcodec/flacenc.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffplay_g",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffplay_g"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffmpeg_g",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffmpeg_g"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffprobe_g",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffprobe_g"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffprobe",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffprobe"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffplay",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffplay"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffmpeg",
+                "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffmpeg"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffplay_g",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffplay_g"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffmpeg_g",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffmpeg_g"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffprobe_g",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffprobe_g"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffprobe",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffprobe"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffplay",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffplay"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/ffmpeg",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/ffmpeg"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/libavcodec/flacenc.o",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/libavcodec/flacenc.o"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg/libavcodec/flacenc.bc",
+            "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/libavcodec/flacenc.bc"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [
+        "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c/libavcodec/flacenc.ll"
+    ],
+    "shadow_folder": "/mnt/ssd1/javier/galapagos-clones/ffmpeg-0_flac_get_max_frame_size-4-c",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "pass_tests": false,
+    "test_result": "Command '['make', 'check']' returned non-zero exit status 2.",
+    "verification": {}
+}

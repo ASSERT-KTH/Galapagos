@@ -1,0 +1,135 @@
+{
+    "compiled": true,
+    "function_name": "3_modp_norm",
+    "variant_name": "liboqs",
+    "project": "liboqs",
+    "changes": {
+        "bitcodes": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/liboqs/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc",
+                "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so.5",
+                "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so.5"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so.0.10.1-dev",
+                "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so.0.10.1-dev"
+            ],
+            [
+                "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so",
+                "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/kat_kem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/kat_kem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/speed_common",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/speed_common"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/example_sig",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/example_sig"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_sha3",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_sha3"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_sig",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_sig"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/speed_kem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/speed_kem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/vectors_sig",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/vectors_sig"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/example_kem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/example_kem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_aes",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_aes"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_kem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_kem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_hash",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_hash"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_sig_mem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_sig_mem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/vectors_kem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/vectors_kem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/test_kem_mem",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/test_kem_mem"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/speed_sig",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/speed_sig"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/dump_alg_info",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/dump_alg_info"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/tests/kat_sig",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/tests/kat_sig"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so.5",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so.5"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so.0.10.1-dev",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so.0.10.1-dev"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/lib/liboqs.so",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/lib/liboqs.so"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.c.o",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.c.o"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.bc"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin"
+        ],
+        [
+            "/mnt/ssd1/javier/galapagos-clones/liboqs/build/CMakeFiles/3.20.2/CompilerIdC/a.out",
+            "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/CMakeFiles/3.20.2/CompilerIdC/a.out"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [
+        "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go/build/src/sig/falcon/CMakeFiles/falcon_1024_avx2.dir/pqclean_falcon-1024_avx2/keygen.ll"
+    ],
+    "shadow_folder": "/mnt/ssd1/javier/galapagos-clones/liboqs-3_modp_norm-7-go",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "python_error_trace": "Traceback (most recent call last):\n  File \"/home/javier/Galapagos/scripts/tests/usecase.py\", line 103, in compare\n    pass_test, msg = await pass_test\n  File \"/home/javier/Galapagos/scripts/usecases/case.py\", line 536, in run_tests\n    if not self.tested:\n  File \"/usr/lib/python3.10/subprocess.py\", line 421, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/usr/lib/python3.10/subprocess.py\", line 505, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n  File \"/usr/lib/python3.10/subprocess.py\", line 1154, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n  File \"/usr/lib/python3.10/subprocess.py\", line 2022, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/usr/lib/python3.10/subprocess.py\", line 1198, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['make', 'run_tests']' timed out after 3000 seconds\n",
+    "python_error_msg": "Command '['make', 'run_tests']' timed out after 3000 seconds"
+}
