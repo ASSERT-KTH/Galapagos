@@ -47,7 +47,7 @@ def find_number_equivalent_with_unique_hash(files):
     return len(unique_hashes)
 
 
-projects = ['alsa-lib', 'ffmpeg', 'libsodium', 'openssl']
+projects = ['libgcrypt']
 langs = ['c', 'go']
 
 result = {}
@@ -88,10 +88,10 @@ for project in projects:
                 result[project][fn['name']][lang]['pass_tests'] = pass_tests
                 
                 equivalent_ctr, equivalent_files = find_number_of_equivalent(out_jsons)
-                result[project][lang][fn['name']]['equivalent'] = equivalent_ctr
+                result[project][fn['name']][lang]['equivalent'] = equivalent_ctr
 
                 unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
-                result[project][lang][fn['name']]['unique_hashes'] = unique_hashes
+                result[project][fn['name']][lang]['unique_hashes'] = unique_hashes
 
 def data_to_latex(result):
     s = ''
