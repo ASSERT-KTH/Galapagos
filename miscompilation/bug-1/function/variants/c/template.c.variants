@@ -1,0 +1,289 @@
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g + 0UL;
+  if (b) {
+    f = ((h | (i | (583 | j))) ^ ~(~(g & 5L) / e));
+    c = 22 / (8UL - f);
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l){
+    a = k;
+  }
+
+  return a != 0 ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~((~(g & 5L) / e));
+    c = 22 / (8 - (f - 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l){
+    a = k;
+  }
+
+  return (a != 0) ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = (unsigned) g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - (f - 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % (c + 0);
+  
+  l = f ^ 5L;
+  if (l != 0){
+    a = k;
+  }
+
+  return (a != 0) ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = (unsigned) g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - (f - 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l) {
+    a = k;
+  }
+
+  return a ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~((~(g & 5L) / e));
+    c = 22 / (8UL - (f - 0U));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l != 0){
+    a = k;
+  }
+
+  return a != 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - (unsigned)f);
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l != 0) {
+    a = k;
+  }
+
+  return (a != 0) ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - f);
+    if (f > 0)
+      ffs(f);
+  }
+  int k = (int)(h % c);
+  
+  l = f ^ 5L;
+  if (l) {
+    a = k;
+  }
+
+  return a != 0 ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = (unsigned) g;
+  if (b) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5) / e);
+    c = 22 / (8UL - (f - 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l != 0){
+    a = k;
+  }
+
+  return (a != 0) ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    unsigned long temp = ~(g & 5L) / e;
+    f = (h | (i | (583 | j))) ^ ~temp;
+    c = 22 / (8UL - (f - 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l != 0){
+    a = k;
+  }
+
+  return a != 0 ? 1 : 0;
+}
+
+
+
+int foo() {
+  short e = -1;
+  unsigned short f;
+  char g = 25;
+  long h = 0;
+  if (a) {
+    h = -1;
+    g = 0;
+  }
+  short i = ~g;
+  unsigned j = g;
+  if (b) {
+    f = (h | (i | (583UL | j))) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - (f + 0));
+    if (f > 0)
+      ffs(f);
+  }
+  int k = h % c;
+  
+  l = f ^ 5L;
+  if (l != 0){
+    a = k;
+  }
+
+  return a ? 1 : 0;
+}

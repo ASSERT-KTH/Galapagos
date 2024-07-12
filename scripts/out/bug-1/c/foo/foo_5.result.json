@@ -1,0 +1,49 @@
+{
+    "compiled": true,
+    "function_name": "foo",
+    "variant_name": "bug-1",
+    "project": "bug-1",
+    "changes": {
+        "bitcodes": [
+            [
+                "/home/javier/galapagos-clones/bug-1/main.bc",
+                "/home/javier/galapagos-clones/bug-1-foo-9-c/main.bc"
+            ]
+        ],
+        "executables": [
+            [
+                "/home/javier/galapagos-clones/bug-1/main",
+                "/home/javier/galapagos-clones/bug-1-foo-9-c/main"
+            ]
+        ]
+    },
+    "all": [
+        [
+            "/home/javier/galapagos-clones/bug-1/main",
+            "/home/javier/galapagos-clones/bug-1-foo-9-c/main"
+        ],
+        [
+            "/home/javier/galapagos-clones/bug-1/main.bc",
+            "/home/javier/galapagos-clones/bug-1-foo-9-c/main.bc"
+        ],
+        [
+            "/home/javier/galapagos-clones/bug-1/main.o",
+            "/home/javier/galapagos-clones/bug-1-foo-9-c/main.o"
+        ]
+    ],
+    "only_in_original": [],
+    "only_in_destiny": [],
+    "shadow_folder": "/home/javier/galapagos-clones/bug-1-foo-9-c",
+    "preserved_in_bc": true,
+    "preserved_in_ex": true,
+    "pass_tests": true,
+    "test_result": "testing disabled",
+    "verification": {
+        "main.bc": {
+            "correct transformations": 1,
+            "incorrect transformations": 0,
+            "failed-to-prove transformations": 0,
+            "Alive2 errors": 0
+        }
+    }
+}

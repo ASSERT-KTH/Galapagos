@@ -220,6 +220,8 @@ class AliveVerifier(Verifier):
         new_flags.append(f"--tgt-fn={target_fn}")
         new_flags.append(f"--src-unroll=2")
         new_flags.append(f"--tgt-unroll=2")
+        # new_flags.append(f"--disable-poison-input")
+        # new_flags.append(f"--disable-undef-input")
 
             
         # TODO check if codes are LLVM IR or LLVM bitcode

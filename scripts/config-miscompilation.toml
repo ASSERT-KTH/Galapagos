@@ -1,0 +1,5 @@
+projects = ["bug-1"]
+temperatures = [1]
+n_variants = 10
+input_lang = "C"
+output_lang = "C"
