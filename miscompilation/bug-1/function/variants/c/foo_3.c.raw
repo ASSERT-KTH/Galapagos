@@ -9,8 +9,8 @@ int foo() {
   }
   short i = ~g;
   unsigned j = g;
-  f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
   if (b != 0) {
+    f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
     c = 22 / (8UL - f);
     if (f > 0)
       putc('\0', stdout);
@@ -18,11 +18,12 @@ int foo() {
   int k = h % c;
   
   short l = f ^ 5L;
-  if (l != 0) {
+  if (l != 0){
     a = k;
   }
 
-  if (a != 0) {
+  if(a != 0){
+      a = 0;
       return 1;
   }
   return 0;

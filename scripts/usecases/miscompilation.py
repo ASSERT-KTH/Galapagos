@@ -35,7 +35,55 @@ LIBRARY_INFO = {
             "enabled": False,
             "command": ["make", "check"]
         }
+    },
+    "bug-2": {
+        "object_extension": ".o",
+        "dependencies": [],
+        "flags": [
+            "--cc=clang",
+            "--extra-cflags=\"-Os -save-temps -fno-strict-aliasing\"",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+        "autogen": {
+            "enabled": False,
+            "command": ""
+        },
+        "make": ["make"], 
+        "testing": {
+            "enabled": False,
+            "command": ["make", "check"]
+        }
+    },
+    "bug-3": {
+        "object_extension": ".o",
+        "dependencies": [],
+        "flags": [
+            "--cc=clang-18",
+        ],
+        "env": {
+            "CFLAGS": "-save-temps",
+            "CC": "clang",
+            "CXX": "clang++",
+            "CXXFLAGS": "-save-temps"
+        },
+        "configure": "./configure",
+        "autogen": {
+            "enabled": False,
+            "command": ""
+        },
+        "make": ["make"], 
+        "testing": {
+            "enabled": False,
+            "command": ["make", "check"]
+        }
     }
+
 }
 
 DEPENDENCY_WARNING_TEMPLATE = '''

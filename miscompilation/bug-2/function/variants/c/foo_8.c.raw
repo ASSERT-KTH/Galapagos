@@ -1,0 +1,3 @@
+int foo(int f, int g) {
+  return (f - g < 10000) ? f : f + 1 % -f;
+}

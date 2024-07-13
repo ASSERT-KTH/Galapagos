@@ -1,0 +1,5 @@
+https://github.com/llvm/llvm-project/issues/68871
+
+
+
+compile with clang-18 -O3 -march=znver4 -flto=full

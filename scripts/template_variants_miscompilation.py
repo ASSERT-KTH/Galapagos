@@ -12,6 +12,8 @@ def type_to_params(types):
             r.append('0')
         if t == 'unsigned char':
             r.append('\'a\'')
+        if t == 'uint64*':
+            r.append('&a')
     return r
 
 def read_variants(function_path):

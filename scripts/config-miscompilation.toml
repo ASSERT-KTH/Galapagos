@@ -1,4 +1,4 @@
-projects = ["bug-1"]
+projects = ["bug-3"]
 temperatures = [1]
 n_variants = 10
 input_lang = "C"

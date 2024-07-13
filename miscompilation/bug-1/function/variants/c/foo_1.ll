@@ -1,7 +1,7 @@
 ; ModuleID = '/home/javier/Galapagos/miscompilation/bug-1/function/variants/c/foo_1.bc'
 source_filename = "/home/javier/Galapagos/miscompilation/bug-1/function/variants/c/foo_1.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
-target triple = "x86_64-unknown-linux-gnu"
+target triple = "x86_64-pc-linux-gnu"
 
 @b = dso_local global i16 5, align 2
 @a = dso_local global i32 0, align 4
@@ -11,127 +11,125 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @foo() #0 {
-entry:
-  %retval = alloca i32, align 4
-  %e = alloca i16, align 2
-  %f = alloca i16, align 2
-  %g = alloca i8, align 1
-  %h = alloca i64, align 8
-  %i = alloca i16, align 2
-  %j = alloca i32, align 4
-  %k = alloca i32, align 4
-  %l = alloca i16, align 2
-  store i16 -1, ptr %e, align 2
-  store i8 25, ptr %g, align 1
-  store i64 0, ptr %h, align 8
-  %0 = load i32, ptr @a, align 4
-  %cmp = icmp ne i32 %0, 0
-  br i1 %cmp, label %if.then, label %if.end
+  %1 = alloca i32, align 4
+  %2 = alloca i16, align 2
+  %3 = alloca i16, align 2
+  %4 = alloca i8, align 1
+  %5 = alloca i64, align 8
+  %6 = alloca i16, align 2
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i16, align 2
+  store i16 -1, ptr %2, align 2
+  store i8 25, ptr %4, align 1
+  store i64 0, ptr %5, align 8
+  %10 = load i32, ptr @a, align 4
+  %11 = icmp ne i32 %10, 0
+  br i1 %11, label %12, label %13
 
-if.then:                                          ; preds = %entry
-  store i64 -1, ptr %h, align 8
-  store i8 0, ptr %g, align 1
-  br label %if.end
+12:                                               ; preds = %0
+  store i64 -1, ptr %5, align 8
+  store i8 0, ptr %4, align 1
+  br label %13
 
-if.end:                                           ; preds = %if.then, %entry
-  %1 = load i8, ptr %g, align 1
-  %conv = sext i8 %1 to i32
-  %not = xor i32 %conv, -1
-  %conv1 = trunc i32 %not to i16
-  store i16 %conv1, ptr %i, align 2
-  %2 = load i8, ptr %g, align 1
-  %conv2 = sext i8 %2 to i32
-  store i32 %conv2, ptr %j, align 4
-  %3 = load i64, ptr %h, align 8
-  %4 = load i16, ptr %i, align 2
-  %conv3 = sext i16 %4 to i32
-  %5 = load i32, ptr %j, align 4
-  %or = or i32 583, %5
-  %or4 = or i32 %conv3, %or
-  %conv5 = zext i32 %or4 to i64
-  %or6 = or i64 %3, %conv5
-  %6 = load i8, ptr %g, align 1
-  %conv7 = sext i8 %6 to i64
-  %and = and i64 %conv7, 5
-  %not8 = xor i64 %and, -1
-  %7 = load i16, ptr %e, align 2
-  %conv9 = sext i16 %7 to i64
-  %div = sdiv i64 %not8, %conv9
-  %not10 = xor i64 %div, -1
-  %xor = xor i64 %or6, %not10
-  %conv11 = trunc i64 %xor to i16
-  store i16 %conv11, ptr %f, align 2
-  %8 = load i16, ptr @b, align 2
-  %conv12 = sext i16 %8 to i32
-  %cmp13 = icmp ne i32 %conv12, 0
-  br i1 %cmp13, label %if.then15, label %if.end24
+13:                                               ; preds = %12, %0
+  %14 = load i8, ptr %4, align 1
+  %15 = sext i8 %14 to i32
+  %16 = xor i32 %15, -1
+  %17 = trunc i32 %16 to i16
+  store i16 %17, ptr %6, align 2
+  %18 = load i8, ptr %4, align 1
+  %19 = sext i8 %18 to i32
+  store i32 %19, ptr %7, align 4
+  %20 = load i16, ptr @b, align 2
+  %21 = icmp ne i16 %20, 0
+  br i1 %21, label %22, label %54
 
-if.then15:                                        ; preds = %if.end
-  %9 = load i16, ptr %f, align 2
-  %conv16 = zext i16 %9 to i64
-  %sub = sub i64 8, %conv16
-  %div17 = udiv i64 22, %sub
-  %conv18 = trunc i64 %div17 to i16
-  store i16 %conv18, ptr @c, align 2
-  %10 = load i16, ptr %f, align 2
-  %conv19 = zext i16 %10 to i32
-  %cmp20 = icmp sgt i32 %conv19, 0
-  br i1 %cmp20, label %if.then22, label %if.end23
+22:                                               ; preds = %13
+  %23 = load i64, ptr %5, align 8
+  %24 = load i8, ptr %4, align 1
+  %25 = sext i8 %24 to i32
+  %26 = xor i32 %25, -1
+  %27 = load i32, ptr %7, align 4
+  %28 = or i32 583, %27
+  %29 = or i32 %26, %28
+  %30 = zext i32 %29 to i64
+  %31 = or i64 %23, %30
+  %32 = load i8, ptr %4, align 1
+  %33 = sext i8 %32 to i64
+  %34 = and i64 %33, 5
+  %35 = xor i64 %34, -1
+  %36 = load i16, ptr %2, align 2
+  %37 = sext i16 %36 to i64
+  %38 = sdiv i64 %35, %37
+  %39 = xor i64 %38, -1
+  %40 = xor i64 %31, %39
+  %41 = trunc i64 %40 to i16
+  store i16 %41, ptr %3, align 2
+  %42 = load i16, ptr %3, align 2
+  %43 = zext i16 %42 to i64
+  %44 = sub i64 8, %43
+  %45 = udiv i64 22, %44
+  %46 = trunc i64 %45 to i16
+  store i16 %46, ptr @c, align 2
+  %47 = load i16, ptr %3, align 2
+  %48 = zext i16 %47 to i32
+  %49 = icmp sgt i32 %48, 0
+  br i1 %49, label %50, label %53
 
-if.then22:                                        ; preds = %if.then15
-  %11 = load ptr, ptr @stdout, align 8
-  %call = call i32 @putc(i32 noundef 0, ptr noundef %11)
-  br label %if.end23
+50:                                               ; preds = %22
+  %51 = load ptr, ptr @stdout, align 8
+  %52 = call i32 @putc(i32 noundef 0, ptr noundef %51)
+  br label %53
 
-if.end23:                                         ; preds = %if.then22, %if.then15
-  br label %if.end24
+53:                                               ; preds = %50, %22
+  br label %54
 
-if.end24:                                         ; preds = %if.end23, %if.end
-  %12 = load i64, ptr %h, align 8
-  %13 = load i16, ptr @c, align 2
-  %conv25 = sext i16 %13 to i64
-  %rem = srem i64 %12, %conv25
-  %conv26 = trunc i64 %rem to i32
-  store i32 %conv26, ptr %k, align 4
-  %14 = load i16, ptr %f, align 2
-  %conv27 = zext i16 %14 to i64
-  %xor28 = xor i64 %conv27, 5
-  %conv29 = trunc i64 %xor28 to i16
-  store i16 %conv29, ptr %l, align 2
-  %15 = load i16, ptr %l, align 2
-  %conv30 = sext i16 %15 to i32
-  %cmp31 = icmp ne i32 %conv30, 0
-  br i1 %cmp31, label %if.then33, label %if.end34
+54:                                               ; preds = %53, %13
+  %55 = load i64, ptr %5, align 8
+  %56 = load i16, ptr @c, align 2
+  %57 = sext i16 %56 to i64
+  %58 = srem i64 %55, %57
+  %59 = trunc i64 %58 to i32
+  store i32 %59, ptr %8, align 4
+  %60 = load i16, ptr %3, align 2
+  %61 = zext i16 %60 to i64
+  %62 = xor i64 %61, 5
+  %63 = trunc i64 %62 to i16
+  store i16 %63, ptr %9, align 2
+  %64 = load i16, ptr %9, align 2
+  %65 = icmp ne i16 %64, 0
+  br i1 %65, label %66, label %68
 
-if.then33:                                        ; preds = %if.end24
-  %16 = load i32, ptr %k, align 4
-  store i32 %16, ptr @a, align 4
-  br label %if.end34
+66:                                               ; preds = %54
+  %67 = load i32, ptr %8, align 4
+  store i32 %67, ptr @a, align 4
+  br label %68
 
-if.end34:                                         ; preds = %if.then33, %if.end24
-  %17 = load i32, ptr @a, align 4
-  %tobool = icmp ne i32 %17, 0
-  br i1 %tobool, label %if.then35, label %if.end36
+68:                                               ; preds = %66, %54
+  %69 = load i32, ptr @a, align 4
+  %70 = icmp ne i32 %69, 0
+  br i1 %70, label %71, label %72
 
-if.then35:                                        ; preds = %if.end34
-  store i32 1, ptr %retval, align 4
-  br label %return
+71:                                               ; preds = %68
+  store i32 0, ptr @a, align 4
+  store i32 1, ptr %1, align 4
+  br label %73
 
-if.end36:                                         ; preds = %if.end34
-  store i32 0, ptr %retval, align 4
-  br label %return
+72:                                               ; preds = %68
+  store i32 0, ptr %1, align 4
+  br label %73
 
-return:                                           ; preds = %if.end36, %if.then35
-  %18 = load i32, ptr %retval, align 4
-  ret i32 %18
+73:                                               ; preds = %72, %71
+  %74 = load i32, ptr %1, align 4
+  ret i32 %74
 }
 
 declare i32 @putc(i32 noundef, ptr noundef) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @main() #0 {
-entry:
-  %call = call i32 @foo()
+  %1 = call i32 @foo()
   ret i32 0
 }
 
@@ -142,8 +140,8 @@ attributes #1 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protect
 !llvm.ident = !{!5}
 
 !0 = !{i32 1, !"wchar_size", i32 4}
-!1 = !{i32 8, !"PIC Level", i32 2}
+!1 = !{i32 7, !"PIC Level", i32 2}
 !2 = !{i32 7, !"PIE Level", i32 2}
 !3 = !{i32 7, !"uwtable", i32 2}
 !4 = !{i32 7, !"frame-pointer", i32 2}
-!5 = !{!"clang version 17.0.0 (git@github.com:llvm/llvm-project.git 1a7a00bdc99fa2b2ca19ecd2d1069991b3c1006b)"}
+!5 = !{!"Ubuntu clang version 15.0.7"}

@@ -12,26 +12,30 @@ int foo() {
   unsigned short f;
   char g = 25;
   long h = 0;
-  if (a) {
+  if (a != 0) {
     h = -1;
     g = 0;
   }
   short i = ~g;
   unsigned j = g;
-  f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
-  if (b) {
-    c = 22 / (8UL - f);
-    if (f != 0)
+  if (b != 0) {
+    f = (h | (i | 583 | j)) ^ ~(~(g & 5L) / e);
+    c = 22 / (8UL - (f - 0));
+    if (f > 0)
       putc('\0', stdout);
   }
   int k = h % c;
   
   short l = f ^ 5L;
-  if (l) {
+  if (l != 0){
     a = k;
   }
 
-  return a != 0;
+  if(a != 0){
+      a = 0;
+      return 1;
+  }
+  return 0;
 }
 
 

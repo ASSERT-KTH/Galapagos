@@ -9,21 +9,22 @@ int foo() {
   }
   short i = ~g;
   unsigned j = g;
-  f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
   if (b) {
+    f = ((h | -g | 583 | j) ^ ~(~(g & 5L) / e));
     c = 22 / (8UL - f);
-    if (f) 
+    if (f > 0)
       putc('\0', stdout);
   }
   int k = h % c;
-
+  
   short l = f ^ 5L;
-  if (l) {
+  if (l){
     a = k;
   }
 
-  if (a)
-    return 1;
-  else
-    return 0;
+  if(a != 0){
+      a = 0;
+      return 1;
+  }
+  return 0;
 }

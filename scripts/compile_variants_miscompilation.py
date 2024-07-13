@@ -52,9 +52,9 @@ if lang == 'go':
     DIS = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'llvm-dis')
     OPT = path.join(WORKSPACE, 'linker', 'deps', 'llvm-Release-build-go', 'bin', 'opt')
 elif lang == 'c':
-    CC = 'clang'
-    DIS = 'llvm-dis'
-    OPT = 'opt'
+    CC = 'clang-15'
+    DIS = 'llvm-dis-15'
+    OPT = 'opt-15'
 
 function_path = path.join(WORKSPACE, 'miscompilation', project, 'function')
 

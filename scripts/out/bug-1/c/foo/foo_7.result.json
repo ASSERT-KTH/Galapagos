@@ -32,7 +32,9 @@
         ]
     ],
     "only_in_original": [],
-    "only_in_destiny": [],
+    "only_in_destiny": [
+        "/home/javier/galapagos-clones/bug-1-foo-4-c/main.ll"
+    ],
     "shadow_folder": "/home/javier/galapagos-clones/bug-1-foo-4-c",
     "preserved_in_bc": true,
     "preserved_in_ex": true,

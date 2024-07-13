@@ -1,7 +1,7 @@
 ; ModuleID = '/home/javier/Galapagos/miscompilation/bug-1/function/variants/c/foo_4.bc'
 source_filename = "/home/javier/Galapagos/miscompilation/bug-1/function/variants/c/foo_4.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
-target triple = "x86_64-unknown-linux-gnu"
+target triple = "x86_64-pc-linux-gnu"
 
 @b = dso_local global i16 5, align 2
 @a = dso_local global i32 0, align 4
@@ -11,114 +11,126 @@ target triple = "x86_64-unknown-linux-gnu"
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @foo() #0 {
-entry:
-  %e = alloca i16, align 2
-  %f = alloca i16, align 2
-  %g = alloca i8, align 1
-  %h = alloca i64, align 8
-  %i = alloca i16, align 2
-  %j = alloca i32, align 4
-  %k = alloca i32, align 4
-  %l = alloca i16, align 2
-  store i16 -1, ptr %e, align 2
-  store i8 25, ptr %g, align 1
-  store i64 0, ptr %h, align 8
-  %0 = load i32, ptr @a, align 4
-  %tobool = icmp ne i32 %0, 0
-  br i1 %tobool, label %if.then, label %if.end
+  %1 = alloca i32, align 4
+  %2 = alloca i16, align 2
+  %3 = alloca i16, align 2
+  %4 = alloca i8, align 1
+  %5 = alloca i64, align 8
+  %6 = alloca i16, align 2
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca i16, align 2
+  store i16 -1, ptr %2, align 2
+  store i8 25, ptr %4, align 1
+  store i64 0, ptr %5, align 8
+  %10 = load i32, ptr @a, align 4
+  %11 = icmp ne i32 %10, 0
+  br i1 %11, label %12, label %13
 
-if.then:                                          ; preds = %entry
-  store i64 -1, ptr %h, align 8
-  store i8 0, ptr %g, align 1
-  br label %if.end
+12:                                               ; preds = %0
+  store i64 -1, ptr %5, align 8
+  store i8 0, ptr %4, align 1
+  br label %13
 
-if.end:                                           ; preds = %if.then, %entry
-  %1 = load i8, ptr %g, align 1
-  %conv = sext i8 %1 to i32
-  %not = xor i32 %conv, -1
-  %conv1 = trunc i32 %not to i16
-  store i16 %conv1, ptr %i, align 2
-  %2 = load i8, ptr %g, align 1
-  %conv2 = sext i8 %2 to i32
-  store i32 %conv2, ptr %j, align 4
-  %3 = load i64, ptr %h, align 8
-  %4 = load i16, ptr %i, align 2
-  %conv3 = sext i16 %4 to i32
-  %5 = load i32, ptr %j, align 4
-  %or = or i32 583, %5
-  %or4 = or i32 %conv3, %or
-  %conv5 = zext i32 %or4 to i64
-  %or6 = or i64 %3, %conv5
-  %6 = load i8, ptr %g, align 1
-  %conv7 = sext i8 %6 to i64
-  %and = and i64 %conv7, 5
-  %not8 = xor i64 %and, -1
-  %7 = load i16, ptr %e, align 2
-  %conv9 = sext i16 %7 to i64
-  %div = sdiv i64 %not8, %conv9
-  %not10 = xor i64 %div, -1
-  %xor = xor i64 %or6, %not10
-  %conv11 = trunc i64 %xor to i16
-  store i16 %conv11, ptr %f, align 2
-  %8 = load i16, ptr @b, align 2
-  %tobool12 = icmp ne i16 %8, 0
-  br i1 %tobool12, label %if.then13, label %if.end21
+13:                                               ; preds = %12, %0
+  %14 = load i8, ptr %4, align 1
+  %15 = sext i8 %14 to i32
+  %16 = xor i32 %15, -1
+  %17 = trunc i32 %16 to i16
+  store i16 %17, ptr %6, align 2
+  %18 = load i8, ptr %4, align 1
+  %19 = sext i8 %18 to i32
+  store i32 %19, ptr %7, align 4
+  %20 = load i16, ptr @b, align 2
+  %21 = icmp ne i16 %20, 0
+  br i1 %21, label %22, label %55
 
-if.then13:                                        ; preds = %if.end
-  %9 = load i16, ptr %f, align 2
-  %conv14 = zext i16 %9 to i64
-  %sub = sub i64 8, %conv14
-  %div15 = udiv i64 22, %sub
-  %conv16 = trunc i64 %div15 to i16
-  store i16 %conv16, ptr @c, align 2
-  %10 = load i16, ptr %f, align 2
-  %conv17 = zext i16 %10 to i32
-  %cmp = icmp sgt i32 %conv17, 0
-  br i1 %cmp, label %if.then19, label %if.end20
+22:                                               ; preds = %13
+  %23 = load i64, ptr %5, align 8
+  %24 = load i8, ptr %4, align 1
+  %25 = sext i8 %24 to i32
+  %26 = sub nsw i32 0, %25
+  %27 = sext i32 %26 to i64
+  %28 = or i64 %23, %27
+  %29 = or i64 %28, 583
+  %30 = load i32, ptr %7, align 4
+  %31 = zext i32 %30 to i64
+  %32 = or i64 %29, %31
+  %33 = load i8, ptr %4, align 1
+  %34 = sext i8 %33 to i64
+  %35 = and i64 %34, 5
+  %36 = xor i64 %35, -1
+  %37 = load i16, ptr %2, align 2
+  %38 = sext i16 %37 to i64
+  %39 = sdiv i64 %36, %38
+  %40 = xor i64 %39, -1
+  %41 = xor i64 %32, %40
+  %42 = trunc i64 %41 to i16
+  store i16 %42, ptr %3, align 2
+  %43 = load i16, ptr %3, align 2
+  %44 = zext i16 %43 to i64
+  %45 = sub i64 8, %44
+  %46 = udiv i64 22, %45
+  %47 = trunc i64 %46 to i16
+  store i16 %47, ptr @c, align 2
+  %48 = load i16, ptr %3, align 2
+  %49 = zext i16 %48 to i32
+  %50 = icmp sgt i32 %49, 0
+  br i1 %50, label %51, label %54
 
-if.then19:                                        ; preds = %if.then13
-  %11 = load ptr, ptr @stdout, align 8
-  %call = call i32 @putc(i32 noundef 0, ptr noundef %11)
-  br label %if.end20
+51:                                               ; preds = %22
+  %52 = load ptr, ptr @stdout, align 8
+  %53 = call i32 @putc(i32 noundef 0, ptr noundef %52)
+  br label %54
 
-if.end20:                                         ; preds = %if.then19, %if.then13
-  br label %if.end21
+54:                                               ; preds = %51, %22
+  br label %55
 
-if.end21:                                         ; preds = %if.end20, %if.end
-  %12 = load i64, ptr %h, align 8
-  %13 = load i16, ptr @c, align 2
-  %conv22 = sext i16 %13 to i64
-  %rem = srem i64 %12, %conv22
-  %conv23 = trunc i64 %rem to i32
-  store i32 %conv23, ptr %k, align 4
-  %14 = load i16, ptr %f, align 2
-  %conv24 = zext i16 %14 to i64
-  %xor25 = xor i64 %conv24, 5
-  %conv26 = trunc i64 %xor25 to i16
-  store i16 %conv26, ptr %l, align 2
-  %15 = load i16, ptr %l, align 2
-  %tobool27 = icmp ne i16 %15, 0
-  br i1 %tobool27, label %if.then28, label %if.end29
+55:                                               ; preds = %54, %13
+  %56 = load i64, ptr %5, align 8
+  %57 = load i16, ptr @c, align 2
+  %58 = sext i16 %57 to i64
+  %59 = srem i64 %56, %58
+  %60 = trunc i64 %59 to i32
+  store i32 %60, ptr %8, align 4
+  %61 = load i16, ptr %3, align 2
+  %62 = zext i16 %61 to i64
+  %63 = xor i64 %62, 5
+  %64 = trunc i64 %63 to i16
+  store i16 %64, ptr %9, align 2
+  %65 = load i16, ptr %9, align 2
+  %66 = icmp ne i16 %65, 0
+  br i1 %66, label %67, label %69
 
-if.then28:                                        ; preds = %if.end21
-  %16 = load i32, ptr %k, align 4
-  store i32 %16, ptr @a, align 4
-  br label %if.end29
+67:                                               ; preds = %55
+  %68 = load i32, ptr %8, align 4
+  store i32 %68, ptr @a, align 4
+  br label %69
 
-if.end29:                                         ; preds = %if.then28, %if.end21
-  %17 = load i32, ptr @a, align 4
-  %cmp30 = icmp ne i32 %17, 0
-  %18 = zext i1 %cmp30 to i64
-  %cond = select i1 %cmp30, i32 1, i32 0
-  ret i32 %cond
+69:                                               ; preds = %67, %55
+  %70 = load i32, ptr @a, align 4
+  %71 = icmp ne i32 %70, 0
+  br i1 %71, label %72, label %73
+
+72:                                               ; preds = %69
+  store i32 0, ptr @a, align 4
+  store i32 1, ptr %1, align 4
+  br label %74
+
+73:                                               ; preds = %69
+  store i32 0, ptr %1, align 4
+  br label %74
+
+74:                                               ; preds = %73, %72
+  %75 = load i32, ptr %1, align 4
+  ret i32 %75
 }
 
 declare i32 @putc(i32 noundef, ptr noundef) #1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i32 @main() #0 {
-entry:
-  %call = call i32 @foo()
+  %1 = call i32 @foo()
   ret i32 0
 }
 
@@ -129,8 +141,8 @@ attributes #1 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protect
 !llvm.ident = !{!5}
 
 !0 = !{i32 1, !"wchar_size", i32 4}
-!1 = !{i32 8, !"PIC Level", i32 2}
+!1 = !{i32 7, !"PIC Level", i32 2}
 !2 = !{i32 7, !"PIE Level", i32 2}
 !3 = !{i32 7, !"uwtable", i32 2}
 !4 = !{i32 7, !"frame-pointer", i32 2}
-!5 = !{!"clang version 17.0.0 (git@github.com:llvm/llvm-project.git 1a7a00bdc99fa2b2ca19ecd2d1069991b3c1006b)"}
+!5 = !{!"Ubuntu clang version 15.0.7"}

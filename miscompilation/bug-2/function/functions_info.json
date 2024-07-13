@@ -1,0 +1,10 @@
+[
+    {
+        "name": "foo",
+        "path": "/home/javier/galapagos-clones/bug-2/main.c",
+        "params": ["int", "int"],
+        "return": "int",
+        "bc_file_path": "main.bc",
+        "fn_bc_name_go": "main.foo"
+    }
+]

@@ -8,12 +8,11 @@
 #include <strings.h>
 #include <string.h>
 
-int a;
+int a = 0;
 short b = 5, c;
 void sgh(int signal, siginfo_t *si, void *context){
     printf("CAUGHT: %d\n", signal);
-    a = 42;
-    const int return_delta = 11;
+    const int return_delta = 0x7;
     ((ucontext_t*)context)->uc_mcontext.gregs[REG_RIP] += return_delta;
 }
 
@@ -23,6 +22,7 @@ void empty(){
  int x = 1;
 }
 
+__attribute__((noinline))
 int foo() {
   short e = -1;
   unsigned short f;
@@ -38,8 +38,6 @@ int foo() {
     f = (h | (i | (583 | j))) ^ ~(~(g & 5L) / e);
     c = 22 / (8UL - (f - 0));
     if (f > 0){
-      //printf("0\n");
-      //ffs(f);
       putc('\0', stdout);
     }
   }
@@ -50,8 +48,11 @@ int foo() {
     a = k;
   }
 
-  if (a != 0)
+  if (a != 0){
+      a = 0;
       return 1;
+  }
+
   return 0;
 }
 

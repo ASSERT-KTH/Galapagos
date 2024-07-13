@@ -1,0 +1,6 @@
+int foo(int f, int g) {
+  int diff = f - g;
+  if (diff < 10000)
+    return f;
+  return f + (1 % -f);
+}
