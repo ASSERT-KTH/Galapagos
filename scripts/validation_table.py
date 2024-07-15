@@ -47,7 +47,7 @@ def find_number_equivalent_with_unique_hash(files):
     return len(unique_hashes)
 
 
-projects = ['libgcrypt']
+projects = ['ffmpeg']
 langs = ['c', 'go']
 
 result = {}
@@ -62,6 +62,8 @@ for project in projects:
             result[project][fn['name']] = {}
             # get .bc files path
             for lang in langs:
+                # Print project, function name, language
+                print(project, fn['name'], lang)
                 result[project][fn['name']][lang] = {}
 
                 path = f'../functions/{project}/variants/{lang}/{i}_{fn["name"]}*.bc'
@@ -80,17 +82,20 @@ for project in projects:
                     with open(out_file) as g:
                         out_jsons.append(json.load(g))
 
-                # print(out_jsons)
+                print(out_files)
                 compile_in_project = find_number_of_compiled(out_jsons)
+                print("Compiled in project", compile_in_project)
                 result[project][fn['name']][lang]['compile_project'] = compile_in_project
-
-                pass_tests = find_number_of_tested(out_jsons)
-                result[project][fn['name']][lang]['pass_tests'] = pass_tests
                 
-                equivalent_ctr, equivalent_files = find_number_of_equivalent(out_jsons)
-                result[project][fn['name']][lang]['equivalent'] = equivalent_ctr
+                # COMMENTING OUT THE BELOW: currently irrelevant
+                # pass_tests = find_number_of_tested(out_jsons)
+                # result[project][fn['name']][lang]['pass_tests'] = pass_tests
 
-                unique_hashes = find_number_equivalent_with_unique_hash(equivalent_files)
+                # COMMENTING OUT THE BELOW: with eq_variants.json, we already strictly build equivalent variants               
+                # equivalent_ctr, equivalent_files = find_number_of_equivalent(out_jsons)
+                # result[project][fn['name']][lang]['equivalent'] = equivalent_ctr
+
+                unique_hashes = find_number_equivalent_with_unique_hash(out_jsons)
                 result[project][fn['name']][lang]['unique_hashes'] = unique_hashes
 
 def data_to_latex(result):

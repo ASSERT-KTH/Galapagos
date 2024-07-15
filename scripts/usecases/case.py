@@ -9,7 +9,7 @@ import time
 import traceback
 
 USERNAME = os.environ.get("USER", os.environ.get("USERNAME")) # default for UNIX, fallback for Windows
-CLONE_PATH = f"/mnt/ssd1/javier/galapagos-clones"
+CLONE_PATH = f"/mnt/ssd2/diogo/galapagos-clones"
 
 LIBRARY_INFO = {
     "ffmpeg": {
@@ -44,6 +44,7 @@ LIBRARY_INFO = {
         "flags": [
             "--cc=clang",
             "--extra-cflags=\"-save-temps=obj -fno-strict-aliasing\"",
+            "--disable-doc"
         ],
         "env": {
             "CFLAGS": "-save-temps=obj -Dinline=",
@@ -71,10 +72,10 @@ LIBRARY_INFO = {
             # "-no-asm" # -no-asm to generate all .i and bc. files
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -O0 -Dinline=",
+            "CFLAGS": "-save-temps=obj -Dinline= -O0",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps=obj -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline= -O0"
         },
         "configure": "./Configure",
         "autogen": {
@@ -99,7 +100,7 @@ LIBRARY_INFO = {
             "CFLAGS": "-save-temps=obj -Dinline= -O0",
             "CC": "clang",
             "CXX": "clang++",
-            "CXXFLAGS": "-save-temps=obj -Dinline="
+            "CXXFLAGS": "-save-temps=obj -Dinline= -O0"
         },
         "configure": "./configure",
         "autogen": {
@@ -159,7 +160,7 @@ LIBRARY_INFO = {
             '..'
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -Dinline= -O0",
+            "CFLAGS": "-save-temps=obj -Dinline=",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj -Dinline="
@@ -186,7 +187,7 @@ LIBRARY_INFO = {
             "--enable-maintainer-mode",
         ],
         "env": {
-            "CFLAGS": "-save-temps=obj -O0",
+            "CFLAGS": "-save-temps=obj",
             "CC": "clang",
             "CXX": "clang++",
             "CXXFLAGS": "-save-temps=obj"
