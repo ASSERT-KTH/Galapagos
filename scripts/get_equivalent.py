@@ -1,7 +1,7 @@
 import subprocess
 import json
 
-outfiles_dir = '/home/javier/Galapagos/scripts/out'
+outfiles_dir = '/home/javier/Galapagos/scripts/out/bug-3'
 
 def get_outfiles():
     files = subprocess.check_output(['grep', '-l', '-r', '"correct transformations": 1', outfiles_dir], text=True).strip().split('\n')
@@ -28,6 +28,17 @@ def get_project_variant_lang_number(outfiles):
                     lang = 'go' # hack
                     number = specs[3]
                 r.append((project, function, lang, number))
+            elif project == 'bug':
+                project = f'bug-{specs[1]}'
+                function = specs[2]
+                if len(specs) == 5:
+                    lang = specs[4]
+                    number = specs[3]
+                elif len(specs) == 4:
+                    lang = 'go' # hack
+                    number = specs[3]
+                r.append((project, function, lang, number))
+            
             else:
                 function = specs[1][2:]
                 lang = specs[3]
