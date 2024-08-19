@@ -1,4 +1,4 @@
-# llm-envy
+# Galápagos: Automated N-Version Programming with LLMs
 
 ## Requirements
 
