@@ -1,0 +1,35 @@
+{
+    "barrett_reduce": {
+        "cycles_baseline": 2824946.0,
+        "go_cycles_nversion": 66725256.0,
+        "go_versions": 10
+    },
+    "ctz": {
+        "cycles_baseline": 204389957.0,
+        "c_cycles_nversion": 876396769.0,
+        "c_versions": 9,
+        "go_cycles_nversion": 760645613.0,
+        "go_versions": 10
+    },
+    "int16_t_negative_mask": {
+        "cycles_baseline": 2725188.0,
+        "c_cycles_nversion": 22806672.0,
+        "c_versions": 7,
+        "go_cycles_nversion": 13415093.0,
+        "go_versions": 5
+    },
+    "int16_t_nonzero_mask": {
+        "cycles_baseline": 3690410.0,
+        "c_cycles_nversion": 27375498.0,
+        "c_versions": 7,
+        "go_cycles_nversion": 15578453.0,
+        "go_versions": 5
+    },
+    "montgomery_reduce": {
+        "cycles_baseline": 2422611.0,
+        "c_cycles_nversion": 14963425.0,
+        "c_versions": 4,
+        "go_cycles_nversion": 17311516.0,
+        "go_versions": 8
+    }
+}

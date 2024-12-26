@@ -1,0 +1,19 @@
+{
+    "b64_byte_to_char": {
+        "cycles_baseline": 6239264.0
+    },
+    "b64_byte_to_urlsafe_char": {
+        "cycles_baseline": 6296817.0
+    },
+    "b64_char_to_byte": {
+        "cycles_baseline": 8679917.0
+    },
+    "b64_urlsafe_char_to_byte": {
+        "cycles_baseline": 8585470.0
+    },
+    "fBlaMka": {
+        "cycles_baseline": 3091639.0,
+        "c_cycles_nversion": 38343778.0,
+        "c_versions": 9
+    }
+}

@@ -1,4 +1,5 @@
 #include <c/c.h>
+             //I->replaceAllUsesWith(I2);
 
 extern unsigned DebugLevel;
 namespace c {
@@ -60,7 +61,7 @@ namespace c {
     NF->copyAttributesFrom(&original);
     NF->setComdat(original.getComdat());
     NF->setName("n_version_call");
-    
+
     original.getParent()->getFunctionList().insert(original.getIterator(), NF);
     original.replaceAllUsesWith(ConstantExpr::getBitCast(NF, original.getType()));
     BasicBlock* entry = BasicBlock::Create(NF->getContext(), "entry", NF);
@@ -78,6 +79,8 @@ namespace c {
    
     std::vector<Value*> calls;
 
+    auto PNF = NF;
+
     int n = 2;
     for (auto it = variants.begin(); it != variants.end(); it++){
         auto function2 = *it;
@@ -92,9 +95,21 @@ namespace c {
         fn_name.append(std::to_string(n));
         NF2->setName(fn_name);
         
+      auto I = NF2->arg_begin();
+      auto I2 = function2->arg_begin();
+      for (Function::arg_iterator E = NF2->arg_end();
+             I != E; ++I, ++I2) {
+             errs() << *I2 << "\n";
+             errs() << *I << "\n";
+            // Move the name and users over to the new version.
+             I->takeName(I2);
+             I2->replaceAllUsesWith(I);
+         }
+        
         NF->getParent()->getFunctionList().insert(original.getIterator(), NF2);
         NF2->splice(NF2->begin(), function2);
         calls.push_back(builder.CreateCall(NF2, addParams));
+        
         n++;
     }
 

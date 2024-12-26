@@ -1,0 +1,31 @@
+{
+    "fpr_half": {
+        "cycles_baseline": 2898067.0,
+        "c_cycles_nversion": 11034542.0,
+        "c_versions": 2,
+        "go_cycles_nversion": 6032593.0,
+        "go_versions": 1
+    },
+    "fpr_lt": {
+        "cycles_baseline": 4894382.0,
+        "go_cycles_nversion": 12268778.0,
+        "go_versions": 1
+    },
+    "modp_montymul": {
+        "cycles_baseline": 4702470.0,
+        "c_cycles_nversion": 17673999.0,
+        "c_versions": 2
+    },
+    "modp_norm": {
+        "cycles_baseline": 2685876.0,
+        "go_cycles_nversion": 8112526.0,
+        "go_versions": 2
+    },
+    "int16_nonzero_mask": {
+        "cycles_baseline": 3988394.0,
+        "c_cycles_nversion": 12687789.0,
+        "c_versions": 3,
+        "go_cycles_nversion": 25723294.0,
+        "go_versions": 8
+    }
+}

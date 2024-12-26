@@ -128,7 +128,7 @@ int main(int argc, const char **argv) {
 
     if(original_function && replacement_functions.size() == ReplacementFiles.size()) {
        if(DebugLevel > 1) {
-          errs() << "All functions found. Making starting replacement \n";
+          errs() << "All functions found. Starting replacement \n";
        }
 
        // Replace the BasicBlocks of function 1 by Basic blocks of function2

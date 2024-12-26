@@ -1,0 +1,29 @@
+{
+    "flac_get_max_frame_size": {
+        "cycles_baseline": 5345581.0,
+        "c_cycles_nversion": 29362425.0,
+        "c_versions": 4
+    },
+    "mix": {
+        "cycles_baseline": 8161569.0,
+        "c_cycles_nversion": 55636613.0,
+        "c_versions": 6,
+        "go_cycles_nversion": 89370694.0,
+        "go_versions": 10
+    },
+    "vp5_adjust": {
+        "cycles_baseline": 6845749.0
+    },
+    "weight": {
+        "cycles_baseline": 5229010.0,
+        "c_cycles_nversion": 53858693.0,
+        "c_versions": 10
+    },
+    "int_sin": {
+        "cycles_baseline": 34135075.0,
+        "c_cycles_nversion": 383412180.0,
+        "c_versions": 10,
+        "go_cycles_nversion": 263357264.0,
+        "go_versions": 10
+    }
+}

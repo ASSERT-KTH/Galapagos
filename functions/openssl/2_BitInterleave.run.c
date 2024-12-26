@@ -1,0 +1,57 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <time.h>
+
+static uint64_t BitInterleave(uint64_t Ai)
+{
+    if ((0)) {
+        uint32_t hi = (uint32_t)(Ai >> 32), lo = (uint32_t)Ai;
+        uint32_t t0, t1;
+
+        t0 = lo & 0x55555555;
+        t0 |= t0 >> 1; t0 &= 0x33333333;
+        t0 |= t0 >> 2; t0 &= 0x0f0f0f0f;
+        t0 |= t0 >> 4; t0 &= 0x00ff00ff;
+        t0 |= t0 >> 8; t0 &= 0x0000ffff;
+
+        t1 = hi & 0x55555555;
+        t1 |= t1 >> 1; t1 &= 0x33333333;
+        t1 |= t1 >> 2; t1 &= 0x0f0f0f0f;
+        t1 |= t1 >> 4; t1 &= 0x00ff00ff;
+        t1 |= t1 >> 8; t1 <<= 16;
+
+        lo &= 0xaaaaaaaa;
+        lo |= lo << 1; lo &= 0xcccccccc;
+        lo |= lo << 2; lo &= 0xf0f0f0f0;
+        lo |= lo << 4; lo &= 0xff00ff00;
+        lo |= lo << 8; lo >>= 16;
+
+        hi &= 0xaaaaaaaa;
+        hi |= hi << 1; hi &= 0xcccccccc;
+        hi |= hi << 2; hi &= 0xf0f0f0f0;
+        hi |= hi << 4; hi &= 0xff00ff00;
+        hi |= hi << 8; hi &= 0xffff0000;
+
+        Ai = ((uint64_t)(hi | lo) << 32) | (t1 | t0);
+    }
+
+    return Ai;
+}
+
+int main(){
+
+    const int iterations = 2000000;
+    struct timespec start, end;
+    double total_time = 0;
+
+    clock_gettime(CLOCK_MONOTONIC_RAW, &start); // Start timestamp
+    for (int i = 0; i < iterations; i++) {
+        BitInterleave(0);
+
+    }
+    clock_gettime(CLOCK_MONOTONIC_RAW, &end); // Start timestamp
+
+    total_time = (end.tv_sec - start.tv_sec) * 1e9 + (end.tv_nsec - start.tv_nsec);
+    //total_time = (end.tv_nsec - start.tv_nsec);
+    printf("%.4f\n", total_time);
+}

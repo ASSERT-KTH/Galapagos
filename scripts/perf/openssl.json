@@ -1,0 +1,29 @@
+{
+    "icbrt64": {
+        "cycles_baseline": 63858078.0,
+        "c_cycles_nversion": 669605306.0,
+        "c_versions": 7,
+        "go_cycles_nversion": 880597094.0,
+        "go_versions": 8
+    },
+    "BitDeinterleave": {
+        "cycles_baseline": 1806625.0,
+        "go_cycles_nversion": 7152290.0,
+        "go_versions": 3
+    },
+    "BitInterleave": {
+        "cycles_baseline": 2563062.0,
+        "go_cycles_nversion": 4274696.0,
+        "go_versions": 1
+    },
+    "_booth_recode_w5": {
+        "cycles_baseline": 4157621.0,
+        "c_cycles_nversion": 13331957.0,
+        "c_versions": 2,
+        "go_cycles_nversion": 10773871.0,
+        "go_versions": 2
+    },
+    "_booth_recode_w7": {
+        "cycles_baseline": 4053151.0
+    }
+}

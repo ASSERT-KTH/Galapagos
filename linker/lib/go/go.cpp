@@ -1,5 +1,7 @@
 #include "go/go.h"
+#include "llvm/IR/Attributes.h"
 #include "llvm/Support/raw_ostream.h"
+#include <iterator>
 
 extern unsigned DebugLevel;
 
@@ -111,10 +113,15 @@ namespace go {
     int n = 2;
     for (auto it = variants.begin(); it != variants.end(); it++){
         auto function2 = *it;
-        FunctionType *FT2y = original.getFunctionType();
-        std::vector<Type *> Params2(FT2y->param_begin(), FT2y->param_end());
+        FunctionType *FT2y = function2->getFunctionType();
+        auto iter = FT2y->param_begin();
+        iter++;
+        std::vector<Type *> Params2(iter, FT2y->param_end());
         FunctionType *NF2Ty = FunctionType::get(FT2y->getReturnType(), Params2, false);
-        Function *NF2 = Function::Create(NF2Ty, original.getLinkage(), original.getAddressSpace());
+        Function *NF2 = Function::Create(NF2Ty, function2->getLinkage(), function2->getAddressSpace());
+        
+
+
         NF2->copyAttributesFrom(&original);
         NF2->setComdat(original.getComdat());
 
@@ -122,20 +129,23 @@ namespace go {
         fn_name.append(std::to_string(n));
         NF2->setName(fn_name);
         
-        NF->getParent()->getFunctionList().insert(original.getIterator(), NF2);
-        NF2->splice(NF2->begin(), function2);
 
-        auto I2 = function2->arg_begin(); I2++;
         auto I = NF2->arg_begin(); //hack to replace first argument with "nest" attr
+        auto I2 = function2->arg_begin();
+        I2++;
 
         // Setting the name of the arguments
-        for (Function::arg_iterator E = NF2->arg_end();
-                I != E; ++I, ++I2) {
+        for (Function::arg_iterator E = function2->arg_end();
+                I2 != E; ++I, ++I2) {
             // Move the name and users over to the new version.
-            I2->takeName(&*I);
-            I->replaceAllUsesWith(&*I2);
-
+            I->takeName(I2);
+            I2->replaceAllUsesWith(I);
+            
         }
+        
+        NF->getParent()->getFunctionList().insert(original.getIterator(), NF2);
+        NF2->splice(NF2->begin(), function2);
+        
         calls.push_back(builder.CreateCall(NF2, addParams));
         n++;
     }

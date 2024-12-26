@@ -1,0 +1,35 @@
+{
+    "alaw_to_s16": {
+        "cycles_baseline": 4361395.0,
+        "c_cycles_nversion": 14678456.0,
+        "c_versions": 1,
+        "go_cycles_nversion": 35898824.0,
+        "go_versions": 6
+    },
+    "iec958_parity": {
+        "cycles_baseline": 87975367.0,
+        "c_cycles_nversion": 256859882.0,
+        "c_versions": 4,
+        "go_cycles_nversion": 152248675.0,
+        "go_versions": 10
+    },
+    "add": {
+        "cycles_baseline": 2498146.0,
+        "c_cycles_nversion": 33473661.0,
+        "c_versions": 9,
+        "go_cycles_nversion": 5794824.0,
+        "go_versions": 1
+    },
+    "ulaw_to_s16": {
+        "cycles_baseline": 4304873.0,
+        "c_cycles_nversion": 44816478.0,
+        "c_versions": 9,
+        "go_cycles_nversion": 49471914.0,
+        "go_versions": 10
+    },
+    "val_seg": {
+        "cycles_baseline": 3638594.0,
+        "c_cycles_nversion": 12136591.0,
+        "c_versions": 2
+    }
+}
