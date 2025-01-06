@@ -18,18 +18,18 @@ def compile_variants(variants, lang, function_path):
         
         functions[v['name']] = {}
 
-        source = path.join(function_path, f'{i}_{v["name"]}.run.c')
-        output1 = path.join(function_path, f'{i}_{v["name"]}.bc')
-        output2 = path.join(function_path, f'{i}_{v["name"]}')
+        source = path.join(function_path, f'{i}_{v["name"]}.run.once.c')
+        output1 = path.join(function_path, f'{v["name"]}.once.bc')
+        output2 = path.join(function_path, f'{i}_{v["name"]}-once')
         command1 = ['clang', '-c', '-emit-llvm', '-o', output1, source] 
-        command2 = ['clang', '-o', output2, source] 
+        command2 = ['clang', '-O0', '-o', output2, source] 
         try:
             subprocess.check_output(command1)
             subprocess.check_output(command2)
             
-            print(output2)
-            out = subprocess.check_output(output2)
-            functions[v['name']]['cycles_baseline'] = float(out)
+     #       print(output2)
+     #       out = subprocess.check_output(output2)
+     #       functions[v['name']]['cycles_baseline'] = float(out)
         except Exception as e:
             print(f'failed to compile {source}; {e}')
  #           try:
@@ -44,5 +44,5 @@ function_path = path.join(WORKSPACE, 'functions', project)
 
 compile_variants(read_variants(function_path), lang, function_path)
 
-with open(f'perf/{project}.json', 'w+') as f:
-    json.dump(functions, f, indent=4)
+# with open(f'perf/{project}.json', 'w+') as f:
+#     json.dump(functions, f, indent=4)

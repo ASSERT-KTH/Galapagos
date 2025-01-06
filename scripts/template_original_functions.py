@@ -31,7 +31,7 @@ def template_variants(variants, lang, function_path):
                 fn_call = f'{fn_call}({params})'
                 replace_call = replace_body.replace('<FUNCTION CALL>', fn_call)
 
-                with open(path.join(function_path, f'{i}_{v["name"]}.run.{lang}'), 'w') as templated_file:
+                with open(path.join(function_path, f'{i}_{v["name"]}.run.once.{lang}'), 'w') as templated_file:
                     templated_file.write(replace_call)
 
 lang, project = read_params()

@@ -5,98 +5,45 @@ from enum import Enum
 
 home = os.environ['HOME']
 
-clones_dir = f'{home}/galapagos-clones'
-verification_output_dir = f'{home}/Galapagos/scripts/out' # ./out
-intel_pin_bin = f'{home}/intel-pin/pin-3.30-98830-g1d7b601b3-gcc-linux/pin'
-pintool = f'{home}/Galapagos/scripts/pintool/instnames.so'
-
-class ModifyMode(Enum):
-    INSERT_IN_LINE = 1
-
-class TestRunMode(Enum):
-    SHELL = 1
-
-replace_token = '<FUNCTION_NAME>'
-
-test_dict = {
-    'libsodium': {
-        'run': TestRunMode.SHELL,
-        'modify': ModifyMode.INSERT_IN_LINE,
-        'testsPath': 'test/default',
-        'insertLine': 117,
-        'insertString': f'exec {intel_pin_bin} -t {pintool} -- "$progdir/$program" ${{1+"$@"}} {replace_token}\n',
-        'tests': {
-            '0_sodium_is_zero': 'xchacha20',
-            '1_sodium_bin2hex': 'xchacha20',
-            '2__crypto_scalarmult_ed25519_is_inf': 'core_ed25519',
-            '3__crypto_scalarmult_ed25519_clamp': 'core_ed25519',
-            '4_sc25519_is_canonical': 'core_ed25519',
-            }
-        }
-    }
+variants_dir = f'{home}/Galapagos/functions'
+intel_pin_bin = f'{home}/pin/pin'
+pintool = f'{home}/pin/instnames.so'
+lang = 'c'
+original = False
 
 
-def insert_in_line(file, line, replacement):
-    try:
-        lines = []
-        with open(file, "r") as f:
-            lines = f.readlines()
-            lines[line-1] = replacement
-        
-        with open(file, "w") as f:
-            f.writelines(lines)
+def run_variants():
+    projects = ['alsa-lib', 'ffmpeg', 'libgcrypt', 'liboqs', 'libsodium', 'openssl']
+    eq = {}
+    with open('eq_variants.json', 'r') as eq_file:
+        eq = json.load(eq_file)
 
+    for proj in projects:
+        # load functions_info
+        with open(f'{variants_dir}/{proj}/functions_info.json', 'r') as info:
+            functions_info = json.load(info)
+            
+            for i, fn in enumerate(functions_info):
+                for lang in ['c', 'go']:
+                    for j in range(10):
+                        if not fn['name'] in eq[proj] or not lang in eq[proj][fn['name']] or not str(j) in eq[proj][fn['name']][lang]:
+                            continue
 
-    except:
-        print(f'failed to open file {file}')
-
-
-def run_shell_command(commandPath):
-    outfile = f'{commandPath}.insts'
-    sp = os.path.split(commandPath)
-    try:
-        with open(outfile, 'w+') as f:
-            print(f'Running {commandPath}')
-            subprocess.run(commandPath, cwd=sp[0], stdout=f)
-    except:
-        os.remove(outfile)
-        print(f'failed to run {commandPath}')
-
-
+                        exe = f'{variants_dir}/{proj}/variants/{lang}/{fn["name"]}-{j}-once-O0-debug'
+                        try: 
+                            #if lang == 'c':
+                            instructions = subprocess.check_output([intel_pin_bin, '-t', pintool, '-fn', fn['name'], '--', exe], text=True, timeout=4) 
+                            print([intel_pin_bin, '-t', pintool, '-fn', fn['name'], '--', exe]) 
+                            #elif lang == 'go':
+                            #    instructions = subprocess.check_output([intel_pin_bin, '-t', pintool, '-fn', fn['fn_bc_name_go'], '--', output], text=True, timeout=4) 
+                            #    print([intel_pin_bin, '-t', pintool, '-fn', fn['fn_bc_name_go'], '--', output]) 
+                            with open(f'dynamic/{fn["name"]}-{j}-{lang}', 'w+') as f:
+                                f.write(instructions)
+                        except Exception as e:
+                            print(e)
+                            continue
 def main():
-    # walk the out dir
-    for project_name in os.listdir(verification_output_dir):
-        project = test_dict[project_name]
-        to_test = []
-        for fn in os.listdir(os.path.join(verification_output_dir, project_name)):
-            for variant_result in os.listdir(os.path.join(verification_output_dir, project_name, fn)):
-                with open(os.path.join(verification_output_dir, project_name, fn, variant_result), 'r') as f:
-                    res = json.load(f)
-                    print(variant_result)
-                    verification_info = res.get('verification')
-                    if verification_info == None:
-                        continue
-                    for key in verification_info.keys():
-                        if verification_info[key]['correct transformations'] > 0:
-                            to_test.append(res['shadow_folder'])
-        
-
-        for variant in to_test:
-            fnname = variant.strip().split('/')[-1].split('-')[1]
-            replacement = project['insertString'].replace(replace_token, fnname[2:]) #hack
-            match project['modify']:
-                case ModifyMode.INSERT_IN_LINE:
-                    insert_in_line(
-                        f'{variant}/{project["testsPath"]}/{project["tests"][fnname]}',
-                        project['insertLine'],
-                        replacement)
-            match project['run']:
-                case TestRunMode.SHELL:
-                    run_shell_command(f'{variant}/{project["testsPath"]}/{project["tests"][fnname]}')
-
-    return 0
-
-
+    run_variants()
 
 if __name__ == '__main__':
     main()

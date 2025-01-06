@@ -25,7 +25,7 @@ def main():
                                 '--src-unroll=64',
                                 '--tgt-unroll=64',
                                 '--bidirectional',
-                                '--smt-to=600000',
+                                '--smt-to=1200000',
                                 '--quiet',
                                 source_file,
                                 target_file

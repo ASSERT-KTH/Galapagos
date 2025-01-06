@@ -6,7 +6,7 @@ def main():
     for proj in projects:
         args = [
             'python',
-            'template_original_functions_bench.py',
+            'template_original_functions.py',
             'c',
             proj]
         print(args)
