@@ -3,7 +3,7 @@
 __attribute__((noinline))
 static uint64_t BitInterleave(uint64_t Ai)
 {
-    if ((0)) {
+    if ((1)) {
         uint32_t hi = (uint32_t)(Ai >> 32), lo = (uint32_t)Ai;
         uint32_t t0, t1;
 

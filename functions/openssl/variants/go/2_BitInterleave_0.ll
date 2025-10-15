@@ -22,14 +22,10 @@ module asm "\09.ascii \22Ai\22"
 module asm "\09.ascii \22 \22"
 module asm "\09.ascii \22<type -8>\22"
 module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 (\22"
-module asm "\09.ascii \22$ret0\22"
 module asm "\09.ascii \22 \22"
 module asm "\09.ascii \22<type -8>\22"
-module asm "\09.ascii \22)\22"
-module asm "\09.ascii \22 <inl:155>\\n\22"
-module asm "\09.ascii \22 // /home/javier/Galapagos/functions/openssl/variants/go/2_BitInterleave_0.go:3\\n { //4\\n  $false //4\\n } //19\\n { //20\\n  $ret0 = Ai //20\\n  return //20\\n } //0\\n\22"
-module asm "\09.ascii \22checksum AC69CC46C4881452EB6E7AFFF68A5DB40F31E304\\n\22"
+module asm "\09.ascii \22\\n\22"
+module asm "\09.ascii \22checksum 4D9E72743718C28E295D74F99573D8CBC365E99D\\n\22"
 module asm "\09.text"
 
 %functionDescriptor.0 = type { i64 }
@@ -46,9 +42,40 @@ entry:
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn
-define i64 @main.BitInterleave(i8* nest nocapture readnone %nest.0, i64 returned %Ai) #1 {
+define i64 @main.BitInterleave(i8* nest nocapture readnone %nest.0, i64 %Ai) #1 {
 entry:
-  ret i64 %Ai
+  %trunc.0 = trunc i64 %Ai to i32
+  %shr.0 = lshr i64 %Ai, 32
+  %trunc.1 = trunc i64 %shr.0 to i32
+  %shl.0 = shl i32 %trunc.0, 8
+  %ior.0 = or i32 %shl.0, %trunc.0
+  %iand.0 = and i32 %ior.0, 16711935
+  %shl.1 = shl nuw nsw i32 %iand.0, 4
+  %ior.1 = or i32 %shl.1, %iand.0
+  %iand.1 = and i32 %ior.1, 252645135
+  %shl.2 = shl nuw nsw i32 %iand.1, 2
+  %ior.2 = or i32 %shl.2, %iand.1
+  %iand.2 = and i32 %ior.2, 858993459
+  %shl.3 = shl nuw nsw i32 %iand.2, 1
+  %ior.3 = or i32 %shl.3, %iand.2
+  %iand.3 = and i32 %ior.3, 1431655765
+  %shl.4 = shl i32 %trunc.1, 8
+  %ior.4 = or i32 %shl.4, %trunc.1
+  %iand.4 = and i32 %ior.4, 16711935
+  %shl.5 = shl nuw nsw i32 %iand.4, 4
+  %ior.5 = or i32 %shl.5, %iand.4
+  %iand.5 = and i32 %ior.5, 252645135
+  %shl.6 = shl nuw nsw i32 %iand.5, 2
+  %ior.6 = or i32 %shl.6, %iand.5
+  %iand.6 = and i32 %ior.6, 858993459
+  %shl.7 = shl nuw nsw i32 %iand.6, 1
+  %ior.7 = or i32 %shl.7, %iand.6
+  %iand.7 = and i32 %ior.7, 1431655765
+  %zext.0 = zext i32 %iand.7 to i64
+  %zext.1 = zext i32 %iand.3 to i64
+  %shl.8 = shl nuw nsw i64 %zext.0, 32
+  %ior.8 = or i64 %shl.8, %zext.1
+  ret i64 %ior.8
 }
 
 ; Function Attrs: mustprogress nofree norecurse nosync nounwind null_pointer_is_valid readnone willreturn

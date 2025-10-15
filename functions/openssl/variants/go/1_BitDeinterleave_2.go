@@ -1,7 +1,7 @@
 package main
 
 func BitDeinterleave(Ai uint64) uint64 {
-	if false {
+	if true {
 		hi := uint32(Ai >> 32)
 		lo := uint32(Ai)
 
@@ -51,7 +51,6 @@ func BitDeinterleave(Ai uint64) uint64 {
 	return Ai
 }
 
-
-func main(){
-    BitDeinterleave(0)
+func main() {
+	BitDeinterleave(0)
 }

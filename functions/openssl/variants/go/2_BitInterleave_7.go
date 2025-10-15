@@ -1,7 +1,9 @@
 package main
 
+import "math/bits"
+
 func BitInterleave(Ai uint64) uint64 {
-	if false {
+	if true {
 		lo := uint32(Ai)
 		hi := uint32(Ai >> 32)
 
@@ -19,7 +21,6 @@ func BitInterleave(Ai uint64) uint64 {
 	return Ai
 }
 
-
-func main(){
-    BitInterleave(0)
+func main() {
+	BitInterleave(0)
 }
