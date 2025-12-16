@@ -3,13 +3,13 @@
 See paper "[Galápagos: Automated N-Version Programming with LLMs](http://arxiv.org/pdf/2408.09536)" (Javier Ron, Diogo Gaspar, Javier Cabrera-Arteaga, Benoit Baudry and Martin Monperrus), Technical report 2408.09536, arXiv, 2024."
 
 ```bibtex
-@techreport{galapagos2024,
+@article{galapagos2024,
  title = {Galápagos: Automated N-Version Programming with LLMs},
- year = {2024},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+ year = {2025},
  author = {Javier Ron and Diogo Gaspar and Javier Cabrera-Arteaga and Benoit Baudry and Martin Monperrus},
  url = {http://arxiv.org/pdf/2408.09536},
- number = {2408.09536},
- institution = {arXiv},
+ doi = {10.1145/3785363},
 }
 ```
 
