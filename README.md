@@ -1,6 +1,6 @@
 # Galápagos: Automated N-Version Programming with LLMs
 
-See paper "[Galápagos: Automated N-Version Programming with LLMs](http://arxiv.org/pdf/2408.09536)" (Javier Ron, Diogo Gaspar, Javier Cabrera-Arteaga, Benoit Baudry and Martin Monperrus), Technical report 2408.09536, arXiv, 2024."
+See paper "[Galápagos: Automated N-Version Programming with LLMs](http://arxiv.org/pdf/2408.09536)" (Javier Ron, Diogo Gaspar, Javier Cabrera-Arteaga, Benoit Baudry and Martin Monperrus), ACM TOSEM, 2025."
 
 ```bibtex
 @article{galapagos2024,
